@@ -1,0 +1,114 @@
+{
+	"Format":"1.28",
+	"ConfigSchema":{
+		"ChangeInteriorLighting":{
+			"AllowValues":"true,false",
+			"Default":"true"
+		},
+		"RecolourFarmHouseFurniture":{
+			"AllowValues":"true,false",
+			"Default":"true"
+		},
+		"RecolourWallsAndFloors":{
+			"AllowValues":"true,false",
+			"Default":"true"
+		},
+		"RecolourCoopAndBarnTiles":{
+			"AllowValues":"true,false",
+			"Default":"true"
+		},
+		"RecolourBathHouseTiles":{
+			"AllowValues":"true,false",
+			"Default":"true"
+		}
+	},
+	"Changes":[		
+		//lighting neutral
+		{
+			"Action":"EditMap",
+			"Target":"Maps/AdventureGuild, Maps/AnimalShop, Maps/ArchaeologyHouse, Maps/Blacksmith, Maps/CommunityCenter_Joja, Maps/CommunityCenter_Refurbished, Maps/ElliottHouse, Maps/FishShop, Maps/HaleyHouse, Maps/HarveyRoom, Maps/Hospital, Maps/JojaMart, Maps/JoshHouse, Maps/LeahHouse, Maps/MovieTheater, Maps/SamHouse, Maps/SandyHouse, Maps/ScienceHouse, Maps/SebastianRoom, Maps/SeedShop, Maps/Trailer, Maps/Trailer_Big, Maps/Coop, Maps/Coop2, Maps/Coop3, Maps/Barn, Maps/Barn2, Maps/Barn3, Maps/Tent",
+			"MapProperties":{"AmbientLight":"80 80 80"},
+			"When":{"ChangeInteriorLighting":"true"}
+		},
+		//lighting warm
+		{
+			"Action":"EditMap",
+			"Target":"Maps/Saloon",
+			"MapProperties":{"AmbientLight":"55 85 132"},
+			"When":{"ChangeInteriorLighting":"true"}
+		},		
+		//lighting bathhouse
+		{
+			"Action":"EditMap",
+			"Target":"Maps/BathHouse_Entry, BathHouse_Pool, BathHouse_MensLocker, BathHouse_WomensLocker",
+			"MapProperties":{"AmbientLight":"255 255 255"},
+			"When":{
+				"ChangeInteriorLighting":"true",
+				"RecolourBathHouseTiles":"true"
+			}
+		},
+		//town interior
+		{
+			"Action":"EditImage",
+			"Target":"Maps/townInterior, Maps/townInterior_2, Maps/ElliottHouseTiles, Maps/MovieTheater_TileSheet, Maps/MovieTheaterJoja_TileSheet, Maps/CarolineGreenhouseTiles, Maps/CarolineGreenhouseTiles_rainy, Maps/submarine_tilesheet",
+			"FromFile":"assets/{{TargetWithoutPath}}.png"
+		},
+		//town interior chairs
+		{
+			"Action":"EditImage",
+			"Target":"TileSheets/ChairTiles",
+			"FromFile":"assets/ChairTiles.png",
+			"PatchMode":"Overlay"
+		},
+		//town interior doors
+		{
+			"Action":"EditImage",
+			"Target":"LooseSprites/Cursors",
+			"FromFile":"assets/Cursors.png",
+			"PatchMode":"Overlay"
+		},
+		//furniture
+		{
+			"Action":"EditImage",
+			"Target":"Maps/farmhouse_tiles, TileSheets/furniture, TileSheets/furnitureFront",
+			"FromFile":"assets/{{TargetWithoutPath}}.png",
+			"PatchMode":"Overlay",
+			"When":{"RecolourFarmHouseFurniture":"true"}
+		},
+		//walls and floors
+		{
+			"Action":"EditImage",
+			"Target":"Maps/walls_and_floors",
+			"FromFile":"assets/walls_and_floors.png",
+			"When":{"RecolourWallsAndFloors":"true"}
+		},
+		//coop and barn
+		{
+			"Action":"EditImage",
+			"Target":"Maps/coopTiles",
+			"FromFile":"assets/coopTiles.png",
+			"When":{"RecolourCoopAndBarnTiles":"true"}
+		},		
+		//bathhouse
+		{
+			"Action":"EditImage",
+			"Target":"Maps/bathhouse_tiles",
+			"FromFile":"assets/bathhouse_tiles.png",
+			"When":{"RecolourBathHouseTiles":"true"}
+		},
+		//sve
+		{
+			"Action":"EditImage",
+			"Target":"Maps/spring_z_extras, Maps/summer_z_extras, Maps/fall_z_extras, Maps/winter_z_extras",
+			"FromFile":"assets/SVE_extras.png",
+			"PatchMode":"Overlay",
+			"When":{"HasMod":"FlashShifter.StardewValleyExpandedCP"}
+		},
+		{
+			"Action":"EditImage",
+			"Target":"Maps/VanillaWallsAndFloors",
+			"FromFile":"assets/SVE_VanillaWallsAndFloors.png",
+			"When":{"HasMod":"FlashShifter.StardewValleyExpandedCP"}
+		}
+	]
+}

@@ -1,0 +1,895 @@
+{
+        "Format": "2.0.0",
+        "ConfigSchema": {
+                "LoadJojaMart": {
+                        "AllowValues": "true, false",
+                        "Default": "true"
+                },
+                "TownMap": {
+                        "AllowValues": "default, reimagined, SVE",
+                        "Default": "default"
+                }, //can remove SVE if recolor/door patch is left universal
+                "atdsdv": {
+                        "AllowValues": "none,standard, warm",
+                        "Default": "standard"
+                },
+                "alternateWallsNFloors": //for recolor compatibility (enabled does nothing and lets the mod proceed with standard load; ONLY FOR VANILLA)
+                {
+                        "AllowValues": "disabled, enabled",
+                        "Default": "disabled"
+                },
+                "GenderNeutral": //for dialogue to be non-gendered
+                {
+                        "AllowValues": "true, false",
+                        "Default": "false"
+                }
+        },
+        "DynamicTokens": [
+                {
+                        "Name": "IsEvenYear",
+                        "Value": "{{Query: {{Year}} % 2 = 0}}"
+                },
+                //Loads ES Schedules if East Scarpe is installed but SVE is not
+                {
+                        "Name": "LoadESMap",
+                        "Value": "false"
+                },
+                {
+                        "Name": "LoadESMap",
+                        "Value": "true",
+                        "When": {
+                                "HasMod": "LemurKat.EastScarpe.CP"
+                        }
+                },
+                {
+                        "Name": "LoadESMap",
+                        "Value": "false",
+                        "When": {
+                                "HasMod": "FlashShifter.StardewValleyExpandedCP"
+                        }
+                },
+                //Is Juliet's Boss Lewis or Morris? 
+                {
+                        "Name": "bossGuy",
+                        "Value": "Lewis",
+                        "When": {
+                                "IsCommunityCenterComplete": true
+                        }
+                },
+                {
+                        "Name": "bossGuy",
+                        "Value": "Morris",
+                        "When": {
+                                "IsCommunityCenterComplete": false
+                        }
+                },
+                //Spirit's Eve Costume
+                {
+                        "Name": "Costume",
+                        "Value": "Pirate"
+                },
+                {
+                        "Name": "Costume",
+                        "Value": "Zombie",
+                        "When": {
+                                "Year": "1,3,5,7,11,13,17,19,23,27,31,37,43"
+                        }
+                },
+                //Determines what gifts Jessie can give in her 2-heart event
+                {
+                        "Name": "JessGift",
+                        "Value": "453"
+                },
+                {
+                        "Name": "JessGift",
+                        "Value": "{{JessGift}} 431",
+                        "When": {
+                                "Hearts:Haley": "0,1,2,3,4"
+                        }
+                },
+                {
+                        "Name": "JessGift",
+                        "Value": "{{JessGift}} 482",
+                        "When": {
+                                "Hearts:Shane": "0,1,2,3,4"
+                        }
+                },
+                {
+                        "Name": "JessGift",
+                        "Value": "{{JessGift}} 453",
+                        "When": {
+                                "Hearts:Penny": "0,1,2,3,4"
+                        }
+                },
+                {
+                        "Name": "JessGift",
+                        "Value": "{{JessGift}} 490",
+                        "When": {
+                                "Hearts:Abigail": "0,1,2,3,4"
+                        }
+                },
+                {
+                        "Name": "JessGift",
+                        "Value": "{{JessGift}} 745",
+                        "When": {
+                                "Hearts:Maru": "0,1,2,3,4"
+                        }
+                },
+                {
+                        "Name": "JessGift",
+                        "Value": "{{JessGift}} 802",
+                        "When": {
+                                "Hearts:Sam": "0,1,2,3,4"
+                        }
+                },
+                {
+                        "Name": "JessGift",
+                        "Value": "{{JessGift}} 433",
+                        "When": {
+                                "Hearts:Harvey": "0,1,2,3,4"
+                        }
+                },
+                //Recolor Configurations. This was done by 'The Help'
+                // this mod contains exteriors as well; atdsv token removed for people who want both this and atdsv
+                {
+                        "Name": "recolor",
+                        "Value": "vanilla",
+                        "When": {
+                                "HasMod |contains=Hesper.RusticCountrysideTownInterior": false,
+                                "HasMod |contains=minervamaga.CP.ATDSV": false
+                        }
+                },
+                {
+                        "Name": "recolor",
+                        "Value": "rusticInteriors",
+                        "When": {
+                                "HasMod |contains=Hesper.RusticCountrysideTownInterior": true,
+                                "HasMod |contains=minervamaga.CP.ATDSV": false
+                        }
+                },
+                {
+                        "Name": "recolor",
+                        "Value": "atdsdvStandard",
+                        "When": {
+                                "HasMod |contains=minervamaga.CP.ATDSV": true,
+                                "atdsdv": "standard"
+                        }
+                },
+                {
+                        "Name": "recolor",
+                        "Value": "atdsdvWarm",
+                        "When": {
+                                "HasMod |contains=minervamaga.CP.ATDSV": true,
+                                "atdsdv": "warm"
+                        }
+                },
+                {
+                        "Name": "recolor",
+                        "Value": "seasside",
+                        "When": {
+                                "HasMod |contains=rainkius.SeasideValley": true,
+                                "atdsdv": "none"
+                        }
+                },
+                //Added flavour for Jessie's 10-heart event
+                {
+                        "Name": "MusicalInterlude",
+                        "Value": "pause 500/faceDirection farmer 3/emote farmer 32/pause 2500/faceDirection farmer 2/emote Jessie 56 true/emote farmer 56 true"
+                },
+                {
+                        "Name": "MusicalInterlude",
+                        "Value": "pause 500/faceDirection farmer 3/emote farmer 32/pause 2500/faceDirection farmer 2/playSound dwop/showFrame 98/emote Jessie 16/pause 500/speak Jessie \"{{i18n:6398005.08.2}}\"/pause 500/emote Jessie 56",
+                        "When": {
+                                "HasSeenEvent": "2"
+                        }
+                },
+                //Platonic or Romantic for Juliet's 10-heart event
+                {
+                        "Name": "10HeartReact",
+                        "Value": "emote Juliet 20/pause 1000"
+                },
+                {
+                        "Name": "10HeartReact",
+                        "Value": "animate Juliet false false 4500 28/animate farmer true false 4500 101/positionOffset farmer -10 0/positionOffset Juliet 10 0/textAboveHead Juliet \"<\"",
+                        "When": {
+                                "HasDialogueAnswer": "639899"
+                        }
+                },
+                {
+                        "Name": "GenericMovieDialogue",
+                        "Value": "{{i18n:juliet.movietheater.kevin}}",
+                        "When": {
+                                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+                        }
+                },
+                {
+                        "Name": "GenericMovieDialogue",
+                        "Value": "{{i18n:juliet.movietheater.claire}}",
+                        "When": {
+                                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+                        }
+                },
+                //14-heart Event Participants
+                {
+                        "Name": "Juliet_SetUp",
+                        "Value": "Marlon 28 8 2 Marnie 35 8 2"
+                },
+                {
+                        "Name": "Juliet_SetUp",
+                        "Value": "Marlon 28 8 2 Marnie 29 8 2",
+                        "When": {
+                                "HasSeenEvent": "50706110"
+                        }
+                },
+                {
+                        "Name": "Juliet_SetUp",
+                        "Value": "{{Juliet_SetUp}} Vincent 40 10 0 Jas 41 10 0 Willy 43 11 3 Penny 38 10 1 Lewis 33 11 1 Caroline 24 11 1 Jodi 25 11 3 Wizard 22 11 1 Alex 27 12 1 Haley 28 12 3 Kent 22 15 1 Gus 23 18 1 Pam 23 20 1 Harvey 26 21 0 Shane 29 19 3 Clint 27 17 2 Pierre 26 9 2 Emily 30 15 2 Gunther 30 18 0 Leah 34 17 1 Elliott 35 16 2 Robin 36 17 3 Sam 38 15 1 Abigail 39 14 2 Sebastian 40 15 3 Demetrius 43 15 3 Maru 46 13 0 Evelyn 39 19 2 George 40 19 2 Linus 42 20 3 Jessie 38 20 1 Juliet 32 11 3 farmer 32 23 0"
+                },
+                //Adds selected custom NPCs: Jasper, Tristan and Luckiel (if installed)
+                {
+                        "Name": "Juliet_SetUp",
+                        "Value": "{{Juliet_SetUp}} Jasper 43 12 3",
+                        "When": {
+                                "HasMod": "Lemurkat.NPCJasper"
+                        }
+                },
+                {
+                        "Name": "Juliet_SetUp",
+                        "Value": "{{Juliet_SetUp}} MisterGinger 43 16 3",
+                        "When": {
+                                "HasSeenEvent": "5295000",
+                                "HasMod": "Lemurkat.Tristan.CP"
+                        }
+                },
+                {
+                        "Name": "Juliet_SetUp",
+                        "Value": "{{Juliet_SetUp}} Lucikiel 28 21 0",
+                        "When": {
+                                "HasMod": "Arknir.Lucikiel"
+                        }
+                },
+                {
+                        "Name": "Juliet_SetUp",
+                        "Value": "{{Juliet_SetUp}} Jade 36 11 3",
+                        "When": {
+                                "HasMod": "malic.cp.jadeNPC"
+                        }
+                },
+                {
+                        "Name": "Juliet_SetUp",
+                        "Value": "{{Juliet_SetUp}} Rosa 36 13 2",
+                        "When": {
+                                "HasMod": "Lemurkat.JacobEloise.CP"
+                        }
+                },
+                //Main Event Rearrangement, includes custom NPCs
+                {
+                        "Name": "Juliet_MainEvent",
+                        "Value": "warp Gunther 31 17 true/warp Jessie 39 15 true/faceDirection Jessie 3 true/warp Juliet 34 11 true/faceDirection Juliet 2 true/warp farmer 35 13 true/warp Vincent 26 11 true/faceDirection Vincent 1 true/warp Jas 37 12 true/faceDirection Jas 3 true/faceDirection Penny 3 true/warp Lewis 36 8 true/faceDirection Lewis 2 true/warp Caroline 25 10 true/faceDirection Jodi 1 true/warp Kent 22 14 true/warp Gus 25 14 true/warp Pam 26 16 true/faceDirection Pam 0 true/warp Harvey 24 13 true/faceDirection Harvey 1 true/warp Shane 38 13 true/warp Clint 28 15 true/faceDirection Clint 0 true/faceDirection Pierre 1 true/faceDirection Emily 0 true/warp Gunther 31 17 true/warp Leah 36 15 true/faceDirection Leah 0 true/warp Elliott 35 15 true/faceDirection Elliott 0 true/warp Robin 33 17 true/faceDirection Robin 0 true/warp Sam 32 14 true/faceDirection Sam 0 true/warp Abigail 31 14 true/faceDirection Abigail 0 true/warp Sebastian 33 14 true/faceDirection Sebastian 0 true/warp Demetrius 34 17 true/faceDirection Demetrius 0 true/warp Maru 42 12 true/faceDirection Maru 3 true/warp Evelyn 41 14 true/faceDirection Evelyn 3 true/warp George 40 14 true/faceDirection George 3 true/warp Linus 38 16 true/faceDirection Linus 0 true/warp Jessie 39 15 true/faceDirection Jessie 3 true/warp Juliet 34 11 true/faceDirection Juliet 2 false/warp farmer 35 13 false"
+                },
+                {
+                        "Name": "Juliet_MainEvent",
+                        "Value": "{{Juliet_MainEvent}}/warp Jasper 43 15/faceDirection Jasper 3",
+                        "When": {
+                                "HasMod": "Lemurkat.NPCJasper"
+                        }
+                },
+                {
+                        "Name": "Juliet_MainEvent",
+                        "Value": "{{Juliet_MainEvent}}/warp MisterGinger 43 13/faceDirection MisterGinger 3",
+                        "When": {
+                                "HasSeenEvent": "5295000",
+                                "HasMod": "LemurKat.Tristan.CP"
+                        }
+                },
+                {
+                        "Name": "Juliet_MainEvent",
+                        "Value": "{{Juliet_MainEvent}}/warp Lucikiel 29 17/faceDirection Lucikiel 0",
+                        "When": {
+                                "HasMod": "Arknir.Lucikiel"
+                        }
+                },
+                {
+                        "Name": "Juliet_MainEvent",
+                        "Value": "{{Juliet_MainEvent}}/warp Rosa 39 11/FaceDirection Rosa 3",
+                        "When": {
+                                "HasMod": "Lemurkat.JacobEloise.CP"
+                        }
+                },
+                //Adds Lucikiel's reactions into 14-heart event
+                {
+                        "Name": "Clint_Heckle",
+                        "Value": "textAboveHead Pam \"{{i18n:6398444_clintheckle_1}}\"/pause 50"
+                },
+                {
+                        "Name": "Clint_Heckle",
+                        "Value": "textAboveHead Pam \"{{i18n:6398444_clintheckle_1}}\"/pause 500/emote Lucikiel 12/pause 500/textAboveHead Lucikiel \"{{i18n:6398444_clintheckle_2}}\"/pause 50",
+                        "When": {
+                                "HasMod": "Arknir.Lucikiel"
+                        }
+                },
+                {
+                        "Name": "Clint_Heckle2",
+                        "Value": "textAboveHead Pam \"{{i18n:6398444_clintheckle_3}}\""
+                },
+                {
+                        "Name": "Clint_Heckle2",
+                        "Value": "textAboveHead Lucikiel \"{{i18n:6398444_clintheckle_4}}\"",
+                        "When": {
+                                "HasMod": "Arknir.Lucikiel"
+                        }
+                },
+                {
+                        "Name": "Clint_Heckle3",
+                        "Value": "emote Emily 32/emote Clint 60"
+                },
+                {
+                        "Name": "Clint_Heckle3",
+                        "Value": "emote Emily 32/emote Clint 60/pause 500/emote Lucikiel 12",
+                        "When": {
+                                "HasMod": "Arknir.Lucikiel"
+                        }
+                }
+        ],
+        //These files contains the actual code for each NPC!
+        "Changes": [
+                {
+                        "Action": "Load",
+                        "Target": "Maps/Custom_LK_ClearingHouse",
+                        "FromFile": "assets/Maps/ClearingHouseRev.tmx"
+                },
+                {
+                        "Action": "Load",
+                        "Target": "Maps/Custom_LK_LodgingHouse",
+                        "FromFile": "assets/Maps/LodgingHouseRev.tmx"
+                },
+                {
+                        "Action": "Load",
+                        "Target": "Maps/Custom_LK_JojaBreakRoom",
+                        "FromFile": "assets/Maps/JojaBreakRoom.tmx"
+                },
+                {
+                        "Action": "Load",
+                        "Target": "Maps/Custom_LK_TheaterBreakroom",
+                        "FromFile": "assets/Maps/TheaterBreakroom.tmx"
+                },
+                {
+                        "Action": "Load",
+                        "Target": "Maps/Custom_LK_LodgingHouseBasement",
+                        "FromFile": "assets/Maps/LodgingHouseBasement.tmx"
+                },
+                {
+                        "Action": "EditData",
+                        "Target": "Data/Locations",
+                        "Entries": {
+                                "Custom_LK_ClearingHouse": {
+                                        "DisplayName": "{{i18n:lookup.clearinghouse}}",
+                                        "DefaultArrivalTile": {
+                                                "X": 5,
+                                                "Y": 20
+                                        },
+                                        "CreateOnLoad": {
+                                                "MapPath": "Maps\\Custom_LK_ClearingHouse"
+                                        },
+                                        "ArtifactSpots": [
+                                                {
+                                                        "Chance": 0.2,
+                                                        "Id": "(O)378",
+                                                        "ItemId": "(O)378",
+                                                        "RandomItemId": null,
+                                                        "MinStack": -1,
+                                                        "MaxStack": -1,
+                                                        "Quality": -1
+                                                },
+                                                {
+                                                        "Chance": 0.2,
+                                                        "Id": "(O)110",
+                                                        "ItemId": "(O)110",
+                                                        "RandomItemId": null,
+                                                        "MinStack": -1,
+                                                        "MaxStack": -1,
+                                                        "Quality": -1
+                                                },
+                                                {
+                                                        "Chance": 0.1,
+                                                        "Id": "(O)583",
+                                                        "ItemId": "(O)583",
+                                                        "RandomItemId": null,
+                                                        "MinStack": -1,
+                                                        "MaxStack": -1,
+                                                        "Quality": -1
+                                                },
+                                                {
+                                                        "Chance": 0.2,
+                                                        "Id": "(O)102",
+                                                        "ItemId": "(O)102",
+                                                        "RandomItemId": null,
+                                                        "MinStack": -1,
+                                                        "MaxStack": -1,
+                                                        "Quality": -1
+                                                },
+                                                {
+                                                        "Chance": 0.25,
+                                                        "Id": "(O)390",
+                                                        "ItemId": "(O)390",
+                                                        "RandomItemId": null,
+                                                        "MinStack": -1,
+                                                        "MaxStack": -1,
+                                                        "Quality": -1
+                                                }
+                                        ],
+                                        "Fish": [
+                                                {
+                                                        "Season": null,
+                                                        "Id": "(O)142", //carp
+                                                        "ItemId": "(O)142",
+                                                        "Condition": "LOCATION_Season Here spring summer fall winter"
+                                                },
+                                                {
+                                                        "Season": "Summer",
+                                                        "Id": "(O)144",
+                                                        "ItemId": "(O)144"
+                                                },
+                                                {
+                                                        "Season": null,
+                                                        "Id": "(O)269",
+                                                        "ItemId": "(O)269",
+                                                        "Condition": "LOCATION_Season Here fall winter"
+                                                },
+                                                {
+                                                        "Season": null,
+                                                        "Id": "(O)152", //carp
+                                                        "ItemId": "(O)142",
+                                                        "Condition": "LOCATION_Season Here spring summer fall winter"
+                                                },
+                                                {
+                                                        "Season": "Fall",
+                                                        "Id": "(O)139", //salmon 
+                                                        "ItemId": "(O)139", //salmon 
+                                                },
+                                                {
+                                                        "Season": "Summer",
+                                                        "Id": "(O)138", //Rainbow Trout 
+                                                        "ItemId": "(O)138", //Rainbow Trout
+                                                },
+                                        ],
+                                        "Forage": [
+                                                {
+                                                        "Chance": 0.7,
+                                                        "Season": "Spring",
+                                                        "Condition": null,
+                                                        "Id": "(O)18",
+                                                        "ItemId": "(O)18",
+                                                        "RandomItemId": null,
+                                                        "MinStack": -1,
+                                                        "MaxStack": -1,
+                                                        "Quality": -1,
+                                                },
+                                                {
+                                                        "Chance": 0.7,
+                                                        "Season": "Summer",
+                                                        "Condition": null,
+                                                        "Id": "(O)402",
+                                                        "ItemId": "(O)402",
+                                                        "RandomItemId": null,
+                                                        "MinStack": -1,
+                                                        "MaxStack": -1,
+                                                        "Quality": -1,
+                                                },
+                                                {
+                                                        "Chance": 0.6,
+                                                        "Season": "Fall",
+                                                        "Condition": null,
+                                                        "Id": "(O)410",
+                                                        "ItemId": "(O)410",
+                                                        "RandomItemId": null,
+                                                        "MinStack": -1,
+                                                        "MaxStack": -1,
+                                                        "Quality": -1,
+                                                },
+                                                {
+                                                        "Chance": 0.1,
+                                                        "Season": "Winter",
+                                                        "Condition": null,
+                                                        "Id": "(O)414",
+                                                        "ItemId": "(O)414",
+                                                        "RandomItemId": null,
+                                                        "MinStack": -1,
+                                                        "MaxStack": -1,
+                                                        "Quality": -1,
+                                                },
+                                                {
+                                                        "Chance": 0.7,
+                                                        "Season": "Winter",
+                                                        "Condition": null,
+                                                        "Id": "(O)418",
+                                                        "ItemId": "(O)418",
+                                                        "RandomItemId": null,
+                                                        "MinStack": -1,
+                                                        "MaxStack": -1,
+                                                        "Quality": -1,
+                                                },
+                                                {
+                                                        "Chance": 0.5,
+                                                        "Season": "Winter",
+                                                        "Condition": null,
+                                                        "Id": "(O)283",
+                                                        "ItemId": "(O)283",
+                                                        "RandomItemId": null,
+                                                        "MinStack": -1,
+                                                        "MaxStack": -1,
+                                                        "Quality": -1,
+                                                }
+                                        ],
+                                        "CustomFields": {}
+                                },
+                                "Custom_LK_LodgingHouse": {
+                                        "DisplayName": "{{i18n:lookup.lodginghouse}}",
+                                        "DefaultArrivalTile": {
+                                                "X": 13,
+                                                "Y": 22
+                                        },
+                                        "CreateOnLoad": {
+                                                "MapPath": "Maps\\Custom_LK_LodgingHouse"
+                                        },
+                                        "CustomFields": {}
+                                },
+                                "Custom_LK_JojaBreakRoom": {
+                                        "DisplayName": "{{i18n:lookup.jojabr}}",
+                                        "DefaultArrivalTile": {
+                                                "X": 2,
+                                                "Y": 9
+                                        },
+                                        "CreateOnLoad": {
+                                                "MapPath": "Maps\\Custom_LK_JojaBreakRoom"
+                                        },
+                                        "CustomFields": {}
+                                },
+                                "Custom_LK_TheaterBreakroom": {
+                                        "DisplayName": "{{i18n:lookup.theater}}",
+                                        "DefaultArrivalTile": {
+                                                "X": 20,
+                                                "Y": 19
+                                        },
+                                        "CreateOnLoad": {
+                                                "MapPath": "Maps\\Custom_LK_TheaterBreakroom"
+                                        },
+                                        "CustomFields": {}
+                                },
+                                "Custom_LK_LodgingHouseBasement": {
+                                        "DisplayName": "{{i18n:lookup.basement}}",
+                                        "DefaultArrivalTile": {
+                                                "X": 5,
+                                                "Y": 10
+                                        },
+                                        "CreateOnLoad": {
+                                                "MapPath": "Maps\\Custom_LK_LodgingHouseBasement"
+                                        },
+                                        "CustomFields": {}
+                                }
+                        }
+                },
+                {
+                        "Action": "Include",
+                        "FromFile": "assets/Jessie.json"
+                },
+                {
+                        "Action": "Include",
+                        "FromFile": "assets/Juliet.json"
+                },
+                {
+                        "Action": "Include",
+                        "FromFile": "assets/LodgingHouse.json",
+                        "When": {
+                                "LoadESMap": "false"
+                        }
+                },
+                {
+                        "Action": "Include",
+                        "FromFile": "assets/ES_LodgingHouse.json",
+                        "When": {
+                                "LoadESMap": "true"
+                        }
+                },
+                {
+                        "Action": "Include",
+                        "FromFile": "assets/MovieTastes.json"
+                },
+                {
+                        "Action": "Include",
+                        "FromFile": "assets/Festivals.json"
+                },
+                // SVE AND RECOLOR COMPATIBILITY EDIT: JOJAMART BACKDOOR
+                {
+                        "LogName": "JojaMart backdoor for SVE and optional interior recolors",
+                        "Action": "EditMap",
+                        "Target": "Maps/JojaMart",
+                        "FromFile": "assets/Maps/Patches/JojaMart-Backdoor-{{recolor}}.tmx",
+                        "FromArea": {
+                                "X": 0,
+                                "Y": 0,
+                                "Width": 2,
+                                "Height": 5
+                        },
+                        "ToArea": {
+                                "X": 2,
+                                "Y": 1,
+                                "Width": 2,
+                                "Height": 5
+                        },
+                        "When": {
+                                "HasSeenEvent |contains=191393": false
+                        }
+                },
+                //Counter chance
+                {
+                        "LogName": "Changes out the counter",
+                        "Action": "EditMap",
+                        "Target": "Maps/JojaMart",
+                        "FromFile": "assets/Maps/Patches/JojaMart-Counter.tmx",
+                        "FromArea": {
+                                "X": 0,
+                                "Y": 0,
+                                "Width": 2,
+                                "Height": 4
+                        },
+                        "ToArea": {
+                                "X": 8,
+                                "Y": 23,
+                                "Width": 2,
+                                "Height": 4
+                        },
+                        "When": {
+                                "HasSeenEvent |contains=191393": false,
+                                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+                        }
+                },
+                // Optional Universal Recolor Compat and Disabling Alternating Tiles
+                {
+                        "LogName": "Theater Breakroom - Alternate Walls and Floors",
+                        "Action": "EditMap",
+                        "Target": "Maps/Custom_LK_TheaterBreakroom",
+                        "FromFile": "assets/Maps/Patches/TheaterBreakroomAlternateWalls-enabled.tmx",
+                        "FromArea": {
+                                "X": 0,
+                                "Y": 0,
+                                "Width": 22,
+                                "Height": 22
+                        },
+                        "ToArea": {
+                                "X": 0,
+                                "Y": 0,
+                                "Width": 22,
+                                "Height": 22
+                        },
+                        "When": {
+                                "HasMod |contains=RusticCountry.wallsandfloors": false,
+                                "alternateWallsNFloors": "disabled"
+                        }
+                },
+                // Rustic Country Walls and Floors compatibility
+                {
+                        "LogName": "Theater Breakroom - Rustic Country Walls and Floors",
+                        "Action": "EditMap",
+                        "Target": "Maps/Custom_LK_TheaterBreakroom",
+                        "FromFile": "assets/Maps/Patches/TheaterBreakroom-rusticWalls.tmx",
+                        "FromArea": {
+                                "X": 0,
+                                "Y": 0,
+                                "Width": 22,
+                                "Height": 22
+                        },
+                        "ToArea": {
+                                "X": 9,
+                                "Y": 26,
+                                "Width": 22,
+                                "Height": 22
+                        },
+                        "When": {
+                                "HasMod |contains=RusticCountry.wallsandfloors": true
+                        }
+                },
+                //EDITS END
+                {
+                        "LogName": "Add dirt tile underneath Joja to try and eliminate voiding issue.",
+                        "Action": "EditMap",
+                        "Target": "Maps/Town",
+                        "MapTiles": [
+                                {
+                                        "Position": {
+                                                "X": 95,
+                                                "Y": 50
+                                        },
+                                        "Layer": "Back",
+                                        "SetTileSheet": "Landscape",
+                                        "SetIndex": "153"
+                                }
+                        ]
+                },
+                {
+                        "Action": "EditData",
+                        "Target": "Strings/StringsFromMaps",
+                        "Entries": {
+                                "ClearingHouse.1": "{{i18n:strings.clearinghouse.1}}",
+                                "ClearingHouse.2": "{{i18n:strings.clearinghouse.2}}",
+                                "ClearingHouse.3": "{{i18n:strings.clearinghouse.3}}",
+                                "ClearingHouse.4": "{{i18n:strings.clearinghouse.4}}",
+                                "JojaBR.000": "{{i18n:strings.jojabr.0}}",
+                                "JojaBR.001": "{{i18n:strings.jojabr.1}}",
+                                "JojaBR.002": "{{i18n:strings.jojabr.2}}",
+                                "JojaBR.003": "{{i18n:strings.jojabr.3}}",
+                                "JojaBR.004": "{{i18n:strings.jojabr.4}}",
+                                "JojaBR.005": "{{i18n:strings.jojabr.5}}",
+                                "LodgingHouse.000": "{{i18n:strings.lodginghouse.0}}",
+                                "LodgingHouse.001": "{{i18n:strings.lodginghouse.1}}",
+                                "LodgingHouse.002": "{{i18n:strings.lodginghouse.2}}",
+                                "LodgingHouse.003": "{{i18n:strings.lodginghouse.3}}",
+                                "LodgingHouse.004": "{{i18n:strings.lodginghouse.4}}",
+                                "LodgingHouse.005": "{{i18n:strings.lodginghouse.5}}",
+                                "LodgingHouse.006": "{{i18n:strings.lodginghouse.6}}",
+                                "LodgingHouse.007": "{{i18n:strings.lodginghouse.7}}",
+                                "LodgingHouse.008": "{{i18n:strings.lodginghouse.8}}",
+                                "LodgingHouse.009": "{{i18n:strings.lodginghouse.9}}",
+                                "LodgingHouse.010": "{{i18n:strings.lodginghouse.10}}",
+                                "LodgingHouse.011": "{{i18n:strings.lodginghouse.11}}",
+                                "LodgingHouse.012": "{{i18n:strings.lodginghouse.12}}",
+                                "LodgingHouse.013": "{{i18n:strings.lodginghouse.13}}",
+                                "LodgingHouse.014": "{{i18n:strings.lodginghouse.14}}",
+                                "LodgingHouse.015": "{{i18n:strings.lodginghouse.15}}",
+                                "JulesMovie.1": "{{i18n:strings.julesmovie1}}",
+                                "JulesMovie.2": "{{i18n:strings.julesmovie2}}"
+                        }
+                },
+                // Adds the warp so that Juliet can enter the Theater Breakroom (non-SVE). 
+                {
+                        "Action": "EditMap",
+                        "Target": "Maps/Town",
+                        "MapProperties": {
+                                "NPCWarp": "100 51 Custom_LK_TheaterBreakroom 21 20"
+                        },
+                        "When": {
+                                "HasMod |contains=FlashShifter.StardewValleyExpandedCP, Lumisteria.MtVapius": false,
+                                "HasFlag |contains=ccMovieTheater": true
+                        }
+                },
+                {
+                        "Action": "EditMap",
+                        "Target": "Maps/Town",
+                        "TextOperations": [
+                                {
+                                        "Operation": "Append",
+                                        "Target": [
+                                                "MapProperties",
+                                                "Warp"
+                                        ],
+                                        "Value": "100 51 Custom_LK_TheaterBreakroom 21 20",
+                                        "Delimiter": " "
+                                },
+                        ],
+                        "When": {
+                                "HasMod |contains= Lumisteria.MtVapius": true
+                        }
+                },
+                { //Adds spouse strings for the movie theater
+                        "Action": "EditData",
+                        "Target": "Strings/Characters",
+                        "Entries": {
+                                "MovieInvite_Spouse_Juliet": "{{Random:Sounds great! Date night!$1++Ooooh, a night on the town! Time to get wild!$1++Heh, I know - we can make out in the back row like a couple of teenagers.$4|inputSeparator=++}}"
+                        }
+                },
+                //Juliet should refuse movie invitiations whilst she is working
+                {
+                        "LogName": "Movie Theatre Default",
+                        "Action": "EditData",
+                        "Target": "Data/MoviesReactions",
+                        "When": {
+                                "DayofWeek": "Monday, Tuesday, Wednesday, Thursday",
+                                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+                        },
+                        "Entries": {
+                                "Juliet": {
+                                        "NPCName": "Juliet",
+                                        "Reactions": [
+                                                {
+                                                        "Tag": "*",
+                                                        "Response": "reject",
+                                                        "Whitelist": [],
+                                                        "SpecialResponses": null,
+                                                        "ID": "reaction_0"
+                                                }
+                                        ]
+                                }
+                        }
+                },
+                //I said I wouldn't, but I did anyway... with a little help! (The Help didn't want credit :P) : SVE compatibility
+                //Sets Juliet as second teller for JojaMart, changes her schedule from working theater. For extra compatibility (not seen in this file), added a backroom to JojaMart with recolor support for every interior recolor mod that touches JojaMart (that the Help knows of).
+                {
+                        "Action": "Include",
+                        "FromFile": "assets/SVECompatibility.json",
+                        "When": {
+                                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+                        }
+                },
+                {
+                        "LogName": "NPC Exclusion antisocial NPCs",
+                        "Action": "EditData",
+                        "Target": "Data/CustomNPCExclusions",
+                        "Entries": {
+                                "Gremlin": "All"
+                        }
+                },
+                //Spouse Room
+                {
+                        "Action": "EditData",
+                        "Target": "Data/SpouseRooms",
+                        "Entries": {
+                                "Juliet": "Lemurkat_Juliet_SpouseRoom/0"
+                        }
+                },
+                {
+                        "Action": "Load",
+                        "Target": "Maps/Lemurkat_Juliet_SpouseRoom",
+                        "FromFile": "assets/Maps/SpouseRoomJulietRev.tmx"
+                },
+                {
+                        //Add "displayname" to locations
+                        "Action": "EditData",
+                        "Target": "Mods/shekurika.EventLookup/locationnames",
+                        "When": {
+                                "HasMod": "shekurika.EventLookup"
+                        },
+                        "Entries": {
+                                "Custom_LK_ClearingHouse": "{{i18n:lookup.clearinghouse}}",
+                                "Custom_LK_LodgingHouse": "{{i18n:lookup.lodginghouse}}",
+                                "Custom_LK_JojaBreakRoom": "{{i18n:lookup.jojabr}}",
+                                "Custom_LK_TheaterBreakroom": "{{i18n:lookup.theater}}",
+                                "Custom_LK_LodgingHouseBasement": "{{i18n:lookup.basement}}",
+                                "Custom_ESClearingHouse": "{{i18n:lookup.clearinghouse}}"
+                        }
+                },
+                {
+                        "LogName": "Patches out the second house",
+                        "Action": "EditMap",
+                        "Target": "Maps/Custom_LK_ClearingHouse",
+                        "FromFile": "assets/Maps/ClearingHouseRev_noES.tmx",
+                        "FromArea": {
+                                "X": 38,
+                                "Y": 22,
+                                "Width": 9,
+                                "Height": 11
+                        },
+                        "ToArea": {
+                                "X": 38,
+                                "Y": 22,
+                                "Width": 9,
+                                "Height": 11
+                        },
+                        "When": {
+                                //   "{{Query}}: ({{Time}} >= 0600 AND {{Time}} <= 1200) OR {{Time}} > 2400": true
+                                "HasMod |contains=LemurKat.EastScarpe.CP": false
+                        }
+                },
+                {
+                        "Action": "EditData",
+                        "Target": "Data/Minecarts",
+                        "When": {
+                                "HasFlag": "ccBoilerRoom",
+                                "HasMod |contains=LemurKat.EastScarpe.CP": false
+                        },
+                        "TargetField": [
+                                "Destinations"
+                        ],
+                        "Entries": {
+                                "Custom_LK_ClearingHouse": {
+                                        "Location": "Custom_LK_ClearingHouse",
+                                        "Tile": {
+                                                "X": 54,
+                                                "Y": 7
+                                        },
+                                        "Direction": "down",
+                                        "DisplayName": "{{i18n:minecart.LKClearingHouse}}",
+                                },
+                        }
+                }
+        ]
+}

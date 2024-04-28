@@ -1,0 +1,1362 @@
+{
+  "Changes": [
+    //Data for Social Menu
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Entries": {
+        "Juliet": {
+          "DisplayName": "{{i18n:npcd.juliet}}", // this would normally use {{i18n:}} to support translations
+          "BirthSeason": "Spring",
+          "BirthDay": 15,
+          "HomeRegion": "Town",
+          "Gender": "Female",
+          "Age": "Adult",
+          "Manner": "Rude",
+          "SocialAnxiety": "Outgoing",
+          "Optimism": "Negative",
+          "CanBeRomanced": false,
+          "LoveInterest": "Rosa",
+          "SpouseRoom": {
+            "MapAsset": "Lemurkat_Juliet_SpouseRoom",
+            "MapSourceRect": {
+              "X": 0,
+              "Y": 0,
+              "Width": 6,
+              "Height": 9
+            }
+          },
+          /*
+          "SpousePatio": {
+            "MapAsset": null,
+            "MapSourceRect": {
+              "X": 0,
+              "Y": 0,
+              "Width": 4,
+              "Height": 4
+            },
+            "SpriteAnimationFrames": [
+              [
+                32,
+                500
+              ],
+              [
+                33,
+                500
+              ],
+              [
+                34,
+                500
+              ],
+              [
+                35,
+                500
+              ]
+            ],
+            "SpriteAnimationPixelOffset": {
+              "X": 0,
+              "Y": 0
+            }
+          },*/
+          "FriendsAndFamily": {
+            "Jessie": "{{i18n:npcd.jessie}}",
+            "Gremlin": "{{i18n:juliet.gremlin}}"
+          },
+          "HiddenProfileEmoteDuration": -1,
+          "HiddenProfileEmoteStartFrame": 32,
+          "HiddenProfileEmoteFrameCount": 4,
+          "HiddenProfileEmoteFrameDuration": 200.0,
+          "Home": [
+            {
+              "Id": "OwnHouse",
+              "Condition": "PLAYER_HAS_MAIL Host RosaJulesLivingTogether",
+              "Location": "Custom_ESRosJulesHouse",
+              "Tile": {
+                "X": 15,
+                "Y": 5
+              },
+              "Direction": "Right"
+            },
+            {
+              "Id": "Default",
+              "Location": "Custom_LK_LodgingHouse",
+              "Tile": {
+                "X": 22,
+                "Y": 6
+              },
+              "Direction": "Right"
+            }
+          ]
+        },
+        "Gremlin": {
+          "DisplayName": "{{i18n:npcd.gremlin}}",
+          "BirthSeason": null,
+          "BirthDay": 0,
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Female",
+          "Age": "Child",
+          "Manner": "Neutral",
+          "SocialAnxiety": "Shy",
+          "Optimism": "Positive",
+          "SocialTab": "HiddenAlways",
+          "CanSocialize": "FALSE",
+          "CanVisitIsland": null,
+          "ExcludeFromIntroductionsQuest": true,
+          "ExcludeFromPerfectionScore": true,
+          "EndSlideShow": "Hidden",
+          "UnlockConditions": "PLAYER_HAS_SEEN_EVENT Host 86571101",
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "Location": "Custom_LK_LodgingHouse",
+              "Tile": {
+                "X": 25,
+                "Y": 7
+              },
+              "Direction": "up"
+            }
+          ],
+          "Breather": false
+        }
+      }
+    },
+    {
+      "LogName": "Juliet becomes datable",
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "TargetField": [
+        "Juliet"
+      ],
+      "Entries": {
+        "CanBeRomanced": true
+      },
+      "When": {
+        "HasDialogueAnswer": "639899"
+      }
+    },
+    {
+      "LogName": "NPC Gift Tastes",
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Entries": {
+        "Juliet": "{{i18n:gifts.juliet.love}}/376 420 614 651 731/{{i18n:gifts.juliet.like}}/283 348 613 724 346 167/{{i18n:gifts.juliet.dislike}}/-4 256 231/{{i18n:gifts.juliet.hate}}/717 720 276/{{i18n:gifts.juliet.neutral}}//"
+      }
+    },
+    // Juliet Loves Poppy, Red Mushroom, Green Tea, Poppyseed Muffin, Maple Bar
+    //Likes Wine, Apple, Maple Syrup, Beer, Joja cola?, holly
+    //Dislikes Tomato, fish, Eggplant Parmesan
+    //Hates Crab, Shrimp, Pumpkin
+    //Loads Juliet
+    {
+      "LogName": "NPC Sprite",
+      "Action": "Load",
+      "Target": "Characters/Juliet, Portraits/Juliet",
+      "FromFile": "assets/{{Target}}/Juliet_base.png"
+    },
+    {
+      "LogName": "swimsuit sprites",
+      "Action": "EditImage",
+      "Target": "Characters/Juliet, Portraits/Juliet",
+      "FromFile": "assets/{{Target}}/Juliet_swimsuit.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "LocationName": "Beach",
+        "Season": "summer"
+      }
+    },
+    {
+      "LogName": "swimsuit sprites",
+      "Action": "Load",
+      "Target": "Characters/Juliet_Beach",
+      "FromFile": "assets/Characters/Juliet/Juliet_swimsuit.png"
+    },
+    {
+      "LogName": "swimsuit sprites",
+      "Action": "Load",
+      "Target": "Portraits/Juliet_Beach",
+      "FromFile": "assets/Portraits/Juliet/Juliet_swimsuit.png"
+    },
+    {
+      "LogName": "fall sprites",
+      "Action": "EditImage",
+      "Target": "Characters/Juliet, Portraits/Juliet",
+      "FromFile": "assets/{{Target}}/Juliet_fall.png",
+      "When": {
+        "Season": "fall"
+      }
+    },
+    {
+      "LogName": "winter sprites",
+      "Action": "EditImage",
+      "Target": "Characters/Juliet, Portraits/Juliet",
+      "FromFile": "assets/{{Target}}/Juliet_winter.png",
+      "When": {
+        "Season": "winter"
+      }
+    },
+    {
+      "LogName": "Theater Sprites",
+      "Action": "EditImage",
+      "Target": "Characters/Juliet, Portraits/Juliet",
+      "FromFile": "assets/{{Target}}/Juliet_theater.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "LocationName": "Custom_LK_TheaterBreakroom"
+      }
+    },
+    {
+      "LogName": "JojaMart Sprites",
+      "Action": "EditImage",
+      "Target": "Portraits/Juliet",
+      "FromFile": "assets/Portraits/Juliet/Juliet_Joja.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "LocationName": "JojaMart"
+      }
+    },
+    {
+      "LogName": "JojaMart Sprites",
+      "Action": "Load",
+      "Target": "Portraits/Juliet_Joja",
+      "FromFile": "assets/Portraits/Juliet/Juliet_Joja.png"
+    },
+    {
+      "LogName": "JojaMart Sprites",
+      "Action": "Load",
+      "Target": "Characters/Juliet_Joja",
+      "FromFile": "assets/Characters/Juliet/Juliet_Joja.png"
+    },
+    { //Kataryna
+      "LogName": "Juliet FortuneTeller",
+      "Action": "Load",
+      "Target": "Characters/Juliet_FortuneTeller",
+      "FromFile": "assets/Characters/Juliet/Juliet_FortuneTeller.png"
+    },
+    { //Kataryna
+      "LogName": "Juliet FortuneTeller",
+      "Action": "Load",
+      "Target": "Portraits/Juliet_FortuneTeller",
+      "FromFile": "assets/Portraits/Juliet/Juliet_FortuneTeller.png"
+    },
+    //Festivals
+    {
+      "LogName": "EggFestival",
+      "Action": "EditImage",
+      "Target": "Characters/Juliet",
+      "FromFile": "assets/Characters/Juliet_eggfest.png",
+      "FromArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 16,
+        "Height": 128
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 16,
+        "Height": 128
+      },
+      "Update": "OnLocationChange",
+      "When": {
+        "DayEvent": "egg festival",
+        "LocationName": "Temp"
+      }
+    },
+    {
+      "LogName": "EggFestival",
+      "Action": "EditImage",
+      "Target": "Portraits/Juliet",
+      "FromFile": "assets/Portraits/Juliet_eggfest.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "DayEvent": "egg festival",
+        "LocationName": "Temp"
+      }
+    },
+    {
+      "LogName": "FlowerFestival",
+      "Action": "EditImage",
+      "Target": "Characters/Juliet",
+      "FromFile": "assets/Characters/Juliet_flowerdance.png",
+      "Update": "OnLocationChange",
+      "FromArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 16,
+        "Height": 128
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 16,
+        "Height": 128
+      },
+      "When": {
+        "LocationName": "Temp",
+        "DayEvent": "flower dance"
+      }
+    },
+    {
+      "LogName": "FlowerFestival",
+      "Action": "EditImage",
+      "Target": "Portraits/Juliet",
+      "FromFile": "assets/Portraits/Juliet_flowerdance.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "LocationName": "Temp",
+        "DayEvent": "flower dance"
+      }
+    },
+    {
+      "LogName": "Jellies",
+      "Action": "EditImage",
+      "Target": "Characters/Juliet",
+      "FromFile": "assets/Characters/Juliet_jellies.png",
+      "FromArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 16,
+        "Height": 128
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 16,
+        "Height": 128
+      },
+      "Update": "OnLocationChange",
+      "When": {
+        "LocationName": "Temp",
+        "DayEvent": "dance of the moonlight jellies"
+      }
+    },
+    {
+      "LogName": "Jellies",
+      "Action": "EditImage",
+      "Target": "Portraits/Juliet",
+      "FromFile": "assets/Portraits/Juliet_jellies.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "LocationName": "Temp",
+        "DayEvent": "dance of the moonlight jellies"
+      }
+    },
+    {
+      "LogName": "SDV fair",
+      "Action": "EditImage",
+      "Target": "Characters/Juliet",
+      "FromFile": "assets/Characters/Juliet_Fair.png",
+      "FromArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 16,
+        "Height": 128
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 16,
+        "Height": 128
+      },
+      "Update": "OnLocationChange",
+      "When": {
+        "LocationName": "Temp",
+        "DayEvent": "stardew valley fair"
+      }
+    },
+    {
+      "LogName": "SDV fair",
+      "Action": "EditImage",
+      "Target": "Portraits/Juliet",
+      "FromFile": "assets/Portraits/Juliet_Fair.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "LocationName": "Temp",
+        "DayEvent": "stardew valley fair"
+      }
+    },
+    {
+      "LogName": "Festival Sprites",
+      "Action": "EditImage",
+      "Target": "Characters/Juliet",
+      "FromFile": "assets/Characters/Juliet_{{Costume}}.png",
+      "FromArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 16,
+        "Height": 128
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 16,
+        "Height": 128
+      },
+      "Update": "OnLocationChange",
+      "When": {
+        "LocationName": "Temp",
+        "DayEvent": "spirit's eve"
+      }
+    },
+    {
+      "Logname": "Festival Sprites",
+      "Action": "EditImage",
+      "Target": "Portraits/Juliet",
+      "FromFile": "assets/Portraits/Juliet_{{Costume}}.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "LocationName": "Temp",
+        "DayEvent": "spirit's eve"
+      }
+    },
+    {
+      "LogName": "Festival Sprites",
+      "Action": "EditImage",
+      "Target": "Characters/Juliet",
+      "FromFile": "assets/Characters/Juliet/Juliet_SpiritsEve.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "LocationName": "Custom_EastScarpeInn, Custom_EastScarpe",
+        "DayEvent": "spirit's eve"
+      }
+    },
+    {
+      "Logname": "Festival Sprites",
+      "Action": "EditImage",
+      "Target": "Portraits/Juliet",
+      "FromFile": "assets/Portraits/Juliet/Juliet_SpiritsEve.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "LocationName": "Custom_EastScarpeInn, Custom_EastScarpe",
+        "DayEvent": "spirit's eve"
+      }
+    },
+    //Schedules
+    {
+      "LogName": "Schedule",
+      "Action": "Load",
+      "Target": "Characters/schedules/Juliet",
+      "FromFile": "assets/schedules/JulietSchedule.json",
+      "When": {
+        "HasSeenEvent |contains=191393": "false" //has not seen Community Center opening = Joja still eopn
+      }
+    },
+    {
+      "LogName": "Schedule",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Juliet",
+      "Entries": {
+        "rain": "GOTO Sun"
+      },
+      "When": {
+        "DayofWeek": "Sunday"
+      }
+    },
+    {
+      "LogName": "Schedule",
+      "Action": "Load",
+      "Target": "Characters/schedules/Juliet",
+      "FromFile": "assets/schedules/JulietScheduleJojaClosed.json",
+      "When": {
+        "HasSeenEvent |contains=191393": true, //Community Center made
+        "HasFlag |contains=ccMovieTheater": false //theater not built
+      }
+    },
+    {
+      "LogName": "Schedule",
+      "Action": "Load",
+      "Target": "Characters/schedules/Juliet",
+      "FromFile": "assets/schedules/JulietScheduleTheater.json",
+      "When": {
+        "HasFlag |contains=ccMovieTheater": true, //theater built
+        "HasFlag |contains=ccMovieTheaterJoja": false, //not Joja theater
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false //No SVE
+      }
+    },
+    {
+      "LogName": "Schedule",
+      "Action": "Load",
+      "Target": "Characters/schedules/Juliet",
+      "FromFile": "assets/schedules/JulietScheduleJojaClosed.json",
+      "When": {
+        "HasFlag |contains=ccMovieTheater": true, //theater built
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true, //has SVE
+        "HasSeenEvent |contains=191393": "true" //Joja closed
+      }
+    },
+    //changes schedule if you encourage her to play drums (ES not installed)
+    {
+      "LogName": "Schedule",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Juliet",
+      "Entries": {
+        "Sat": "700 Custom_LK_LodgingHouse 21 21 1/900 Custom_LK_ClearingHouse 23 27 3/1100 SamHouse 16 18 0 Juliet_drums/1500 Beach 44 35 2/1800 Saloon 42 20 3/2400 Custom_LK_LodgingHouse 22 6 2 juliet_sleep"
+      },
+      "When": {
+        "HasDialogueAnswer": "8571103, 8571105"
+      }
+    },
+    //East Scarpe installed
+    {
+      "LogName": "Schedule - if East Scarp installed",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Juliet",
+      "Entries": {
+        "Sat": "700 Custom_LK_LodgingHouse 21 21 3/900 Custom_LK_LodgingHouse 28 7 0 Juliet_drums/950 Custom_LK_ClearingHouse 23 27 3/1030 Custom_EastScarpe 20 102 0/1400 Custom_EastScarpe 56 41 2/1700 Saloon 42 21 3/2400 Custom_LK_LodgingHouse 22 6 2 juliet_sleep"
+      },
+      "When": {
+        "HasSeenEvent": "86571101",
+        "HasMod": "LemurKat.EastScarpe.CP"
+      }
+    },
+    {
+      "LogName": "Schedule - if East Scarp installed",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Gremlin",
+      "Entries": {
+        "Sat": "700 Custom_LK_LodgingHouse 19 22 0 Gremlin_sit/900 Custom_LK_ClearingHouse 21 19 1 square_3_3/1010 Custom_LK_ClearingHouse 24 27 2 Gremlin_sit/1030 Custom_EastScarpe 20 108 2 square_5_4/1330 Custom_EastScarpe 19 102 1/1400 Custom_EastScarpe 57 40 2/1700 Saloon 41 22 1 Gremlin_sit/2400 Custom_LK_LodgingHouse 22 6 2 Gremlin_sleep"
+      },
+      "When": {
+        "HasSeenEvent": "86571101",
+        "HasMod": "LemurKat.EastScarpe.CP"
+      }
+    },
+    //Dialogue
+    {
+      "LogName": "Dialogue",
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Juliet",
+      "FromFile": "assets/dialogue/JulietDialogue.json"
+    },
+    {
+      "LogName": "Dialogue",
+      "Action": "Load",
+      "Target": "Characters/Dialogue/MarriageDialogueJuliet",
+      "FromFile": "assets/dialogue/MarriageDialogueJuliet.json"
+    },
+    {
+      "LogName": "Dialogue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueJuliet",
+      "Entries": {
+        "Rainy_Night_5": "{{i18n:juliet.marriage.juliet.rainy5}} {{i18n:juliet.marriage.juliet.rainy5.{{random: 1,2,3}} }}"
+      }
+    },
+    {
+      "LogName": "Schedule Dialogue",
+      "Action": "Load",
+      "Target": "Strings/schedules/Juliet",
+      "FromFile": "assets/dialogue/ScheduleDialogueJuliet.json"
+    },
+    {
+      "LogName": "Rainy Day Dialogue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/rainy",
+      "Entries": {
+        "Juliet": "{{i18n:juliet.rain}}",
+        "Jessie": "{{i18n:jessie.rain}}"
+      }
+    },
+    //Animations  
+    {
+      "LogName": "Animations",
+      "Action": "EditData",
+      "Target": "Data/animationDescriptions",
+      "Entries": {
+        "Juliet_work": "12 24 24 24/16 16 16 17 17 18 18 19 19 18 18 18 19 19 19 18 18 18 19 19 19 17 17 20 20 20 20 20 20 21 21 21 20 20 20 22 22 20 20 22 22 20 20 21 21 21 21/24 24 24 12",
+        "Juliet_drums": "8/29 30 31/8",
+        "juliet_sleep": "39/39/39",
+        "Juliet_yoyo": "0/32 32 33 33 34 34 35 35 35 35 35 35 35 35 35 35 35/0",
+        "Gremlin_sit": "4/16 16 16 16 17 17 17 17/4",
+        "Gremlin_sleep": "0/19/0"
+      }
+    },
+    {
+      "LogName": "Engagement Dialogue",
+      "Action": "EditData",
+      "Target": "Data/EngagementDialogue",
+      "Entries": {
+        "Juliet0": "{{i18n:juliet.engagement.juliet0}}",
+        "Juliet1": "{{i18n:juliet.engagement.juliet1}}"
+      }
+    },
+    //Changes Shane's schedule on rainy days
+    {
+      "LogName": "Schedule",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Shane",
+      "Entries": {
+        "rain": "700 Town 95 51 0/850 JojaMart 9 25 1/1700 Saloon 21 17 2 shane_drink/2300 AnimalShop 27 4 1 shane_sleep"
+      },
+      "When": {
+        "IsCommunityCenterComplete": false,
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+      }
+    },
+    //Events
+    {
+      "LogName": "Removes bushes from KIM",
+      "Action": "EditMap",
+      "Target": "Maps/Town",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 109,
+            "Y": 57
+          },
+          "Layer": "Paths",
+          "Remove": true
+        },
+        {
+          "Position": {
+            "X": 105,
+            "Y": 61
+          },
+          "Layer": "Paths",
+          "Remove": true
+        }
+      ],
+      "When": {
+        "HasMod": "Karmylla.ImmersiveMaps",
+        "HasSeenEvent |contains=86571101": false
+      }
+    },
+    //Loads Data/Events for areas without them (including some never used)
+    {
+      "LogName": "LodgingHouse Events",
+      "Action": "Load",
+      "Target": "Data/Events/Custom_LK_LodgingHouse,Data/Events/Custom_LK_ClearingHouse,Data/Events/Custom_LK_JojaBreakroom,Data/Events/Custom_LK_LodgingHouseBasement",
+      "FromFile": "assets/blank.json"
+    },
+    {
+      "Logname": "JojaMart Events",
+      "Action": "Load",
+      "Target": "Data/Events/JojaMart",
+      "FromFile": "assets/blank.json",
+      "When": {
+        "LoadJojaMart": true,
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP, Fellowclown.Nikolai": false
+      }
+    },
+    //4 and 8 heart events
+    {
+      "LogName": "Temp Actor Melon",
+      "Action": "Load",
+      "Target": "Characters/MelonJuliet",
+      "FromFile": "assets/img/melon.png"
+    },
+    {
+      "LogName": "Juliet - Lodging House",
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_LK_LodgingHouse",
+      "Entries": {
+        "86571100/f Juliet 500/t 900 1600/w sunny/p Juliet": "heavy/21 9/Juliet 28 7 0 farmer 13 13 0/skippable/animate Juliet false true 150 29 30 31/move farmer 14 0 0/emote farmer 16/pause 500/doAction 27 12/move farmer 0 -4 0/pause 1000/stopMusic/stopAnimation Juliet/pause 500/faceDirection Juliet 2/pause 500/jump Juliet 3/pause 500/emote Juliet 40/pause 500/speak Juliet \"{{i18n:86571100.01}}\"/move farmer 0 -2 1/faceDirection Juliet 3/quickQuestion #{{i18n:86571100.02}}#{{i18n:86571100.03}}#{{i18n:86571100.04}}(break)speak Juliet \"{{i18n:86571100.05}} [{{JessGift}}]\"(break)speak Juliet \"{{i18n:86571100.06}}\"(break)speak Juliet \"{{i18n:86571100.07}}\"/pause 500/speak Juliet \"{{i18n:86571100.08}}\"/pause 500/emote farmer 32/pause 500/speak Juliet \"{{i18n:86571100.09}}#$b#$q 86571102 null#{{i18n:86571100.10}}#$r 86571103 50 Jules_BandY#{{i18n:86571100.11}}#$r 86571103 25 Jules_BandM#{{i18n:86571100.12}}#$r 86571104 0 Jules_BandN#{{i18n:86571100.13}}#$r 86571104 -50 Jules_BandS#{{i18n:86571100.14}}#$r 8571105 25 Jules_BandP#{{i18n:86571100.15}}\"/pause 500/speak Juliet \"{{i18n:86571100.16}}\"/end dialogue Juliet \"{{i18n:86571100.17}}\""
+      }
+    },
+    {
+      "LogName": "Juliet 4 and 8-heart events",
+      "Action": "EditData",
+      "Target": "Data/Events/Town",
+      "Entries": {
+        "86571101/f Juliet 1000/t 1600 1800/d Sat Sun/w sunny": "none/-100 -100/Juliet 96 53 2 farmer 107 63 0/addTemporaryActor Gremlin 16 32 109 56 1 false/addConversationTopic JulietGremlin 3/animate Gremlin false true 300 22 22 23 23 23/skippable/viewport 100 59/playSound trashcan/move Juliet 0 3 1/pause 500/playSound dogWhining/jump Juliet 3/pause 500/emote Juliet 16/pause 500/playSound trashcan/pause 500/move Juliet 2 0 1/textAboveHead Juliet \"{{i18n:86571101.01}}\"/move Juliet 2 0 1/pause 1000/move Juliet 2 0 1/pause 1000/textAboveHead Juliet \"{{i18n:86571101.02}}\"/pause 1000/move farmer 0 -2 0/pause 500/stopAnimation Gremlin/pause 500/faceDirection Gremlin 3/shake Gremlin 250/showFrame Gremlin 18/pause 500/faceDirection Juliet 2/pause 500/speak Juliet \"{{i18n:86571101.03}}\"/pause 500/emote farmer 28/pause 500/playSound dog_bark/pause 500/shake Gremlin 250/playSound dog_bark/faceDirection Juliet 1/showFrame Juliet 26/pause 500/speak Juliet \"{{i18n:86571101.04}}\"/addObject 104 56 684 0/pause 500/emote farmer 40/showFrame Gremlin 12/pause 500/playSound dog_pant/move Gremlin -1 0 3/pause 500/move Gremlin -1 0 3/pause 500/playSound dog_bark/textAboveHead Juliet \"{{i18n:86571101.05}}\"/move Gremlin -2 0 1/animate Gremlin false true 250 26 27 26 27 12 12 12 12/advancedMove Juliet false -1 0 0 5 4 0/faceDirection Juliet 1/pause 1500/speak Juliet \"{{i18n:86571101.06}}\"/pause 500/faceDirection farmer 3/emote farmer 40/speak Juliet \"$q 86571116 null#{{i18n:86571101.07}}#$r 8651116 25 Juliet_Gremlin_Apologise#{{i18n:86571101.08}}#$r 8651116 0 Juliet_Gremlin_Charge#{{i18n:86571101.09}}#$r 8651118 -50 Juliet_Gremlin_Pest#{{i18n:86571101.10}}\"/pause 500/fork 8651118 Juliet_Gremlin_Disgust/pause 500/faceDirection Juliet 0/faceDirection farmer 0/speak Juliet \"{{i18n:86571101.11}}\"/removeSprite 104 56/stopAnimation Gremlin/showFrame Gremlin 0/pause 500/move Gremlin 0 2 2/pause 1000/emote Juliet 32/pause 500/move Gremlin 0 1 2/pause 1000/emote farmer 28/move Gremlin 0 1 2/textAboveHead Gremlin \"{{i18n:86571101.12}}\"/pause 500/warp Gremlin -100 -100/showFrame Juliet 27/pause 1000/emote Juliet 20/pause 500/faceDirection farmer 3/emote farmer 32/pause 1000/end dialogue Juliet \"{{i18n:86571101.13}}\"",
+        "Juliet_Gremlin_Disgust": "pause 500/emote Juliet 12/pause 500/faceDirection Juliet 0/pause 1000/emote farmer 28/pause 500/speak Juliet \"{{i18n:86571101.Juliet_Gremlin_Disgust.01}}\"/pause 1000/end",
+        "86571120/e 86571110/e 86571141/f Juliet 2000/p Juliet/w sunny/t 1000 1800": "continue/93 28/Juliet 94 25 1 farmer 94 34 0 {{bossGuy}} 94 45 0/skippable/addTemporaryActor MelonJuliet 16 16 -100 -100 0 false/animate Juliet false false 150 49 49 49 49 50 50 51/warp MelonJuliet 95 25/speed MelonJuliet 7/playSound throw/move MelonJuliet 6 0 0/warp MelonJuliet -100 -100/playSound slimedead/temporaryAnimatedSprite Maps\\springobjects 240 160 16 16 100 1 9999 101 24 false false 1 0.0 1 0 0 0/pause 500/animate Juliet false false 150 49 49 49 49 50 50 51/warp MelonJuliet 95 25/speed MelonJuliet 7/playSound throw/move MelonJuliet 6 0 0/warp MelonJuliet -100 -100/playSound slimedead/temporaryAnimatedSprite Maps\\springobjects 240 160 16 16 100 1 9999 101 24 false false 1 0.0 1 0 0 0/emote farmer 8/showFrame Juliet 49/pause 500/showFrame Juliet 50/move farmer 0 -7 0/pause 500/jump Juliet 2/showFrame Juliet 51/playSound slimedead/temporaryAnimatedSprite Maps\\springobjects 240 160 16 16 100 1 9999 101 24 false false 1 0.0 1 0 0 0/showFrame Juliet 0/emote Juliet 12/speak Juliet \"{{i18n:86571120.01}}\"/quickQuestion #{{i18n:86571120.02}}#{{i18n:86571120.03}}#{{i18n:86571120.04}}(break)speak Juliet \"{{i18n:86571120.05}}\"(break)speak Juliet \"{{i18n:86571120.06}}\"(break)speak Juliet \"{{i18n:86571120.07}}\"/pause 500/speak Juliet \"{{i18n:86571120.08}}\"/emote farmer 40/showFrame Juliet 49/pause 500/speed {{bossGuy}} 3/move {{bossGuy}} 0 -10 0/showFrame Juliet 50/jump {{bossGuy}} 3/pause 500/emote {{bossGuy}} 16/speed {{bossGuy}} 7/move {{bossGuy}} 0 -5 0/emote {{bossGuy}} 16/pause 500/speak {{bossGuy}} \"What are you doing?!!$3\"/faceDirection farmer 2/faceDirection Juliet 2/jump Juliet 3/textAboveHead Juliet \"{{i18n:86571120.09}}\"/speed Juliet 3/move Juliet 0 -2 0 true/speed farmer 3/move farmer 0 -2 0 true/globalFade/viewport -2000 -2000/warp Juliet 46 33/warp farmer 45 33/warp {{bossGuy}} -100 -100/faceDirection Juliet 3/faceDirection farmer 1/positionOffset farmer 0 6/viewport 43 35/pause 500/faceDirection Juliet 1/pause 500/faceDirection Juliet 3/pause 500/textAboveHead Juliet \"{{i18n:86571120.10}}\"/speak Juliet \"{{i18n:86571120.11}}\"/emote farmer 60/speak Juliet \"{{i18n:86571120.12}}\"/pause 500/faceDirection Juliet 1/playMusic desolate/pause 500/emote Juliet 40/speak Juliet \"{{i18n:86571120.13}}\"/pause 500/shake Juliet 250/pause 500/move Juliet 3 0 1/pause 500/emote Juliet 28/pause 500/move farmer 3 0 1/pause 500/faceDirection Juliet 3/pause 500/emote Juliet 60/pause 500/speak Juliet \"{{i18n:86571120.14}}\"/pause 500/emote farmer 20/speak Juliet \"{{i18n:86571120.15}}\"/pause 500/emote Juliet 20/emote farmer 32/pause 400/speak Juliet \"{{i18n:86571120.16}}\"/pause 500/emote farmer 28/pause 1000/end",
+        "86571141/e 86571101/t 1700 2000": "nightTime/40 57/Juliet 41 57 0 Gremlin 42 57 3 farmer 30 58 1/skippable/pause 500/playSound dogWhining/pause 500/faceDirection Juliet 1/pause 500/showFrame Juliet 26/speak Juliet \"{{i18n:86571141.01}}\"/shake Gremlin 450/move farmer 6 0 1/pause 500/faceDirection Juliet 1/speak Juliet \"{{i18n:86571141.02}}\"/pause 500/jump Gremlin 5/playSound dog_bark/move Gremlin 0 1 3/faceDirection Juliet 2/emote Juliet 16/speak Juliet \"{{i18n:86571141.03}}\"/pause 500/emote farmer 60/pause 500/emote Juliet 40/playSound dog_bark/pause 500/speak Juliet \"$q 86571103 null#{{i18n:86571141.04}}#$r 86571104 25 GremlinYes#{{i18n:86571141.05}}#$r 86571105 50 GremlinYours#{{i18n:86571141.06}}#$r 86571105 -50 GremlinNo#{{i18n:86571141.07}}\"/fork 86571105 GremlinJules/pause 500/speak Juliet \"{{i18n:86571141.08}}\"/pause 500/playSound dog_bark/faceDirection Juliet 1/pause 500/showFrame Juliet 26/speak Juliet \"{{i18n:86571141.09}}\"/pause 500/faceDirection Juliet 1/move Gremlin -4 0 3 true/faceDirection Juliet 3/showframe 34/playSound dog_pant/speak Juliet \"{{i18n:86571141.10}}\"/pause 2000/faceDirection Juliet 1/pause 500/faceDirection Gremlin 1/pause 500/playSound dogWhining/move Gremlin 4 0 3/playSound dog_bark/jump Juliet 5/faceDirection Juliet 2/speak Juliet \"{{i18n:86571141.11}}\"/pause 500/playSound dog_bark/faceDirection farmer 1/faceDirection Juliet 3/speak Juliet \"{{i18n:86571141.12}}\"/pause 500/emote farmer 32/pause 500/switchEvent GremlinJules",
+        "GremlinJules": "pause 500/move Gremlin -1 0 0/faceDirection Juliet 2/speak Juliet \"{{i18n:86571141.GremlinJules.01}}\"/pause 500/jump Gremlin 4/pause 500/playSound dog_bark/emote Gremlin 20/pause 500/emote Juliet 20/pause 500/speak Juliet \"{{i18n:86571141.GremlinJules.02}}\"/pause 500/playSound dog_bark/pause 200/warp Gremlin -100 -100/showFrame Juliet 27/pause 2000/end",
+        "6398311/e 6398310/d 1100 1600/A JulietParents": "{{season}}_day_ambient/-100 -100/Juliet 2 53 2 farmer 0 54 1 Lewis 27 67 1 Jessie 30 67 3/skippable/viewport 5 54 clamp true/addTemporaryActor Mr.Donaghue 16 32 29 66 2 true/addTemporaryActor Ms.Donaghue 16 32 28 66 2 true/pause 500/move farmer 2 0 0/emote farmer 16/pause 1000/speak Juliet \"{{i18n:6398311.01}}\"/emote Juliet 28/pause 1000/speak Juliet \"{{i18n:6398311.02}}\"/quickQuestion #{{i18n:6398311.03}}#{{i18n:6398311.04}}#{{i18n:6398311.05}}(break)emote Juliet 20\\pause 500\\speak Juliet \"{{i18n:6398311.06}}\"(break)emote Juliet 20\\pause 500\\speak Juliet \"{{i18n:6398311.07}}\"(break)textAboveHead Juliet \"{{i18n:6398311.08}}\"\\pause 500\\speak Juliet \"{{i18n:6398311.09}}\"/pause 1000/faceDirection Juliet 1/pause 1000/faceDirection Juliet 2/pause 500/speak Juliet \"{{i18n:6398311.10}}\"/pause 1000/emote Juliet 40/pause 1000/speak Juliet \"{{i18n:6398311.11}}\"/pause 500/emote farmer 56/pause 500/emote Juliet 60/pause 500/faceDirection Juliet 1/pause 1000/faceDirection farmer 1/pause 500/textAboveHead Juliet \"{{i18n:6398311.12}}\"/pause 1000/fade/viewport -1000 -1000/warp Juliet 20 69/warp farmer 20 70/pause 1000/viewport 28 70/pause 1000/faceDirection Ms.Donaghue 1/faceDirection Mr.Donaghue 3/pause 500/textAboveHead Ms.Donaghue \"{{i18n:6398311.13}}\"/speak Ms.Donaghue \"{{i18n:6398311.14}}\"/pause 1000/emote Lewis 12/pause 500/speak Ms.Donaghue \"{{i18n:6398311.15}}\"/textAboveHead Jessie \"{{i18n:6398311.16}}\"/faceDirection Juliet 2/faceDirection farmer 0/emote Juliet 28/pause 500/advancedMove Juliet false 8 0 4 1000/advancedMove farmer false 9 0 0 -1 4 1000/pause 6000/playMusic bigDrums/textAboveHead Ms.Donaghue \"{{i18n:6398311.17}}\"/pause 1000/advancedMove Lewis false 0 7 1 0 1 1000/advancedMove Jessie false 0 7 -1 0 3 1000/faceDirection Ms.Donaghue 2/faceDirection Mr.Donaghue 2/speak Ms.Donaghue \"{{i18n:6398311.18}}\"/pause 500/speak Juliet \"{{i18n:6398311.19}}\"/pause 500/textAboveHead Mr.Donaghue \"{{i18n:6398311.20}}\"/pause 500/speak Mr.Donaghue \"{{i18n:6398311.21}}\"/pause 1000/speak Juliet \"{{i18n:6398311.22}}\"/pause 1000/faceDirection Jessie 0/faceDirection Lewis 0/emote Mr.Donaghue 40/pause 1000/speak Mr.Donaghue \"{{i18n:6398311.23}}\"/faceDirection Ms. Donaghue 1/pause 1000/faceDirection Ms.Donaghue 2/move Ms.Donaghue 0 1 2/pause 400/speak Ms.Donaghue \"{{i18n:6398311.24}}\"/pause 500/move Mr.Donaghue 0 1 2/speak Mr.Donaghue \"{{i18n:6398311.25}}\"/pause 1000/faceDirection Juliet 1/faceDirection farmer 3/emote Juliet 28/pause 1000/emote farmer 20/pause 1000/faceDirection Juliet 0/faceDirection farmer 0/textAboveHead Juliet \"{{i18n:6398311.26}}\"/stopMusic/pause 500/speak Juliet \"{{i18n:6398311.27}}\"/pause 500/jump Mr.Donaghue 4 true/emote Mr.Donaghue 16 true/jump Ms.Donaghue 4 true/emote Ms.Donaghue 16 true/pause 1000/speak Mr.Donaghue \"{{i18n:6398311.28}}\"/pause 500/faceDirection Juliet 1/faceDirection farmer 3/pause 1000/faceDirection Juliet 0/move Juliet 0 -1 0/faceDirection farmer 0/textAboveHead Juliet \"{{i18n:6398311.29}}\"/pause 1000/speak Ms.Donaghue \"{{i18n:6398311.30}}\"/pause 1000/emote Juliet 12/move farmer 0 -1 0/speak Juliet \"{{i18n:6398311.31}}\"/playMusic desolate/speak Juliet \"{{i18n:6398311.32}}\"/shake Juliet 500/textAboveHead Ms.Donaghue \"{{i18n:6398311.33}}\"/pause 500/speak Juliet \"{{i18n:6398311.34}}\"/pause 1000/speak Juliet \"{{i18n:6398311.35}}\"/faceDirection Juliet 1/faceDirection farmer 3/emote Juliet 60/speak Juliet \"{{i18n:6398311.36}}\"/textAboveHead Ms.Donaghue \"{{i18n:6398311.37}}\"/speak Juliet \"{{i18n:6398311.38}}\"/pause 500/emote Mr.Donaghue 16/faceDirection Juliet 2/faceDirection farmer 2/move Juliet 0 1 2/pause 500/move farmer 0 1 2/speak Juliet \"{{i18n:6398311.39}}\"/emote Lewis 16/emote Jessie 20/pause 500/advancedMove Lewis false 0 -4 -1 0 0 -2 1 1000/advancedMove Jessie false 0 -4 1 0 0 -2 3 1000/pause 500/faceDirection Juliet 1/faceDirection farmer 3/speak Juliet \"{{i18n:6398311.40}}\"/emote farmer 32/pause 1000/faceDirection Juliet 0/faceDirection farmer 0/speak Juliet \"{{i18n:6398311.41}}\"/textAboveHead Mr.Donaghue \"{{i18n:6398311.42}}\"/faceDirection Lewis 0/faceDirection Jessie 0/pause 500/textAboveHead Jessie \"{{i18n:6398311.43}}\"/pause 1000/speak Ms.Donaghue \"{{i18n:6398311.44}}\"/pause 1000/emote Lewis 12/stopMusic/pause 500/speak Juliet \"{{i18n:6398311.45}}\"/playMusic SettlingIn/speak Juliet \"{{i18n:6398311.46}}\"/move Juliet 0 -1 3/faceDirection Lewis 1/pause 500/speak Juliet \"{{i18n:6398311.47}}\"/jump Lewis 5/emote Lewis 28/pause 500/faceDirection Ms.Donaghue 1/faceDirection Mr.Donaghue 3/emote Ms.Donaghue 12/emote Lewis 8/pause 500/emote Mr.Donaghue 40/pause 1000/faceDirection Ms.Donaghue 2/faceDirection Mr.Donaghue 2/textAboveHead Ms.Donaghue \"{{i18n:6398311.48}}\"/faceDirection Juliet 0/faceDirection farmer 0/speak Ms.Donaghue \"{{i18n:6398311.49}}\"/pause 1000/faceDirection Mr.Donaghue 3/faceDirection Ms.Donaghue 1/pause 500/textAboveHead Juliet \"{{i18n:6398311.50}}\"/pause 2000/end"
+      }
+    },
+    // 6-heart event
+    {
+      "LogName": "Juliet 6-heart - jojaMart",
+      "Action": "EditData",
+      "Target": "Data/Events/JojaMart",
+      "Entries": {
+        "86571110/f Juliet 1500/e 86571101/d Sat Sun/t 0900 1700": "none/13 11/Juliet 2 8 1 Morris 4 8 3 farmer 2 13 0/skippable/pause 500/speak Juliet \"{{i18n:86571110.01}}\"/emote Morris 12/emote Juliet 12/shake Juliet 350/faceDirection Juliet 0/textAboveHead Juliet \"{{i18n:86571110.02}}\"/speed Juliet 7/move Juliet 0 -4 0/warp Juliet -100 -100/playSound doorClose/speed farmer 5/move farmer 0 -5 1/textAboveHead Morris \"{{i18n:86571110.03}}\"/emote farmer 40/speed farmer 5/move farmer 0 -4 0/warp farmer -100 -100/playSound doorClose/globalFade/viewport -2000 -2000/changeLocation Custom_LK_JojaBreakRoom/viewport -1000 -1000/warp Morris -100 -100/warp Juliet 2 5/faceDirection Juliet 1/advancedMove Juliet false 6 0 -6 0/viewport 11 7/textAboveHead Juliet \"{{i18n:86571110.04}}\"/pause 3000/emote Juliet 12/warp farmer 2 10/pause 500/move farmer 0 -2 0/showFrame Juliet 8/quickQuestion #{{i18n:86571110.05}}#{{i18n:86571110.06}}#{{i18n:86571110.07}}#{{i18n:86571110.08}}(break)jump Juliet\\faceDirection Juliet 2\\speak Juliet \"{{i18n:86571110.09}}\"(break)jump Juliet\\faceDirection Juliet 2\\speak Juliet \"{{i18n:86571110.10}}\"(break)jump Juliet\\faceDirection Juliet 2\\speak Juliet \"{{i18n:86571110.11}}\"(break)jump Juliet\\faceDirection Juliet 2\\speak Juliet \"{{i18n:86571110.12}}\"/pause 500/faceDirection Juliet 0/speak Juliet \"{{i18n:86571110.13}}\"/question null \"#{{i18n:86571110.q1}}#{{i18n:86571110.q2}}\"/playMusic sappypiano/speak Juliet \"{{i18n:86571110.14}}\"/pause 500/emote farmer 28/pause 500/speak Juliet \"{{i18n:86571110.15}}\"/pause 500/advancedMove Juliet false 4 0 -4 0/speak Juliet \"{{i18n:86571110.16}}\"/pause 500/faceDirection Juliet 0/pause 500/move farmer 0 -2 0/move Juliet -1 0 3/shake Juliet 350/pause 500/quickQuestion #{{i18n:86571110.17}}#{{i18n:86571110.18}}#{{i18n:86571110.19}}(break)emote Juliet 12\\speak Juliet \"{{i18n:86571110.20}}\"(break)emote Juliet 40\\speak Juliet \"{{i18n:86571110.21}}\"(break)faceDirection Juliet 3\\pause 500\\shake Juliet 250\\speak Juliet \"{{i18n:86571110.22}}\"/pause 500/emote farmer 28/move Juliet 0 2 1/faceDirection farmer 2/speak Juliet \"{{i18n:86571110.23}}\"/pause 500/emote farmer 40/pause 500/speak Juliet \"{{i18n:86571110.24}}\"/pause 500/emote Juliet 40/pause 500/speak Juliet \"{{i18n:86571110.25}}\"/question fork0 \"{{i18n:86571110.26}}#{{i18n:86571110.27}}#{{i18n:86571110.28}}#\"/fork WalkAway/pause 500/move farmer 0 1 3/positionOffset farmer -4 0/speak Juliet \"{{i18n:86571110.29}}\"/pause 500/emote farmer 32/pause 500/animate farmer true true 1000 89/positionOffset farmer -2 0/showFrame Juliet 48/positionOffset Juliet 4 0/speak Juliet \"{{i18n:86571110.30}}\"/emote Juliet 20/stopAnimation farmer/pause 1000/end"
+      },
+      "When": {
+        "HasSeenEvent |contains=191393": false
+      }
+    },
+    {
+      "LogName": "Juliet - Joja Breakroom",
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_LK_JojaBreakRoom",
+      "Entries": {
+        "WalkAway": "emote farmer 12/pause 500/move farmer 0 4 0/faceDirection Juliet 2/emote Juliet 28/warp farmer -100 -100/friendship Juliet -1000/speak Juliet \"{{i18n:WalkAway.01}}\"/faceDirection Juliet 0/shake Juliet 500/end dialogue Juliet \"{{i18n:WalkAway.02}}\""
+      }
+    },
+    {
+      "LogName": "Juliet 6-heart - Community Center",
+      "Action": "EditData",
+      "Target": "Data/Events/Town",
+      "Entries": {
+        "86571110/f Juliet 1500/e 86571101/d Sat Sun/t 0900 1700": "none/54 26/Juliet 52 24 1 Lewis 54 24 3 farmer 52 29 0/skippable/pause 500/speak Juliet \"{{i18n:86571110.cc.01}}\"/emote Lewis 12/emote Juliet 12/shake Juliet 350/faceDirection Juliet 0/textAboveHead Juliet \"{{i18n:86571110.cc.02}}\"/speed Juliet 7/move Juliet 0 -4 0/warp Juliet -100 -100/playSound doorClose/speed farmer 5/move farmer 0 -5 1/textAboveHead Lewis \"{{i18n:86571110.cc.03}}\"/speak Lewis \"{{i18n:86571110.cc.04}}\"/emote farmer 40/speed farmer 5/move farmer 0 -4 0/warp farmer -100 -100/playSound doorClose/globalFade/viewport -2000 -2000/changeLocation CommunityCenter/viewport -1000 -1000/warp Lewis -100 -100/warp Juliet 32 14/faceDirection Juliet 1/advancedMove Juliet false 6 0 -6 0/viewport 32 14/textAboveHead Juliet \"{{i18n:86571110.cc.05}}\"/pause 3000/warp farmer 32 23/emote Juliet 12/move farmer 0 -4 0/pause 1500/move farmer 0 -2 0/showFrame Juliet 8/quickQuestion #{{i18n:86571110.cc.06}}#{{i18n:86571110.cc.07}}#{{i18n:86571110.cc.08}}#{{i18n:86571110.cc.09}}(break)jump Juliet\\faceDirection Juliet 2\\speak Juliet \"{{i18n:86571110.cc.10}}\"(break)jump Juliet\\faceDirection Juliet 2\\speak Juliet \"{{i18n:86571110.cc.11}}\"(break)jump Juliet\\faceDirection Juliet 2\\speak Juliet \"{{i18n:86571110.cc.12}}\"(break)jump Juliet\\faceDirection Juliet 2\\speak Juliet \"{{i18n:86571110.cc.13}}\"/pause 500/faceDirection Juliet 0/speak Juliet \"{{i18n:86571110.cc.14}}\"/question null \"#{{i18n:86571110.q1}}#{{i18n:86571110.q2}}\"/playMusic sappypiano/speak Juliet \"{{i18n:86571110.cc.15}}\"/pause 500/emote farmer 28/pause 500/speak Juliet \"{{i18n:86571110.cc.16}}\"/pause 500/advancedMove Juliet false 4 0 -4 0/speak Juliet \"{{i18n:86571110.cc.17}}\"/pause 500/faceDirection Juliet 0/pause 500/move farmer 0 -2 0/move Juliet -1 0 3/shake Juliet 350/pause 500/quickQuestion #{{i18n:86571110.cc.18}}#{{i18n:86571110.cc.19}}#{{i18n:86571110.cc.20}}(break)emote Juliet 12\\speak Juliet \"{{i18n:86571110.cc.21}}\"(break)emote Juliet 40\\speak Juliet \"{{i18n:86571110.cc.22}}\"(break)faceDirection Juliet 3\\pause 500\\shake Juliet 250\\speak Juliet \"{{i18n:86571110.cc.23}}\"/pause 500/emote farmer 28/move Juliet 0 2 1/faceDirection farmer 2/speak Juliet \"{{i18n:86571110.cc.24}}\"/pause 500/emote farmer 40/pause 500/speak Juliet \"{{i18n:86571110.cc.25}}\"/pause 500/emote Juliet 40/pause 500/speak Juliet \"{{i18n:86571110.cc.26}}\"/question fork0 \"{{i18n:86571110.cc.27}}#{{i18n:86571110.cc.28}}#{{i18n:86571110.cc.29}}#\"/fork WalkAway/pause 500/move farmer 0 1 3/positionOffset farmer -4 0/speak Juliet \"{{i18n:86571110.cc.30}}\"/pause 500/emote farmer 32/pause 500/showFrame farmer 89/positionOffset farmer -2 0/showFrame Juliet 48/positionOffset Juliet 4 0/speak Juliet \"{{i18n:86571110.cc.31}}\"/emote Juliet 20/pause 1000/end",
+        "63984301/l ccMovieTheater/e 191393": "continue/96 53/Juliet 96 53 0 farmer 90 53 1 Jessie 71 53 1/addConversationTopic Juliet_JojaRuins 7/skippable/pause 1000/speak Juliet \"{{i18n:63984301.01}}\"/move farmer 5 0 1 true/speak Juliet \"{{i18n:63984301.02}}\"/faceDirection Juliet 3/speak Juliet \"{{i18n:63984301.03}}\"/quickQuestion #{{i18n:63984301.04}}#{{i18n:63984301.05}}#{{i18n:63984301.06}}#{{i18n:63984301.07}}(break)emote Juliet 12\\pause 500\\speak Juliet \"{{i18n:63984301.08}}\"(break)emote Juliet 16\\pause 500\\speak Juliet \"{{i18n:63984301.09}}\"(break)emote Juliet 12\\pause 500\\friendship Juliet -50\\speak Juliet \"{{i18n:63984301.10}}\"(break)emote Juliet 40\\pause 500\\speak Juliet \"{{i18n:63984301.11}}\"/speak Juliet \"{{i18n:63984301.12}}\"/emote farmer 8/pause 1000/faceDirection Juliet 2/speak Juliet \"{{i18n:63984301.13}}\"/pause 500/emote Juliet 40/pause 1000/speak Juliet \"{{i18n:63984301.14}}\"/move Juliet 2 0 1/pause 1000/advancedMove Jessie false 23 0/speak Juliet \"{{i18n:63984301.15}}\"/pause 500/shake Juliet 1000/move farmer 2 0 1/showFrame 35/positionOffset farmer 8 0/shake Juliet 1000/pause 2000/textAboveHead Jessie \"{{i18n:63984301.16}}\"/faceDirection farmer 3/pause 500/faceDirection Juliet 3/move farmer 0 1 3/speak Jessie \"{{i18n:63984301.17}}\"/move Juliet -3 0 3/move farmer -1 0 0/move farmer 0 -1 3/textAboveHead Juliet \"{{i18n:63984301.18}}\"/pause 1000/faceDirection Juliet 0/faceDirection Jessie 0/pause 1000/textAboveHead Jessie \"{{i18n:63984301.19}}\"/pause 3000/end"
+      },
+      "When": {
+        "HasSeenEvent |contains=191393": true
+      }
+    },
+    {
+      "LogName": "Juliet 6-heart - Community Center",
+      "Action": "EditData",
+      "Target": "Data/Events/CommunityCenter",
+      "Entries": {
+        "WalkAway": "emote farmer 12/pause 500/move farmer 0 8 0 true/faceDirection Juliet 2/emote Juliet 28/warp farmer -100 -100/friendship Juliet -1000/speak Juliet \"{{i18n:WalkAway.01}}\"/faceDirection Juliet 0/shake Juliet 500/end dialogue Juliet \"{{i18n:WalkAway.02}}\""
+      }
+    },
+    // 10 heart event
+    {
+      "Action": "Load",
+      "Target": "Maps/GTCemetery",
+      "FromFile": "assets/Maps/TempMaps/{{season}}_Cemetery.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/crowLK",
+      "FromFile": "assets/img/crow.png"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Events/Farm",
+      "Entries": {
+        "86571130/f Juliet 2502/e 6398421/A Juliet_Prop/x Juliet_invite": "null",
+        "86571133/f Juliet 2502/e 502261/x Juliet_invite": "null",
+        "63984302/e 63984301/t 600 1200": "continue/64 15/farmer 64 16 2 Juliet 64 18 0/skippable/pause 1500/speak Juliet \"{{i18n:63984302.01}}\"/pause 500/emote Juliet 60/pause 1000/speak Juliet \"{{i18n:63984302.02}}\"/pause 1000/emote farmer 28/pause 1000/faceDirection Juliet 2/pause 1000/faceDirection Juliet 0/speak Juliet \"{{i18n:63984302.03}}\"/pause 1000/emote farmer 40/pause 1000/speak Juliet \"{{i18n:63984302.04}}\"/jump farmer 3/emote farmer 12/speak Juliet \"{{i18n:63984302.05}}\"/emote farmer 32/pause 1000/speak Juliet \"{{i18n:63984302.06}}\"/emote farmer 56/pause 1000/faceDirection Juliet 2/pause 1000/end",
+        //silent event to set HasSeenEvent if you are unable to trigger the above due to theater being finished before update installed
+        "63984302/k 63984301/n ccMovieTheater/e 191393": "none/-100 -100/farmer -1000 -1000 0/pause 50/end"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Events/Farm",
+      "Entries": {
+        "6398420/e 191393/e 86571120/f Juliet 2000/t 600 1200": "continue/64 15/farmer 64 16 2 Juliet 64 18 0/skippable/pause 500/emote Juliet 32/speak Juliet \"{{i18n:6398420.01}}\"/pause 500/faceDirection Juliet 1/pause 500/faceDirection Juliet 0/emote Juliet 28/pause 1500/speak Juliet \"{{i18n:6398420.02}}\"/emote farmer 40/pause 500/speak Juliet \"{{i18n:6398420.03}}\"/pause 500/faceDirection Juliet 3/pause 500/faceDirection Juliet 0/speak Juliet \"{{i18n:6398420.04}}\"/pause 500/faceDirection Juliet 2/pause 500/emote Juliet 40/faceDirection Juliet 0/speak Juliet \"{{i18n:6398420.05}}\"/pause 500/speak Juliet \"{{i18n:6398420.06}}\"/pause 500/emote farmer 32/faceDirection Juliet 2/pause 1000/end"
+      },
+      "When": {
+        "HasSeenEvent": "63984302"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "Juliet_invite": "{{i18n:juliet_invite}}[#]{{i18n:juliet_invite.title}}",
+        "Juliet_Vet": "{{i18n:juliet_vet}}%item conversationTopic JulietVet 7 %% [#]{{i18n:juliet_vet.title}}",
+        "Juliet_VetDone": "{{i18n:juliet_vetdone}}[#]{{i18n:juliet_vetdone.title}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Events/BusStop",
+      "Entries": {
+        "86571131/t 1700 1900/n Juliet_invite": "continue/22 11/farmer 22 19 0 Juliet 23 10 0/skippable/pause 500/move farmer 0 -4 0/faceDirection Juliet 2/emote Juliet 20/move farmer 0 -1 0/move Juliet 0 1 2/speak Juliet \"{{i18n:86571131.01}}\"/emote farmer 32/pause 1500/emote farmer 8/pause 1000/speak Juliet \"{{i18n:86571131.02}}\"/faceDirection Juliet 3/speak Juliet \"{{i18n:86571131.03}}\"/pause 500/move farmer 0 -4 0/globalFade/viewport -1000 -1000/playMusic none/pause 800/playSound busDriveOff/pause 4000/changeToTemporaryMap GTCemetery false/speak Juliet \"{{i18n:86571131.04}}\"/Message \"Juliet is shaking.\"/pause 1000/playSound busDoorOpen/speak Juliet \"{{i18n:86571131.05}}\"/pause 500/warp Juliet 11 25/faceDirection Juliet 1/warp farmer 12 25/faceDirection farmer 0/playMusic {{season}}_day_ambient/viewport 17 17/advancedMove Juliet false 0 -10/move farmer 0 -10 0/pause 1000/faceDirection Juliet 1 true/faceDirection farmer 3 true/pause 500/speak Juliet \"{{i18n:86571131.06}}\"/emote farmer 32/pause 500/faceDirection Juliet 3/pause 500/faceDirection Juliet 1/speak Juliet \"{{i18n:86571131.07}}\"/advancedMove Juliet false 0 -4 -2 0 -1 0/move farmer 0 -4 3/move farmer -3 0 0/viewport move 0 -2 2000 true/faceDirection farmer 3 true/faceDirection Juliet 0/pause 2500/faceDirection farmer 0/Message \"{{i18n:86571131.14}}\"/pause 500/speak Juliet \"{{i18n:86571131.08}}\"/pause 500/faceDirection Juliet 1 true/faceDirection farmer 3 true/pause 500/emote Juliet 20/pause 500/faceDirection Juliet 0/speak Juliet \"{{i18n:86571131.09}}\"/pause 500/faceDirection Juliet 1/pause 400/faceDirection Juliet 0/speak Juliet \"{{i18n:86571131.10}}\"/pause 500/addObject 8 10 562/pause 1500/faceDirection Juliet 1/pause 500/speak Juliet \"{{i18n:86571131.11}}\"/{{10HeartReact}}/addTemporaryActor crowLK 16 32 20 9 3 false/move crowLK -12 0 3/pause 1500/showFrame crowLK 16/playSound crow/pause 500/jump Juliet 2/pause 1000/animate crowLK false false 1000 16 17 16/faceDirection Juliet 0 true/faceDirection farmer 0 true/pause 500/emote Juliet 8/pause 4000/textAboveHead Juliet \"{{i18n:86571131.12}}\"/pause 1000/faceDirection farmer 3/emote farmer 16/playSound crow/faceDirection Juliet 1/pause 1000/emote Juliet 60/pause 3000/end dialogue Juliet \"{{i18n:86571131.13}}\""
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Events/Beach",
+      "Entries": {
+        "6398421/e 6398420/f Juliet 2000/t 1700 2300/w sunny/i 348": "ocean/36 36/Juliet 42 36 2 farmer 26 35 1/ambientLight 50 120 120/addConversationTopic Juliet_Prop 5/skippable/pause 500/move farmer 15 0 2 true/pause 1000/faceDirection Juliet 3/speak Juliet \"{{i18n:6398421.01}}\"/pause 500/emote farmer 32/addObject 41 33 348/showFrame 9/pause 1000/move Juliet 0 -1 3/removeSprite 41 33/removeItem 348/faceDirection farmer 1/pause 500/speak Juliet \"{{i18n:6398421.02}}\"/pause 500/faceDirection Juliet 0/playSound gulp/pause 500/faceDirection Juliet 2/pause 1000/emote Juliet 40/pause 500/emote farmer 8/pause 500/faceDirection Juliet 3/speak Juliet \"{{i18n:6398421.03}}\"/faceDirection farmer 2/showFrame farmer 90/pause 1000/farmerEat 348/pause 4000/pause 500/pause 500/faceDirection Juliet 3/faceDirection farmer 1/playMusic sappypiano/pause 500/speak Juliet \"{{i18n:6398421.04}}\"/pause 500/emote farmer 8/pause 1500/speak Juliet \"{{i18n:6398421.05}}\"/pause 500/faceDirection Juliet 1/faceDirection farmer 1/pause 500/speak Juliet \"{{i18n:6398421.06}}\"/pause 500/faceDirection Juliet 3/pause 500/speak Juliet \"{{i18n:6398421.07}} [(O)458]\"/pause 500/emote Juliet 28/pause 500/emote farmer 40/pause 1500/speak Juliet \"{{i18n:6398421.q1}}#$b#$q 639897 null#{{i18n:6398421.q2}}#$r 639899 100 Juliet_Date_Yes#{{i18n:6398421.a1}}#$r 639898 -250 Juliet_Date_No#{{i18n:6398421.a2}}#$r 639898 -500 Juliet_Date_HellNo#{{i18n:6398421.a3}}#$r 639896 0 Juliet_NoMarried#{{i18n:6398421.a4}}\"/fork 639899 Juliet_Dating/fork 639896 Juliet_Married/pause 500/faceDirection Juliet 1/move Juliet 2 0 1/speak Juliet \"{{i18n:6398421.08}}\"/pause 500/faceDirection Juliet 3/pause 500/emote farmer 28/speak Juliet \"{{i18n:6398421.09}}\"/emote farmer 60/pause 500/emote Juliet 32/pause 1000/end",
+        "Juliet_Dating": "pause 500/speak Juliet \"{{i18n:6398421.Juliet_Dating.01}}\"/pause 500/faceDirection Juliet 2 true/faceDirection farmer 2 true/positionOffset Juliet -20 0/emote farmer 32/emote Juliet 20/pause 2000/end dialogue \"{{i18n:6398421.Juliet_Dating.02}}\"",
+        "Juliet_Married": "pause 500/faceDirection Juliet 1/move Juliet 2 0 1/speak Juliet \"{{i18n:6398421.Juliet_Married.01}}\"/pause 500/faceDirection Juliet 3/pause 500/emote farmer 28/speak Juliet \"{{i18n:6398421.Juliet_Married.02}}\"/emote farmer 60/pause 500/emote Juliet 32/pause 1000/end"
+      }
+    },
+    //14 heart event
+    {
+      "Action": "Include",
+      "FromFile": "assets/TalentShow.json"
+    },
+    //Parental Confrontation
+    {
+      "LogName": "Mother Sprite",
+      "Action": "Load",
+      "Target": "Characters/Ms.Donaghue, Characters/Mr.Donaghue, Portraits/Ms.Donaghue, Portraits/Mr.Donaghue",
+      "FromFile": "assets/{{target}}.png"
+    },
+    {
+      "LogName": "Juliet's parental visit",
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_LK_ClearingHouse",
+      "Entries": {
+        "6398310/f Juliet 2500/f Jessie 2500/f Lewis 2000/e 6398444/o Juliet/w sunny/t 1200 1800": "{{season}}_day_ambient/25 10/Juliet -100 -100 0 Jessie 24 11 1 farmer 23 15 0 Gremlin 27 11 1/addConversationTopic JulietParents 5/skippable/advancedMove Gremlin true 3 0 0 1 -3 0 3 1000 0 -1/move farmer 0 -4 1/faceDirection Jessie 3/pause 500/speak Jessie \"{{i18n:6398310.01}}\"/emote farmer 8 /pause 500/speak Jessie \"{{i18n:6398310.02}}\"/pause 500/emote farmer 56/pause 500/textAboveHead Jessie \"{{i18n:6398310.03}}\"/pause 1000/faceDirection Jessie 0/move farmer 0 -2 1/move farmer 1 0 0/pause 100/playSound doorOpen/warp farmer -100 -100/pause 2000/fade/viewport -200 -200/changeLocation Custom_LK_LodgingHouse/viewport -200 -200/switchEvent 6398310_2"
+      },
+      "When": {
+        "LoadESMap": "false"
+      }
+    },
+    {
+      "LogName": "Juliet's parental visit",
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_LK_LodgingHouse",
+      "Entries": {
+        "6398310_2": "warp Jessie -100 -100/warp Gremlin -100 -100/playMusic heavy/viewport 26 8 clamp true/warp Juliet 28 7/animate Juliet false true 150 29 30 31/warp farmer 20 13/move farmer 7 0 0/emote farmer 28/pause 500/doAction 27 12/move farmer 0 -6 1/pause 500/message \"{{i18n:6398310_2.01}}\"/pause 1000/stopMusic/stopAnimation Juliet/pause 500/faceDirection Juliet 3/message \"{{i18n:6398310_2.02}}\"/shake Juliet 1000/speak Juliet \"{{i18n:6398310_2.03}}\"/pause 500/quickQuestion #{{i18n:6398310_2.04}}#{{i18n:6398310_2.05}}#{{i18n:6398310_2.06}}(break)pause 500\\speak Juliet \"{{i18n:6398310_2.07}}\"(break)pause 500\\speak Juliet \"{{i18n:6398310_2.08}}\"(break)pause 500\\speak Juliet \"{{i18n:6398310_2.09}}\"/shake Juliet 1000/pause 500/speak Juliet \"{{i18n:6398310_2.10}}\"/pause 500/emote farmer 8/speak Juliet \"{{i18n:6398310_2.11}}\"/pause 500/faceDirection Juliet 0/emote Juliet 12/pause 1000/faceDirection Juliet 3/quickQuestion #{{i18n:6398310_2.12}}#{{i18n:6398310_2.13}}#{{i18n:6398310_2.14}}(break)textAboveHead Juliet \"{{i18n:6398310_2.15}}\"\\speak Juliet \"{{i18n:6398310_2.16}}\"(break)speak Juliet \"{{i18n:6398310_2.17}}\"(break)speak Juliet \"{{i18n:6398310_2.18}}\"/pause 500/speak Juliet \"{{i18n:6398310_2.19}}\"/emote farmer 28/pause 500/speak Juliet \"{{i18n:6398310_2.20}}\"/pause 500/emote farmer 32/pause 1000/end"
+      }
+    },
+    //Gremlin
+    {
+      "LogName": "Gremlin Sprite",
+      "Action": "Load",
+      "Target": "Characters/Gremlin",
+      "FromFile": "assets/img/Gremlin.png"
+    },
+    {
+      "LogName": "Gremlin Portrait",
+      "Action": "Load",
+      "Target": "Portraits/Gremlin",
+      "FromFile": "assets/img/Gremlin_collar.png"
+    },
+    {
+      "LogName": "Gremlin Dialogue",
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Gremlin",
+      "FromFile": "assets/dialogue/GremlinDialogue.json",
+      "When": {
+        "HasSeenEvent": "86571141"
+      }
+    },
+    {
+      "LogName": "Gremlin Schedule",
+      "Action": "Load",
+      "Target": "Characters/schedules/Gremlin",
+      "FromFile": "assets/schedules/GremlinSchedule.json",
+      "When": {
+        "HasSeenEvent |contains=86571101": true,
+        "HasSeenEvent |contains=191393": false
+      }
+    },
+    {
+      "LogName": "Schedule",
+      "Action": "Load",
+      "Target": "Characters/schedules/Gremlin",
+      "FromFile": "assets/schedules/GremlinScheduleJojaClosed.json",
+      "When": {
+        "HasSeenEvent |contains=191393": true,
+        "HasFlag |contains=ccMovieTheater": false
+      }
+    },
+    {
+      "LogName": "Schedule",
+      "Action": "Load",
+      "Target": "Characters/schedules/Gremlin",
+      "FromFile": "assets/schedules/GremlinScheduleTheater.json",
+      "When": {
+        "HasSeenEvent |contains=191393": true,
+        "HasFlag |contains=ccMovieTheater": true
+      }
+    },
+    {
+      "LogName": "NPC Manifestation",
+      "Action": "EditData",
+      "Target": "Data/NPCDispositions",
+      "Entries": {
+        "Gremlin": "child/neutral/shy/positive/female/not-datable/null/Town/null//Custom_LK_LodgingHouse 25 7/{{i18n:npcd.gremlin}}"
+      },
+      "When": {
+        "HasSeenEvent": "86571101",
+        "HasMod": "SuperAardvark.AntiSocial"
+      }
+    },
+    //movies!
+    //Adds Door Warp to backroom Theater
+    {
+      "LogName": "Adds door to sheet",
+      "Action": "EditImage",
+      "Target": "Maps/{{season}}_Town",
+      "FromFile": "assets/img/{{season}}_theaterDoor.png",
+      "ToArea": {
+        "X": 160,
+        "Y": 1104,
+        "Width": 16,
+        "Height": 32
+      },
+      "When": {
+        "HasMod |contains=Gweniaczek.WayBackPT": false
+      }
+    },
+    {
+      "LogName": "Adds door to sheet",
+      "Action": "EditImage",
+      "Target": "Maps/{{season}}_Town",
+      "FromFile": "assets/img/WayBack_DoorOV.png",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 160,
+        "Y": 1104,
+        "Width": 16,
+        "Height": 32
+      },
+      "When": {
+        "HasMod |contains=Gweniaczek.WayBackPT": true
+      }
+    },
+    //adds Door Warp
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Town-Theater",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 100,
+            "Y": 50
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Warp 20 20 Custom_LK_TheaterBreakroom"
+          }
+        }
+      ]
+    },
+    //Concessions Clerk
+    {
+      "LogName": "Places Juliet into Theater",
+      "Action": "EditImage",
+      "Target": "Maps/MovieTheater_TileSheet",
+      "FromFile": "assets/img/JulietTheaterPatch.png",
+      "FromArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 64,
+        "Height": 32
+      },
+      "ToArea": {
+        "X": 192,
+        "Y": 160,
+        "Width": 64,
+        "Height": 32
+      },
+      "When": {
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+        "DayOfWeek": "Monday, Tuesday, Wednesday, Thursday"
+      }
+    },
+    {
+      "LogName": "Places Kevin into Theater",
+      "Action": "EditImage",
+      "Target": "Maps/MovieTheater_TileSheet",
+      "FromFile": "assets/img/JulietTheaterPatch.png",
+      "FromArea": {
+        "X": 0,
+        "Y": 32,
+        "Width": 64,
+        "Height": 32
+      },
+      "ToArea": {
+        "X": 192,
+        "Y": 160,
+        "Width": 64,
+        "Height": 32
+      },
+      "When": {
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+        "DayOfWeek": "Friday, Saturday, Sunday"
+      }
+    },
+    {
+      "LogName": "Places Kevin into Theater",
+      "Action": "EditImage",
+      "Target": "Maps/MovieTheater_TileSheet",
+      "FromFile": "assets/img/JulietTheaterPatch.png",
+      "FromArea": {
+        "X": 0,
+        "Y": 32,
+        "Width": 64,
+        "Height": 32
+      },
+      "ToArea": {
+        "X": 192,
+        "Y": 160,
+        "Width": 64,
+        "Height": 32
+      },
+      "When": {
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+        "DayOfWeek": "Tuesday, Thursday, Friday, Saturday, Sunday",
+        "spouse": "Juliet"
+      }
+    },
+    {
+      "LogName": "Places Kevin into Theater",
+      "Action": "EditImage",
+      "Target": "Maps/MovieTheater_TileSheet",
+      "FromFile": "assets/img/JulietTheaterPatch.png",
+      "FromArea": {
+        "X": 0,
+        "Y": 32,
+        "Width": 64,
+        "Height": 32
+      },
+      "ToArea": {
+        "X": 192,
+        "Y": 160,
+        "Width": 64,
+        "Height": 32
+      },
+      "When": {
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+        "Weather": "rain"
+      }
+    },
+    //Compatibility Patches and Bonus stuff
+    {
+      "LogName": "Yoba Worship if Paul or Amelia are present",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Juliet",
+      "Entries": {
+        "Sun": "700 Custom_LK_LodgingHouse 21 21 1/900 Custom_LK_LodgingHouse 28 7 0/1100 SeedShop 37 22 0/1400 Town 95 51 0/1700 JojaMart 9 25 1 Juliet_work/2300 Town 34 10 2/2400 Custom_LK_LodgingHouse 22 6 2 Juliet_sleep"
+      },
+      "When": {
+        "HasMod": "Ginnyclaire.Paul, midnightsky550, Rafseazz.RSVCP",
+        "IsCommunityCenterComplete": false
+      }
+    },
+    {
+      "LogName": "Yoba Worship if Paul or Amelia are present - post CC completion",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Juliet",
+      "Entries": {
+        "Sun": "700 Custom_LK_LodgingHouse 21 21 1/900 Custom_LK_LodgingHouse 28 7 0/1100 SeedShop 37 22 0/1400 Town 95 51 0/1700 Town 26 22 2 Juliet_yoyo/2300 Town 34 10 2/2400 Custom_LK_LodgingHouse 22 6 2 Juliet_sleep"
+      },
+      "When": {
+        "HasMod": "Ginnyclaire.Paul, midnightsky550, Rafseazz.RSVCP",
+        "IsCommunityCenterComplete": true
+      }
+    },
+    {
+      "LogName": "Woman in a Painting",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Juliet",
+      "Entries": {
+        "CommunityCenter_Fri": "{{i18n:juliet_womanpainting_CC_fri}}",
+        "CommunityCenter_Mon": "{{i18n:juliet_womanpainting_CC_mon}}"
+      },
+      "When": {
+        "HasMod": "MIDI.MysteriousWoman"
+      }
+    },
+    {
+      "LogName": "Jade",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Juliet",
+      "Entries": {
+        "Sun2": "{{i18n:juliet.sun2.jade}}",
+        "Sun4": "{{i18n:juliet.sun4.jade}}",
+        "Sun6": "{{i18n:juliet.sun6.jade}}",
+        "LodgingHouse_Sat": "{{i18n:juliet.lodginghouse_sat.jade}}"
+      },
+      "When": {
+        "HasMod": "malic.cp.jadeNPC"
+      }
+    },
+    {
+      "LogName": "Schedule",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Gremlin",
+      "Entries": {
+        "Mon": "620 Custom_LK_LodgingHouse 19 22 0 Gremlin_sit/700 Town 85 101 0 square_3_3/930 Town 53 25 2 square_5_5/1700 Custom_LK_LodgingHouse 17 22 2 Gremlin_sit/2200 Custom_LK_LodgingHouse 25 6 2 Gremlin_sleep",
+        "Fri": "620 Custom_LK_LodgingHouse 19 22 0 Gremlin_sit/700 Town 85 101 0 square_3_3/930 Town 53 25 2 square_5_5/1700 Custom_LK_LodgingHouse 17 22 2 Gremlin_sit/2200 Custom_LK_LodgingHouse 25 6 2 Gremlin_sleep",
+        "Sat": "700 Custom_LK_LodgingHouse 19 22 0 Gremlin_sit/900 Custom_LK_ClearingHouse 21 19 1 square_3_3/1310 Beach 43 35 2/1800 Saloon 42 22 3/2200 Custom_LK_LodgingHouse 25 6 2 Gremlin_sleep"
+      },
+      "When": {
+        "Spouse": "Juliet"
+      }
+    },
+    // Bonus events
+    //If East Scarpe installed, triggers within the 7 days of seeing Gremlin's second adoption scene. If not seen in that time, you will never see it.
+    {
+      "LogName": "Juliet visits the vet",
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_ESVetHouse",
+      "Entries": {
+        "86571142/e 86571141/k 86571138/t 900 1900/d Tue": "none/7 14/Juliet 3 14 0 Gremlin 4 12 3 Jacob 5 12 3 farmer 5 20 0/animate Gremlin false true 240 16 17/skippable/pause 500/textAboveHead Juliet \"{{i18n:86571142.01}}\"/playSound dogWhining/pause 500/speak Jacob \"{{i18n:86571142.02}}\"/pause 500/playSound dog_bark/pause 500/speak Juliet \"{{i18n:86571142.03}}\"/pause 500/emote Juliet 28/move Gremlin -1 0 2/playSound dog_pant/move farmer 0 -2 0/doAction 5 17/pause 500/move farmer 0 -3 0/jump Juliet 5/playSound dog_bark/faceDirection Jacob 2/emote farmer 60/pause 500/speak Jacob \"{{i18n:86571142.04}}\"/pause 500/speak Juliet \"{{i18n:86571142.05}}\"/faceDirection Juliet 1/speak Juliet \"{{i18n:86571142.06}}\"/pause 500/faceDirection Juliet 0/speak Juliet \"{{i18n:86571142.07}}\"/move farmer -1 0 0/move farmer 0 -1 3/faceDirection Juliet 1/emote Juliet 20/pause 1500/faceDirection Jacob 3/faceDirection farmer 0 true/faceDirection Juliet 0 true/faceDirection Gremlin 1/speak Jacob \"{{i18n:86571142.08}}\"/pause 500/speak Juliet \"{{i18n:86571142.09}}\"/playSound dogWhining/emote Juliet 40/speak Jacob \"{{i18n:86571142.10}}\"/pause 500/faceDirection Juliet 1/faceDirection farmer 3/speak Jacob \"{{i18n:86571142.11}}\"/emote farmer 8/pause 500/faceDirection Juliet 0/pause 500/faceDirection Gremlin 2/playSound dog_pant/pause 500/speak Juliet \"{{i18n:86571142.12}}\"/jump Gremlin 3/move Gremlin 0 1 2/emote Gremlin 20/playSound dog_bark/emote Jacob 32/speak Jacob \"{{i18n:86571142.13}}\"/emote Juliet 20/pause 1000/end"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Events/Farm",
+      "When": {
+        "HasMod": "LemurKat.JacobEloise.CP"
+      },
+      "Entries": {
+        "86571137/e 86571141/x Juliet_Vet true": "null",
+        "86571138/n Juliet_Vet/k 86571142/A JulietVet/x Juliet_VetDone": "null"
+      }
+    },
+    //If Stray Catfe installed
+    //Triggers on Juliet's birthday       
+    {
+      "Action": "EditData",
+      "Target": "Data/Events/BusStop",
+      "When": {
+        "HasMod": "ch20youk.TSCCP"
+      },
+      "Entries": {
+        "86571139/u 15/z winter/z summer/z fall": "jaunty/27 25/farmer 19 23 1 Juliet 31 23 3 Tabitha -100 -100 2 Theo -100 -100 3/ignoreCollisions farmer/skippable/move Juliet -5 0 3 true/move farmer 5 0 1 true/pause 2000/emote Juliet 32/pause 500/speak Juliet \"{{i18n:86571139.01}}\"/pause 500/emote farmer 8/pause 500/speak Juliet \"{{i18n:86571139.02}}\"/emote farmer 40/move farmer 1 0 1/speak Juliet \"$q 86571140 null#{{i18n:86571139.03}}#$r 86571141 50 Juliet_Bday_Y#{{i18n:86571139.04}}#$r 86571144 0 Juliet_Bday_N#{{i18n:86571139.05}}#$r 86571145 -50 Juliet_Bday_W#{{i18n:86571139.06}}\"/fork 86571141 Juliet_Catfe/pause 500/speak Juliet \"{{i18n:86571139.07}}\"/pause 500/move Juliet 0 6 2 true/faceDirection farmer 2/pause 500/emote farmer 60/pause 1000/end",
+        "Juliet_Catfe": "pause 500/speak Juliet \"{{i18n:86571139.Juliet_Catfe.01}}\"/pause 500/emote Juliet 20/move Juliet 0 4 2 true/move farmer 0 4 2 true/fade/viewport -1000 -1000/pause 2000/warp Tabitha 14 13/warp Theo 18 19/warp Juliet 6 24/warp farmer -100 -100/changeLocation Custom_StrayCatfe_CafeIndoors/viewport 11 17 true/move Juliet 0 -4 2/textAboveHead Tabitha \"{{i18n:86571139.Juliet_Catfe.02}}\"/warp farmer 6 24/move farmer 0 -2 2/faceDirection farmer 1/pause 1000/faceDirection farmer 3/speak Juliet \"{{i18n:86571139.Juliet_Catfe.03}}\"/emote farmer 32/speak Juliet \"{{i18n:86571139.Juliet_Catfe.04}}\"/fade/viewport -1000 -1000/warp Juliet 5 17/faceDirection Juliet 2/warp farmer 3 19/faceDirection farmer 1/positionOffset farmer 0 -20/showframe 117/warp Tabitha 9 18/faceDirection Tabitha 3/viewport 8 17/pause 500/move Tabitha -3 0 3/speak Tabitha \"{{i18n:86571139.Juliet_Catfe.05}}\"/speak Juliet \"{{i18n:86571139.Juliet_Catfe.06}}\"/pause 500/emote Tabitha 60/pause 2000/speak Tabitha \"{{i18n:86571139.Juliet_Catfe.07}}\"/quickQuestion #{{i18n:86571139.Juliet_Catfe.08}}#{{i18n:86571139.Juliet_Catfe.09}}#{{i18n:86571139.Juliet_Catfe.10}}(break)friendship Juliet 25\\faceDirection Juliet 3\\emote Juliet 20\\speak Juliet \"{{i18n:86571139.Juliet_Catfe.11}}\"(break)friendship Juliet 10\\faceDirection Juliet 3\\emote Juliet 32\\speak Juliet \"{{i18n:86571139.Juliet_Catfe.12}}\"(break)friendship Juliet -25\\emote Juliet 12\\speak Juliet \"{{i18n:86571139.Juliet_Catfe.13}}\"/faceDirection Juliet 2/pause 500/speak Tabitha \"{{i18n:86571139.Juliet_Catfe.14}}\"/pause 1000/fade/viewport -1000 -1000/farmerEat 731/message \"{{i18n:86571139.Juliet_Catfe.15}}\"/end"
+      }
+    },
+    //Juliet's schedule on her birthday
+    {
+      "LogName": "Schedule - Stray Catfe",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Juliet",
+      "When": {
+        "HasMod": "ch20youk.TSCCP"
+      },
+      "Entries": {
+        "spring_15": "700 Custom_LK_LodgingHouse 21 21 3/900 Custom_LK_LodgingHouse 28 7 0 Juliet_drums/1100 Custom_StrayCatfe_CafeIndoors 5 15 1 \"Strings\\schedules\\Juliet:spring_17.100\"/1740 Saloon 42 20 3/2400 Custom_LK_LodgingHouse 22 6 2 Juliet_sleep"
+      }
+    },
+    {
+      "LogName": "Schedule - Stray Catfe",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Juliet",
+      "When": {
+        "HasMod": "ch20youk.TSCCP",
+        "Season": "spring",
+        "Day": "15"
+      },
+      "Entries": {
+        "rain": "700 Custom_LK_LodgingHouse 21 21 3/900 Custom_LK_LodgingHouse 28 7 0 Juliet_drums/1100 Custom_StrayCatfe_CafeIndoors 5 15 1 \"Strings\\schedules\\Juliet:spring_17.100\"/1740 Saloon 42 20 3/2400 Custom_LK_LodgingHouse 22 6 2 Juliet_sleep"
+      }
+    },
+    //Gremlin schedule on Juliet's birthday   
+    {
+      "LogName": "Schedule - Stray Catfe",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Gremlin",
+      "When": {
+        "HasMod": "ch20youk.TSCCP"
+      },
+      "Entries": {
+        "spring_15": "700 Custom_LK_LodgingHouse 19 22 0 Gremlin_sit/900 Custom_LK_ClearingHouse 21 19 1 square_3_3/1130 Custom_StrayCatfe_CafeOutdoors 21 16 2 square 10_3/1800 Saloon 42 22 3/2400 Custom_LK_LodgingHouse 25 6 2 Gremlin_sleep"
+      }
+    },
+    {
+      "LogName": "Schedule - Stray Catfe",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Gremlin",
+      "When": {
+        "HasMod": "ch20youk.TSCCP",
+        "Season": "spring",
+        "Day": "15"
+      },
+      "Entries": {
+        "rain": "700 Custom_LK_LodgingHouse 19 22 0 Gremlin_sit/900 Custom_LK_ClearingHouse 21 19 1 square_3_3/1130 Custom_StrayCatfe_CafeOutdoors 21 16 2 square 10_3/1800 Saloon 42 22 3/2400 Custom_LK_LodgingHouse 25 6 2 Gremlin_sleep"
+      }
+    },
+    //Makes Fun Leave DIalogue more fun!
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueJuliet",
+      "Entries": {
+        "funLeave_Juliet": "{{i18n:juliet.marriage.funleave.mon}}",
+        "funReturn_Juliet": "{{i18n:juliet.marriage.funreturn.mon}}"
+      },
+      "When": {
+        "DayOfWeek": "Monday"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueJuliet",
+      "Entries": {
+        "funLeave_Juliet": "{{i18n:juliet.marriage.funleave.mon.theater}}"
+      },
+      "When": {
+        "DayOfWeek": "Monday",
+        "HasFlag |contains=ccMovieTheater": true,
+        "HasFlag |contains=ccMovieTheaterJoja": false,
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueJuliet",
+      "Entries": {
+        "funLeave_Juliet": "{{i18n:juliet.marriage.funleave.wed}}",
+        "funReturn_Juliet": "{{i18n:juliet.marriage.funreturn.wed}}"
+      },
+      "When": {
+        "DayOfWeek": "Wednesday"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueJuliet",
+      "Entries": {
+        "funLeave_Juliet": "{{i18n:juliet.marriage.funleave.wed.theater}}",
+        "funReturn_Juliet": "{{i18n:juliet.marriage.funreturn.wed.theater}}"
+      },
+      "When": {
+        "DayOfWeek": "Wednesday",
+        "HasFlag |contains=ccMovieTheater": true,
+        "HasFlag |contains=ccMovieTheaterJoja": false,
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueJuliet",
+      "Entries": {
+        "funLeave_Juliet": "{{i18n:juliet.marriage.funleave.sun}}",
+        "funReturn_Juliet": "{{i18n:juliet.marriage.funreturn.sun}}"
+      },
+      "When": {
+        "DayOfWeek": "Sunday"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueJuliet",
+      "Entries": {
+        "Neutral_8": "{{i18n:juliet.neutral_8_1}}{{i18n:juliet.neutral_8_{{random:a,b,c,d}} }}#$b#{{i18n:juliet.neutral_8_2}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueJuliet",
+      "When": {
+        "HasMod": "CopperSun.JojaSeedsJA"
+      },
+      "Entries": {
+        "JojaMart_Tue": "{{i18n:juliet.joja.spring.jjseeds}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Events/Forest",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "3910975/f Shane 1500/e 3910674/t 900 2000/w rainy",
+            4
+          ],
+          "Value": "addConversationTopic Shane_6_heart 0",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    {
+      "LogName": "Dialogue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Juliet",
+      "Entries": {
+        "Juliet_NoMarried": "{{i18n:juliet.datingresponse.marriednot}}"
+      },
+      "When": {
+        "HasValue:{{spouse}}": "false"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "strings/StringsFromCSFiles",
+      "Entries": {
+        "Utility.cs.5367": "{{i18n:juliet.utility.cs.5367}}",
+        "Utility.cs.5369": "{{i18n:juliet.utility.cs.5369}}",
+        "Utility.cs.5371": "{{i18n:juliet.utility.cs.5371}}",
+        "Utility.cs.5377": "{{i18n:juliet.utility.cs.5377}}"
+      },
+      "When": {
+        "Relationship:Juliet": "Engaged"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Juliet",
+      "Entries": {
+        "Utility.cs.5367": "{{i18n:juliet.utility.cs.5367}}",
+        "Utility.cs.5369": "{{i18n:juliet.utility.cs.5369}}",
+        "Utility.cs.5371": "{{i18n:juliet.utility.cs.5371}}",
+        "Utility.cs.5377": "{{i18n:juliet.utility.cs.5377}}"
+      },
+      "When": {
+        "HasMod": "aedenthorn.CustomFixedDialogue"
+      }
+    },
+    /*******************************
+  A D D I T I O N A L  D I A L O G U E
+  **********************************/
+    {
+      "LogName": "Dialogue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Juliet",
+      "Entries": {
+        "refusal_no_heartsA": "{{i18n:juliet.refusal_no_heartsA}}",
+        "refusal_no_heartsB": "{{i18n:juliet.refusal_no_heartsB}}",
+      },
+      "When": {
+        "query: {{Hearts:Juliet}} >= 8": true,
+        "HasMod": "misscoriel.UCRFix"
+      }
+    },
+    {
+      "LogName": "Dialogue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Juliet",
+      "Entries": {
+        "Mon2": "{{i18n:juliet.cc_mon2}}",
+        "Mon4": "{{i18n:juliet.cc_mon4}}",
+        "summer_Thu": "{{i18n:juliet.cc_summer_thu}}",
+        "summer_Fri6": "{{i18n:juliet.cc_summer_fri6}}",
+        "summer_Sun6": "{{i18n:juliet.cc_summer_sun6}}"
+      },
+      "When": {
+        "HasSeenEvent": "191393"
+      }
+    },
+    {
+      "LogName": "Dialogue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Juliet",
+      "Entries": {
+        "Mon8": "{{i18n:juliet.shane}}"
+      },
+      "When": {
+        "HasSeenEvent": "5295016"
+      }
+    },
+    {
+      "LogName": "Dialogue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogue",
+      "Entries": {
+        "fall_Juliet": "{{i18n:juliet.marriage.fall_juliet}}[240]",
+      }
+    },
+    //Trigger 14-heart event without dating pathing: 
+    {
+      "LogName": "Talent Show Event starts",
+      "Action": "EditData",
+      "Target": "Data/Events/Farm",
+      "when": {
+        "HasDialogueAnswer": "639898, 639896",
+        "Relationship:Juliet |contains=Engaged, Married": false
+      },
+      "Entries": {
+        "6398443/f Juliet 2749/o Juliet/O {{spouse}}/t 600 1200": "playful/12 17/Juliet -100 -100 0 farmer 12 18 0/addConversationTopic Juliet_TalentShow 7/skippable/pause 500/speak Juliet \"{{i18n:6398443.01}}\"/emote farmer 8/pause 500/speak Juliet \"{{i18n:6398443.02}}\"/emote farmer 16/speak Juliet \"{{i18n:6398443.03}}\"/quickQuestion #{{i18n:6398443.04}}#{{i18n:6398443.05}}#{{i18n:6398443.06}}(break)emote Juliet 20\\speak Juliet \"{{i18n:6398443.07}}\"(break)emote Juliet 12\\speak Juliet \"{{i18n:6398443.08}}\"(break)emote Juliet 40\\speak Juliet \"{{i18n:6398443.09}}\"/speak Juliet \"{{i18n:6398443.10}}\"/emote farmer 60/speak Juliet \"{{i18n:6398443.11}}\"/emote farmer 56/pause 1000/speak Juliet \"{{i18n:6398443.12}}\"/pause 500/emote farmer 28/pause 1500/end",
+        "6398446/e 6398443/A Juliet_TalentShow/k 6398444/F/o Juliet/t 600 1600": "playful/12 17/Juliet -100 -100 0 farmer 12 18 0/skippable/pause 500/speak Juliet \"{{i18n:6398446.01}}\"/pause 500/emote farmer 60/pause 500/speak Juliet \"{{i18n:6398446.02}}\"/pause 500/emote farmer 16/pause 500/speak Juliet \"{{i18n:6398446.03}}\"/pause 500/emote farmer 32/pause 500/speak Juliet \"{{i18n:6398446.04}}\"/pause 1000/end"
+      }
+    },
+    /* {
+      "LogName": "Juliet reminds you of the event",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Juliet",
+      "When": {
+        "HasSeenEvent": "6398443",
+        "HasConversationTopic |contains=Juliet_TalentShow": false,
+        "HasFlag |contains=Juliet_TalentShowReminder": false,
+        "Relationship:Juliet |contains=Engaged, Married": false
+      },
+      "Entries": {
+        "{{season}}_{{day}}_2": "$1 Juliet_TalentShowReminder#Hey farmer! Don't forget the talent show! It's at the Community Center this afternoon.#$b#And you don't wanna miss out on the fun! It's gonna be a RIOT! Of the good kind, not the destructive kind - I hope.$1"
+      }
+    },*/
+  ]
+}

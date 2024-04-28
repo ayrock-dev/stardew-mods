@@ -1,0 +1,166 @@
+{
+  "Changes": [
+    {
+      "LogName": "Before Intro Schedule - Kevin",
+      "Action": "EditData",
+      "Target": "Characters/Schedules/KevinTheCrow",
+      "When": {
+        "HasSeenEvent |contains=1067101": false
+      },
+      "Entries": {
+        "spring": "610 Custom_Alecto_WitchHutUpstairs 4 6 2 kevin_idle/2000 Custom_Alecto_WitchHutUpstairs 10 6 2 kevin_sleep",
+        "summer": "610 Custom_Alecto_WitchHutUpstairs 4 6 2 kevin_idle/2000 Custom_Alecto_WitchHutUpstairs 10 6 2 kevin_sleep",
+        "fall": "610 Custom_Alecto_WitchHutUpstairs 4 6 2 kevin_idle/2000 Custom_Alecto_WitchHutUpstairs 10 6 2 kevin_sleep",
+        "winter": "610 Custom_Alecto_WitchHutUpstairs 4 6 2 kevin_idle/2000 Custom_Alecto_WitchHutUpstairs 10 6 2 kevin_sleep"
+      }
+    },
+    {
+      "LogName": "Before Intro Schedule - Titania",
+      "Action": "EditData",
+      "Target": "Characters/Schedules/TitaniaTheCrow",
+      "When": {
+        "HasSeenEvent |contains=1067101": false
+      },
+      "Entries": {
+        "spring": "610 Custom_Alecto_WitchHutUpstairs 5 8 2 titania_idle/2000 Custom_Alecto_WitchHutUpstairs 11 6 2 titania_sleep",
+        "summer": "610 Custom_Alecto_WitchHutUpstairs 5 8 2 titania_idle/2000 Custom_Alecto_WitchHutUpstairs 11 6 2 titania_sleep",
+        "fall": "610 Custom_Alecto_WitchHutUpstairs 5 8 2 titania_idle/2000 Custom_Alecto_WitchHutUpstairs 11 6 2 titania_sleep",
+        "winter": "610 Custom_Alecto_WitchHutUpstairs 5 8 2 titania_idle/2000 Custom_Alecto_WitchHutUpstairs 11 6 2 titania_sleep"
+      }
+    },
+    {
+      "LogName": "Kevin's Basic Schedule - Post Intro, No Mods",
+      "Action": "EditData",
+      "Target": "Characters/Schedules/KevinTheCrow",
+      "When": {
+        "HasSeenEvent |contains=1067101": true
+      },
+      "Entries": {
+        "spring": "610 Custom_Alecto_WitchHutUpstairs 4 6 2 kevin_spin/1500 Railroad 52 41 2 kevin_crisps \"Strings\\schedules\\KevinTheCrow:kevincrisps.000\"/1800 Mountain 85 19 2 kevin_idle/2200 Custom_Alecto_WitchHutUpstairs 10 6 2 kevin_sleep",
+        "summer": "610 Custom_Alecto_WitchHutUpstairs 4 6 2 kevin_spin/1500 Railroad 52 41 2 kevin_crisps \"Strings\\schedules\\KevinTheCrow:kevincrisps.000\"/1800 Mountain 85 19 2 kevin_idle/2200 Custom_Alecto_WitchHutUpstairs 10 6 2 kevin_sleep",
+        "fall": "610 Custom_Alecto_WitchHutUpstairs 4 6 2 kevin_spin/1500 Railroad 52 41 2 kevin_crisps \"Strings\\schedules\\KevinTheCrow:kevincrisps.000\"/1800 Mountain 85 19 2 kevin_idle/2200 Custom_Alecto_WitchHutUpstairs 10 6 2 kevin_sleep",
+        "winter": "610 Custom_Alecto_WitchHutUpstairs 4 6 2 kevin_spin/1500 Railroad 52 41 2 kevin_crisps \"Strings\\schedules\\KevinTheCrow:kevincrisps.000\"/1800 Mountain 85 19 2 kevin_idle/2200 Custom_Alecto_WitchHutUpstairs 10 6 2 kevin_sleep",
+        "rain": "0 Woods 7 9 2/610 Woods 7 11 2 kevin_idle/800 Woods 3 25 2 kevin_idle/1500 Woods 7 10 2 kevin_idle/1900 Woods 45 10 2 kevin_idle/2400 Custom_Alecto_WitchHutUpstairs 10 6 2 kevin_sleep"
+      }
+    },
+    {
+      "LogName": "Titania's Basic Schedule - Post Intro, No Mods",
+      "Action": "EditData",
+      "Target": "Characters/Schedules/TitaniaTheCrow",
+      "When": {
+        "HasSeenEvent |contains=1067101": true
+      },
+      "Entries": {
+        "spring": "610 Custom_Alecto_WitchHutUpstairs 8 7 2 titania_ignore \"Strings\\schedules\\TitaniaTheCrow:titaniaignore.000\"/1500 Railroad 56 40 2 titania_idle/1800 Mountain 88 20 2 titania_idle/2200 Custom_Alecto_WitchHutUpstairs 10 7 2 titania_sleep",
+        "summer": "610 Custom_Alecto_WitchHutUpstairs 8 7 2 titania_ignore \"Strings\\schedules\\TitaniaTheCrow:titaniaignore.000\"/1500 Railroad 56 40 2 titania_idle/1800 Mountain 88 20 2 titania_idle/2200 Custom_Alecto_WitchHutUpstairs 10 7 2 titania_sleep",
+        "fall": "610 Custom_Alecto_WitchHutUpstairs 8 7 2 titania_ignore \"Strings\\schedules\\TitaniaTheCrow:titaniaignore.000\"/1500 Railroad 56 40 2 titania_idle/1800 Mountain 88 20 2 titania_idle/2200 Custom_Alecto_WitchHutUpstairs 10 7 2 titania_sleep",
+        "winter": "610 Custom_Alecto_WitchHutUpstairs 8 7 2 titania_ignore \"Strings\\schedules\\TitaniaTheCrow:titaniaignore.000\"/1500 Railroad 56 40 2 titania_idle/1800 Mountain 88 20 2 titania_idle/2200 Custom_Alecto_WitchHutUpstairs 10 7 2 titania_sleep",
+        "rain": "0 Woods 8 9 2/610 Woods 9 11 2 titania_idle/800 Woods 5 25 2 titania_idle/1500 Woods 9 10 2 titania_idle/1900 Woods 47 10 2 titania_idle/2400 Custom_Alecto_WitchHutUpstairs 11 6 2 titania_sleep"
+      }
+    },
+    {
+      "LogName": "Kevin's Schedule - SVE Patch",
+      "Action": "EditData",
+      "Target": "Characters/Schedules/KevinTheCrow",
+      "When": {
+        "HasSeenEvent |contains=1067101": true,
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      },
+      "Entries": {
+        "spring": "610 Custom_Alecto_WitchHutUpstairs 4 6 2 kevin_spin/1500 Railroad 54 38 2 kevin_crisps \"Strings\\schedules\\KevinTheCrow:kevincrisps.000\"/1800 Mountain 84 18 2 kevin_idle/2200 Custom_Alecto_WitchHutUpstairs 10 6 2 kevin_sleep",
+        "summer": "610 Custom_Alecto_WitchHutUpstairs 4 6 2 kevin_spin/1500 Railroad 54 38 2 kevin_crisps \"Strings\\schedules\\KevinTheCrow:kevincrisps.000\"/1800 Mountain 84 18 2 kevin_idle/2200 Custom_Alecto_WitchHutUpstairs 10 6 2 kevin_sleep",
+        "fall": "610 Custom_Alecto_WitchHutUpstairs 4 6 2 kevin_spin/1500 Railroad 54 38 2 kevin_crisps \"Strings\\schedules\\KevinTheCrow:kevincrisps.000\"/1800 Mountain 84 18 2 kevin_idle/2200 Custom_Alecto_WitchHutUpstairs 10 6 2 kevin_sleep",
+        "winter": "610 Custom_Alecto_WitchHutUpstairs 4 6 2 kevin_spin/1500 Railroad 54 38 2 kevin_crisps \"Strings\\schedules\\KevinTheCrow:kevincrisps.000\"/1800 Mountain 84 18 2 kevin_idle/2200 Custom_Alecto_WitchHutUpstairs 10 6 2 kevin_sleep",
+        "rain": "0 Woods 47 14 2/610 Woods 48 16 2 kevin_idle/1000 Woods 34 48 2 kevin_idle/1500 Woods 36 20 2 kevin_idle/1900 Woods 53 28 2 kevin_idle/2200 Custom_Alecto_WitchHutUpstairs 10 7 2 kevin_sleep"
+      }
+    },
+    {
+      "LogName": "Titania's Schedule - SVE Patch",
+      "Action": "EditData",
+      "Target": "Characters/Schedules/TitaniaTheCrow",
+      "When": {
+        "HasSeenEvent |contains=1067101": true,
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      },
+      "Entries": {
+        "spring": "610 Custom_Alecto_WitchHutUpstairs 8 7 2 titania_ignore \"Strings\\schedules\\TitaniaTheCrow:titaniaignore.000\"/1500 Railroad 55 38 2 titania_idle/1800 Mountain 86 18 2 titania_idle/2200 Custom_Alecto_WitchHutUpstairs 10 7 2 titania_sleep",
+        "summer": "610 Custom_Alecto_WitchHutUpstairs 8 7 2 titania_ignore \"Strings\\schedules\\TitaniaTheCrow:titaniaignore.000\"/1500 Railroad 55 38 2 titania_idle/1800 Mountain 86 18 2 titania_idle/2200 Custom_Alecto_WitchHutUpstairs 10 7 2 titania_sleep",
+        "fall": "610 Custom_Alecto_WitchHutUpstairs 8 7 2 titania_ignore \"Strings\\schedules\\TitaniaTheCrow:titaniaignore.000\"/1500 Railroad 55 38 2 titania_idle/1800 Mountain 86 18 2 titania_idle/2200 Custom_Alecto_WitchHutUpstairs 10 7 2 titania_sleep",
+        "winter": "610 Custom_Alecto_WitchHutUpstairs 8 7 2 titania_ignore \"Strings\\schedules\\TitaniaTheCrow:titaniaignore.000\"/1500 Railroad 55 38 2 titania_idle/1800 Mountain 86 18 2 titania_idle/2200 Custom_Alecto_WitchHutUpstairs 10 7 2 titania_sleep",
+        "rain": "0 Woods 46 14 2/610 Woods 52 16 2 titania_idle/1000 Woods 38 53 2 titania_idle/1500 Woods 32 20 2 titania_idle/1900 Woods 52 27 2 titania_idle/2200 Custom_Alecto_WitchHutUpstairs 10 7 2 titania_sleep"
+      }
+    },
+    {
+      "LogName": "Kevin's Additional Schedule - East Scarp",
+      "Action": "EditData",
+      "Target": "Characters/Schedules/KevinTheCrow",
+      "When": {
+        "HasSeenEvent |contains=1067101": true,
+        "HasMod": "LemurKat.EastScarpe.CP"
+      },
+      "Entries": {
+        "Mon": "0 Custom_ESDeepMountains 45 50 2/610 Custom_ESDeepMountains 58 46 0 kevin_idle/1200 Custom_ESDeepMountains 43 54 2 kevin_idle/1800 Mountain 85 17 2 kevin_idle/2200 Custom_Alecto_WitchHutUpstairs 10 6 2 kevin_sleep"
+      }
+    },
+    {
+      "LogName": "Titania's Additional Schedule - East Scarp",
+      "Action": "EditData",
+      "Target": "Characters/Schedules/TitaniaTheCrow",
+      "When": {
+        "HasSeenEvent |contains=1067101": true,
+        "HasMod": "LemurKat.EastScarpe.CP"
+      },
+      "Entries": {
+        "Mon": "0 Custom_ESDeepMountains 44 52 2/610 Custom_ESDeepMountains 63 44 0 titania_idle/1200 Custom_ESDeepMountains 46 51 2 titania_idle/1800 Mountain 88 15 2 titania_idle/2200 Custom_Alecto_WitchHutUpstairs 10 7 2 titania_sleep"
+      }
+    },
+    {
+      "LogName": "Kevin's Additional Schedule - Ridgeside",
+      "Action": "EditData",
+      "Target": "Characters/Schedules/KevinTheCrow",
+      "When": {
+        "HasSeenEvent |contains=1067101": true,
+        "HasMod": "Rafseazz.RSVCP"
+      },
+      "Entries": {
+        "Wed": "0 Custom_Ridgeside_Ridge 65 32 2/610 Custom_Ridgeside_Ridge 65 32 0 kevin_idle/1200 Custom_Ridgeside_Ridge 70 39 2 kevin_idle/1800 Custom_Ridgeside_Ridge 55 17 0 kevin_idle/2200 Custom_Alecto_WitchHutUpstairs 10 6 2 kevin_sleep"
+      }
+    },
+    {
+      "LogName": "Titania's Additional Schedule - Ridgeside",
+      "Action": "EditData",
+      "Target": "Characters/Schedules/TitaniaTheCrow",
+      "When": {
+        "HasSeenEvent |contains=1067101": true,
+        "HasMod": "Rafseazz.RSVCP"
+      },
+      "Entries": {
+        "Wed": "0 Custom_Ridgeside_Ridge 69 32 2/610 Custom_Ridgeside_Ridge 69 32 0 titania_idle/1200 Custom_Ridgeside_Ridge 72 43 2 titania_idle/1800 Custom_Ridgeside_Ridge 60 17 0 titania_idle/2200 Custom_Alecto_WitchHutUpstairs 10 6 2 titania_sleep"
+      }
+    },
+    {
+      "LogName": "Kevin's Additional Schedule - Kitty Gossip Circle",
+      "Action": "EditData",
+      "Target": "Characters/Schedules/KevinTheCrow",
+      "When": {
+        "HasSeenEvent |contains=1067101": true,
+        "HasMod": "LemurKat.Mr.Ginger.NPC",
+      },
+      "Entries": {
+        "Thu": "0 Forest 42 8 2/610 Forest 44 9 2 kevin_idle/1510 Mountain 85 17 2 kevin_idle/2200 Custom_Alecto_WitchHutUpstairs 10 6 2 kevin_sleep"
+      }
+    },
+    {
+      "LogName": "Titania's Additional Schedule - Kitty Gossip Circle",
+      "Action": "EditData",
+      "Target": "Characters/Schedules/TitaniaTheCrow",
+      "When": {
+        "HasSeenEvent |contains=1067101": true,
+        "HasMod": "LemurKat.Mr.Ginger.NPC",
+      },
+      "Entries": {
+        "Thu": "0 Forest 45 11 2/610 Forest 45 10 2 titania_idle/1510 Mountain 88 15 2 titania_idle/2200 Custom_Alecto_WitchHutUpstairs 10 7 2 titania_sleep"
+      }
+    }
+  ]
+}

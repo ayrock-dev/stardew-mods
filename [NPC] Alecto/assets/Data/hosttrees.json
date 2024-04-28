@@ -1,0 +1,25 @@
+{
+"Changes": [
+  {
+    "LogName": "Gift Tastes With Host Trees Installed",
+    "Action": "EditData",
+    "Target": "Data/NPCGiftTastes",
+    "TextOperations": [
+      {
+        "Operation": "Append",
+        "Target": [
+          "Fields",
+          "Alecto",
+          "3"
+        ],
+        "Value": "{{spacechase0.jsonAssets/ObjectId:Mistletoe Berries}}",
+        "Delimiter": " "
+      }
+    ],
+    "When": {
+      "HasMod": "spacechase0.JsonAssets"
+    }
+  }
+
+]
+}

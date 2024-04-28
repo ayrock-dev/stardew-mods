@@ -1,0 +1,59 @@
+{
+
+
+  
+    "Changes": [
+
+	//railroad npcwarp
+  {			 "LogName": "swampnpcwarp",
+			"Action": "EditMap",
+			"Target": "Maps/Railroad",
+			"MapProperties": {
+			"NPCWarp": "58 38 WitchSwamp 20 40", 
+			},
+		},
+		 {
+		  "LogName": "swampnpcwarpaddwarps",
+            "Action": "EditMap",
+            "Target": "Maps/Railroad",
+          
+            "AddWarps": [
+                "58 38 WitchSwamp 20 40"
+            ]
+        },
+		 {
+            "Action": "EditMap",
+            "Target": "Maps/Railroad",
+            "MapTiles": [
+                {
+                    "Position": { "X":58, "Y": 38 },
+                    "Layer": "Back",
+                    "SetProperties": 
+					{
+                        "Passable": "t"
+                    }
+                },
+				 {
+                    "Position": { "X":57, "Y": 38 },
+                    "Layer": "Back",
+                    "SetProperties": 
+					{
+                        "Passable": "t"
+                    }
+                },
+				 {
+                    "Position": { "X":58, "Y": 39 },
+                    "Layer": "Back",
+                    "SetProperties": 
+					{
+                        "Passable": "t"
+                    }
+                },
+            ]
+        },
+
+
+]
+
+
+}

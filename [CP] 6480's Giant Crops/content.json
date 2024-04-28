@@ -1,0 +1,279 @@
+{
+    "Format":"2.0.0",
+    "DynamicTokens":[
+        {
+            "Name":"NormalCropChance",
+            "Value":0.005,
+            "When":{
+                "Normal Crop Chance |contains=very high, high, medium, low, off": "false"
+            }
+        },
+        {
+            "Name":"NormalCropChance",
+            "Value":0.0,
+            "When":{
+                "Normal Crop Chance":"off"
+            }
+        },
+        {
+            "Name":"NormalCropChance",
+            "Value":0.001,
+            "When":{
+                "Normal Crop Chance":"low"
+            }
+        },
+        {
+            "Name":"NormalCropChance",
+            "Value":0.005,
+            "When":{
+                "Normal Crop Chance":"medium"
+            }
+        },
+        {
+            "Name":"NormalCropChance",
+            "Value":0.01,
+            "When":{
+                "Normal Crop Chance":"high"
+            }
+        },
+        {
+            "Name":"NormalCropChance",
+            "Value":0.05,
+            "When":{
+                "Normal Crop Chance":"very high"
+            }
+        },
+        {
+            "Name":"RegrowableCropChance",
+            "Value":0.00,
+            "When":{
+                "Regrowable Crop Chance |contains=very high, high, medium, low, off": "false"
+            }
+        },
+        {
+            "Name":"RegrowableCropChance",
+            "Value":0.0,
+            "When":{
+                "Regrowable Crop Chance":"off"
+            }
+        },
+        {
+            "Name":"RegrowableCropChance",
+            "Value":0.001,
+            "When":{
+                "Regrowable Crop Chance":"low"
+            }
+        },
+        {
+            "Name":"RegrowableCropChance",
+            "Value":0.005,
+            "When":{
+                "Regrowable Crop Chance":"medium"
+            }
+        },
+        {
+            "Name":"RegrowableCropChance",
+            "Value":0.01,
+            "When":{
+                "Regrowable Crop Chance":"high"
+            }
+        },
+        {
+            "Name":"RegrowableCropChance",
+            "Value":0.05,
+            "When":{
+                "Regrowable Crop Chance":"very high"
+            }
+        },
+        
+    ],
+    "ConfigSchema":{
+        "Cauliflower Retexture":{
+            "AllowValues":"true, false",
+            "Default":"true",
+            "Description":"Optional setting to make the vanilla giant cauliflower have better graphics.",
+			"Section": "Retextures"
+        },
+        "Melon Retexture":{
+            "AllowValues":"true, false",
+            "Default":"true",
+            "Description":"Optional setting to make the vanilla giant melon have better graphics.",
+			"Section": "Retextures"
+        },
+        "Normal Crop Chance":{
+            "AllowValues":"very high, high, medium, low, off",
+            "Default":"medium",
+            "Description":"Chance of getting a giant crop from any single-harvest plant. Values: 'very high' - 5%, 'high' - 1% (game default), 'medium' - 0.5%, 'low' - 0.1%, 'off' - 0%.",
+			"Section": "Normal Crops"
+        },
+        "Regrowable Crop Chance":{
+            "AllowValues":"very high, high, medium, low, off",
+            "Default":"off",
+            "Description":"Chance of getting a giant crop from any regrowable plant. Values: 'very high' - 5%, 'high' - 1% (game default), 'medium' - 0.5%, 'low' - 0.1%, 'off' - 0%. Turned off by default. GIANT CROPS WILL DESTROY THE CROPS UNDER THEM... but you get double the amount that you do from non-regrowable ones!",
+			"Section": "Regrowable Crops"
+        },
+        "Potato":{
+            "AllowValues":"true, false",
+            "Default":"true",
+            "Section":"Normal Crops"
+        },
+        "Parsnip":{
+            "AllowValues":"true, false",
+            "Default":"true",
+            "Section":"Normal Crops"
+        },
+        "Red Cabbage":{
+            "AllowValues":"true, false",
+            "Default":"true",
+            "Section":"Normal Crops"
+        },
+        "Starfruit":{
+            "AllowValues":"true, false",
+            "Default":"true",
+            "Section":"Normal Crops"
+        },
+        "Beet":{
+            "AllowValues":"true, false",
+            "Default":"true",
+            "Section":"Normal Crops"
+        },
+        "Radish":{
+            "AllowValues":"true, false",
+            "Default":"true",
+            "Section":"Normal Crops"
+        },
+        "Artichoke":{
+            "AllowValues":"true, false",
+            "Default":"true",
+            "Section":"Normal Crops"
+        },
+        "Garlic":{
+            "AllowValues":"true, false",
+            "Default":"true",
+            "Section":"Normal Crops"
+        },
+        "Taro":{
+            "AllowValues":"true, false",
+            "Default":"true",
+            "Section":"Normal Crops"
+        },
+        "Yam":{
+            "AllowValues":"true, false",
+            "Default":"true",
+            "Section":"Normal Crops"
+        },
+        "Sweet Gem Berry":{
+            "AllowValues":"true, false",
+            "Default":"true",
+            "Section":"Normal Crops"
+        },
+        "Corn":{
+            "AllowValues":"true, false",
+            "Default":"true",
+            "Section":"Regrowable Crops"
+        },
+        "Hot Pepper":{
+            "AllowValues":"true, false",
+            "Default":"true",
+            "Section":"Regrowable Crops"
+        },
+        "Ancient Fruit":{
+            "AllowValues":"true, false",
+            "Default":"true",
+            "Section":"Regrowable Crops"
+        },
+        "Strawberry":{
+            "AllowValues":"true, false",
+            "Default":"true",
+            "Section":"Regrowable Crops"
+        },
+        "Eggplant":{
+            "AllowValues":"true, false",
+            "Default":"true",
+            "Section":"Regrowable Crops"
+        },
+        "Tomato":{
+            "AllowValues":"true, false",
+            "Default":"true",
+            "Section":"Regrowable Crops"
+        },
+        "Coffee":{
+            "AllowValues":"true, false",
+            "Default":"true",
+            "Section":"Regrowable Crops"
+        },
+        "Pineapple":{
+            "AllowValues":"true, false",
+            "Default":"true",
+            "Section":"Regrowable Crops"
+        },
+        "Cranberries":{
+            "AllowValues":"true, false",
+            "Default":"true",
+            "Section":"Regrowable Crops"
+        },
+        "Blueberries":{
+            "AllowValues":"true, false",
+            "Default":"true",
+            "Section":"Regrowable Crops"
+        },
+        "Broccoli":{
+            "AllowValues":"true, false",
+            "Default":"true",
+            "Section":"Regrowable Crops"
+        }
+    },
+    "Changes":[
+        {
+            "Action":"Load",
+            "Target":"Mods/6480.giantcrops/GiantCrops",
+            "FromFile":"assets/{{TargetWithoutPath}}.png"
+        },
+		{
+			"LogName": "Giant Crops - Normal",
+			"Action": "Include",
+			"FromFile": "assets/normal.json",
+			"When": {
+				"Normal Crop Chance": "very high, high, medium, low"
+			}
+		},
+		{
+			"LogName": "Giant Crops - Regrowable",
+			"Action": "Include",
+			"FromFile": "assets/regrowable.json",
+			"When": {
+				"Regrowable Crop Chance": "very high, high, medium, low"
+			}
+		},
+        {
+            "LogName":"Cauliflower",
+            "Action":"EditImage",
+            "Target":"TileSheets/Crops",
+            "FromFile":"assets/cauliflower.png",
+            "When": {
+				"Cauliflower Retexture": true
+			},
+            "ToArea":{
+                "X":112,
+                "Y":512,
+                "Width":48,
+                "Height":64
+            }
+		},
+        {
+            "LogName":"Melon",
+            "Action":"EditImage",
+            "Target":"TileSheets/Crops",
+            "FromFile":"assets/melon.png",
+            "When": {
+				"Melon Retexture": true
+			},
+            "ToArea":{
+                "X":160,
+                "Y":512,
+                "Width":48,
+                "Height":64
+            }
+		}
+    ]
+}

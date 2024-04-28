@@ -1,0 +1,13 @@
+{
+	"Name": "6480's Giant Crops",
+	"Author": "6480",
+	"Version": "2.1.2",
+	"MinimumApiVersion": "4.0.0",
+	"Description": "This mod makes so many crops giant!",
+	"UniqueID": "6480.giantcrops",
+	"ContentPackFor": {
+		"UniqueID": "Pathoschild.ContentPatcher",
+		"MinimumVersion": "2.0.0"
+	},
+	"UpdateKeys": [ "Nexus: 5221" ]
+}

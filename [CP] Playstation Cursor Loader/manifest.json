@@ -1,0 +1,12 @@
+{
+   "Name": "[CP] Playstation Cursor Loader",
+   "Author": "DrexomXander,Warilized",
+   "Version": "2.1.1",
+   "Description": "Playstation Controller Buttons with nice to look at cursors. Made by DrexomXander, Converted to CP by Warilized",
+   "UniqueID": "Warilized.DrexomXander_PSCursor",
+   "MinimumApiVersion": "3.5",
+   "UpdateKeys": ["Nexus:3694"],
+   "ContentPackFor": {
+      "UniqueID": "Pathoschild.ContentPatcher",
+   }
+}

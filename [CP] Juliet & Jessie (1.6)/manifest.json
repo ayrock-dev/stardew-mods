@@ -1,0 +1,39 @@
+{
+   "Name": "Juliet, Jessie and Lodging House",
+   "Author": "Lemurkat",
+   "Version": "1.5.1",
+   "Description": "Adds the NPC's Juliet and Jessie, plus their House and More!",
+   "UpdateKeys": [
+      "Nexus:6398"
+   ],
+   "UniqueID": "LemurKat.JulietHouse.NPC",
+   "Dependencies": [
+      {
+         "UniqueID": "DaisyNiko.Tilesheets"
+      },
+      {
+         "UniqueID": "spacechase0.jsonAssets",
+         "IsRequired": false
+      },
+      {
+         "UniqueID": "FlashShifter.StardewValleyExpandedCP",
+         "IsRequired": false
+      },
+      {
+         "UniqueID": "Gweniaczek.WayBackPT",
+         "IsRequired": false
+      },
+      {
+         "UniqueID": "ch20youk.TSCCP",
+         "IsRequired": false
+      },
+      {
+         "UniqueID": "Lumisteria.MtVapius",
+         "IsRequired": false
+      },
+   ],
+   "MinimumApiVersion": "1.0",
+   "ContentPackFor": {
+      "UniqueID": "Pathoschild.ContentPatcher"
+   }
+}

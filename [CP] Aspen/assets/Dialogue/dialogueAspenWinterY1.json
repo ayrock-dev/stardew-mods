@@ -1,0 +1,116 @@
+{
+    //Special dialogue------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	"Introduction": "Oh, hey neighbor! I heard someone moved into that farm. My name's Aspen!$h#$b#I hope you like it here in Pelican Town!$0#$e#If you ever need anything feel free to come by my farm and talk, I live west of the railroads!$0",
+	"danceRejection": "Y-you want to dance with me?$4#$b#I didn't practice for the dance.. so maybe next year?$6",
+	"divorced": "Look... you wanted to end things, I don't think we should be talking..$2",
+	"breakUp": "Ohh... and I thought we were happy together. If I did something, I'm sorry..$2",
+	"aspenFirstEventText": "Sorry for getting a bit upset at the ranch, I hope I didn't leave a bad impression.$2#$b#I try not to get like that in front of people, and especially people I don't know very well.$2#$b#But again, thanks for listening to me vent, @...$7",
+
+	//Location text
+    "saloon_Entry": "Hey, Gus!/Somethin' smells good!/I'm back!/Your favorite customer returns!/Lemme get somethin' on the house!",
+    "seedShop_Entry": "Time to sweat.../Workout day!",
+    "AnimalShop_Entry": "Hey Marnie!/Got any fresh milk?/How're the cows?",
+
+	//Custom gift dialogue (MOD)--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	//https://www.nexusmods.com/stardewvalley/mods/7304
+	//https://github.com/purrplingcat/StardewMods/tree/master/CustomGiftDialogue#create-gift-reaction-dialogues
+	"GiftReactionHoney_FairyRose_Birthday": "You really got me my favorite honey for my birthday?! You're the best, @!$8", //Response for Fairy Rose honey on birthday
+	"GiftReactionHoney_FairyRose": "@!! This is my favorite type of honey! How did you know?!$1#$b#Did someone tell you?$9", //Response for Fairy Rose honey
+	"GiftReaction_Daffodil": "For such a common flower, they're surprisingly pretty!$9#$b#Thanks for the daffodil, @!$8", //Response for daffodil
+	"GiftReaction_Dandelion": "For such an ugly flower, they're pretty good to use in a salad!$9#$b#Thanks for the dandelion, @!$8", //Response for dandelion
+	"GiftReaction_Driftwood": "I.. don't really like this, @.$2#$b#Maybe try giving it to Leah, I think she'd like it more!$9", //Response for driftwood
+	"GiftReactionCategory_-80": "Ooooh, flowers!$9#$b#Tryna woo me over, @?$1#$b#I'm just kiddin'! Thanks for the flowers, @!$8", //Generic response for flowers
+
+    //Winter unique dialogues)--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	"Mon": "The snow is so beautiful! I know some people dislike the snow but I love it.$1#$b#It's a perfect day to cozy up by the fireplace with a good book, don't you think?",
+	"Tue": "Y'know @, I love making snow angels! It's so much fun to lay in the snow and wave your arms and legs.$1#$b#Have you made a snow angel before?",
+	"Tue4": "It used to snow a lot where I grew up, @! I think it's my favorite season.$1
+						#$q 818/811/812/813/814 winter_Mon3Old#What's your favorite season?
+						#$r 818 -10 seasonquestion_None#None. I actually dislike all the seasons.
+						#$r 811 5 seasonquestion_Spring#Spring
+						#$r 812 5 seasonquestion_Summer#Summer
+						#$r 813 5 seasonquestion_Fall#Fall
+						#$r 814 5 seasonquestion_Winter#Winter
+					",
+	
+	"seasonquestion_None": "Are you just saying that because you don't want to tell me? Do you not trust me, @?!$7#$b#Well, I guess that's okay. I'm sure you have your reasons.$5",
+	
+	"seasonquestion_Spring": "Oooh, Spring! I do love the smell of flowers blooming and the sound of bees buzzing.$9#$b#It's a beautiful season, isn't it @?$5
+								#$q 815/816/817/818/819 winter_Mon3Old#How come you like spring so much?
+								#$r 815 5 seasonquestion_Spring_WarmWeather#The warm weather! I need to thaw out after the winter!
+								#$r 816 5 seasonquestion_Spring_FreshAir#I can't get enough of the fresh air! Springs me back to life after the winter!
+								#$r 817 10 seasonquestion_Spring_Festivals#The festivals! The flower dance and egg hunt are so much fun!
+								#$r 818 -10 seasonquestion_Spring_Jk#I was just kidding. I hate spring.
+								#$r 819 5 seasonquestion_Spring_Farming#Being able to farm again! I've missed growing crops, it's so relaxing!
+							",
+	"seasonquestion_Spring_WarmWeather": "Hahaha, I get what you mean @!$1#$b#Fortunately for me, I've gotten pretty used to the cold by now.$0",
+	"seasonquestion_Spring_FreshAir": "Ahh, not a fan of the sharp cold air, huh?$1#$b#Gotta be strong like me to handle it!$8#$b#I could even chew some minty gum and be fine!$5",
+	"seasonquestion_Spring_Festivals": "I couldn't agree move! The festivals are definitely the best part of Spring for me!$1#$b#I love watching the dance, even if I don't participate! Plus I don't mind when I lose the egg hunt because I still had fun!$9#$b#Though, sometimes the pressure of having to find the most eggs can be overwhelming, I try to remember I'm competiting against the kids!$8#$b#I just like that everyone is together and having a great time.$0",
+	"seasonquestion_Spring_Farming": "Just like my bees! They're always buzzing around and working hard in Spring.$1#$b#I'm glad you enjoy farming though, it's a lot of work but it's so rewarding!$0",
+	"seasonquestion_Spring_Jk": "What a weird thing to joke about @!$3#b#I genuinely wanted to know.$2",
+
+	"seasonquestion_Summer": "Really? I'm surprised! I thought it'd be too hot for a farmer!$1#$b#I'm sure you have a good reason though!$0
+								#$q 823/818/820/821/822 winter_Mon3Old#What do you like about summer so much?
+								#$r 823 15 seasonquestion_Summer_FestivalJellies#The Jellies! They're so pretty.
+								#$r 818 -5 seasonquestion_Summer_Jk#Yeah I've got nothing. I don't actually like summer.
+								#$r 820 5 seasonquestion_Summer_Icecream#You ever have one of those ice cream's Alex sells?
+								#$r 821 5 seasonquestion_Summer_Beach#It's the best time to go to the beach!
+								#$r 822 10 seasonquestion_Summer_FestivalLuau#The Luau! The potluck is amazing, even when it's not!
+							",
+	"seasonquestion_Summer_FestivalJellies": "Fair polint! The jellies really are pretty!$1#$b#I love how they light up the ocean, it's so magical!$1#$b#It's actually my favorite festival!$5",
+	"seasonquestion_Summer_Jk": "Yeah, I figured! No way a farmer's favorite holiday is the summer.$0#$b#I wanted a genuine answer though.$2",
+	"seasonquestion_Summer_Icecream": "Hahaha what a funny reason, @.$1#$b#I have though! I can see why you'd like them.$0#$b#I'm not a huge fan of ice cream, but it's pretty good!$0",
+	"seasonquestion_Summer_Beach": "I see! I like the beach too, but I still prefer to go when it's not so hot!$0#$b#Maybe that's just me, though.$1",
+	"seasonquestion_Summer_FestivalLuau": "Oh yeah! The potluck is always so delicious!$1#$b#I'm glad you love it too! Especially since the whole town works hard to make it!$9",
+
+	"seasonquestion_Fall": "Fall! Good choice, @!$0#$bThe colors changing, the temperature starts dropping...$1
+								#$q 818/825/826/827 winter_Mon3Old#What's your favorite part of fall?
+								#$r 818 -5 seasonquestion_Fall_Jk#Nothing actually, it was all a lie. I hate fall.
+								#$r 825 5 seasonquestion_Fall_FestivalEve#Spriti's Eve is so much fun!
+								#$r 826 5 seasonquestion_Fall_FestivalFair#I love all the minigames from the Fair!
+								#$r 827 5 seasonquestion_Fall_Generic#You got it! The colors and cooler temperature is perfect.
+							",
+	"seasonquestion_Fall_Jk": "Oh, okay...$2",
+	"seasonquestion_Fall_FestivalEve": "I agree! I love the spooky decorations!$1#$b#I'm not a huge fan of the haunted maze though, it's a little too spooky for me!$0",
+	"seasonquestion_Fall_FestivalFair": "Ooh the fair! I wonder what your favorite game is, @.$1#$b#I'll try to look out to see what you play the most next time!$0",
+	"seasonquestion_Fall_Generic": "The colors changing is always such a sight!$1#$b#I can understand why it'd be your favorite part of fall, @!$0",
+
+	"seasonquestion_Winter": "Winter? As a farmer?! You can't even grow your crops!$1#$b#Or maybe that's why you like it, the break...$9
+								#$q 828/829/830/831/832 winter_Mon3Old#So what is it about winter you like?
+								#$r 828 5 seasonquestion_Winter_FestivalofIce#Fishing at the Festival of Ice!
+								#$r 829 5 seasonquestion_Winter_FestivalWinterStar#Giving gifts at Winter Star!
+								#$r 830 5 seasonquestion_Winter_FestivalNightMarket#The Night Market is such a sight!
+								#$r 831 5 seasonquestion_Winter_Snow#I love the snow!
+								#$r 832 -10 seasonquestion_Winter_Jk#I was joking! Winer is the worst, there's nothing to like about it.
+							",
+	"seasonquestion_Winter_FestivalofIce": "Ahh, the Festival of Ice! I love seeing all the ice sculptures.$1#$b#Plus everyone gathers around for the fishing tournament... so fun!$9",
+	"seasonquestion_Winter_FestivalWinterStar": "I love giving gifts to the villagers!$1#$b#Wouldn't it be funny if we were one of the other's secret santa this year?$9",
+	"seasonquestion_Winter_FestivalNightMarket": "The Night Market is great! I just wish I didn't live so far.$0#$b#It's hard for me to get there and back at a decent hour..$2",
+	"seasonquestion_Winter_Snow": "I love the snow too! Snowball fights, snow angels, snowmen...$9#$b#I love it all!$1",
+	"seasonquestion_Winter_Jk": "No! That's not true, @!$3#$b#I think there's many things to love about the winter! When the forest is coated in snow, it's so beautiful!$3#$b#And you can make so much with snow! You can play with it and make fun memories!$3#$b#I think you just need to spend winter with someone who loves the season!$0",
+
+	"winter_Mon3Old": "$p 818
+                            #I don't believe you when you say you don't have a favorite holiday, @!$0#$b#And I don't appreciate you keepin' secrets from me!$0
+                            |I'm glad I got to hear your favorite season, @!$1#$b#I think it's important to know what people like and dislike.$0",
+
+	// Hoping to make this start a fetch quest
+	"Wed": "I'm thinking of making one of my special honey-infused hot chocolate for Marnie and Gus! As a little thank-you for all they've done for me.$1#$b#Would you like to join me and help spread some winter cheer?",
+	"Thur": "Do you enjoy ice skating, @? I haven't been since I was a kid but I used to love it.$1#$b#I wasn't very good though... I fell a lot!$8",
+	"Fri": "I've been knitting a some mittens and a scarf for Linus. I imagine he's freezing out there!$2#$e#I know I would be.$7",
+	"Fri2": "The snowflakes are like nature's confetti, don't you think? Each one is unique and beautiful.$1",
+	"Sat": "I'm planning to bake some delicious honey gingerbread cookies. The honey adds a lovely flavor and sweetness.$1",
+	"Sun": "Winter nights are so peaceful. I like to sit by the window with a warm cup of tea and watch the snowfall.$1#$b#It's a perfect time for reflection, or a book!$0",
+	"Sun2": "My bees are huddled up in their hives, staying warm. They're like a big, fuzzy family in there!$1#$b#I make sure to check on them regularly to ensure they're doing well in the cold.",
+
+	//Winter Festival (Night Market) dialogue
+	"winter_13": "The Night Market is here! I'm excited to see all the things people are selling! Maybe stop by Gus's on the way down.$1
+							#$q 833/834/835 nightmarketOld##Have you been to the Night Market before?
+							#$r 833 5 nightmarket_yes#Yes!
+							#$r 834 5 nightmarket_no#Nope!
+							#$r 835 -5 nightmarket_bad#The Night Market is a waste of time!
+						",
+	"nightmarket_yes": "I love the Night Market too! The lights, the food, the ambiance - it's all so magical.$1#$b#I hope you emjoy it the the Night Market this year!$1",
+	"nightmarket_no": "Oh, you're in for a treat! The Night Market is a wonderful experience with so much to see and do.$1",
+	"nightmarket_bad": "I'm sorry you feel that way, @. I think the Night Market is a wonderful experience!$0#$b#Is there something specific you dislike about the Night Market?",
+	"nightmarketOld": "Hopefully you enjoy the Night Market this year, @!$1",
+}

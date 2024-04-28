@@ -1,0 +1,17 @@
+{
+    "Name": "Earthy Interface",
+    "Author": "DaisyNiko",
+    "Version": "1.1",
+    "UniqueID": "DaisyNiko.EarthyInterface",
+    "MinimumApiVersion": "2.11.2",
+    "UpdateKeys": [ "Nexus:13658" ],
+    "ContentPackFor": {
+        "UniqueID": "Pathoschild.ContentPatcher"
+    },
+    "Dependencies":[
+        {
+            "UniqueID":"DaisyNiko.EarthyRecolour",
+            "IsRequired":false
+        }
+    ]
+}

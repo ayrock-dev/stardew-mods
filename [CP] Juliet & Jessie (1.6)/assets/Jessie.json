@@ -1,0 +1,257 @@
+{
+  "Changes": [
+    /*{
+      "LogName": "NPC Manifestation",
+      "Action": "EditData",
+      "Target": "Data/NPCDispositions",
+      "Entries": {
+        "Jessie": "adult/polite/shy/positive/female/not-datable/null/Town/summer 1//Custom_LK_LodgingHouse 17 4/{{i18n:npcd.jessie}}"
+      }
+    },*/
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Entries": {
+        "Jessie": {
+          "DisplayName": "{{i18n:npcd.jessie}}", // this would normally use {{i18n:}} to support translations
+          "BirthSeason": "Summer",
+          "BirthDay": 1,
+          "HomeRegion": "Town",
+          "Gender": "Female",
+          "Age": "Adult",
+          "Manner": "Polite",
+          "SocialAnxiety": "Shy",
+          "Optimism": "Positive",
+          "CanBeRomanced": false,
+          "LoveInterest": null,
+          "Home": [
+            {
+              "Id": "Default",
+              "Location": "Custom_LK_LodgingHouse",
+              "Tile": {
+                "X": 17,
+                "Y": 4
+              },
+              "Direction": "Down"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "NPC Gift Tastes",
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Entries": {
+        "Jessie": "{{i18n:gifts.jessie.love}}/222 230 254 281 282/{{i18n:gifts.jessie.like}}/-81 -75 -79 350/{{i18n:gifts.jessie.dislike}}/-6 206 424 426/{{i18n:gifts.jessie.hate}}/-4 446/{{i18n:gifts.jessie.neutral}}//"
+      }
+    },
+    //Loves Rhubarb Pie, Red plate, Melon, Cranberries, Chanterelle
+    //Dislikes/Hates animal products (eggs, milk, fish), pizza 
+    {
+      "LogName": "NPC Sprite",
+      "Action": "Load",
+      "Target": "Characters/Jessie",
+      "FromFile": "assets/Characters/Jessie/Sprites.png"
+    },
+    {
+      "LogName": "NPC Portrait",
+      "Action": "Load",
+      "Target": "Portraits/Jessie",
+      "FromFile": "assets/Portraits/Jessie/Portraits.png"
+    },
+    {
+      "LogName": "Schedule",
+      "Action": "Load",
+      "Target": "Characters/schedules/Jessie",
+      "FromFile": "assets/schedules/JessieSchedule.json",
+      "When": {
+        "HasSeenEvent |contains=191393": false,
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+      }
+    },
+    {
+      "LogName": "Schedule",
+      "Action": "Load",
+      "Target": "Characters/schedules/Jessie",
+      "FromFile": "assets/schedules/JessieScheduleJojaClosed.json",
+      "When": {
+        "HasSeenEvent |contains=191393": true,
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+      }
+    },
+    {
+      "LogName": "Dialogue",
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Jessie",
+      "FromFile": "assets/dialogue/JessieDialogue.json"
+    },
+    {
+      "LogName": "Dialogue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jessie",
+      "When": {
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+      },
+      "Entries": {
+        "Sat": "{{i18n:sve.sat}}",
+        "Sat4": "{{i18n:sve.sat4}}",
+        "Sun": "{{i18n:sve.sun}}",
+        "Sun6": "{{i18n:sve.sun6}}"
+      }
+    },
+    {
+      "LogName": "Dialogue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jessie",
+      "When": {
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+        "Spouse": "Wizard"
+      },
+      "Entries": {
+        "spring_23_2": "{{i18n:sve.spring23.wizard}}"
+      }
+    },
+    {
+      "LogName": "Dialogue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jessie",
+      "When": {
+        "HasSeenEvent": "191393"
+      },
+      "Entries": {
+        "Sat": "{{i18n:sve.sat}}",
+        "Sat4": "{{i18n:sve.sat4}}",
+        "Sun": "{{i18n:sve.sun}}",
+        "Sun6": "{{i18n:sve.sun6}}"
+      }
+    },
+    {
+      "LogName": "Animations",
+      "Action": "EditData",
+      "Target": "Data/animationDescriptions",
+      "Entries": {
+        "Jessie_work": "0 12 24 24 24/20 20 20 20 20 20 21 21 21 20 20 20 22 22 20 20 22 22 20 20 21 21 21 21 20 20 20 23 23 23 20 20 20/24 24 24 12 0",
+        "Jessie_exercise": "0 18/16 16 16 16 16 17 17 17 17 16 16 16 16 16 16/18 0",
+        "Jessie_waterL": "25/25/25",
+        "Jessie_waterR": "26/26/26",
+        "Jessie_waterF": "27/27/27"
+      }
+    },
+    {
+      "LogName": "Dialogue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jessie",
+      "Entries": {
+        "{{season}}_Wed6": "$1 Pregnant_Gift#{{i18n:jessie.pregnantgift}}[351]$k#$e#{{i18n:jessie.pregnant}}"
+      },
+      "When": {
+        "Pregnant": "@{{playerName}}"
+      }
+    },
+    //Temp Actors and Maps 
+    {
+      "LogName": "NPC Sprite",
+      "Action": "Load",
+      "Target": "Characters/SlimeyBoi",
+      "FromFile": "assets/img/SlimeyBoi.png"
+    },
+    {
+      "LogName": "NPC Sprite",
+      "Action": "Load",
+      "Target": "Characters/LexiMon",
+      "FromFile": "assets/img/LexiMon.png"
+    },
+    {
+      "LogName": "NPC Sprite",
+      "Action": "Load",
+      "Target": "Maps/SunsetBeach",
+      "FromFile": "assets/Maps/TempMaps/SunsetBeach.tbin"
+    },
+    {
+      "LogName": "NPC Sprite",
+      "Action": "Load",
+      "Target": "Maps/SunsetBeach2",
+      "FromFile": "assets/Maps/TempMaps/SunsetBeach2.tbin"
+    },
+    //Jessie is gathering fiddlehead ferns in the Secret Woods
+    {
+      "LogName": "4 Heart Event",
+      "Action": "EditData",
+      "Target": "Data/Events/Woods",
+      "Entries": {
+        "6398002/f Jessie 1000/d sat sun/t 900 1400/w sunny": "woodsTheme/18 17/Jessie 18 18 2 farmer 29 13 3/addTemporaryActor SlimeyBoi 16 16 -100 -100 2 false/skippable/pause 500/move farmer -8 0 2/pause 1000/emote Jessie 56/pause 500/move farmer 0 4 3/faceDirection Jessie 1/pause 500/emote Jessie 32/pause 1500/speak Jessie \"{{i18n:6398002.01}}\"/pause 500/faceDirection Jessie 3/pause 500/faceDirection Jessie 1/speak Jessie \"{{i18n:6398002.02}}\"/pause 1000/quickQuestion #{{i18n:6398002.03}}#{{i18n:6398002.04}}#{{i18n:6398002.05}}#{{i18n:6398002.06}}(break)speak Jessie \"{{i18n:6398002.07}}\"(break)speak Jessie \"{{i18n:6398002.08.{{season}} }}\"(break)speak Jessie \"{{i18n:6398002.09}}\"(break)speak Jessie \"{{i18n:6398002.10}}\"/stopMusic/pause 500/playSound slime/pause 500/emote farmer 16/warp SlimeyBoi 19 14/faceDirection farmer 0 true/faceDirection Jessie 0 true/playMusic XOR/animate SlimeyBoi false true 100 0 1 2 3 19 18 17 0 0 0/speed farmer 5/move farmer -2 0 0/move farmer 0 -1 0/textAboveHead Jessie \"{{i18n:6398002.11}}\"/pause 500/emote farmer 8/move Jessie 0 -3 0 true/pause 500/emote farmer 28/pause 1500/stopAnimation SlimeyBoi 0/shake SlimeyBoi 480/pause 500/emote Jessie 56/pause 1500/playSound slime/move SlimeyBoi 0 -1 2/speak Jessie \"{{i18n:6398002.12}}\"/pause 500/shake SlimeyBoi 480/jump SlimeyBoi 5/speak Jessie \"{{i18n:6398002.13}}\"/jump SlimeyBoi 5/pause 500/move SlimeyBoi 0 -1 2/pause 1000/emote Jessie 56/move SlimeyBoi 0 -1 2/playSound slime/pause 500/move SlimeyBoi 0 -1 2/warp SlimeyBoi -100 -100/stopMusic/pause 1000/playMusic woodsTheme/move farmer 0 -1 3/faceDirection Jessie 1/speak Jessie \"$q 639870 null#{{i18n:6398002.14}}#$r 639871 25 JessieSlime_How#{{i18n:6398002.15}}#$r 639872 -50 JessieSlime_Kill#{{i18n:6398002.16}}\"/pause 500/speak Jessie \"{{i18n:6398002.17}}\"/pause 500/faceDirection Jessie 0/pause 500/speak Jessie \"{{i18n:6398002.18}}\"/pause 500/faceDirection Jessie 1/pause 500/speak Jessie \"{{i18n:6398002.19}}\"/pause 500/emote farmer 60/pause 1000/end warpOut"
+      }
+    },
+    {
+      "LogName": "4 Heart Event - SVE version",
+      "Action": "EditData",
+      "Target": "Data/Events/Woods",
+      "Entries": {
+        "6398002/f Jessie 1000/d sat sun/t 900 1400/w sunny": "woodsTheme/49 56/Jessie 54 55 2 farmer 58 48 2/addTemporaryActor SlimeyBoi 16 16 -100 -100 2 false/skippable/pause 500/move farmer -4 0 2/pause 1000/emote Jessie 56/pause 500/move farmer 0 5 2/faceDirection Jessie 0/pause 500/emote Jessie 32/pause 1500/speak Jessie \"{{i18n:6398002.01}}\"/pause 500/faceDirection Jessie 3/pause 500/faceDirection Jessie 1/speak Jessie \"{{i18n:6398002.02}}\"/pause 1000/quickQuestion #{{i18n:6398002.03}}#{{i18n:6398002.04}}#{{i18n:6398002.05}}#{{i18n:6398002.06}}(break)speak Jessie \"{{i18n:6398002.07}}\"(break)speak Jessie \"{{i18n:6398002.08.{{season}} }}\"(break)speak Jessie \"{{i18n:6398002.09}}\"(break)speak Jessie \"{{i18n:6398002.10}}\"/stopMusic/pause 500/playSound slime/pause 500/emote farmer 16/warp SlimeyBoi 50 54/faceDirection farmer 3 true/faceDirection Jessie 3 true/playMusic XOR/animate SlimeyBoi false true 100 0 1 2 3 19 18 17 0 0 0/speed farmer 5/move farmer -2 0 0/move farmer 0 1 3/textAboveHead Jessie \"{{i18n:6398002.11}}\"/pause 500/emote farmer 8/move Jessie -3 0 3 true/pause 500/emote farmer 28/pause 1500/stopAnimation SlimeyBoi 0/shake SlimeyBoi 480/pause 500/emote Jessie 56/pause 1500/playSound slime/move SlimeyBoi 0 1 2/speak Jessie \"{{i18n:6398002.12}}\"/pause 500/shake SlimeyBoi 480/jump SlimeyBoi 5/speak Jessie \"{{i18n:6398002.13}}\"/jump SlimeyBoi 5/pause 500/move SlimeyBoi -2 0 2/pause 1000/emote Jessie 56/warp SlimeyBoi -100 -100/stopMusic/pause 1000/playMusic woodsTheme/move farmer -1 0 2/faceDirection Jessie 0/speak Jessie \"$q 639870 null#{{i18n:6398002.14}}#$r 639871 25 JessieSlime_How#{{i18n:6398002.15}}#$r 639872 -50 JessieSlime_Kill#{{i18n:6398002.16}}\"/pause 500/speak Jessie \"{{i18n:6398002.17}}\"/pause 500/faceDirection Jessie 0/pause 500/speak Jessie \"{{i18n:6398002.18}}\"/pause 500/faceDirection Jessie 3/pause 500/faceDirection Jessie 0/speak Jessie \"{{i18n:6398002.19}}\"/pause 500/emote farmer 60/pause 1000/end warpOut"
+      },
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      }
+    },
+    {
+      "LogName": "2 Heart Event",
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_LK_ClearingHouse",
+      "Entries": {
+        "6398001/f Jessie 500/p Jessie/z winter": "spring2/22 13/farmer 25 18 0 Jessie 20 12 3/skippable/pause 500/emote Jessie 56/message \"{{i18n:6398001.01}}\"/pause 1000/move farmer 0 -6 3/pause 500/faceDirection Jessie 1/emote Jessie 32/pause 500/speak Jessie \"{{i18n:6398001.02}}\"/move farmer -3 0 3/pause 500/emote farmer 32/pause 500/speak Jessie \"{{i18n:6398001.03}}\"/pause 500/emote farmer 60/pause 500/speak Jessie \"{{i18n:6398001.04}}\"/emote farmer 8/move Jessie 1 0 1/pause 500/speak Jessie \"{{i18n:6398001.05}}\"/playSound give_gift/speak Jessie \"{{i18n:6398001.06}}[{{JessGift}}]\"/pause 500/emote farmer 20/pause 1000/end",
+        "6398310/f Juliet 2500/f Jessie 2500/f Lewis 2000/e 6398444/o Juliet/w sunny/t 1200 1800": "{{season}}_day_ambient/25 10/Juliet -100 -100 0 Jessie 24 11 1 farmer 23 15 0 Gremlin 27 11 1/addConversationTopic JulietParents 5/skippable/advancedMove Gremlin true 3 0 0 1 -3 0 3 1000 0 -1/move farmer 0 -4 1/faceDirection Jessie 3/pause 500/speak Jessie \"{{i18n:6398310.01}}\"/emote farmer 8 /pause 500/speak Jessie \"{{i18n:6398310.02}}\"/pause 500/emote farmer 56/pause 500/textAboveHead Jessie \"{{i18n:6398310.03}}\"/pause 1000/faceDirection Jessie 0/move farmer 0 -2 1/move farmer 1 0 0/pause 100/playSound doorOpen/warp farmer -100 -100/pause 2000/fade/viewport -200 -200/changeLocation Custom_LK_LodgingHouse/viewport -200 -200/switchEvent 6398310_2"
+      },
+      "When": {
+        "LoadESMap": "false"
+      }
+    },
+    {
+      "LogName": "6 Heart Event",
+      "Action": "EditData",
+      "Target": "Data/Events/Mountain",
+      "Entries": {
+        "6398006/f Jessie 1500/f Linus 1500/e 191393/w sunny/t 1400 1800": "{{season}}_day_ambient/29 12/Jessie 28 9 1 Linus 30 9 3 farmer 18 9 1/skippable/pause 500/speak Jessie \"{{i18n:6398006.01}}\"/pause 500/speak Linus \"{{i18n:6398006.02}}\"/shake Linus 240/pause 500/speak Jessie \"{{i18n:6398006.03}}\"/pause 500/speak Linus \"{{i18n:6398006.04}}\"/pause 500/emote Linus 20/emote Jessie 60/move farmer 8 0 1/pause 500/speak Jessie \"{{i18n:6398006.05}}\"/faceDirection Jessie 3/speak Jessie \"{{i18n:6398006.06}}\"/pause 500/quickQuestion #{{i18n:6398006.07}}#{{i18n:6398006.08}}#{{i18n:6398006.09}}(break)speak Jessie \"{{i18n:6398006.10}}\"(break)speak Jessie \"{{i18n:6398006.11}}\"\\faceDirection Jessie 1\\emote Jessie 32\\speak Jessie \"{{i18n:6398006.12}}\"(break)speak Jessie \"{{i18n:6398006.13}}\"/pause 500/speak Linus \"{{i18n:6398006.14}}\"/pause 500/speak Jessie \"{{i18n:6398006.15}}\"/emote Jessie 56/move Jessie 0 -1 2/move Jessie 1 0 2/speak Jessie \"{{i18n:6398006.16}}\"/pause 500/move farmer 2 0 1/pause 500/speak Jessie \"{{i18n:6398006.17}}\"/pause 1500/end"
+      }
+    },
+    {
+      "LogName": "8 Heart Event",
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_LK_LodgingHouse",
+      "Entries": {
+        "6398003/f Jessie 2000/t 0900 1400/d sat sun": "none/17 12/farmer 13 23 0 Jessie -100 -100 0/skippable/move farmer 0 -4 1/move farmer 4 0 1/playSound woodyStep/emote farmer 8/move farmer 4 0 0/move farmer 0 -1 0/playSound doorOpen/pause 500/fade/viewport -1000 -1000/warp farmer -1000 -1000/changeLocation Custom_LK_LodgingHouseBasement/viewport -1000 -1000/warp Jessie 3 6/playMusic desolate/viewport 10 6/textAboveHead Jessie \"{{i18n:6398003.01}}\"/pause 1250/textAboveHead Jessie \"{{i18n:6398003.02}}\"/pause 1000/playSound stairsdown/pause 500/warp farmer 5 10/pause 1000/speak Jessie \"{{i18n:6398003.03}}\"/move farmer 0 -2 0/faceDirection farmer 1/pause 500/faceDirection farmer 0/pause 500/move farmer 0 -2 3/faceDirection Jessie 1/pause 500/emote farmer 8/pause 500/speak Jessie \"{{i18n:6398003.04}}\"/pause 500/faceDirection Jessie 3/pause 500/emote Jessie 40/pause 500/faceDirection Jessie 1/textAboveHead Jessie \"{{i18n:6398003.05}}\"/pause 2000/emote farmer 8/pause 500/speak Jessie \"{{i18n:6398003.06}}\"/faceDirection Jessie 2/pause 1000/stopMusic/fade/viewport -1000 -1000/changeToTemporaryMap SunsetBeach/viewport -1000 -1000/warp farmer -1000 -1000/warp Jessie 27 15/playMusic ocean/viewport 15 10/move Jessie -12 0 3/pause 500/playSound junimoMeep1/pause 500/faceDirection Jessie 0/jump Jessie 5/emote Jessie 16/speed Jessie 5/move Jessie -1 0 0/move Jessie 0 -1 3/pause 500/playSound junimoMeep1/pause 500/emote Jessie 56/pause 1000/fade/viewport -1000 -1000/changeLocation Custom_LK_LodgingHouseBasement/warp farmer 5 7/faceDirection farmer 3/warp Jessie 3 7/faceDirection Jessie 1/stopMusic/playMusic desolate/viewport 10 6/pause 500/speak Jessie \"{{i18n:6398003.07}}\"/emote farmer 20/pause 500/speak Jessie \"{{i18n:6398003.08}}\"/move Jessie 0 1 3/pause 500/speak Jessie \"{{i18n:6398003.09}}\"/move Jessie 0 -1 1/pause 500/speak Jessie \"{{i18n:6398003.10}}\"/pause 500/emote farmer 40/speak Jessie \"{{i18n:6398003.11}}\"/pause 500/speak Jessie \"{{i18n:6398003.12}}\"/stopMusic/fade/viewport -1000 -1000/speak Jessie \"{{i18n:6398003.13}}\"/changeToTemporaryMap SunsetBeach2/viewport -1000 -1000/addTemporaryActor LexiMon 16 32 15 14 3 true/warp Jessie 14 14/warp farmer -100 -100/viewport 15 10/pause 500/emote Jessie 56/emote LexiMon 20/faceDirection LexiMon 0/faceDirection Jessie 0/move LexiMon 0 -3 2/pause 500/faceDirection LexiMon 0/pause 500/warp LexiMon -100 -100/playSound dropItemInWater/pause 500/emote Jessie 20/pause 1500/fade/viewport -1000 -1000/changeLocation Custom_LK_LodgingHouseBasement/viewport -1000 -1000/warp Jessie 3 7/faceDirection Jessie 1/warp farmer 5 7/viewport 10 6/pause 500/speak Jessie \"{{i18n:6398003.14}}\"/pause 500/faceDirection Jessie 3/pause 500/emote farmer 60/faceDirection Jessie 1/speak Jessie \"{{i18n:6398003.15}}\"/pause 500/faceDirection Jessie 0/pause 1000/end"
+      }
+    },
+    {
+      "LogName": "Jessie and Vincent",
+      "Action": "EditData",
+      "Target": "Data/Events/Beach",
+      "Entries": {
+        "6398004/f Kent 50/p Vincent/e 191393/t 1700 1900": "continue/-100 -100/Vincent 43 24 2 farmer 27 22 2 Willy 27 25 0 Jessie 38 12 2/addMailReceived Jessie_Vincent/skippable/animate Vincent false true 500 18 19/specificTemporarySprite beachStuff/viewport 40 25 true/move Jessie 0 12 1/speak Jessie \"{{i18n:6398004.01}}\"/pause 500/stopAnimation Vincent 18/emote Vincent 40/pause 3000/textAboveHead Vincent \"{{i18n:6398004.02}}\"/pause 500/move Jessie 3 0 2/showFrame Jessie 32/pause 500/speak Jessie \"{{i18n:6398004.03}}\"/pause 500/faceDirection Vincent 3/emote Vincent 40/pause 2000/speak Vincent \"{{i18n:6398004.04}}\"/move Willy 0 5 2/warp Willy -100 -100/faceDirection farmer 1/pause 500/emote Jessie 60/pause 2000/speak Vincent \"{{i18n:6398004.05}}\"/pause 500/emote Jessie 8/textAboveHead Jessie \"{{i18n:6398004.06}}\"/pause 500/speak Jessie \"{{i18n:6398004.07}}\"/pause 500/speak Vincent \"{{i18n:6398004.08}}\"/pause 500/showFrame Vincent 18/speak Vincent \"{{i18n:6398004.09}}\"/pause 500/showFrame Vincent 19/move Jessie 1 0 2/showFrame Jessie 32/pause 500/speak Vincent \"{{i18n:6398004.10}}\"/showFrame Vincent 12/pause 500/speak Jessie \"{{i18n:6398004.11}}\"/pause 500/textAboveHead Vincent \"{{i18n:6398004.12}}\"/pause 500/speak Jessie \"{{i18n:6398004.13}}\"/pause 500/speak Vincent \"{{i18n:6398004.14}}\"/pause 500/speak Jessie \"{{i18n:6398004.15}}\"/jump Vincent 4/speak Vincent \"{{i18n:6398004.16}}\"/pause 500/speak Jessie \"{{i18n:6398004.17}}\"/pause 500/speak Vincent \"{{i18n:6398004.18}}\"/pause 500/speak Jessie \"{{i18n:6398004.19}}\"/pause 500/speak Vincent \"{{i18n:6398004.20}}\"/pause 1500/speak Jessie \"{{i18n:6398004.21}}\"/pause 500/speak Vincent \"{{i18n:6398004.22}}\"/speak Jessie \"{{i18n:6398004.23}}\"/pause 500/jump Vincent 4/speak Vincent \"{{i18n:6398004.24}}\"/pause 500/animate Jessie false true 500 33 34/showFrame farmer 20/pause 500/end"
+      }
+    },
+    {
+      "LogName": "Jessie and Lexi",
+      "Action": "EditData",
+      "Target": "Data/Events/Beach",
+      "Entries": {
+        "6398005/f Jessie 2500/e 6398003/p Jessie/w rainy": "ocean/85 39/Jessie 86 40 2 farmer 87 25 2/addTemporaryActor LexiMon 16 32 -100 -100 0 true/skippable/swimming LexiMon/pause 500/emote Jessie 56/pause 500/move farmer 0 15 2 true/pause 500/textAboveHead Jessie \"{{i18n:6398005.01}}\"/pause 2500/speak Jessie \"{{i18n:6398005.02}}\"/pause 1500/faceDirection Jessie 1/speak Jessie \"{{i18n:6398005.03}}\"/pause 500/emote farmer 32/pause 500/faceDirection farmer 3/pause 1500/emote farmer 8/pause 500/speak Jessie \"{{i18n:6398005.04}}\"/pause 500/faceDirection Jessie 2/faceDirection farmer 2/speak Jessie \"{{i18n:6398005.05}}\"/faceDirection Jessie 1/pause 500/emote farmer 40/pause 500/speak Jessie \"{{i18n:6398005.06}}\"/pause 500/faceDirection Jessie 2/pause 500/speak Jessie \"{{i18n:6398005.07}}\"/pause 500/faceDirection Jessie 1/pause 500/speak Jessie \"{{i18n:6398005.08}}\"/{{MusicalInterlude}}/faceDirection Jessie 2/playMusic mermaidSong/pause 10000/playSound dropItemInWater/pause 500/stopMusic/warp LexiMon 86 46/faceDirection farmer 2/emote farmer 16/pause 2500/textAboveHead Jessie \"{{i18n:6398005.09}}\"/pause 500/move LexiMon 0 -4 0/pause 500/emote LexiMon 20/pause 2000/end dialogue Jessie \"{{i18n:6398005.10}}\"",
+      },
+      "When": {
+        "HasFlag": "beachBridgeFixed"
+      }
+    },
+    /*{
+      "LogName": "Schedule",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Jessie",
+      "Entries": {
+        "summer": "610 Custom_LK_LodgingHouse 18 14 2/900 Custom_LK_ClearingHouse 17 21 3 Jessie_waterL/1100 Custom_LK_ClearingHouse 12 13 2 Jessie_waterF/1230 Mountain 60 37 1/1600 Mountain 29 8 2/2000 Custom_LK_LodgingHouse 20 4 1"
+      },
+      "When": {
+        "HasSeenEvent |contains=191393": true,
+        "HasMod": "DSVTeam.DiverseSeasonalOutfits, DSVTeam.Marigold"
+      }
+    },*/
+  ]
+}

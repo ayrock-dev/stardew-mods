@@ -1,0 +1,168 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load Map File",
+      "Action": "Load",
+      "Target": "Maps/Custom_Alecto_WitchHutUpstairs",
+      "FromFile": "assets/Maps/WitchHutUpstairs.tmx"
+    },
+    {
+      "LogName": "Add Location",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "Custom_Alecto_WitchHutUpstairs": {
+          "DisplayName": "{{i18n:location.AlectoRoom}}",
+          "DefaultArrivalTile": { "X": 4, "Y": 4 },
+          "CreateOnLoad": {
+            "MapPath": "Maps/Custom_Alecto_WitchHutUpstairs"
+          }
+        }
+      }
+    },
+    {
+      "LogName": "Location Strings",
+      "Action": "EditData",
+      "Target": "Strings/StringsFromMaps",
+      "Entries": {
+        "alectohouse.1": "{{i18n:maps.AlectoHouse1}}",
+        "alectohouse.2": "{{i18n:maps.AlectoHouse2}}",
+        "alectohouse.3": "{{i18n:maps.AlectoHouse3}}",
+        "alectohouse.4": "{{i18n:maps.AlectoHouse4}}",
+        "alectohouse.5": "{{i18n:maps.AlectoHouse5}}",
+        "alectohouse.6": "{{i18n:maps.AlectoHouse6}}"
+      }
+    },
+    {
+      "LogName": "Patches Witch's Hut",
+      "Action": "EditMap",
+      "Target": "Maps/WitchHut",
+      "FromArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 3,
+        "Height": 5
+      },
+      "ToArea": {
+        "X": 2,
+        "Y": 0,
+        "Width": 3,
+        "Height": 5
+      },
+      "FromFile": "assets/Maps/WitchHutPatch.tmx"
+    },
+    {
+      "LogName": "Add Warp From Vanilla Witch Hut to Alecto's Room",
+      "Action": "EditMap",
+      "Target": "Maps/WitchHut",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 3,
+            "Y": 4
+          },
+          "Layer": "Back",
+          "SetProperties": {
+            "TouchAction": "Warp Custom_Alecto_WitchHutUpstairs 4 4"
+          }
+        }
+      ]
+    },
+    {
+      "LogName": "Add Warp From Alecto's Room to Vanilla Witch Hut",
+      "Action": "EditMap",
+      "Target": "Maps/Custom_Alecto_WitchHutUpstairs",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 3,
+            "Y": 5
+          },
+          "Layer": "Back",
+          "SetProperties": {
+            "TouchAction": "Warp WitchHut 3 4"
+          }
+        }
+      ]
+    },
+    {
+      "LogName": "Strings",
+      "Action": "EditMap",
+      "Target": "Maps/Custom_Alecto_WitchHutUpstairs",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 13,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Message \"alectohouse.2\""
+          }
+        },
+        {
+          "Position": {
+            "X": 13,
+            "Y": 8
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Message \"alectohouse.3\""
+          }
+        },
+        {
+          "Position": {
+            "X": 6,
+            "Y": 11
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Message \"alectohouse.4\""
+          }
+        },
+        {
+          "Position": {
+            "X": 9,
+            "Y": 10
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Message \"alectohouse.5\""
+          }
+        },
+        {
+          "Position": {
+            "X": 3,
+            "Y": 9
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Message \"alectohouse.6\""
+          }
+        }
+      ]
+    },
+    {
+      "LogName": "Adds First NPCWarp for Alecto",
+      "Action": "EditMap",
+      "Target": "Maps/Railroad",
+      "MapProperties": {
+        "NPCWarp": "55 36 Custom_Alecto_WitchHutUpstairs 12 12"
+      }
+    },
+    {
+      "LogName": "Adds Second NPCWarp for Alecto",
+      "Action": "EditMap",
+      "Target": "Maps/Custom_Alecto_WitchHutUpstairs",
+      "MapProperties": {
+        "NPCWarp": "12 11 Railroad 56 36"
+      }
+    },
+    {
+      "LogName": "Load Alecto's Special Tiles",
+      "Action": "Load",
+      "Target": "Maps/z_alectotiles",
+      "FromFile": "assets/Maps/z_alectotiles.png"
+    }
+  ]
+}

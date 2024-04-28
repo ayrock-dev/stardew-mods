@@ -1,0 +1,142 @@
+{
+  "Changes": [
+    {
+      "LogName": "Kevin and Titania's Dispositions",
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Entries": {
+        "KevinTheCrow": {
+					"CanSocialize" : "FALSE",
+					"Manner": "Rude",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Positive",
+					"Gender": "Male",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Other",
+					"FriendsAndFamily": {},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Alecto_WitchHutUpstairs",
+							"Tile": {
+								"X": 10,
+								"Y": 6
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Kevin.display.name}}",
+					"Age": "Child",
+          "CanGreetNearbyCharacters": false
+				},
+        "TitaniaTheCrow": {
+					"CanSocialize" : "FALSE",
+					"Manner": "Polite",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Positive",
+					"Gender": "Female",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Other",
+					"FriendsAndFamily": {},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Alecto_WitchHutUpstairs",
+							"Tile": {
+								"X": 11,
+								"Y": 6
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Titania.display.name}}",
+					"Age": "Child",
+          "CanGreetNearbyCharacters": false
+				},
+      }
+    },
+    {
+      "LogName": "Animations",
+      "Action": "EditData",
+      "Target": "Data/animationDescriptions",
+      "Entries": {
+        "kevin_spin": "16/16 16 16 17 17 17 18 18 18 19 19 19 18 18 18 17 17 17/16",
+        "kevin_idle": "20/20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 22 23 22 20 20 20 20 20 20 20 20 20 20 20 24 24 25 25 20 20/20",
+        "titania_idle": "20/20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 26 27 26 27 20 20 20 20 20 20 20 20 20 20 20 20 20 22 23 22 20/20",
+        "kevin_still": "16/16/16",
+        "titania_still": "17/17/17",
+        "kevin_crisps": "28/28 28 29 28 29 28 28 28 28/28",
+        "titania_ignore": "18/18/18",
+        "kevin_sleep": "22/22/22",
+        "titania_sleep": "22/22/22"
+      }
+    },
+    {
+      "LogName": "Portraits and Sprites - Kevin",
+      "Action": "Load",
+      "Target": "Portraits/KevinTheCrow, Characters/KevinTheCrow",
+      "FromFile": "assets/{{TargetPathOnly}}/Kevin.png"
+    },
+    {
+      "LogName": "Portraits and Sprites - Titania",
+      "Action": "Load",
+      "Target": "Portraits/TitaniaTheCrow, Characters/TitaniaTheCrow",
+      "FromFile": "assets/{{TargetPathOnly}}/Titania.png"
+    },
+    {
+      "LogName": "Crow Stuff - Blank",
+      "Action": "Load",
+      "Target": "Characters/Dialogue/KevinTheCrow, Characters/Dialogue/TitaniaTheCrow, Characters/Schedules/KevinTheCrow, Characters/Schedules/TitaniaTheCrow, Strings/schedules/KevinTheCrow, Strings/schedules/TitaniaTheCrow",
+      "FromFile": "{{BlankFile}}"
+    },
+    {
+      "LogName": "Crow Schedules",
+      "Action": "Include",
+      "FromFile": "assets/Schedules/crows.json"
+    },
+    {
+      "LogName": "Kevin's Dialogue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/KevinTheCrow",
+      "Entries": {
+        "Mon": "{{i18n:Kevin.dialogue.Mon}}",
+        "Tue": "{{i18n:Kevin.dialogue.Tue1}}#$b#%{{i18n:Kevin.dialogue.Tue2}}",
+        "Wed": "{{i18n:Kevin.dialogue.Wed1}}#$b#%{{i18n:Kevin.dialogue.Wed2}}",
+        "Thu": "{{i18n:Kevin.dialogue.Thu}}",
+        "Fri": "{{i18n:Kevin.dialogue.Fri}}",
+        "Sat": "{{i18n:Kevin.dialogue.Sat}}",
+        "Sun": "{{i18n:Kevin.dialogue.Sun}}"
+      }
+    },
+    {
+      "LogName": "Titania's Dialogue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/TitaniaTheCrow",
+      "Entries": {
+        "Mon": "{{i18n:Titania.dialogue.Mon}}",
+        "Tue": "{{i18n:Titania.dialogue.Tue}}",
+        "Wed": "{{i18n:Titania.dialogue.Wed}}",
+        "Thu": "{{i18n:Titania.dialogue.Thu}}",
+        "Fri": "{{i18n:Titania.dialogue.Fri}}",
+        "Sat": "{{i18n:Titania.dialogue.Sat}}",
+        "Sun": "{{i18n:Titania.dialogue.Sun}}"
+      }
+    },
+    {
+      "LogName": "Strings - Kevin",
+      "Action": "EditData",
+      "Target": "Strings/schedules/KevinTheCrow",
+      "Entries": {
+        "kevincrisps.000": "%{{i18n:Kevin.dialogue.chips}}"
+      }
+    },
+    {
+      "LogName": "Strings - Titania",
+      "Action": "EditData",
+      "Target": "Strings/schedules/TitaniaTheCrow",
+      "Entries": {
+        "titaniaignore.000": "%{{i18n:Titania.dialogue.ignore}}"
+      }
+    }
+  ]
+}

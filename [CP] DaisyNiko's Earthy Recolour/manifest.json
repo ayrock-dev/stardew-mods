@@ -1,0 +1,11 @@
+{
+    "Name": "Earthy Recolour",
+    "Author": "DaisyNiko",
+    "Version": "1.4.2",
+    "UniqueID": "DaisyNiko.EarthyRecolour",
+    "MinimumApiVersion": "2.11.2",
+    "UpdateKeys": [ "Nexus:5255" ],
+    "ContentPackFor": {
+        "UniqueID": "Pathoschild.ContentPatcher"
+    }
+}

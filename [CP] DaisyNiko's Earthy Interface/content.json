@@ -1,0 +1,326 @@
+{
+	"Format":"2.0.0",
+	"ConfigSchema":{
+		"AccentColour":{
+			"AllowValues":"Slate, Maroon, Plum, Sienna, Olive, Forest, Emerald, Navy, Cornflower, Eggplant, Scarlet, Coal, Random, Seasonal",
+			"Default":"Slate"
+		},
+		"SpringDefault":{
+			"AllowValues":"Slate, Maroon, Plum, Sienna, Olive, Forest, Emerald, Navy, Cornflower, Eggplant, Scarlet, Coal",
+			"Default":"Forest"
+		},
+		"SummerDefault":{
+			"AllowValues":"Slate, Maroon, Plum, Sienna, Olive, Forest, Emerald, Navy, Cornflower, Eggplant, Scarlet, Coal",
+			"Default":"Eggplant"
+		},
+		"FallDefault":{
+			"AllowValues":"Slate, Maroon, Plum, Sienna, Olive, Forest, Emerald, Navy, Cornflower, Eggplant, Scarlet, Coal",
+			"Default":"Sienna"
+		},
+		"WinterDefault":{
+			"AllowValues":"Slate, Maroon, Plum, Sienna, Olive, Forest, Emerald, Navy, Cornflower, Eggplant, Scarlet, Coal",
+			"Default":"Cornflower"
+		},
+		"RecolourCursors":{
+			"AllowValues":"true,false",
+			"Default":"true"
+		}
+	},
+	"DynamicTokens":[
+		{
+			"Name":"ManualColourChoice",
+			"Value":"true",
+			"When":{
+				"AccentColour":"Slate, Maroon, Plum, Sienna, Olive, Forest, Emerald, Navy, Cornflower, Eggplant, Scarlet, Coal"
+			}
+		},
+		{
+			"Name":"ManualColourChoice",
+			"Value":"false",
+			"When":{
+				"AccentColour":"Random, Seasonal"
+			}
+		},
+		{
+			"Name":"SeasonColour",
+			"Value":"{{SpringDefault}}",
+			"When":{
+				"Season":"Spring"
+			}
+		},
+		{
+			"Name":"SeasonColour",
+			"Value":"{{SummerDefault}}",
+			"When":{
+				"Season":"Summer"
+			}
+		},
+		{
+			"Name":"SeasonColour",
+			"Value":"{{FallDefault}}",
+			"When":{
+				"Season":"Fall"
+			}
+		},
+		{
+			"Name":"SeasonColour",
+			"Value":"{{WinterDefault}}",
+			"When":{
+				"Season":"Winter"
+			}
+		},
+		{
+			"Name":"extension",
+			"Value":null,
+			"When":{
+				"Language":"en, de, es, fr, hu, it, ja, ko, pt, ru, tr"
+			}
+		},
+		{
+			"Name":"extension",
+			"Value":"-zh",
+			"When":{
+				"Language":"zh"
+			}
+		}
+	],
+	"Changes":[
+		//font shadow xnbs
+		{
+			"Action":"Load",
+			"Target":"Fonts/SmallFont, Fonts/SpriteFont1, Fonts/tinyFont, Fonts/tinyFontBorder",
+			"FromFile":"assets/{{Target}}.xnb",
+			"When":{
+				"Language":"en"
+			}
+		},
+		//billboard
+		{
+			"Action":"EditImage",
+			"Target":"LooseSprites/Billboard",
+			"FromFile":"assets/{{Target}}-{{Language}}.png",
+			"PatchMode":"Overlay"
+		},
+		//bundle sprites
+		{
+			"Action":"EditImage",
+			"Target":"LooseSprites/BundleSprites",
+			"FromFile":"assets/{{Target}}.png",
+			"PatchMode":"Overlay"
+		},
+		//book animation
+		{
+			"Action":"EditImage",
+			"Target":"LooseSprites/Book_Animation",
+			"FromFile":"assets/{{Target}}.png",
+			"PatchMode":"Overlay"
+		},
+		//controller maps
+		{
+			"Action":"EditImage",
+			"Target":"LooseSprites/ControllerMaps",
+			"FromFile":"assets/{{Target}}-{{Language}}.png",
+			"PatchMode":"Overlay"
+		},
+		//cursors *
+		{
+			"Action":"EditImage",
+			"Target":"LooseSprites/Cursors",
+			"FromFile":"assets/LooseSprites/Cursors-{{Language}}.png",
+			"PatchMode":"Overlay"
+		},
+		{
+			"Action":"EditImage",
+			"Target":"LooseSprites/Cursors_1_6",
+			"FromFile":"assets/{{Target}}.png",
+			"PatchMode":"Overlay"
+		},
+		{
+			"Action":"EditImage",
+			"Target":"LooseSprites/Cursors",
+			"FromFile":"assets/LooseSprites/Cursors-cursors.png",
+			"PatchMode":"Overlay",
+			"When":{"RecolourCursors":"true"}
+		},
+		//cursors accent colour overlay
+		{
+			"Action":"EditImage",
+			"Target":"LooseSprites/Cursors",
+			"FromFile":"assets/colours/Cursors-{{AccentColour}}.png",
+			"PatchMode":"Overlay",
+			"When":{
+				"ManualColourChoice":"true"
+			}
+		},
+		//cursors accent colour randomise
+		{
+			"Action":"EditImage",
+			"Target":"LooseSprites/Cursors",
+			"FromFile":"assets/colours/Cursors-{{Random:Slate, Maroon, Plum, Sienna, Olive, Forest, Emerald, Navy, Cornflower, Eggplant, Scarlet, Coal}}.png",
+			"PatchMode":"Overlay",
+			"Update":"OnDayStart",
+			"When":{
+				"AccentColour":"Random"
+			}
+		},
+		//cursors accent colour seasonal
+		{
+			"Action":"EditImage",
+			"Target":"LooseSprites/Cursors",
+			"FromFile":"assets/colours/Cursors-{{SeasonColour}}.png",
+			"PatchMode":"Overlay",
+			"When":{
+				"AccentColour":"Seasonal"
+			}
+		},
+		//cursors 2
+		{
+			"Action":"EditImage",
+			"Target":"LooseSprites/Cursors2",
+			"FromFile":"assets/{{Target}}.png",
+			"PatchMode":"Overlay"
+		},
+		//player backgrounds
+		{
+			"Action":"EditImage",
+			"Target":"LooseSprites/daybg, LooseSprites/nightbg",
+			"FromFile":"assets/{{Target}}.png",
+			"PatchMode":"Overlay"
+		},
+		//dye + sewing machine
+		{
+			"Action":"EditImage",
+			"Target":"LooseSprites/dye_bench, LooseSprites/tailoring",
+			"FromFile":"assets/{{Target}}.png",
+			"PatchMode":"Overlay"
+		},
+		//font bold
+		{
+			"Action":"EditImage",
+			"Target":"LooseSprites/font_bold",
+			"FromFile":"assets/{{Target}}.png",
+			"PatchMode":"Replace"
+		},
+		//junimo note
+		{
+			"Action":"EditImage",
+			"Target":"LooseSprites/JunimoNote",
+			"FromFile":"assets/{{Target}}-{{Language}}.png",
+			"PatchMode":"Replace"
+		},
+		//language buttons
+		{
+			"Action":"EditImage",
+			"Target":"LooseSprites/LanguageButtons",
+			"FromFile":"assets/{{Target}}.png",
+			"PatchMode":"Overlay"
+		},
+		//letter background
+		{
+			"Action":"EditImage",
+			"Target":"LooseSprites/letterBG, LooseSprites/troutDerbyLetterBG",
+			"FromFile":"assets/{{Target}}.png",
+			"PatchMode":"Overlay"
+		},
+		//special orders board
+		{
+			"Action":"EditImage",
+			"Target":"LooseSprites/SpecialOrdersBoard",
+			"FromFile":"assets/{{Target}}.png",
+			"PatchMode":"Overlay"
+		},
+		//panorama
+		{
+			"Action":"EditImage",
+			"Target":"LooseSprites/stardewPanorama",
+			"FromFile":"assets/{{Target}}.png",
+			"PatchMode":"Overlay"
+		},
+		{
+			"Action":"EditImage",
+			"Target":"LooseSprites/map, LooseSprites/map_summer, LooseSprites/map_fall, LooseSprites/map_winter",
+			"FromFile":"assets/LooseSprites/map.png",
+			"PatchMode":"Overlay"
+		},
+		//textBox
+		{
+			"Action":"EditImage",
+			"Target":"LooseSprites/textBox",
+			"FromFile":"assets/{{Target}}.png",
+			"PatchMode":"Overlay"
+		},
+		//menu tiles
+		{
+			"Action":"EditImage",
+			"Target":"Maps/MenuTiles",
+			"FromFile":"assets/{{Target}}.png",
+			"PatchMode":"Overlay"
+		},
+		//clouds
+		{
+			"Action":"EditImage",
+			"Target":"Minigames/Clouds",
+			"FromFile":"assets/{{Target}}.png",
+			"PatchMode":"Replace"
+		},
+		//trees
+		{
+			"Action":"EditImage",
+			"Target":"Minigames/treestrip",
+			"FromFile":"assets/{{Target}}.png",
+			"PatchMode":"Overlay"
+		},
+		//title buttons *
+		{
+			"Action":"EditImage",
+			"Target":"Minigames/TitleButtons",
+			"FromFile":"assets/{{Target}}-{{Language}}.png",
+			"PatchMode":"Overlay"
+		},
+		{
+			"Action":"EditImage",
+			"Target":"Minigames/Xb1ProfileButton.de-DE, Minigames/Xb1ProfileButton.es-ES, Minigames/Xb1ProfileButton.hu-HU, Minigames/Xb1ProfileButton.it-IT, Minigames/Xb1ProfileButton.ja-JP, Minigames/Xb1ProfileButton.ko-KR, Minigames/Xb1ProfileButton, Minigames/Xb1ProfileButton.pt-BR, Minigames/Xb1ProfileButton.ru-RU, Minigames/Xb1ProfileButton.tr-TR, Minigames/Xb1ProfileButton.zh-CN",
+			"FromFile":"assets/{{Target}}.png",
+			"PatchMode":"Overlay"
+		},
+		//title accent overlay
+		{
+			"Action":"EditImage",
+			"Target":"Minigames/TitleButtons",
+			"FromFile":"assets/colours/TitleButtons-{{AccentColour}}{{extension}}.png",
+			"PatchMode":"Overlay",
+			"When":{
+				"ManualColourChoice":"true"
+			}
+		},
+		//title accent overlay randomise
+		{
+			"Action":"EditImage",
+			"Target":"Minigames/TitleButtons",
+			"FromFile":"assets/colours/TitleButtons-{{Random:Slate, Maroon, Plum, Sienna, Olive, Forest, Emerald, Navy, Cornflower, Eggplant, Scarlet, Coal}}{{extension}}.png",
+			"PatchMode":"Overlay",
+			"Update":"OnDayStart",
+			"When":{
+				"AccentColour":"Random"
+			}
+		},
+		//title accent overlay seasonal
+		{
+			"Action":"EditImage",
+			"Target":"Minigames/TitleButtons",
+			"FromFile":"assets/colours/TitleButtons-{{SeasonColour}}{{extension}}.png",
+			"PatchMode":"Overlay",
+			"When":{
+				"AccentColour":"Seasonal"
+			}
+		},
+		//buffs icons
+		{
+			"Action":"EditImage",
+			"Target":"TerrainFeatures/BuffsIcons, TileSheets/BuffsIcons",
+			"FromFile":"assets/{{Target}}.png",
+			"PatchMode":"Overlay"
+		}
+
+	]
+}

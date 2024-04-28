@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.7.0" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="15" height="14" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="29">
+ <properties>
+  <property name="AmbientLight" value="160 110 90"/>
+  <property name="Music" value="Upper_Ambient"/>
+ </properties>
+ <tileset firstgid="1" name="paths" tilewidth="16" tileheight="16" tilecount="36" columns="4">
+  <image source="paths" width="64" height="144"/>
+ </tileset>
+ <tileset firstgid="37" name="untitled tile sheet" tilewidth="16" tileheight="16" tilecount="128" columns="8">
+  <image source="WitchHutTiles" width="128" height="256"/>
+  <tile id="32">
+   <animation>
+    <frame tileid="32" duration="1000"/>
+    <frame tileid="32" duration="1000"/>
+    <frame tileid="32" duration="1000"/>
+    <frame tileid="32" duration="1000"/>
+    <frame tileid="32" duration="1000"/>
+    <frame tileid="35" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="40">
+   <animation>
+    <frame tileid="40" duration="101"/>
+    <frame tileid="41" duration="101"/>
+    <frame tileid="40" duration="101"/>
+    <frame tileid="42" duration="101"/>
+    <frame tileid="43" duration="101"/>
+    <frame tileid="40" duration="101"/>
+    <frame tileid="43" duration="101"/>
+    <frame tileid="40" duration="101"/>
+    <frame tileid="43" duration="101"/>
+    <frame tileid="41" duration="101"/>
+    <frame tileid="43" duration="101"/>
+    <frame tileid="42" duration="101"/>
+    <frame tileid="43" duration="101"/>
+   </animation>
+  </tile>
+ </tileset>
+ <tileset firstgid="165" name="townInterior" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <image source="townInterior.png" width="512" height="1088"/>
+ </tileset>
+ <tileset firstgid="2341" name="z_alectotiles" tilewidth="16" tileheight="16" tilecount="48" columns="8">
+  <image source="z_alectotiles.png" width="128" height="96"/>
+  <tile id="44">
+   <animation>
+    <frame tileid="44" duration="1000"/>
+    <frame tileid="45" duration="1000"/>
+    <frame tileid="46" duration="1000"/>
+    <frame tileid="47" duration="1000"/>
+    <frame tileid="46" duration="1000"/>
+    <frame tileid="45" duration="1000"/>
+   </animation>
+  </tile>
+ </tileset>
+ <layer id="1" name="Back" width="15" height="14">
+  <data encoding="csv">
+66,66,66,66,66,66,66,66,66,66,66,66,66,66,66,
+66,43,42,42,42,42,42,42,42,42,42,42,42,44,66,
+73,51,50,50,50,50,50,50,50,50,50,50,50,52,66,
+66,59,58,58,58,58,58,58,58,58,58,58,58,60,66,
+73,74,73,124,73,74,66,66,74,73,74,74,73,74,74,
+74,73,74,73,81,74,73,74,73,73,73,74,74,73,66,
+66,82,75,73,66,66,73,74,73,66,73,73,74,73,66,
+73,75,74,73,74,66,132,73,66,73,74,73,73,74,66,
+66,66,124,66,66,66,74,66,132,74,66,66,73,74,73,
+66,81,66,73,66,73,66,132,74,66,73,74,73,73,66,
+66,66,73,74,81,66,73,66,81,73,66,66,74,73,66,
+73,73,66,74,66,73,74,124,66,74,73,74,148,74,73,
+74,73,66,139,66,66,73,132,74,66,73,66,66,73,74,
+66,66,73,37,37,37,37,37,37,37,37,37,37,66,74
+</data>
+ </layer>
+ <layer id="2" name="Buildings" width="15" height="14">
+  <data encoding="csv">
+37,38,39,39,39,39,39,39,39,39,39,39,39,40,37,
+45,46,77,0,83,84,42,77,83,84,0,0,77,48,49,
+53,0,0,0,91,92,50,0,91,92,0,0,0,0,57,
+53,2385,58,58,58,58,2354,2355,58,58,585,586,58,60,57,
+53,67,0,1324,0,0,2362,2363,580,0,0,0,0,2364,57,
+53,0,0,0,0,0,0,0,0,0,487,488,0,0,57,
+53,915,916,0,0,0,0,0,0,0,0,0,0,0,57,
+53,947,948,0,0,0,0,0,0,0,0,0,0,0,57,
+53,0,0,0,0,0,0,0,0,0,0,0,0,2353,57,
+53,2341,2342,2343,0,0,0,0,2373,2374,2375,0,2360,2361,57,
+53,2349,2350,2351,0,0,0,0,2381,2382,2383,0,0,0,57,
+53,2357,2358,2359,0,0,2378,0,0,0,0,0,0,0,57,
+61,0,0,0,0,0,0,0,0,0,0,0,0,0,65,
+37,37,37,37,37,37,37,37,37,37,37,37,37,37,37
+</data>
+ </layer>
+ <layer id="3" name="Paths" width="15" height="14">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,9,0,0,0,0,9,0,0,0,0,9,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,9,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,9,0,0,0,0,0,0,0,0,0,0,0,0,
+0,9,0,9,0,0,0,0,0,0,0,0,0,0,0,
+0,0,9,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="4" name="Front" width="15" height="14">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,2369,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,2377,0,0,0,0,2346,2347,0,0,553,554,0,2348,0,
+0,0,0,0,0,0,0,0,548,0,587,588,0,2356,0,
+0,0,0,0,0,0,0,0,0,0,619,620,0,0,0,
+0,883,884,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,2345,0,
+0,0,0,0,0,0,0,0,2365,2366,2367,0,2352,0,0,
+0,0,0,0,0,0,0,0,2368,2376,2384,0,0,0,0,
+0,0,0,0,0,0,2370,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+61,62,63,63,63,63,63,63,63,63,63,63,63,64,65,
+37,37,37,0,0,0,0,0,0,0,0,0,37,37,37
+</data>
+ </layer>
+ <objectgroup id="5" name="Back"/>
+ <objectgroup id="6" name="Buildings">
+  <object id="19" x="208" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;alectohouse.2&quot;"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="7" name="Paths"/>
+ <objectgroup id="8" name="Front"/>
+</map>

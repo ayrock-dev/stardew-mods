@@ -1,0 +1,101 @@
+{
+  "Changes": [
+    {
+      "LogName": "Add Witch Hut For Events",
+      "Action": "Load",
+      "Target": "Data/Events/WitchHut",
+      "FromFile": "{{BlankFile}}",
+      "When": {
+        "LoadWitchHut": "true"
+      }
+    },
+    {
+      "LogName": "Add Alecto's Map For Events",
+      "Action": "Load",
+      "Target": "Data/Events/Custom_Alecto_WitchHutUpstairs",
+      "FromFile": "{{BlankFile}}"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/AlectoTeleport",
+      "FromFile": "assets/Characters/teleport.png"
+    },
+    {
+      "LogName": "Event One - Introduction",
+      "Action": "EditData",
+      "Target": "Data/Events/Railroad",
+      "Entries": {
+        "1067101/e 112/t 1900 2600": "nightTime/30 52/farmer 30 56 0 Alecto -100 -100 2/skippable/addConversationTopic AlectoIntroduction/move farmer 0 -4 0/playSound cacklingWitch/pause 400/emote farmer 8/pause 600/speak Alecto \"{{i18n:Alecto.event1.1{{wizardgender}}}}\"/pause 600/speak Alecto \"{{i18n:Alecto.event1.2{{wizardgender}}}}\"/addTemporaryActor AlectoTeleport 18 32 30 50 2 false/animate AlectoTeleport false false 100 0 1 2 3 3 3/playSound wand/pause 400/warp Alecto 30 50/faceDirection Alecto 2/warp AlectoTeleport -100 -100/playMusic spirits_eve/emote farmer 16/speak Alecto \"{{i18n:Alecto.event1.3}}\"/pause 600/emote farmer 28/pause 600/speak Alecto \"{{i18n:Alecto.event1.4}}#$b#{{i18n:Alecto.event1.5}}\"/pause 500/emote farmer 12/pause 500/speak Alecto \"{{i18n:Alecto.event1.6}}#$b#{{i18n:Alecto.event1.7}}\"/pause 500/playSound healSound/animate Alecto false false 98 20 21 22 23 24 25 26 27 28 29 20/pause 500/speak Alecto \"{{i18n:Alecto.event1.8}}\"/animate Alecto false false 145 30 31 30 31 30 31/emote farmer 12/speak Alecto \"{{i18n:Alecto.event1.9}}\"/pause 500/playSound wand/animate Alecto false false 100 16 17 18 19/pause 400/warp Alecto -100 -100/pause 600/emote farmer 28/pause 600/fade/viewport -1000 -1000/pause 1000/message \"{{i18n:message.event1.10}}\"/pause 1000/end"
+      }
+    },
+    {
+      "LogName": "Event Two - Emotional",
+      "Action": "EditData",
+      "Target": "Data/Events/Forest",
+      "Entries": {
+        "1067102/e 1067101/f Alecto 500/t 2000 2600": "nightTime/-100 -100/farmer 10 39 0 Alecto 6 35 0 KevinTheCrow 5 35 1 TitaniaTheCrow 7 35 3/skippable/addConversationTopic AlectoWizardTower/changeSprite Alecto blue/changePortrait Alecto blue/animate KevinTheCrow false true 100 20 20 20 20 20 22 23 22 20 20 20 20 20 20 20 20 20 20 20 24 24 25 25 20 20/animate TitaniaTheCrow false true 100 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 26 27 26 27 20 20 20 20 20 20 20 20 20 20 20 20 20 22 23 22 20/addObject 6 36 348/viewport 6 34 clamp true/pause 1000/showFrame Alecto 9/playSound flameSpell/temporarySprite 5 28 3 7 60 false/pause 500/showFrame Alecto 8/emote Alecto 12/move farmer -4 0 0/showFrame Alecto 9/playSound debuffSpell/temporarySprite 6 29 4 7 60 false/pause 500/showFrame Alecto 8/emote Alecto 12/move farmer 0 -2 0/jump Alecto/faceDirection Alecto 2/speak Alecto \"{{i18n:Alecto.event2.1}}\"/pause 500/speak Alecto \"{{i18n:Alecto.event2.2}}\"/pause 500/emote farmer 8/pause 500/speak Alecto \"{{i18n:Alecto.event2.3}}#$b#{{i18n:Alecto.event2.4{{wizardgender}}}}\"/quickQuestion #{{i18n:question.event2.1}}#{{i18n:question.event2.2}}(break)speak Alecto \"{{i18n:answer.event2.1}}\"(break)speak Alecto \"{{i18n:answer.event2.2}}\"/pause 500/emote farmer 40/pause 500/playMusic desolate/speak Alecto \"...$2#$b#{{i18n:Alecto.event2.5{{wizardgender}}}}\"/pause 500/emote farmer 28/pause 500/emote Alecto 12/speak Alecto \"{{i18n:Alecto.event2.6}}\"/beginSimultaneousCommand/stopAnimation KevinTheCrow/stopAnimation TitaniaTheCrow/endSimultaneousCommand/beginSimultaneousCommand/showFrame KevinTheCrow 17/showFrame TitaniaTheCrow 19/endSimultaneousCommand/speak Alecto \"{{i18n:Alecto.event2.7}}\"/pause 500/playSound crow/emote KevinTheCrow 20/playSound crow/emote TitaniaTheCrow 20/pause 500/emote Alecto 20/pause 500/speak Alecto \"{{i18n:Alecto.event2.8}}\"/pause 1000/textAboveHead Alecto \"sigh\"/pause 1000/speak Alecto \"{{i18n:Alecto.event2.9}}\"/pause 500/emote farmer 60/pause 1000/end"
+      }
+    },
+    {
+      "LogName": "Event Three - Ink",
+      "Action": "EditData",
+      "Target": "Data/Events/WitchHut",
+      "Entries": {
+        "1067103/e 529952": "WizardSong/7 8/farmer 7 14 0 Alecto 4 5 2/skippable/move farmer 0 -3 3/jump Alecto/speed Alecto 4/move Alecto 0 3 2/speed Alecto 4/move Alecto 2 0 2/speak Alecto \"{{i18n:Alecto.event3.1}}\"/pause 500/faceDirection farmer 0/pause 500/emote farmer 40/pause 500/emote Alecto 12/pause 500/speak Alecto \"{{i18n:Alecto.event3.2}}\"/pause 500/faceDirection farmer 3/pause 500/emote farmer 40/pause 500/faceDirection farmer 0/pause 500/speak Alecto \"{{i18n:Alecto.event3.3{{wizardgender}}}}\"/pause 500/message \"{{i18n:message.event3.4}}\"/move Alecto -3 0 0/move Alecto 0 -5 0/beginSimultaneousCommand/warp Alecto -1000 -1000/playSound stairsdown/endSimultaneousCommand/pause 500/emote farmer 28/pause 1000/end"
+      }
+    },
+    {
+      "LoogName": "Letter for Event Four - Trigger",
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+          "AlectoQuestLetter": {
+              "Id": "AlectoQuestLetter",
+              "Trigger": "DayEnding",
+              "Condition": "PLAYER_HAS_SEEN_EVENT Current 1067102, PLAYER_HAS_SEEN_EVENT Current 1067103, PLAYER_HEARTS Current Alecto 8",
+              "Actions": [
+                  "AddMail Current AlectoQuestLetter tomorrow"
+              ]
+          }
+      }
+    },
+    {
+      "LogName": "Letter for Event Four",
+      "Action": "EditData",
+      "Target": "Data/Mail",
+      "Entries": {
+        "AlectoQuestLetter": "{{i18n:Alecto.mail.1}}"
+      }
+    },
+    {
+      "LogName": "Event Four - Spell Reversal",
+      "Action": "EditData",
+      "Target": "Data/Events/WitchHut",
+      "Entries": {
+        "1067104/n AlectoQuestLetter/t 2100 2600/i 74": "WizardSong/-100 -100/farmer 7 14 0 Alecto 7 7 2/changeSprite Alecto night/changePortrait Alecto night/viewport 7 8/skippable/move farmer 0 -3 0/speak Alecto \"{{i18n:Alecto.event4.1}}\"/pause 500/emote farmer 60/pause 500/speak Alecto \"{{i18n:Alecto.event4.2}}\"/move Alecto 0 2 2/emote farmer 8/pause 500/emote Alecto 12/pause 500/speak Alecto \"{{i18n:Alecto.event4.3{{wizardgender}}}}\"/pause 500/emote farmer 12/pause 500/speak Alecto \"{{i18n:Alecto.event4.4}}\"/pause 500/move Alecto -4 0 0/speak Alecto \"{{i18n:Alecto.event4.5}}\"/move farmer 0 -3 3/move Alecto 0 -3 0/fade/viewport -1000 -1000/playSound stairsdown/changeLocation Custom_Alecto_WitchHutUpstairs/warp Alecto 6 10/warp farmer 9 7/faceDirection Alecto 2/faceDirection farmer 2/addObject 2 10 74/viewport 7 8/pause 1000/textAboveHead Alecto \"{{i18n:textabovehead.event4.1}}\"/playSound healSound/animate Alecto false false 98 20 21 22 23 24 25 26 27 28 29 20/pause 500/playSound stardrop/temporarySprite 6 10 4 7 60 false/temporarySprite 6 10 3 7 60 false/pause 1000/temporarySprite 6 10 4 7 60 false/temporarySprite 6 10 3 7 60 false/pause 1000/warp Alecto -100 -100/changeSprite Alecto oldernight/changePortrait Alecto oldernight/warp Alecto 6 10/temporarySprite 6 10 4 7 60 false/temporarySprite 6 10 3 7 60 false/pause 2000/textAboveHead Alecto \"{{i18n:textabovehead.event4.2}}\"/pause 1000/speak Alecto \"{{i18n:Alecto.event4.6}}\"/quickQuestion #{{i18n:question.event4.1}}#{{i18n:question.event4.2}}(break)speak Alecto \"{{i18n:answer.event4.1}}\"(break)speak Alecto \"{{i18n:answer.event4.2}}\"/pause 500/emote Alecto 40/pause 500/emote farmer 40/pause 100/speak Alecto \"{{i18n:Alecto.event4.7}}\"/pause 500/emote farmer 32/pause 500/speak Alecto \"{{i18n:Alecto.event4.8}}\"/pause 1000/fade/viewport -1000 -1000/pause 500/message \"{{i18n:message.event4.9}}\"/pause 500/end invisibleWarpOut Alecto"
+      }
+    },
+    {
+      "LogName": "Bonus Event - Wellwick",
+      "Action": "EditData",
+      "Target": "Data/Events/WizardHouse",
+      "When": {
+        "HasMod |contains=Jyangnam.Wellwick": true
+      },
+      "Entries": {
+        "1067106/f Alecto 500/f Wellwick 500/t 1800 2600": "WizardSong/7 18/farmer 8 23 0 Alecto 9 14 2 Wellwick 10 14 2 Wizard -1000 -1000 0/skippable/addConversationTopic AlectoWellwickEvent/addObject 9 15 348/addObject 10 15 348/pause 500/speak Wellwick \"{{i18n:Wellwickevent.1}}\"/animate Alecto false false 145 30 31 30 31 30 31/move farmer 0 -3 0/emote farmer 8/beginSimultaneousCommand/jump Alecto/jump Wellwick/endSimultaneousCommand/speak Wellwick \"{{i18n:Wellwickevent.2}}\"/pause 500/speak Alecto \"{{i18n:Wellwickevent.3}}\"/emote farmer 40/beginSimultaneousCommand/emote Alecto 16/emote Wellwick 16/endSimultaneousCommand/speak Wellwick \"{{i18n:Wellwickevent.4}}\"/speed Alecto 5/move Alecto -3 0 2/speed Alecto 5/move Alecto 0 5 2/speed Alecto 5/move Alecto -3 0 2/playSound pullItemFromWater/warp Alecto -1000 -1000/pause 1000/playSound doorClose/warp Wizard 8 23 0/pause 500/faceDirection farmer 2/pause 500/emote Wizard 8/pause 500/speak Wizard \"{{i18n:Wellwickevent.5}}\"/pause 500/emote Wellwick 60/pause 400/speak Wellwick \"{{i18n:Wellwickevent.6}}\"/pause 500/emote Wizard 12/pause 400/move farmer -2 0 1/move Wizard 0 -3 3/speak Wizard \"{{i18n:Wellwickevent.7}}\"/pause 400/emote Wellwick 16/faceDirection Wizard 0/pause 400/speak Wellwick \"{{i18n:Wellwickevent.8}}\"/pause 500/faceDirection Wizard 3/speak Wizard \"{{i18n:Wellwickevent.9}}\"/pause 400/emote farmer 28/pause 400/speak Wellwick \"{{i18n:Wellwickevent.10}}\"/speed Wellwick 5/move Wellwick -2 0 2/speed Wellwick 5/move Wellwick 0 5 0/warp Wizard 8 18/textAboveHead Wizard \"{{i18n:Wellwickevent.11}}\"/move Wizard 0 -12 0/playSound doorClose/warp Wizard -1000 -1000/pause 1000/playSound pullItemFromWater/warp Alecto 3 19/faceDirection Alecto 2/faceDirection farmer 3/move Wellwick 0 -3 2/move Alecto 5 0 0/faceDirection farmer 1/emote Alecto 12/move Alecto 0 4 2/playSound doorClose/warp Alecto -1000 -1000/pause 1000/message \"{{i18n:Wellwickevent.12}}\"/pause 1000/end"
+      }
+    },
+    {
+      "LogName": "Bonus Event - Eloise",
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_ESDeepMountains",
+      "When": {
+        "HasMod": "LemurKat.EastScarpe.CP"
+      },
+      "Entries": {
+        "1067107/f Eloise 500/d Tue Wed Fri/t 1000 1800": "breezy/62 48/farmer -1000 -1000 0 Eloise -1000 -1000 0 KevinTheCrow 64 46 0 TitaniaTheCrow 67 47 0/skippable/animate KevinTheCrow false true 100 20 20 20 20 20 22 23 22 20 20 20 20 20 20 20 20 20 20 20 24 24 25 25 20 20/animate TitaniaTheCrow false true 100 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 26 27 26 27 20 20 20 20 20 20 20 20 20 20 20 20 20 22 23 22 20/warp Eloise 62 60/move Eloise 0 -11 0/speak Eloise \"{{i18n:Eloiseevent.1}}\"/pause 1000/stopAnimation KevinTheCrow/stopAnimation TitaniaTheCrow/beginSimultaneousCommand/showFrame KevinTheCrow 17/showFrame TitaniaTheCrow 16/jump TitaniaTheCrow/jump KevinTheCrow/playSound crow/endSimultaneousCommand/pause 1000/speak Eloise \"{{i18n:Eloiseevent.2}}\"/emote TitaniaTheCrow 32/playSound crow/emote KevinTheCrow 12/playSound crow/pause 500/speak Eloise \"{{i18n:Eloiseevent.3}}\"/pause 500/emote KevinTheCrow 12/pause 500/jump TitaniaTheCrow/addObject 67 48 171/jump TitaniaTheCrow/emote TitaniaTheCrow 32/pause 500/speak Eloise \"{{i18n:Eloiseevent.4}}\"/jump KevinTheCrow/addObject 64 47 516/jump KevinTheCrow/emote KevinTheCrow 32/pause 500/jump Eloise/speak Eloise \"{{i18n:Eloiseevent.5}}\"/pause 500/emote KevinTheCrow 28/pause 1000/end"
+      }
+    }
+  ]
+}

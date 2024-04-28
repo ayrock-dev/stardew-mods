@@ -1,0 +1,17 @@
+{
+    "Name": "Earthy Interiors",
+    "Author": "DaisyNiko",
+    "Version": "1.0.3",
+    "UniqueID": "DaisyNiko.EarthyInteriors",
+    "MinimumApiVersion": "2.11.2",
+    "UpdateKeys": [ "Nexus:14790" ],
+    "ContentPackFor": {
+        "UniqueID": "Pathoschild.ContentPatcher"
+    },
+    "Dependencies":[
+        {
+            "UniqueID":"FlashShifter.StardewValleyExpandedCP",
+            "IsRequired":false
+        }
+    ]
+}

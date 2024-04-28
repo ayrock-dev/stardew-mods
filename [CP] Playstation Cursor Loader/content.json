@@ -1,0 +1,47 @@
+{
+	"Format": "1.29",
+	
+	"ConfigSchema": {
+		"Enable Mod": {
+            "AllowValues": "True, False",
+			"Default": "True",
+			"Description": "Enable the Mod.",
+		},
+		"Load From": {
+            "AllowValues": "Default, Playstation, Custom 1, Custom 2",
+			"Default": "Playstation",
+			"Description": "The name of the cursor pack folder you wanted to load from.",
+		},
+		"Load from PNG": {
+            "AllowValues": "True, False",
+			"Default": "True",
+			"Description": "Always Load .PNG files.",
+		},
+	},
+	"Changes": [
+		{
+		"LogName": "Loads cursor from .xnb file",
+		"Action": "EditImage",
+		"Target": "LooseSprites/Cursors",
+		"FromFile": "assets/{{Load From}}/Cursors.xnb",
+		"FromArea": { "X": 0, "Y": 0, "Width": 128, "Height": 32 },
+		"ToArea": { "X": 0, "Y": 0, "Width": 128, "Height": 32 },
+		"When": {
+				"Enable Mod": "True",
+				"Load from PNG": "False",
+			}
+		},
+		{
+		"LogName": "Loads cursor from .png file",
+		"Action": "EditImage",
+		"Target": "LooseSprites/Cursors",
+		"FromFile": "assets/{{Load From}}/Cursors.png",
+		"FromArea": { "X": 0, "Y": 0, "Width": 128, "Height": 32 },
+		"ToArea": { "X": 0, "Y": 0, "Width": 128, "Height": 32 },
+		"When": {
+				"Enable Mod": "True",
+				"Load from PNG": "True",
+			}
+		},
+	]
+}

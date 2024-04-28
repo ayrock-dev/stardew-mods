@@ -1,0 +1,21 @@
+{
+    "Changes": [
+        {
+            "LogName": "Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Juliet",
+            "Entries": {
+                "Wed": "I can't imagine why a hot cityslicker would come to a dead-end town like this.#$b#But that's cool. Whatever floats your goat.",
+                "spring_23_1": "Flower Dance tomorrow. I wonder what the dancing's gonna be like.#$b#Betcha it's gonna be some creepy-as Midsommar shtick.$1",
+            }
+        },
+        {
+            "LogName": "Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueJuliet",
+            "Entries": {
+                "Good_3": "Good morning lover! Never thought I'd be the marrying type, but hey...$3#$b#I've got this wicked farm, and this bitchin' hot-as spouse.$4#$b#Married life ain't half bad.$1",
+            }
+        }
+    ]
+}

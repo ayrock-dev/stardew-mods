@@ -1,0 +1,450 @@
+{
+    "Format": "2.0.0",
+    "ConfigSchema": {
+        "enableGrass": {
+            "AllowValues": "true, false",
+            "Default": "true"
+        },
+        "enableDigSpot": {
+            "AllowValues": "true, false",
+            "Default": "true"
+        },
+        "enableFruitTrees":{
+            "AllowValues":"true,false",
+            "Default":"true"
+        },
+        "enableMiniMap":{
+            "AllowValues":"true, false",
+            "Default":"true"
+        },
+        "enableTownBuildings":{
+            "AllowValues":"true, false",
+            "Default":"true"
+        },
+        "treesVersion":{
+            "AllowValues":"vanilla,new",
+            "Default":"new"
+        },
+        "winterTilledSoil":{
+            "AllowValues":"brown,blue",
+            "Default":"brown"
+        }
+    },
+    "Changes": [
+        //1.5 island tilsheets
+        {
+            "Action": "EditImage",
+            "Target": "Maps/island_tilesheet_1, Maps/island_tilesheet_2, Maps/spring_island_tilesheet_1, Maps/summer_island_tilesheet_1, Maps/fall_island_tilesheet_1, Maps/winter_island_tilesheet_1",
+            "FromFile": "assets/{{Target}}.png"
+        },
+        {
+            "Action": "EditImage",
+            "Target": "LooseSprites/SuspensionBridge",
+            "FromFile": "assets/{{Target}}.png"
+        },
+        //beach
+        {
+            "Action": "EditImage",
+            "Target": "Maps/spring_beach, Maps/summer_beach, Maps/fall_beach, Maps/winter_beach",
+            "FromFile": "assets//{{Target}}.png"
+        },
+        //bushes
+        {
+            "Action": "EditImage",
+            "Target": "TileSheets/bushes",
+            "FromFile": "assets/{{Target}}.png"
+        },
+        //chair tiles
+        {
+            "Action":"EditImage",
+            "Target":"Tilesheets/ChairTiles",
+            "FromFile":"assets/{{Target}}.png",
+            "PatchMode":"Overlay"
+        },
+        //cursors overlay
+        {
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "assets/{{Target}}.png",
+            "ToArea":{"X":0,"Y":0,"Width":704,"Height":2256},
+            "PatchMode":"Overlay"
+        },
+        {
+            "Action":"EditImage",
+            "Target":"LooseSprites/Cursors2",
+            "FromFile":"assets/{{Target}}.png",
+            "ToArea":{"X":0,"Y":0,"Width":256,"Height":320},
+            "PatchMode":"Overlay"
+        },
+        //cursors water
+        {
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "assets/{{Target}}_water.png",
+            "ToArea": {"X": 0,"Y": 2000,"Width": 640,"Height": 256},
+            "PatchMode": "Replace"
+        },
+        //cursors 1.6
+        {
+            "Action":"EditImage",
+            "Target":"LooseSprites/cursors_1_6",
+            "FromFile":"assets/{{Target}}.png",
+            "PatchMode":"Overlay"
+        },
+        // debris overlay
+        {
+            "Action":"EditImage",
+            "Target":"Maps/springobjects",
+            "FromFile":"assets/{{Target}}.png",
+            "ToArea": {"X": 0,"Y": 0,"Width": 384,"Height": 624},
+            "PatchMode":"Overlay"
+        },
+        //desert tiles
+        {
+            "Action": "EditImage",
+            "Target": "Maps/DesertTiles, Maps/DesertTiles_Extended",
+            "FromFile": "assets/{{Target}}.png",
+            "PatchMode": "Overlay"
+        },
+        //desert tiles palm tree
+        {
+            "Action": "EditImage",
+            "Target": "Maps/DesertTiles",
+            "FromFile": "assets/{{Target}}_tree.png",
+            "FromArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 48,
+                "Height": 48
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 112,
+                "Width": 48,
+                "Height": 48
+            },
+            "When":{"treesVersion":"new"}
+        },
+        {
+            "Action": "EditImage",
+            "Target": "Maps/DesertTiles",
+            "FromFile": "assets/{{Target}}_tree.png",
+            "FromArea": {
+                "X": 16,
+                "Y": 48,
+                "Width": 16,
+                "Height": 32
+            },
+            "ToArea": {
+                "X": 16,
+                "Y": 160,
+                "Width": 16,
+                "Height": 32
+            },
+            "When":{"treesVersion":"new"}
+        },
+        //desert caravan shop
+        {
+            "Action": "EditImage",
+            "Target": "LooseSprites/temporary_sprites_1",
+            "FromFile": "assets/{{Target}}.png",
+            "PatchMode": "Overlay"
+        },
+        //desert festival
+        {
+            "Action":"EditImage",
+            "Target":"Maps/desert_festival_tilesheet",
+            "FromFile":"assets/{{Target}}.png",
+            "PatchMode":"Overlay"
+        },
+        //desert festival palm tree
+        {
+            "Action":"EditImage",
+            "Target":"Maps/desert_festival_tilesheet",
+            "FromFile":"assets/Maps/DesertTiles_tree.png",
+            "FromArea":{
+                "X":0,
+                "Y":0,
+                "Width":48,
+                "Height":64
+            },
+            "ToArea":{
+                "X":96,
+                "Y":112,
+                "Width":48,
+                "Height":64
+            },
+            "When":{"treesVersion":"new"}
+        },
+        {
+            "Action":"EditImage",
+            "Target":"Maps/desert_festival_tilesheet",
+            "FromFile":"assets/Maps/DesertTiles_tree.png",
+            "ToArea":{
+                "X":112,
+                "Y":176,
+                "Width":16,
+                "Height":16
+
+            },
+            "FromArea":{
+                "X":16,
+                "Y":64,
+                "Width":16,
+                "Height":16
+            },
+            "When":{"treesVersion":"new"}
+        },
+        //dig spot
+        {
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "assets/{{Target}}_digSpot.png",
+            "PatchMode": "Replace",
+            "ToArea": {
+                "X": 368,
+                "Y": 32,
+                "Width": 64,
+                "Height": 16
+            },
+            "When": {
+                "enableDigSpot": "true",
+                "Season": "spring, summer, fall"
+            }
+        },
+        {
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "PatchMode": "Replace",
+            "FromFile": "assets/{{Target}}_digSpot_winter.png",
+            "ToArea": {
+                "X": 368,
+                "Y": 32,
+                "Width": 64,
+                "Height": 16
+            },
+            "When": {
+                "enableDigSpot": "true",
+                "Season": "winter"
+            }
+        },
+        //extra
+        {
+            "Action":"EditImage",
+            "Target":"Maps/spring_outdoorTileSheet_extra, summer_outdoorTileSheet_extra, fall_outdoorTileSheet_extra, winter_outdoorTileSheet_extra",
+            "FromFile":"assets/{{Target}}.png"
+        },
+        //fence (buildable)
+        {
+            "Action":"EditImage",
+            "Target":"LooseSprites/Fence1",
+            "FromFile":"assets/LooseSprites/{{season}}_Fence1.png"
+        },
+        //festivals overlay
+        {
+            "Action": "EditImage",
+            "Target": "Maps/Festivals",
+            "FromFile": "assets/{{Target}}.png",
+            "PatchMode": "Overlay"
+        },
+        //fishing derby tiles
+        {
+            "Action":"EditImage",
+            "Target":"Maps/FishingDerbyTiles",
+            "FromFile":"assets/{{Target}}.png",
+            "PatchMode":"Overlay"
+        },
+        //grass
+        {
+            "Action": "EditImage",
+            "Target": "TerrainFeatures/grass",
+            "FromFile": "assets/{{Target}}.png",
+            "When": {
+                "enableGrass": "true"
+            }
+        },
+        //hoeDirt
+        {
+            "Action": "EditImage",
+            "Target": "TerrainFeatures/hoeDirt, TerrainFeatures/hoeDirtDark",
+            "FromFile": "assets/{{Target}}.png"
+        },
+        {
+            "Action": "EditImage",
+            "Target": "TerrainFeatures/hoeDirt, TerrainFeatures/hoeDirtSnow",
+            "FromFile": "assets/TerrainFeatures/hoeDirtLight.png",
+            "When": {
+                "Season": "summer, winter"
+            }
+        },
+        {
+            "Action":"EditImage",
+            "Target":"TerrainFeatures/hoeDirtSnow",
+            "FromFile":"assets/{{Target}}.png",
+            "When":{
+                "winterTilledSoil":"blue"
+            }
+        },
+        //minimap
+        {
+            "Action": "EditImage",
+            "Target": "LooseSprites/map, LooseSprites/map_summer, LooseSprites/map_fall, LooseSprites/map_winter, LooseSprites/Farm_ranching_map, LooseSprites/Farm_ranching_map_summer, LooseSprites/Farm_ranching_map_fall, LooseSprites/Farm_ranching_map_winter",
+            "FromFile": "assets/{{Target}}.png",
+            "PatchMode":"Overlay",
+            "When": {
+                "enableMiniMap":"true"
+            }
+        },
+        //marnie luau edit
+        {
+            "Action": "EditImage",
+            "Target": "Characters/Marnie",
+            "FromFile": "assets/{{Target}}.png",
+            "PatchMode": "Overlay"
+        },
+        //monster grave tiles
+        {
+            "Action": "EditImage",
+            "Target": "Maps/fall_monsterGraveTiles, Maps/spring_monsterGraveTiles, Maps/summer_monsterGraveTiles, Maps/winter_monsterGraveTiles",
+            "FromFile": "assets/{{Target}}.png"
+        },
+        //night market
+        {
+            "Action":"Load",
+            "Target":"Maps/night_market_tilesheet_objects",
+            "FromFile":"assets/{{Target}}.png"
+        },
+        //outdoors overlay
+        {
+            "Action": "EditImage",
+            "Target": "Maps/spring_outdoorsTileSheet, Maps/summer_outdoorsTileSheet, Maps/fall_outdoorsTileSheet, Maps/winter_outdoorsTileSheet",
+            "FromFile": "assets/{{Target}}.png",
+            "PatchMode":"Overlay"
+        },
+        //outdoors bathhouse glass replace
+        {
+            "Action":"EditImage",
+            "Target":"Maps/spring_outdoorsTileSheet, Maps/summer_outdoorsTileSheet, Maps/fall_outdoorsTileSheet, Maps/winter_outdoorsTileSheet",
+            "FromFile":"assets/{{Target}}_bathhouseGlass.png",
+            "ToArea":{
+                "X":0,
+                "Y":860,
+                "Width":256,
+                "Height":37
+            }
+        },
+        //outdoors trees replace
+        {
+            "Action":"EditImage",
+            "Target":"Maps/spring_outdoorsTileSheet, Maps/summer_outdoorsTileSheet, Maps/fall_outdoorsTileSheet",
+            "FromFile":"assets/{{Target}}_trees.png",
+            "ToArea":{
+                "X":0,
+                "Y":0,
+                "Width":208,
+                "Height":96
+            },
+            "FromArea":{
+                "X":0,
+                "Y":0,
+                "Width":208,
+                "Height":96
+            },
+            "When":{"treesVersion":"new"}
+        },
+        //outdoors2 replace
+        {
+            "Action": "EditImage",
+            "Target": "Maps/spring_outdoorsTileSheet2, Maps/summer_outdoorsTileSheet2, Maps/fall_outdoorsTileSheet2, Maps/winter_outdoorsTileSheet2",
+            "FromFile": "assets/{{Target}}.png"
+        },
+        //outdoors extra
+        {
+            "Action":"EditImage",
+            "Target":"Maps/spring_outdoorTileSheet_extra, Maps/summer_outdoorTileSheet_extra, Maps/fall_outdoorTileSheet_extra, Maps/winter_outdoorTileSheet_extra",
+            "FromFile":"assets/{{Target}}.png"
+        },
+        //pet bowls
+        {
+            "Action":"EditImage",
+            "Target":"Buildings/Pet Bowl, Buildings/Hay Pet Bowl, Buildings/Stone Pet Bowl",
+            "FromFile":"assets/{{Target}}.png"
+        },
+        // shipping bin
+        {
+            "Action":"EditImage",
+            "Target":"Buildings/Shipping Bin",
+            "FromFile":"assets/{{Target}}.png"
+        },
+        //town
+        {
+            "Action": "EditImage",
+            "Target": "Maps/spring_town, Maps/summer_town, Maps/fall_town, Maps/winter_town",
+            "FromFile": "assets/{{Target}}.png",
+            "PatchMode": "Overlay"
+        },
+        //town buildings
+        {
+            "Action": "EditImage",
+            "Target": "Maps/spring_town, Maps/summer_town, Maps/fall_town, Maps/winter_town",
+            "FromFile": "assets/{{Target}}_buildings.png",
+            "PatchMode": "Overlay",
+            "When":{"enableTownBuildings":"true"}
+        },
+        //trees
+        {
+            "Action":"EditImage",
+            "Target":"TileSheets/fruitTrees",
+            "FromFile":"assets/{{Target}}.png",
+            "When":{"enableFruitTrees":"true"}
+        },
+            //tree1 (oak)
+        {
+            "Action": "EditImage",
+            "Target": "TerrainFeatures/tree1_spring, TerrainFeatures/tree1_summer, TerrainFeatures/tree1_fall, TerrainFeatures/tree1_winter, TerrainFeatures/tree1_greenRain, TerrainFeatures/tree1_greenRain_fall, TerrainFeatures/tree1_greenRain_winter",
+            "FromFile": "assets/TerrainFeatures/{{treesVersion}}/{{TargetWithoutPath}}.png"
+        },
+            //tree2 (maple)
+        {
+            "Action": "EditImage",
+            "Target": "TerrainFeatures/tree2_spring, TerrainFeatures/tree2_summer, TerrainFeatures/tree2_fall, TerrainFeatures/tree2_winter, TerrainFeatures/tree2_greenRain, TerrainFeatures/tree2_greenRain_fall, TerrainFeatures/tree2_greenRain_winter",
+            "FromFile": "assets/TerrainFeatures/{{treesVersion}}/{{TargetWithoutPath}}.png"
+        },
+            //tree3 (pine)
+        {
+            "Action": "EditImage",
+            "Target": "TerrainFeatures/tree3_spring, TerrainFeatures/tree3_fall, TerrainFeatures/tree3_winter, TerrainFeatures/tree3_greenRain, TerrainFeatures/tree3_greenRain_fall, TerrainFeatures/tree3_greenRain_winter",
+            "FromFile": "assets/TerrainFeatures/{{treesVersion}}/{{TargetWithoutPath}}.png"
+        },
+            //tree8 (mahogany)
+        {
+            "Action":"EditImage",
+            "Target":"TerrainFeatures/tree8_spring,TerrainFeatures/tree8_summer,TerrainFeatures/tree8_fall,TerrainFeatures/tree8_winter",
+            "FromFile":"assets/TerrainFeatures/{{treesVersion}}/{{TargetWithoutPath}}.png"
+        },
+            //tree_palm
+        {
+            "Action": "EditImage",
+            "Target": "TerrainFeatures/tree_palm, TerrainFeatures/tree_palm2",
+            "FromFile": "assets/TerrainFeatures/{{treesVersion}}/{{TargetWithoutPath}}.png"
+        },
+            // mystic tree
+        {
+            "Action":"EditImage",
+            "Target":"TerrainFeatures/mystic_tree",
+            "FromFile":"assets/TerrainFeatures/{{treesVersion}}/{{TargetWithoutPath}}.png"
+        },
+            // mushroom tree
+        {
+            "Action":"EditImage",
+            "Target":"TerrainFeatures/mushroom_tree",
+            "FromFile":"assets/TerrainFeatures/{{treesVersion}}/{{TargetWithoutPath}}.png"
+        },
+        //waterfalls
+        {
+            "Action":"EditImage",
+            "Target":"Maps/spring_Waterfalls, Maps/summer_Waterfalls, Maps/fall_Waterfalls, Maps/winter_Waterfalls",
+            "FromFile":"assets/{{Target}}.png"
+        }
+    ]
+}

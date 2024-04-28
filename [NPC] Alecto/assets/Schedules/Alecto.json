@@ -1,0 +1,73 @@
+{
+  "Changes": [
+    {
+      "LogName": "Alecto's Basic Schedule - Pre-Intro",
+      "Action": "EditData",
+      "Target": "Characters/Schedules/Alecto",
+      "When": {
+        "HasSeenEvent |contains=1067101": false
+      },
+      "Entries": {
+        "spring": "610 Custom_Alecto_WitchHutUpstairs 6 10 2 alecto_spell/2000 Custom_Alecto_WitchHutUpstairs 11 4 0 alecto_sleep",
+        "summer": "610 Custom_Alecto_WitchHutUpstairs 6 10 2 alecto_spell/2000 Custom_Alecto_WitchHutUpstairs 11 4 0 alecto_sleep",
+        "fall": "610 Custom_Alecto_WitchHutUpstairs 6 10 2 alecto_spell/2000 Custom_Alecto_WitchHutUpstairs 11 4 0 alecto_sleep",
+        "winter": "610 Custom_Alecto_WitchHutUpstairs 6 10 2 alecto_spell/2000 Custom_Alecto_WitchHutUpstairs 11 4 0 alecto_sleep"
+      }
+    },
+    {
+      "LogName": "Alecto's Basic Schedule - Post Intro, No Mods",
+      "Action": "EditData",
+      "Target": "Characters/Schedules/Alecto",
+      "When": {
+        "HasSeenEvent |contains=1067101": true
+      },
+      "Entries": {
+        "spring": "610 Custom_Alecto_WitchHutUpstairs 6 9 2 alecto_meditate/800 Custom_Alecto_WitchHutUpstairs 6 10 2 alecto_spell/1500 Railroad 55 41 2/1800 Mountain 86 19 2/2200 Custom_Alecto_WitchHutUpstairs 11 4 0 alecto_sleep",
+        "summer": "610 Custom_Alecto_WitchHutUpstairs 6 9 2 alecto_meditate/800 Custom_Alecto_WitchHutUpstairs 6 10 2 alecto_spell/1500 Railroad 55 41 2/1800 Mountain 86 19 2/2200 Custom_Alecto_WitchHutUpstairs 11 4 0 alecto_sleep",
+        "fall": "610 Custom_Alecto_WitchHutUpstairs 6 9 2 alecto_meditate/800 Custom_Alecto_WitchHutUpstairs 6 10 2 alecto_spell/1500 Railroad 55 41 2/1800 Mountain 86 19 2/2200 Custom_Alecto_WitchHutUpstairs 11 4 0 alecto_sleep",
+        "winter": "610 Custom_Alecto_WitchHutUpstairs 6 9 2 alecto_meditate/800 Custom_Alecto_WitchHutUpstairs 6 10 2 alecto_spell/1500 Railroad 55 41 2/1800 Mountain 86 19 2/2200 Custom_Alecto_WitchHutUpstairs 11 4 0 alecto_sleep",
+        "rain": "0 Woods 8 9 2/610 Woods 8 10 2 alecto_meditate/1000 Woods 4 24 1/1500 Woods 8 10 2/1900 Woods 46 9 2/2400 Custom_Alecto_WitchHutUpstairs 11 4 2 alecto_sleep"
+      }
+    },
+    {
+      "LogName": "Alecto's Schedule - SVE patches",
+      "Action": "EditData",
+      "Target": "Characters/Schedules/Alecto",
+      "When": {
+        "HasSeenEvent |contains=1067101": true,
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      },
+      "Entries": {
+        "spring": "610 Custom_Alecto_WitchHutUpstairs 6 9 2 alecto_meditate/800 Custom_Alecto_WitchHutUpstairs 6 10 2 alecto_spell/1500 Railroad 23 38 2/1800 Mountain 86 18 2/2200 Custom_Alecto_WitchHutUpstairs 11 4 0 alecto_sleep",
+        "summer": "610 Custom_Alecto_WitchHutUpstairs 6 9 2 alecto_meditate/800 Custom_Alecto_WitchHutUpstairs 6 10 2 alecto_spell/1500 Railroad 23 38 2/1800 Mountain 86 18 2/2200 Custom_Alecto_WitchHutUpstairs 11 4 0 alecto_sleep",
+        "fall": "610 Custom_Alecto_WitchHutUpstairs 6 9 2 alecto_meditate/800 Custom_Alecto_WitchHutUpstairs 6 10 2 alecto_spell/1500 Railroad 23 38 2/1800 Mountain 86 18 2/2200 Custom_Alecto_WitchHutUpstairs 11 4 0 alecto_sleep",
+        "winter": "610 Custom_Alecto_WitchHutUpstairs 6 9 2 alecto_meditate/800 Custom_Alecto_WitchHutUpstairs 6 10 2 alecto_spell/1500 Railroad 23 38 2/1800 Mountain 86 18 2/2200 Custom_Alecto_WitchHutUpstairs 11 4 0 alecto_sleep",
+        "rain": "0 Woods 50 15 2/610 Woods 50 16 2 alecto_meditate/1000 Woods 37 49 1/1500 Woods 34 20 2/1900 Woods 53 23 3/2200 Custom_Alecto_WitchHutUpstairs 11 4 2 alecto_sleep"
+      }
+    },
+    {
+      "LogName": "Alecto's Additional Schedule - East Scarp",
+      "Action": "EditData",
+      "Target": "Characters/Schedules/Alecto",
+      "When": {
+        "HasSeenEvent |contains=1067101": true,
+        "HasMod": "LemurKat.EastScarpe.CP"
+      },
+      "Entries": {
+        "Mon": "0 Custom_ESDeepMountains 44 51 2/610 Custom_ESDeepMountains 61 44 0 alecto_meditate/1200 Custom_ESDeepMountains 44 51 2/1800 Mountain 86 17 2/2200 Custom_Alecto_WitchHutUpstairs 11 4 0 alecto_sleep"
+      }
+    },
+    {
+      "LogName": "Alecto's Additional Schedule - Ridgeside Village",
+      "Action": "EditData",
+      "Target": "Characters/Schedules/Alecto",
+      "When": {
+        "HasSeenEvent |contains=1067101": true,
+        "HasMod": "Rafseazz.RSVCP"
+      },
+      "Entries": {
+        "Wed": "0 Custom_Ridgeside_Ridge 67 31 2/610 Custom_Ridgeside_Ridge 67 31 0 alecto_meditate/1200 Custom_Ridgeside_Ridge 71 41 2/1800 Custom_Ridgeside_Ridge 58 16 0 alecto_meditate/2200 Custom_Alecto_WitchHutUpstairs 11 4 0 alecto_sleep"
+      }
+    }
+  ]
+}

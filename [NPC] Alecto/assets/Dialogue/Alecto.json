@@ -1,0 +1,143 @@
+{
+  "Changes": [
+    {
+      "LogName": "Alecto's Basic Dialogue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Alecto",
+      "Entries": {
+        "Introduction": "{{i18n:Alecto.dialogue.introduction}}",
+        "Mon": "{{i18n:Alecto.dialogue.Mon}}",
+        "Tue": "{{i18n:Alecto.dialogue.Tue}}",
+        "Wed": "{{i18n:Alecto.dialogue.Wed}}",
+        "Thu": "{{i18n:Alecto.dialogue.Thu}} #$q 106711/106712 poetryquestion_old#{{i18n:Alecto.dialogue.Thu_q}}#$r 106711 20 poetryquestion_yes#{{i18n:Alecto.dialogue.Thu_a1}}#$r 106712 0 poetryquestion_no#{{i18n:Alecto.dialogue.Thu_a2}}#$r 106711 20 poetryquestion_yes#{{i18n:Alecto.dialogue.Thu_a3}}",
+        "poetryquestion_old": "$p 106712#{{i18n:Alecto.dialogue.Thu_old1}}|{{i18n:Alecto.dialogue.Thu_old2}}",
+        "poetryquestion_yes": "{{i18n:Alecto.dialogue.Thu_yes}}",
+        "poetryquestion_no": "{{i18n:Alecto.dialogue.Thu_no}}",
+        "Fri": "{{i18n:Alecto.dialogue.Fri}}",
+        "Sat": "{{i18n:Alecto.dialogue.Sat}}",
+        "Sun": "{{i18n:Alecto.dialogue.Sun}}",
+        "Mon2": "{{i18n:Alecto.dialogue.Mon2}}",
+        "Tue2": "{{i18n:Alecto.dialogue.Tue2}}",
+        "Wed2": "{{i18n:Alecto.dialogue.Wed2}}",
+        "Thu2": "{{i18n:Alecto.dialogue.Thu2}}",
+        "Fri2": "{{i18n:Alecto.dialogue.Fri2}}",
+        "Sat2": "{{i18n:Alecto.dialogue.Sat2}}",
+        "Sun2": "{{i18n:Alecto.dialogue.Sun2}}",
+        "Mon4": "{{i18n:Alecto.dialogue.Mon4{{wizardgender}}}}",
+        "Tue4": "{{i18n:Alecto.dialogue.Tue4}} #$q 106713/106714 marriageopinion_old#{{i18n:Alecto.dialogue.Tue4_q}}#$r 106713 0 marriageopinion_yes#{{i18n:Alecto.dialogue.Tue4_a1}}#$r 106713 0 marriageopinion_yes#{{i18n:Alecto.dialogue.Tue4_a2}}#$r 106714 0 marriageopinion_no#{{i18n:Alecto.dialogue.Tue4_a3}}",
+        "marriageopinion_old": "$p 106713#{{i18n:Alecto.dialogue.Tue4_old1}}|{{i18n:Alecto.dialogue.Tue4_old2}}",
+        "marriageopinion_yes": "{{i18n:Alecto.dialogue.Tue4_yes}}",
+        "marriageopinion_no": "{{i18n:Alecto.dialogue.Tue4_no}}",
+        "Wed4": "{{i18n:Alecto.dialogue.Wed4}}",
+        "Thu4": "{{i18n:Alecto.dialogue.Thu4}}",
+        "Fri4": "{{i18n:Alecto.dialogue.Fri4}}",
+        "Sat4": "{{i18n:Alecto.dialogue.Sat4}}",
+        "Sun4": "{{i18n:Alecto.dialogue.Sun4}}",
+        "Mon6": "{{i18n:Alecto.dialogue.Mon6}}",
+        "Tue6": "{{i18n:Alecto.dialogue.Tue6}}",
+        "Wed6": "{{i18n:Alecto.dialogue.Wed6{{wizardgender}}}}",
+        "Thu6": "{{i18n:Alecto.dialogue.Thu6}}",
+        "Fri6": "{{i18n:Alecto.dialogue.Fri6}} #$q 106715/106716 childrenopinion_old#{{i18n:Alecto.dialogue.Fri6_q}}#$r 106715 0 childrenopinion_yes#{{i18n:Alecto.dialogue.Fri6_a1}}#$r 106716 0 childrenopinion_yes#{{i18n:Alecto.dialogue.Fri6_a2}}#$r 106716 25 childrenopinion_no#{{i18n:Alecto.dialogue.Fri6_a3}}#$r 106716 25 childrenopinion_no#{{i18n:Alecto.dialogue.Fri6_a4}}",
+        "childrenopinion_old": "$p 106715#{{i18n:Alecto.dialogue.Fri6_old1}}|{{i18n:Alecto.dialogue.Fri6_old2}}",
+        "childrenopinion_yes": "{{i18n:Alecto.dialogue.Fri6_yes}}",
+        "childrenopinion_no": "{{i18n:Alecto.dialogue.Fri6_no}}",
+        "Sat6": "{{i18n:Alecto.dialogue.Sat6}}",
+        "Sun6": "{{i18n:Alecto.dialogue.Sun6}}",
+        "Mon8": "{{i18n:Alecto.dialogue.Mon8}}",
+        "Wed8": "{{i18n:Alecto.dialogue.Wed8}}",
+        "Thu8": "{{i18n:Alecto.dialogue.Thu8}}",
+        "Fri8": "{{i18n:Alecto.dialogue.Fri8}}",
+        "Sat8": "{{i18n:Alecto.dialogue.Sat8}}",
+        "Custom_Alecto_WitchHutUpstairs_6_10": "{{i18n:Alecto.dialogue.locational.1}}#$b#{{i18n:Alecto.dialogue.locational.{{Random: 2, 3, 4, 5, 6, 7}}}}",
+        "Custom_Ridgeside_Ridge_58_16": "{{i18n:Alecto.dialogue.locational.1}}#$b#{{i18n:Alecto.dialogue.locational.{{Random: 8, 9, 10, 11, 12}}}}",
+        "summer_10": "{{i18n:Alecto.dialogue.summer_10}}",
+        "summer_10_2": "{{i18n:Alecto.dialogue.summer_10}}",
+        "summer_28": "{{i18n:Alecto.dialogue.summer_28}}",
+        "summer_28_2": "{{i18n:Alecto.dialogue.summer_28}}",
+        "winter_17": "{{i18n:Alecto.dialogue.winter_17{{wizardgender}}}}",
+        "winter_17_2": "{{i18n:Alecto.dialogue.winter_17{{wizardgender}}}}",
+        "AlectoIntroduction": "{{i18n:Alecto.dialogue.alectointroduction}}",
+        "keahi_prank": "{{i18n:Alecto.dialogue.keahiprank}}",
+        "JunaSign": "{{i18n:Alecto.dialogue.junasign}}",
+        "JunaCave": "{{i18n:Alecto.dialogue.junacave}}",
+        "JunaGone": "{{i18n:Alecto.dialogue.junagone}}",
+        "JunaWizard": "{{i18n:Alecto.dialogue.junawizard}}",
+        "JunaProtectiveWizard": "{{i18n:Alecto.dialogue.junaprotectivewizard}}",
+        "JunaBigFoot": "{{i18n:Alecto.dialogue.junabigfoot}}",
+        "LavrilUnlocked": "{{i18n:Alecto.dialogue.lavrilunlocked}}",
+        "LucikielArrives": "{{i18n:Alecto.dialogue.lucikielarrives}}",
+        "ReputationIncreased": "{{i18n:Alecto.dialogue.lucikielreputation}}",
+        "wedding": "{{i18n:Alecto.dialogue.mctwedding}}",
+        "divorce": "{{i18n:Alecto.dialogue.mctdivorce}}",
+        "mistletoe_lichen_for_sale": "{{i18n:Alecto.dialogue.hosttreemistletoe}}",
+        "MeetTheCats": "{{i18n:Alecto.dialogue.meetthecats}}",
+        "AlectoWellwickEvent": "{{i18n:Alecto.dialogue.alectowellwickevent}}",
+        "RejectMovieTicket": "No thanks."
+      }
+    },
+    {
+      "LogName": "Ten Heart Dialogue Event Locked",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Alecto",
+      "When": {
+        "HasSeenEvent |contains=1067105": true
+      },
+      "Entries": {
+        "Mon10": "{{i18n:Alecto.dialogue.Mon10}}",
+        "Tue10": "{{i18n:Alecto.dialogue.Tue10}}",
+        "Wed10": "{{i18n:Alecto.dialogue.Wed10}}",
+        "Fri10": "{{i18n:Alecto.dialogue.Fri10}}",
+        "Sat10": "{{i18n:Alecto.dialogue.Sat10}}",
+        "Sun10": "{{i18n:Alecto.dialogue.Sun10}}"
+      }
+    },
+    {
+      "LogName": "Ridgeside Compatible Dialogue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Alecto",
+      "When": {
+        "HasMod |contains=Rafseazz.RSVCP": true
+      },
+      "Entries": {
+        "Mon8": "{{i18n:Alecto.dialogue.Mon8}}",
+        "Tue8": "{{i18n:Alecto.dialogue.Tue8}}"
+      }
+    },
+    {
+      "LogName": "Wellwick Compatible Dialogue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Alecto",
+      "When": {
+        "HasMod |contains=Jyangnam.Wellwick": true
+      },
+      "Entries": {
+        "Thu4": "{{i18n:Alecto.dialogue.Thu4}}",
+        "Sun8": "{{i18n:Alecto.dialogue.Sun8}}"
+      }
+    },
+    {
+      "LogName": "Juna Compatible Dialogue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Alecto",
+      "When": {
+        "HasMod |contains=elhrvy.NPCJuna": true,
+        "HasSeenEvent |contains=86060001": true
+      },
+      "Entries": {
+        "summer_5": "{{i18n:Alecto.dialogue.junabirthday}}",
+        "summer_5_2": "{{i18n:Alecto.dialogue.junabirthday}}",
+        "Thu10": "{{i18n:Alecto.dialogue.Thu10}}"
+      }
+    },
+
+    {
+      "LogName": "Rainy Day Dialogue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/rainy",
+      "Entries": {
+        "Alecto": "{{i18n:Alecto.dialogue.rain.{{Random: 1, 2, 3}}}}"
+      }
+    }
+
+  ]
+}

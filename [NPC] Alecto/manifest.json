@@ -1,0 +1,67 @@
+{
+  "Name": "Alecto the Witch",
+  "Author": "ZoeDoll",
+  "Description": "Alecto the Witch, a custom NPC",
+  "Version": "1.1.9",
+  "UniqueID": "ZoeDoll.NPCAlecto",
+  "UpdateKeys": [
+    "Nexus:10671"
+  ],
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher"
+  },
+  "Dependencies": [
+    {
+      "UniqueID": "Rafseazz.RidgesideVillage",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "elhrvy.NPCJuna",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "Jyangnam.Wellwick",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "tiakall.hosttrees",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "NRC5Skyrim.GrapesofFerngillCropsJA",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "StunkyMcDoo.ForageofFerngill.JA",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "StunkyMcDoo.GrapesofFerngill.JA",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "ppja.artisanvalleymachinegoods",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "spacechase0.JsonAssets",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "LemurKat.EastScarpe.CP",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "FlashShifter.StardewValleyExpandedCP",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "tiakall.jortsandjean",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "LemurKat.Mr.Ginger.NPC",
+      "IsRequired": false
+    }
+  ]
+}
