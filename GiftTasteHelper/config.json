@@ -5,7 +5,7 @@
   "ShareKnownGiftsWithAllSaves": true,
   "HideTooltipWhenNoGiftsKnown": false,
   "MaxGiftsToDisplay": 0,
-  "ShowUniversalGifts": true,
+  "ShowUniversalGifts": false,
   "ColorizeUniversalGiftNames": false,
-  "ShowGiftsForUnmetNPCs": false
+  "ShowGiftsForUnmetNPCs": true
 }

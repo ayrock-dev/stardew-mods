@@ -37,7 +37,7 @@
                 "rain": "MAIL beachBridgeFixed/GOTO rain_noBridge/630 Custom_LK_LodgingHouse 17 19 0/700 Custom_LK_LodgingHouse 20 19 2/1100 Custom_LK_LodgingHouse 8 15 2/1300 Beach 83 40 2/1800 Custom_LK_LodgingHouse 18 19 2/2300 Custom_LK_LodgingHouse 17 4 1",
                 "rain_noBridge": "630 Custom_LK_LodgingHouse 17 19 0/700 Custom_LK_LodgingHouse 20 19 2/1100 Custom_LK_LodgingHouse 8 15 2/1300 Beach 42 36 2/1800 Custom_LK_LodgingHouse 18 19 2/2300 Custom_LK_LodgingHouse 17 4 1",
                 "spring_15": "610 Custom_LK_LodgingHouse 18 19 2/a830 JojaMart 9 25 1 Jessie_work/1700 Town 46 32 2/2100 Custom_LK_LodgingHouse 17 4 1",
-                "spring": "610 Custom_LK_LodgingHouse 18 19 2/900 EastScarp_ClearingHouse 16 9 3 Jessie_waterL/1100 EastScarp_ClearingHouse 20 12 2/1300 EastScarp_ClearingHouse 33 10 1 Jessie_waterR/1600 Town 95 51 0/1700 JojaMart 9 25 1 Jessie_work/2300 Town 29 13/2500 Custom_LK_LodgingHouse 17 4 1",
+                "spring": "610 Custom_LK_LodgingHouse 18 19 2/900 EastScarp_ClearingHouse 16 9 3 Jessie_waterL/1100 EastScarp_ClearingHouse 20 12 2/1300 EastScarp_ClearingHouse 33 10 1 Jessie_waterR/1600 Town 95 51 0/1700 JojaMart 9 25 1 Jessie_work/2300 Custom_LK_LodgingHouse 17 4 1",
                 "Tue": "610 Custom_LK_LodgingHouse 18 19 2/1000 SeedShop 15 23 0/1230 SeedShop 21 20 0 Jessie_exercise/a1700 JojaMart 9 25 1 Jessie_work/2300 Custom_LK_LodgingHouse 17 4 1",
                 "Sat": "610 Custom_LK_LodgingHouse 18 19 2/a830 JojaMart 9 25 1 Jessie_work/2300 Custom_LK_LodgingHouse 17 4 1",
                 "Sun": "610 Custom_LK_LodgingHouse 18 19 2/a830 JojaMart 9 25 1 Jessie_work/1700 Town 46 32 2/2100 Custom_LK_LodgingHouse 17 4 1",
@@ -64,7 +64,7 @@
                 "spring_Thu": "GOTO spring_Tue",
                 "summer": "610 Custom_LK_LodgingHouse 18 19 2/900 EastScarp_ClearingHouse 16 9 3 Jessie_waterL/1100 EastScarp_ClearingHouse 20 12 2/1230 Mountain 60 37 1/1600 Mountain 29 10 0/2000 Custom_LK_LodgingHouse 17 4 1",
                 "fall": "610 Custom_LK_LodgingHouse 18 19 2/900 EastScarp_ClearingHouse 16 9 3 Jessie_waterL/1100 EastScarp_ClearingHouse 20 12 2/1230 Forest 53 28 square_5_5/1600 Forest 23 24 1/1900 Custom_LK_LodgingHouse 17 4 1 ",
-                //"Fri": "610 Custom_LK_LodgingHouse 18 19 2/900 Town 28 22 2/1100 EastScarp_ClearingHouse 16 9 3/1900 Custom_LK_LodgingHouse 17 4 1",
+                "Fri": "610 Custom_LK_LodgingHouse 18 19 2/900 Town 28 22 2/1100 EastScarp_ClearingHouse 16 9 3/1900 Custom_LK_LodgingHouse 17 4 1",
                 "Sat": "610 Custom_LK_LodgingHouse 18 19 2/900 EastScarp_ClearingHouse 16 9 3 Jessie_waterL/1100 EastScarp_ClearingHouse 20 12 2/1300 EastScarp_ClearingHouse 33 10 1 Jessie_waterR/1700 Custom_LK_LodgingHouse 7 15 0/2000 Custom_LK_LodgingHouse 17 4 1",
                 "Sun": "610 Custom_LK_LodgingHouse 18 19 2/900 EastScarp_ClearingHouse 16 9 3 Jessie_waterL/1100 EastScarp_ClearingHouse 20 12 2/1300 EastScarp_ClearingHouse 33 10 1 Jessie_waterR/1700 Custom_LK_LodgingHouse 7 15 0/2000 Custom_LK_LodgingHouse 17 4 1",
                 "winter": "GOTO spring",
@@ -169,7 +169,7 @@
                 "rain": "700 Custom_LK_LodgingHouse 19 22 0 Gremlin_sit/1100 Custom_LK_LodgingHouse 3 16 0/1300 EastScarp_ClearingHouse 30 11 1 square_3_3/1600 Custom_LK_LodgingHouse 19 22 0 Gremlin_sit/2300 Custom_LK_LodgingHouse 25 7 2 Gremlin_sleep",
                 "spring_15": "700 Custom_LK_LodgingHouse 19 22 0 Gremlin_sit/900 EastScarp_ClearingHouse 30 11 1 square_3_3/1310 Beach 43 35 2/1800 Saloon 42 22 3/2400 Custom_LK_LodgingHouse 25 7 2 Gremlin_sleep",
                 "spring": "620 Custom_LK_LodgingHouse 19 22 0 Gremlin_sit/700 Town 81 50 0 square_4_4/1500 Town 90 52 2 Gremlin_sit/1700 EastScarp_ClearingHouse 30 12 square_3_3/2400 Custom_LK_LodgingHouse 25 7 2 Gremlin_sleep",
-                //"Fri": "700 Custom_LK_LodgingHouse 19 22 0 Gremlin_sit/900 EastScarp_ClearingHouse 30 11 1 square_3_3/1310 Beach 43 35 2/1800 Saloon 42 22 3/2400 Custom_LK_LodgingHouse 25 7 2 Gremlin_sleep",
+                "Fri": "700 Custom_LK_LodgingHouse 19 22 0 Gremlin_sit/900 EastScarp_ClearingHouse 30 11 1 square_3_3/1310 Beach 43 35 2/1800 Saloon 42 22 3/2400 Custom_LK_LodgingHouse 25 7 2 Gremlin_sleep",
                 "Sat": "700 Custom_LK_LodgingHouse 19 22 0 Gremlin_sit/900 EastScarp_ClearingHouse 30 11 1 square_3_3/1030 EastScarp_ClearingHouse 23 12 2 Gremlin_sit/1100 EastScarp_Village 33 111 1/1400 EastScarp_Village 57 42 1 Gremlin_sit/1700 Saloon 41 22 1 Gremlin_sit/2400 Custom_LK_LodgingHouse 22 6 2 Gremlin_sleep",
                 "Sun": "700 Custom_LK_LodgingHouse 19 22 0 Gremlin_sit/900 EastScarp_ClearingHouse 30 11 1 square_3_3/1500 Town 81 50 0 square_4_4/2300 Town 34 11 0/2400 Custom_LK_LodgingHouse 25 7 2 Gremlin_sleep"
             }

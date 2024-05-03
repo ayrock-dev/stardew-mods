@@ -87,30 +87,6 @@
       }
     },
     {
-      "LogName": "Gift Taste Patches - Host Trees",
-      "Action": "Include",
-      "When": {
-        "HasMod": "tiakall.hosttrees"
-      },
-      "FromFile": "assets/Data/hosttrees.json"
-    },
-    {
-      "LogName": "Gift Taste Patches - Forage of Ferngill",
-      "Action": "Include",
-      "When": {
-        "HasMod": "StunkyMcDoo.ForageofFerngill.JA"
-      },
-      "FromFile": "assets/Data/forageofferngill.json"
-    },
-    {
-      "LogName": "Gift Taste Patches - PPJA Artisan Valley",
-      "Action": "Include",
-      "When": {
-        "HasMod": "ppja.artisanvalleymachinegoods"
-      },
-      "FromFile": "assets/Data/artisanvalley.json"
-    },
-    {
       "LogName": "Alecto Blank Schedule",
       "Action": "Load",
       "Target": "Characters/Schedules/Alecto",

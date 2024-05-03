@@ -89,7 +89,7 @@
     {
       "LogName": "Bonus Event - Eloise",
       "Action": "EditData",
-      "Target": "Data/Events/Custom_ESDeepMountains",
+      "Target": "Data/Events/EastScarp_DeepMountains",
       "When": {
         "HasMod": "LemurKat.EastScarpe.CP"
       },

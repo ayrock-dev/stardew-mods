@@ -99,7 +99,7 @@
         "HasMod": "LemurKat.EastScarpe.CP"
       },
       "Entries": {
-        "Mon": "0 Custom_ESDeepMountains 45 50 2/610 Custom_ESDeepMountains 58 46 0 kevin_idle/1200 Custom_ESDeepMountains 43 54 2 kevin_idle/1800 Mountain 85 17 2 kevin_idle/2200 Custom_Alecto_WitchHutUpstairs 10 6 2 kevin_sleep"
+        "Mon": "0 EastScarp_DeepMountains 45 50 2/610 EastScarp_DeepMountains 58 46 0 kevin_idle/1200 EastScarp_DeepMountains 43 54 2 kevin_idle/1800 Mountain 85 17 2 kevin_idle/2200 Custom_Alecto_WitchHutUpstairs 10 6 2 kevin_sleep"
       }
     },
     {
@@ -111,7 +111,7 @@
         "HasMod": "LemurKat.EastScarpe.CP"
       },
       "Entries": {
-        "Mon": "0 Custom_ESDeepMountains 44 52 2/610 Custom_ESDeepMountains 63 44 0 titania_idle/1200 Custom_ESDeepMountains 46 51 2 titania_idle/1800 Mountain 88 15 2 titania_idle/2200 Custom_Alecto_WitchHutUpstairs 10 7 2 titania_sleep"
+        "Mon": "0 EastScarp_DeepMountains 44 52 2/610 EastScarp_DeepMountains 63 44 0 titania_idle/1200 EastScarp_DeepMountains 46 51 2 titania_idle/1800 Mountain 88 15 2 titania_idle/2200 Custom_Alecto_WitchHutUpstairs 10 7 2 titania_sleep"
       }
     },
     {

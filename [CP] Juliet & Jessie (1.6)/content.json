@@ -336,7 +336,7 @@
                 {
                         "Action": "Load",
                         "Target": "Maps/Custom_LK_ClearingHouse",
-                        "FromFile": "assets/Maps/ClearingHouseRev.tmx"
+                        "FromFile": "assets/Maps/ClearingHouseRev_noES.tmx"
                 },
                 {
                         "Action": "Load",
@@ -844,29 +844,7 @@
                                 "Custom_LK_JojaBreakRoom": "{{i18n:lookup.jojabr}}",
                                 "Custom_LK_TheaterBreakroom": "{{i18n:lookup.theater}}",
                                 "Custom_LK_LodgingHouseBasement": "{{i18n:lookup.basement}}",
-                                "Custom_ESClearingHouse": "{{i18n:lookup.clearinghouse}}"
-                        }
-                },
-                {
-                        "LogName": "Patches out the second house",
-                        "Action": "EditMap",
-                        "Target": "Maps/Custom_LK_ClearingHouse",
-                        "FromFile": "assets/Maps/ClearingHouseRev_noES.tmx",
-                        "FromArea": {
-                                "X": 38,
-                                "Y": 22,
-                                "Width": 9,
-                                "Height": 11
-                        },
-                        "ToArea": {
-                                "X": 38,
-                                "Y": 22,
-                                "Width": 9,
-                                "Height": 11
-                        },
-                        "When": {
-                                //   "{{Query}}: ({{Time}} >= 0600 AND {{Time}} <= 1200) OR {{Time}} > 2400": true
-                                "HasMod |contains=LemurKat.EastScarpe.CP": false
+                                "EastScarp_ClearingHouse": "{{i18n:lookup.clearinghouse}}"
                         }
                 },
                 {

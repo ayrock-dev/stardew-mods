@@ -2,7 +2,7 @@
   "Name": "Alecto the Witch",
   "Author": "ZoeDoll",
   "Description": "Alecto the Witch, a custom NPC",
-  "Version": "1.1.9",
+  "Version": "1.1.10",
   "UniqueID": "ZoeDoll.NPCAlecto",
   "UpdateKeys": [
     "Nexus:10671"
@@ -21,30 +21,6 @@
     },
     {
       "UniqueID": "Jyangnam.Wellwick",
-      "IsRequired": false
-    },
-    {
-      "UniqueID": "tiakall.hosttrees",
-      "IsRequired": false
-    },
-    {
-      "UniqueID": "NRC5Skyrim.GrapesofFerngillCropsJA",
-      "IsRequired": false
-    },
-    {
-      "UniqueID": "StunkyMcDoo.ForageofFerngill.JA",
-      "IsRequired": false
-    },
-    {
-      "UniqueID": "StunkyMcDoo.GrapesofFerngill.JA",
-      "IsRequired": false
-    },
-    {
-      "UniqueID": "ppja.artisanvalleymachinegoods",
-      "IsRequired": false
-    },
-    {
-      "UniqueID": "spacechase0.JsonAssets",
       "IsRequired": false
     },
     {

@@ -70,7 +70,7 @@
             {
               "Id": "OwnHouse",
               "Condition": "PLAYER_HAS_MAIL Host RosaJulesLivingTogether",
-              "Location": "Custom_ESRosJulesHouse",
+              "Location": "EastScarp_RosJulesHouse",
               "Tile": {
                 "X": 15,
                 "Y": 5
@@ -102,8 +102,8 @@
           "SocialTab": "HiddenAlways",
           "CanSocialize": "FALSE",
           "CanVisitIsland": null,
-          "ExcludeFromIntroductionsQuest": true,
-          "ExcludeFromPerfectionScore": true,
+          "IntroductionsQuest": false,
+          "PerfectionScore": false,
           "EndSlideShow": "Hidden",
           "UnlockConditions": "PLAYER_HAS_SEEN_EVENT Host 86571101",
           "SpawnIfMissing": true,
@@ -419,7 +419,7 @@
       "FromFile": "assets/Characters/Juliet/Juliet_SpiritsEve.png",
       "Update": "OnLocationChange",
       "When": {
-        "LocationName": "Custom_EastScarpeInn, Custom_EastScarpe",
+        "LocationName": "EastScarp_VillageInn, EastScarp_Village",
         "DayEvent": "spirit's eve"
       }
     },
@@ -430,7 +430,7 @@
       "FromFile": "assets/Portraits/Juliet/Juliet_SpiritsEve.png",
       "Update": "OnLocationChange",
       "When": {
-        "LocationName": "Custom_EastScarpeInn, Custom_EastScarpe",
+        "LocationName": "EastScarp_VillageInn, EastScarp_Village",
         "DayEvent": "spirit's eve"
       }
     },
@@ -505,7 +505,7 @@
       "Action": "EditData",
       "Target": "Characters/schedules/Juliet",
       "Entries": {
-        "Sat": "700 Custom_LK_LodgingHouse 21 21 3/900 Custom_LK_LodgingHouse 28 7 0 Juliet_drums/950 Custom_LK_ClearingHouse 23 27 3/1030 Custom_EastScarpe 20 102 0/1400 Custom_EastScarpe 56 41 2/1700 Saloon 42 21 3/2400 Custom_LK_LodgingHouse 22 6 2 juliet_sleep"
+        "Sat": "700 Custom_LK_LodgingHouse 21 21 3/900 Custom_LK_LodgingHouse 28 7 0 Juliet_drums/950 Custom_LK_ClearingHouse 23 27 3/1030 EastScarp_Village 20 102 0/1400 EastScarp_Village 56 41 2/1700 Saloon 42 21 3/2400 Custom_LK_LodgingHouse 22 6 2 juliet_sleep"
       },
       "When": {
         "HasSeenEvent": "86571101",
@@ -517,7 +517,7 @@
       "Action": "EditData",
       "Target": "Characters/schedules/Gremlin",
       "Entries": {
-        "Sat": "700 Custom_LK_LodgingHouse 19 22 0 Gremlin_sit/900 Custom_LK_ClearingHouse 21 19 1 square_3_3/1010 Custom_LK_ClearingHouse 24 27 2 Gremlin_sit/1030 Custom_EastScarpe 20 108 2 square_5_4/1330 Custom_EastScarpe 19 102 1/1400 Custom_EastScarpe 57 40 2/1700 Saloon 41 22 1 Gremlin_sit/2400 Custom_LK_LodgingHouse 22 6 2 Gremlin_sleep"
+        "Sat": "700 Custom_LK_LodgingHouse 19 22 0 Gremlin_sit/900 Custom_LK_ClearingHouse 21 19 1 square_3_3/1010 Custom_LK_ClearingHouse 24 27 2 Gremlin_sit/1030 EastScarp_Village 20 108 2 square_5_4/1330 EastScarp_Village 19 102 1/1400 EastScarp_Village 57 40 2/1700 Saloon 41 22 1 Gremlin_sit/2400 Custom_LK_LodgingHouse 22 6 2 Gremlin_sleep"
       },
       "When": {
         "HasSeenEvent": "86571101",
@@ -675,7 +675,7 @@
       "Action": "EditData",
       "Target": "Data/Events/JojaMart",
       "Entries": {
-        "86571110/f Juliet 1500/e 86571101/d Sat Sun/t 0900 1700": "none/13 11/Juliet 2 8 1 Morris 4 8 3 farmer 2 13 0/skippable/pause 500/speak Juliet \"{{i18n:86571110.01}}\"/emote Morris 12/emote Juliet 12/shake Juliet 350/faceDirection Juliet 0/textAboveHead Juliet \"{{i18n:86571110.02}}\"/speed Juliet 7/move Juliet 0 -4 0/warp Juliet -100 -100/playSound doorClose/speed farmer 5/move farmer 0 -5 1/textAboveHead Morris \"{{i18n:86571110.03}}\"/emote farmer 40/speed farmer 5/move farmer 0 -4 0/warp farmer -100 -100/playSound doorClose/globalFade/viewport -2000 -2000/changeLocation Custom_LK_JojaBreakRoom/viewport -1000 -1000/warp Morris -100 -100/warp Juliet 2 5/faceDirection Juliet 1/advancedMove Juliet false 6 0 -6 0/viewport 11 7/textAboveHead Juliet \"{{i18n:86571110.04}}\"/pause 3000/emote Juliet 12/warp farmer 2 10/pause 500/move farmer 0 -2 0/showFrame Juliet 8/quickQuestion #{{i18n:86571110.05}}#{{i18n:86571110.06}}#{{i18n:86571110.07}}#{{i18n:86571110.08}}(break)jump Juliet\\faceDirection Juliet 2\\speak Juliet \"{{i18n:86571110.09}}\"(break)jump Juliet\\faceDirection Juliet 2\\speak Juliet \"{{i18n:86571110.10}}\"(break)jump Juliet\\faceDirection Juliet 2\\speak Juliet \"{{i18n:86571110.11}}\"(break)jump Juliet\\faceDirection Juliet 2\\speak Juliet \"{{i18n:86571110.12}}\"/pause 500/faceDirection Juliet 0/speak Juliet \"{{i18n:86571110.13}}\"/question null \"#{{i18n:86571110.q1}}#{{i18n:86571110.q2}}\"/playMusic sappypiano/speak Juliet \"{{i18n:86571110.14}}\"/pause 500/emote farmer 28/pause 500/speak Juliet \"{{i18n:86571110.15}}\"/pause 500/advancedMove Juliet false 4 0 -4 0/speak Juliet \"{{i18n:86571110.16}}\"/pause 500/faceDirection Juliet 0/pause 500/move farmer 0 -2 0/move Juliet -1 0 3/shake Juliet 350/pause 500/quickQuestion #{{i18n:86571110.17}}#{{i18n:86571110.18}}#{{i18n:86571110.19}}(break)emote Juliet 12\\speak Juliet \"{{i18n:86571110.20}}\"(break)emote Juliet 40\\speak Juliet \"{{i18n:86571110.21}}\"(break)faceDirection Juliet 3\\pause 500\\shake Juliet 250\\speak Juliet \"{{i18n:86571110.22}}\"/pause 500/emote farmer 28/move Juliet 0 2 1/faceDirection farmer 2/speak Juliet \"{{i18n:86571110.23}}\"/pause 500/emote farmer 40/pause 500/speak Juliet \"{{i18n:86571110.24}}\"/pause 500/emote Juliet 40/pause 500/speak Juliet \"{{i18n:86571110.25}}\"/question fork0 \"{{i18n:86571110.26}}#{{i18n:86571110.27}}#{{i18n:86571110.28}}#\"/fork WalkAway/pause 500/move farmer 0 1 3/positionOffset farmer -4 0/speak Juliet \"{{i18n:86571110.29}}\"/pause 500/emote farmer 32/pause 500/animate farmer true true 1000 89/positionOffset farmer -2 0/showFrame Juliet 48/positionOffset Juliet 4 0/speak Juliet \"{{i18n:86571110.30}}\"/emote Juliet 20/stopAnimation farmer/pause 1000/end"
+        "86571110/f Juliet 1500/e 86571101/d Sat Sun/t 0900 1700": "none/13 11/Juliet 2 8 1 Morris 4 8 3 farmer 2 13 0/skippable/pause 500/speak Juliet \"{{i18n:86571110.01}}\"/emote Morris 12/emote Juliet 12/shake Juliet 350/faceDirection Juliet 0/textAboveHead Juliet \"{{i18n:86571110.02}}\"/speed Juliet 7/move Juliet 0 -4 0/warp Juliet -100 -100/playSound doorClose/speed farmer 5/move farmer 0 -5 1/textAboveHead Morris \"{{i18n:86571110.03}}\"/emote farmer 40/speed farmer 5/move farmer 0 -4 0/warp farmer -100 -100/playSound doorClose/globalFade/viewport -2000 -2000/changeLocation Custom_LK_JojaBreakRoom/viewport -1000 -1000/warp Morris -100 -100/warp Juliet 2 5/faceDirection Juliet 1/advancedMove Juliet false 6 0 -6 0/viewport 11 7/textAboveHead Juliet \"{{i18n:86571110.04}}\"/pause 3000/emote Juliet 12/warp farmer 2 10/pause 500/move farmer 0 -2 0/showFrame Juliet 8/quickQuestion #{{i18n:86571110.05}}#{{i18n:86571110.06}}#{{i18n:86571110.07}}#{{i18n:86571110.08}}(break)jump Juliet\\faceDirection Juliet 2\\speak Juliet \"{{i18n:86571110.09}}\"(break)jump Juliet\\faceDirection Juliet 2\\speak Juliet \"{{i18n:86571110.10}}\"(break)jump Juliet\\faceDirection Juliet 2\\speak Juliet \"{{i18n:86571110.11}}\"(break)jump Juliet\\faceDirection Juliet 2\\speak Juliet \"{{i18n:86571110.12}}\"/pause 500/faceDirection Juliet 0/speak Juliet \"{{i18n:86571110.13}}\"/question null \"#{{i18n:86571110.q1}}#{{i18n:86571110.q2}}\"/playMusic sappypiano/speak Juliet \"{{i18n:86571110.14}}\"/pause 500/emote farmer 28/pause 500/speak Juliet \"{{i18n:86571110.15}}\"/pause 500/advancedMove Juliet false 4 0 -4 0/speak Juliet \"{{i18n:86571110.16}}\"/pause 500/faceDirection Juliet 0/pause 500/move farmer 0 -2 0/move Juliet -1 0 3/shake Juliet 350/pause 500/quickQuestion #{{i18n:86571110.17}}#{{i18n:86571110.18}}#{{i18n:86571110.19}}(break)emote Juliet 12\\speak Juliet \"{{i18n:86571110.20}}\"(break)emote Juliet 40\\speak Juliet \"{{i18n:86571110.21}}\"(break)faceDirection Juliet 3\\pause 500\\shake Juliet 250\\speak Juliet \"{{i18n:86571110.22}}\"/pause 500/emote farmer 28/move Juliet 0 2 1/faceDirection farmer 2/speak Juliet \"{{i18n:86571110.23}}\"/pause 500/emote farmer 40/pause 500/speak Juliet \"{{i18n:86571110.24}}\"/pause 500/emote Juliet 40/pause 500/speak Juliet \"{{i18n:86571110.25}}\"/question fork0 \"{{i18n:86571110.26}}#{{i18n:86571110.27}}#{{i18n:86571110.28}}#\"/fork WalkAway/pause 500/move farmer 0 1 3/positionOffset farmer -4 0/speak Juliet \"{{i18n:86571110.29}}\"/pause 500/emote farmer 32/showFrame Juliet 48/positionOffset Juliet 4 0/speak Juliet \"{{i18n:86571110.30}}\"/emote Juliet 20/pause 1000/end"
       },
       "When": {
         "HasSeenEvent |contains=191393": false
@@ -898,6 +898,9 @@
     {
       "Action": "EditMap",
       "Target": "Maps/Town-Theater",
+      "When": {
+        "HasFlag |contains=ccMovieTheater": true
+      },
       "MapTiles": [
         {
           "Position": {
@@ -1070,7 +1073,7 @@
     {
       "LogName": "Juliet visits the vet",
       "Action": "EditData",
-      "Target": "Data/Events/Custom_ESVetHouse",
+      "Target": "Data/Events/EastScarp_VetHouse",
       "Entries": {
         "86571142/e 86571141/k 86571138/t 900 1900/d Tue": "none/7 14/Juliet 3 14 0 Gremlin 4 12 3 Jacob 5 12 3 farmer 5 20 0/animate Gremlin false true 240 16 17/skippable/pause 500/textAboveHead Juliet \"{{i18n:86571142.01}}\"/playSound dogWhining/pause 500/speak Jacob \"{{i18n:86571142.02}}\"/pause 500/playSound dog_bark/pause 500/speak Juliet \"{{i18n:86571142.03}}\"/pause 500/emote Juliet 28/move Gremlin -1 0 2/playSound dog_pant/move farmer 0 -2 0/doAction 5 17/pause 500/move farmer 0 -3 0/jump Juliet 5/playSound dog_bark/faceDirection Jacob 2/emote farmer 60/pause 500/speak Jacob \"{{i18n:86571142.04}}\"/pause 500/speak Juliet \"{{i18n:86571142.05}}\"/faceDirection Juliet 1/speak Juliet \"{{i18n:86571142.06}}\"/pause 500/faceDirection Juliet 0/speak Juliet \"{{i18n:86571142.07}}\"/move farmer -1 0 0/move farmer 0 -1 3/faceDirection Juliet 1/emote Juliet 20/pause 1500/faceDirection Jacob 3/faceDirection farmer 0 true/faceDirection Juliet 0 true/faceDirection Gremlin 1/speak Jacob \"{{i18n:86571142.08}}\"/pause 500/speak Juliet \"{{i18n:86571142.09}}\"/playSound dogWhining/emote Juliet 40/speak Jacob \"{{i18n:86571142.10}}\"/pause 500/faceDirection Juliet 1/faceDirection farmer 3/speak Jacob \"{{i18n:86571142.11}}\"/emote farmer 8/pause 500/faceDirection Juliet 0/pause 500/faceDirection Gremlin 2/playSound dog_pant/pause 500/speak Juliet \"{{i18n:86571142.12}}\"/jump Gremlin 3/move Gremlin 0 1 2/emote Gremlin 20/playSound dog_bark/emote Jacob 32/speak Jacob \"{{i18n:86571142.13}}\"/emote Juliet 20/pause 1000/end"
       }
@@ -1337,10 +1340,11 @@
       "Target": "Data/Events/Farm",
       "when": {
         "HasDialogueAnswer": "639898, 639896",
-        "Relationship:Juliet |contains=Engaged, Married": false
+        "Relationship:Juliet |contains=Engaged, Married": false,
+        "HasValue:{{spouse}}": "true"
       },
       "Entries": {
-        "6398443/f Juliet 2749/o Juliet/O {{spouse}}/t 600 1200": "playful/12 17/Juliet -100 -100 0 farmer 12 18 0/addConversationTopic Juliet_TalentShow 7/skippable/pause 500/speak Juliet \"{{i18n:6398443.01}}\"/emote farmer 8/pause 500/speak Juliet \"{{i18n:6398443.02}}\"/emote farmer 16/speak Juliet \"{{i18n:6398443.03}}\"/quickQuestion #{{i18n:6398443.04}}#{{i18n:6398443.05}}#{{i18n:6398443.06}}(break)emote Juliet 20\\speak Juliet \"{{i18n:6398443.07}}\"(break)emote Juliet 12\\speak Juliet \"{{i18n:6398443.08}}\"(break)emote Juliet 40\\speak Juliet \"{{i18n:6398443.09}}\"/speak Juliet \"{{i18n:6398443.10}}\"/emote farmer 60/speak Juliet \"{{i18n:6398443.11}}\"/emote farmer 56/pause 1000/speak Juliet \"{{i18n:6398443.12}}\"/pause 500/emote farmer 28/pause 1500/end",
+        "6398443/f Juliet 2749/o Juliet/t 600 1200": "playful/12 17/Juliet -100 -100 0 farmer 12 18 0/addConversationTopic Juliet_TalentShow 7/skippable/pause 500/speak Juliet \"{{i18n:6398443.01}}\"/emote farmer 8/pause 500/speak Juliet \"{{i18n:6398443.02}}\"/emote farmer 16/speak Juliet \"{{i18n:6398443.03}}\"/quickQuestion #{{i18n:6398443.04}}#{{i18n:6398443.05}}#{{i18n:6398443.06}}(break)emote Juliet 20\\speak Juliet \"{{i18n:6398443.07}}\"(break)emote Juliet 12\\speak Juliet \"{{i18n:6398443.08}}\"(break)emote Juliet 40\\speak Juliet \"{{i18n:6398443.09}}\"/speak Juliet \"{{i18n:6398443.10}}\"/emote farmer 60/speak Juliet \"{{i18n:6398443.11}}\"/emote farmer 56/pause 1000/speak Juliet \"{{i18n:6398443.12}}\"/pause 500/emote farmer 28/pause 1500/end",
         "6398446/e 6398443/A Juliet_TalentShow/k 6398444/F/o Juliet/t 600 1600": "playful/12 17/Juliet -100 -100 0 farmer 12 18 0/skippable/pause 500/speak Juliet \"{{i18n:6398446.01}}\"/pause 500/emote farmer 60/pause 500/speak Juliet \"{{i18n:6398446.02}}\"/pause 500/emote farmer 16/pause 500/speak Juliet \"{{i18n:6398446.03}}\"/pause 500/emote farmer 32/pause 500/speak Juliet \"{{i18n:6398446.04}}\"/pause 1000/end"
       }
     },

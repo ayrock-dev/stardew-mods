@@ -5,7 +5,6 @@
       "AllowValues": "true, false",
       "Default": "true",
       "Description": "Adds mist during rainy days to many maps. This does impact performance, so disable this if you're experiencing lag on rainy days.",
-
     },
     "SandboxLayout": {
       "AllowValues": "true, false",
@@ -455,13 +454,13 @@
     //Event #8 - Stone Bridge    <<ID tagged by quest
     {
       "Action": "EditData",
-      "Target": "data/events/Farm",
+      "Target": "data/events/farm",
       "When": {
         "HasSeenEvent": "2554907",
         "FarmType": "Standard"
       },
       "Entries": {
-        "2554908/t 900 1800/H": "none/-500 -500/farmer -200 -200 0 Robin 13 13 0/skippable/pause 1000/speak Robin \"{{i18n:GF.Event8.01}}\"/pause 200/emote farmer 32/pause 300/speak Robin \"{{i18n:GF.Event8.02}}\"/pause 500/end"
+        "2554908/t 900 1800/H": "none/-500 -500/farmer 64 15 2 Robin 64 17 0/skippable/pause 1000/speak Robin \"{{i18n:GF.Event8.01}}\"/pause 200/emote farmer 32/pause 300/speak Robin \"{{i18n:GF.Event8.02}}\"/pause 500/end"
       },
     },
     //Event #9 - Stone Bridge    <<ID tagged by framework
@@ -721,6 +720,9 @@
       },
       "Update": "OnLocationChange"
     },
+	
+	//
+	
     { //Lewis special order event - part 1
       "Action": "EditData",
       "Target": "data/events/farmhouse",
@@ -728,9 +730,9 @@
         "HasMod": "flashshifter.GrandpasFarm",
         "FarmType": "Standard",
         "HasSeenEvent |contains=191393": true
-      }, //= Summer 17th year 3 minimum, Grandpa's Farm is being played on
+      }, //= Summer 17th year 3 minimum, Grandpa's Farm is being played on  
       "Entries": {
-        "8033858/t 600 2200/j 268/w sunny/H": "continue/-500 -500/farmer 95 49 2 Lewis 95 51 0/pause 1000/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/pause 800/message \"{{i18n:Expansion.Event1.01}}\"/changeLocation farm/pause 500/playSound doorOpen/pause 500/positionOffset farmer 0 -20/positionOffset Lewis 10 -25/viewport 95 49 clamp true/pause 1000/speak Lewis \"{{i18n:Expansion.Event1.02}}\"/pause 650/emote farmer 8 true/pause 1500/faceDirection Lewis 1 true/pause 500/speak Lewis \"{{i18n:Expansion.Event1.03}}\"/pause 600/faceDirection farmer 1 true/pause 500/globalFade/viewport -1000 -1000/faceDirection farmer 1 true/faceDirection Lewis 3 true/warp farmer 120 57/warp Lewis 122 57/pause 500/viewport 121 57 clamp true/pause 1400/jump Lewis/pause 1000/speak Lewis \"{{i18n:Expansion.Event1.04}}\"/pause 1200/faceDirection Lewis 2 true/pause 1000/faceDirection Lewis 3 true/pause 300/faceDirection Lewis 0 true/pause 1000/faceDirection Lewis 3 true/pause 400/speak Lewis \"{{i18n:Expansion.Event1.05}}\"/pause 600/emote farmer 40/speak Lewis \"{{i18n:Expansion.Event1.06}}\"/pause 600/globalFade/viewport -1000 -1000/warp Lewis -50 -50/viewport 121 57 clamp true/pause 1700/faceDirection farmer 2 true/pause 1250/message \"{{i18n:Expansion.Event1.07}}\"/pause 800/question fork0 \"{{i18n:Expansion.Event1.08}}\"/fork 8033858_ExpandFarm/pause 750/message \"{{i18n:Expansion.Event1.09}}\"/pause 500/end dialogue Lewis \"{{i18n:Expansion.Event1.10}}\"",
+        "8033858/t 600 2200/j 268/w sunny/H": "continue/-500 -500/farmer 95 49 2 Lewis 95 51 0/pause 1000/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/pause 800/message \"{{i18n:Expansion.Event1.01}}\"/changeLocation farm/pause 500/playSound doorOpen/pause 500/positionOffset farmer 0 -20/positionOffset Lewis 10 -25/viewport 64 15 clamp true/pause 1000/speak Lewis \"{{i18n:Expansion.Event1.02}}\"/pause 650/emote farmer 8 true/pause 1500/faceDirection Lewis 1 true/pause 500/speak Lewis \"{{i18n:Expansion.Event1.03}}\"/pause 600/faceDirection farmer 1 true/pause 500/globalFade/viewport -1000 -1000/faceDirection farmer 1 true/faceDirection Lewis 3 true/warp farmer 89 23/warp Lewis 91 23/pause 500/viewport 89 22 clamp true/pause 1400/jump Lewis/pause 1000/speak Lewis \"{{i18n:Expansion.Event1.04}}\"/pause 1200/faceDirection Lewis 2 true/pause 1000/faceDirection Lewis 3 true/pause 300/faceDirection Lewis 0 true/pause 1000/faceDirection Lewis 3 true/pause 400/speak Lewis \"{{i18n:Expansion.Event1.05}}\"/pause 600/emote farmer 40/speak Lewis \"{{i18n:Expansion.Event1.06}}\"/pause 600/globalFade/viewport -1000 -1000/warp Lewis -50 -50/viewport 89 22 clamp true/pause 1700/faceDirection farmer 2 true/pause 1250/message \"{{i18n:Expansion.Event1.07}}\"/pause 800/question fork0 \"{{i18n:Expansion.Event1.08}}\"/fork 8033858_ExpandFarm/pause 750/message \"{{i18n:Expansion.Event1.09}}\"/pause 500/end dialogue Lewis \"{{i18n:Expansion.Event1.10}}\"",
       },
     },
     { //Lewis special order event - part 1 (players can start questline early if they meet conditions)
@@ -745,7 +747,7 @@
         "HasFlag |contains=Island_Resort": true
       }, //=Player has completed community center, theater, island resort, and cleared railroad boulder
       "Entries": {
-        "8033858/t 600 2200/w sunny/H": "continue/-500 -500/farmer 95 49 2 Lewis 95 51 0/pause 1000/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/pause 800/message \"{{i18n:Expansion.Event1.01}}\"/changeLocation farm/pause 500/playSound doorOpen/pause 500/positionOffset farmer 0 -20/positionOffset Lewis 10 -25/viewport 95 49 clamp true/pause 1000/speak Lewis \"{{i18n:Expansion.Event1.02}}\"/pause 650/emote farmer 8 true/pause 1500/faceDirection Lewis 1 true/pause 500/speak Lewis \"{{i18n:Expansion.Event1.03}}\"/pause 600/faceDirection farmer 1 true/pause 500/globalFade/viewport -1000 -1000/faceDirection farmer 1 true/faceDirection Lewis 3 true/warp farmer 120 57/warp Lewis 122 57/pause 500/viewport 121 57 clamp true/pause 1400/jump Lewis/pause 1000/speak Lewis \"{{i18n:Expansion.Event1.04}}\"/pause 1200/faceDirection Lewis 2 true/pause 1000/faceDirection Lewis 3 true/pause 300/faceDirection Lewis 0 true/pause 1000/faceDirection Lewis 3 true/pause 400/speak Lewis \"{{i18n:Expansion.Event1.05}}\"/pause 600/emote farmer 40/speak Lewis \"{{i18n:Expansion.Event1.06}}\"/pause 600/globalFade/viewport -1000 -1000/warp Lewis -50 -50/viewport 121 57 clamp true/pause 1700/faceDirection farmer 2 true/pause 1250/message \"{{i18n:Expansion.Event1.07}}\"/pause 800/question fork0 \"{{i18n:Expansion.Event1.08}}\"/fork 8033858_ExpandFarm/pause 750/message \"{{i18n:Expansion.Event1.09}}\"/pause 500/end dialogue Lewis \"{{i18n:Expansion.Event1.10}}\"",
+        "8033858/t 600 2200/w sunny/H": "continue/-500 -500/farmer 95 49 2 Lewis 95 51 0/pause 1000/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/pause 800/message \"{{i18n:Expansion.Event1.01}}\"/changeLocation farm/pause 500/playSound doorOpen/pause 500/positionOffset farmer 0 -20/positionOffset Lewis 10 -25/viewport 64 15 clamp true/pause 1000/speak Lewis \"{{i18n:Expansion.Event1.02}}\"/pause 650/emote farmer 8 true/pause 1500/faceDirection Lewis 1 true/pause 500/speak Lewis \"{{i18n:Expansion.Event1.03}}\"/pause 600/faceDirection farmer 1 true/pause 500/globalFade/viewport -1000 -1000/faceDirection farmer 1 true/faceDirection Lewis 3 true/warp farmer 89 23/warp Lewis 91 23/pause 500/viewport 89 22 clamp true/pause 1400/jump Lewis/pause 1000/speak Lewis \"{{i18n:Expansion.Event1.04}}\"/pause 1200/faceDirection Lewis 2 true/pause 1000/faceDirection Lewis 3 true/pause 300/faceDirection Lewis 0 true/pause 1000/faceDirection Lewis 3 true/pause 400/speak Lewis \"{{i18n:Expansion.Event1.05}}\"/pause 600/emote farmer 40/speak Lewis \"{{i18n:Expansion.Event1.06}}\"/pause 600/globalFade/viewport -1000 -1000/warp Lewis -50 -50/viewport 89 22 clamp true/pause 1700/faceDirection farmer 2 true/pause 1250/message \"{{i18n:Expansion.Event1.07}}\"/pause 800/question fork0 \"{{i18n:Expansion.Event1.08}}\"/fork 8033858_ExpandFarm/pause 750/message \"{{i18n:Expansion.Event1.09}}\"/pause 500/end dialogue Lewis \"{{i18n:Expansion.Event1.10}}\"",
       },
     },
     { //Player decided to purchase land
@@ -781,7 +783,7 @@
         "HasSeenEvent |contains=191393": true
       },
       "Entries": {
-        "8033859/e 8033758/H": "50s/-500 -500/farmer 5 11 0 Lewis 8 5 0 Marnie 22 4 1/positionOffset Marnie -6 10/viewport 5 9 clamp true/skippable/move farmer 0 -2 0/pause 1000/faceDirection Lewis 3 true/pause 200/faceDirection Lewis 2 true/pause 300/emote Lewis 16/pause 300/faceDirection Lewis 3 true/pause 100/move Lewis -2 0 2/move Lewis 0 1 3/move Lewis -1 0 2/move Lewis 0 1 2/pause 650/speak Lewis \"{{i18n:Expansion.Event2.01}}\"/pause 600/emote farmer 40/pause 150/speak Lewis \"{{i18n:Expansion.Event2.02}}\"/pause 650/faceDirection Lewis 3 true/pause 500/speak Lewis \"{{i18n:Expansion.Event2.03}}\"/pause 400/faceDirection Lewis 2 true/pause 500/speak Lewis \"{{i18n:Expansion.Event2.04}}\"/pause 500/end dialogueWarpOut Lewis \"{{i18n:Expansion.Event2.05}}\""
+        "8033859/e 8033758/H": "50s/-500 -500/farmer 5 11 0 Lewis 8 5 0 Marnie 22 4 1/positionOffset Marnie -6 10/viewport 5 9 true/skippable/move farmer 0 -2 0/pause 1000/faceDirection Lewis 3 true/pause 200/faceDirection Lewis 2 true/pause 300/emote Lewis 16/pause 300/faceDirection Lewis 3 true/pause 100/move Lewis -2 0 2/move Lewis 0 1 3/move Lewis -1 0 2/move Lewis 0 1 2/pause 650/speak Lewis \"{{i18n:Expansion.Event2.01}}\"/pause 600/emote farmer 40/pause 150/speak Lewis \"{{i18n:Expansion.Event2.02}}\"/pause 650/faceDirection Lewis 3 true/pause 500/speak Lewis \"{{i18n:Expansion.Event2.03}}\"/pause 400/faceDirection Lewis 2 true/pause 500/speak Lewis \"{{i18n:Expansion.Event2.04}}\"/pause 500/end dialogueWarpOut Lewis \"{{i18n:Expansion.Event2.05}}\""
       },
     },
     { //Lewis special order event - part 3      --->8033860 tagged for farmland map patch
@@ -872,7 +874,7 @@
         "HasSeenEvent |contains=6663408": true,
       }, //= Summer 17th year 3 minimum, Grandpa's Farm is being played on, player built Morris townhouse
       "Entries": {
-        "8033858/t 600 2200/j 268/w sunny/H": "continue/-500 -500/farmer 95 49 2 MorrisTod 95 51 0/pause 1000/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/pause 800/message \"{{i18n:Expansion.Event1.01}}\"/changeLocation farm/pause 500/playSound doorOpen/pause 500/positionOffset farmer 0 -20/positionOffset MorrisTod 10 -25/viewport 95 49 clamp true/pause 1000/speak MorrisTod \"{{i18n:Expansion.Event1.02}}\"/pause 650/emote farmer 8 true/pause 1500/faceDirection MorrisTod 1 true/pause 500/speak MorrisTod \"{{i18n:Expansion.Event1.03}}\"/pause 600/faceDirection farmer 1 true/pause 500/globalFade/viewport -1000 -1000/faceDirection farmer 1 true/faceDirection MorrisTod 3 true/warp farmer 120 57/warp MorrisTod 122 57/pause 500/viewport 121 57 clamp true/pause 1400/jump MorrisTod/pause 1000/speak MorrisTod \"{{i18n:Expansion.Event1.Morris.04}}\"/pause 1200/faceDirection MorrisTod 2 true/pause 1000/faceDirection MorrisTod 3 true/pause 300/faceDirection MorrisTod 0 true/pause 1000/faceDirection MorrisTod 3 true/pause 400/speak MorrisTod \"{{i18n:Expansion.Event1.05}}\"/pause 600/emote farmer 40/speak MorrisTod \"{{i18n:Expansion.Event1.Morris.06}}\"/pause 600/globalFade/viewport -1000 -1000/warp MorrisTod -50 -50/viewport 121 57 clamp true/pause 1700/faceDirection farmer 2 true/pause 1250/message \"{{i18n:Expansion.Event1.07}}\"/pause 800/question fork0 \"{{i18n:Expansion.Event1.08}}\"/fork 8033858_ExpandFarm/pause 750/message \"{{i18n:Expansion.Event1.Morris.09}}\"/pause 500/end dialogue MorrisTod \"{{i18n:Expansion.Event1.10}}\"",
+        "8033858/t 600 2200/j 268/w sunny/H": "continue/-500 -500/farmer 95 49 2 MorrisTod 95 51 0/pause 1000/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/pause 800/message \"{{i18n:Expansion.Event1.01}}\"/changeLocation farm/pause 500/playSound doorOpen/pause 500/positionOffset farmer 0 -20/positionOffset MorrisTod 10 -25/viewport 64 15 clamp true/pause 1000/speak MorrisTod \"{{i18n:Expansion.Event1.02}}\"/pause 650/emote farmer 8 true/pause 1500/faceDirection MorrisTod 1 true/pause 500/speak MorrisTod \"{{i18n:Expansion.Event1.03}}\"/pause 600/faceDirection farmer 1 true/pause 500/globalFade/viewport -1000 -1000/faceDirection farmer 1 true/faceDirection MorrisTod 3 true/warp farmer 89 23/warp MorrisTod 91 23/pause 500/viewport 89 22 clamp true/pause 1400/jump MorrisTod/pause 1000/speak MorrisTod \"{{i18n:Expansion.Event1.Morris.04}}\"/pause 1200/faceDirection MorrisTod 2 true/pause 1000/faceDirection MorrisTod 3 true/pause 300/faceDirection MorrisTod 0 true/pause 1000/faceDirection MorrisTod 3 true/pause 400/speak MorrisTod \"{{i18n:Expansion.Event1.05}}\"/pause 600/emote farmer 40/speak MorrisTod \"{{i18n:Expansion.Event1.Morris.06}}\"/pause 600/globalFade/viewport -1000 -1000/warp MorrisTod -50 -50/viewport 89 22 clamp true/pause 1700/faceDirection farmer 2 true/pause 1250/message \"{{i18n:Expansion.Event1.07}}\"/pause 800/question fork0 \"{{i18n:Expansion.Event1.08}}\"/fork 8033858_ExpandFarm/pause 750/message \"{{i18n:Expansion.Event1.Morris.09}}\"/pause 500/end dialogue MorrisTod \"{{i18n:Expansion.Event1.10}}\"",
       },
     },
     { //Morris special order event - part 1 (alternate)
@@ -889,7 +891,7 @@
         "HasFlag |contains=Island_Resort": true
       }, //=Player has completed joja dev form, theater, island resort, player built Morris townhouse, and cleared railroad boulder
       "Entries": {
-        "8033858/t 600 2200/w sunny/H": "continue/-500 -500/farmer 95 49 2 MorrisTod 95 51 0/pause 1000/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/pause 800/message \"{{i18n:Expansion.Event1.01}}\"/changeLocation farm/pause 500/playSound doorOpen/pause 500/positionOffset farmer 0 -20/positionOffset MorrisTod 10 -25/viewport 95 49 clamp true/pause 1000/speak MorrisTod \"{{i18n:Expansion.Event1.02}}\"/pause 650/emote farmer 8 true/pause 1500/faceDirection MorrisTod 1 true/pause 500/speak MorrisTod \"{{i18n:Expansion.Event1.03}}\"/pause 600/faceDirection farmer 1 true/pause 500/globalFade/viewport -1000 -1000/faceDirection farmer 1 true/faceDirection MorrisTod 3 true/warp farmer 120 57/warp MorrisTod 122 57/pause 500/viewport 121 57 clamp true/pause 1400/jump MorrisTod/pause 1000/speak MorrisTod \"{{i18n:Expansion.Event1.Morris.04}}\"/pause 1200/faceDirection MorrisTod 2 true/pause 1000/faceDirection MorrisTod 3 true/pause 300/faceDirection MorrisTod 0 true/pause 1000/faceDirection MorrisTod 3 true/pause 400/speak MorrisTod \"{{i18n:Expansion.Event1.05}}\"/pause 600/emote farmer 40/speak MorrisTod \"{{i18n:Expansion.Event1.Morris.06}}\"/pause 600/globalFade/viewport -1000 -1000/warp MorrisTod -50 -50/viewport 121 57 clamp true/pause 1700/faceDirection farmer 2 true/pause 1250/message \"{{i18n:Expansion.Event1.07}}\"/pause 800/question fork0 \"{{i18n:Expansion.Event1.08}}\"/fork 8033858_ExpandFarm/pause 750/message \"{{i18n:Expansion.Event1.Morris.09}}\"/pause 500/end dialogue MorrisTod \"{{i18n:Expansion.Event1.10}}\"",
+        "8033858/t 600 2200/w sunny/H": "continue/-500 -500/farmer 95 49 2 MorrisTod 95 51 0/pause 1000/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/pause 800/message \"{{i18n:Expansion.Event1.01}}\"/changeLocation farm/pause 500/playSound doorOpen/pause 500/positionOffset farmer 0 -20/positionOffset MorrisTod 10 -25/viewport 64 15 clamp true/pause 1000/speak MorrisTod \"{{i18n:Expansion.Event1.02}}\"/pause 650/emote farmer 8 true/pause 1500/faceDirection MorrisTod 1 true/pause 500/speak MorrisTod \"{{i18n:Expansion.Event1.03}}\"/pause 600/faceDirection farmer 1 true/pause 500/globalFade/viewport -1000 -1000/faceDirection farmer 1 true/faceDirection MorrisTod 3 true/warp farmer 89 23/warp MorrisTod 91 23/pause 500/viewport 89 22 clamp true/pause 1400/jump MorrisTod/pause 1000/speak MorrisTod \"{{i18n:Expansion.Event1.Morris.04}}\"/pause 1200/faceDirection MorrisTod 2 true/pause 1000/faceDirection MorrisTod 3 true/pause 300/faceDirection MorrisTod 0 true/pause 1000/faceDirection MorrisTod 3 true/pause 400/speak MorrisTod \"{{i18n:Expansion.Event1.05}}\"/pause 600/emote farmer 40/speak MorrisTod \"{{i18n:Expansion.Event1.Morris.06}}\"/pause 600/globalFade/viewport -1000 -1000/warp MorrisTod -50 -50/viewport 89 22 clamp true/pause 1700/faceDirection farmer 2 true/pause 1250/message \"{{i18n:Expansion.Event1.07}}\"/pause 800/question fork0 \"{{i18n:Expansion.Event1.08}}\"/fork 8033858_ExpandFarm/pause 750/message \"{{i18n:Expansion.Event1.Morris.09}}\"/pause 500/end dialogue MorrisTod \"{{i18n:Expansion.Event1.10}}\"",
       },
     },
     { //Player decided to purchase land
@@ -1399,6 +1401,29 @@
         "SkillLevel:Mining": "0, 1, 2, 3, 4, 5, 6, 7, 9"
       }
     },
+	
+	{
+      "Action": "Load", "Priority": "Low",
+      "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Spring_Grandpas_WorldMap",
+      "FromFile": "assets/Maps/WorldMaps/Spring_Grandpas_WorldMap.png"
+    },
+    {
+      "Action": "Load", "Priority": "Low",
+      "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Summer_Grandpas_WorldMap",
+      "FromFile": "assets/Maps/WorldMaps/Summer_Grandpas_WorldMap.png"
+    },
+    {
+      "Action": "Load", "Priority": "Low",
+      "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Fall_Grandpas_WorldMap",
+      "FromFile": "assets/Maps/WorldMaps/Fall_Grandpas_WorldMap.png"
+    },
+    {
+      "Action": "Load", "Priority": "Low",
+      "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Winter_Grandpas_WorldMap",
+      "FromFile": "assets/Maps/WorldMaps/Winter_Grandpas_WorldMap.png"
+    },
+	
+
     {
       "Action": "EditImage",
       "Target": "LooseSprites/Map",
@@ -1455,6 +1480,9 @@
         "FarmType": "Standard"
       },
     },
+	
+	
+	
     //Changes standard farm icon to grandpa
     {
       "Action": "EditImage",

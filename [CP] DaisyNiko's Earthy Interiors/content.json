@@ -1,5 +1,5 @@
 {
-	"Format":"1.28",
+	"Format":"2.0.0",
 	"ConfigSchema":{
 		"ChangeInteriorLighting":{
 			"AllowValues":"true,false",
@@ -50,8 +50,14 @@
 		//town interior
 		{
 			"Action":"EditImage",
-			"Target":"Maps/townInterior, Maps/townInterior_2, Maps/ElliottHouseTiles, Maps/MovieTheater_TileSheet, Maps/MovieTheaterJoja_TileSheet, Maps/CarolineGreenhouseTiles, Maps/CarolineGreenhouseTiles_rainy, Maps/submarine_tilesheet",
+			"Target":"Maps/townInterior, Maps/ElliottHouseTiles, Maps/MovieTheater_TileSheet, Maps/MovieTheaterJoja_TileSheet, Maps/CarolineGreenhouseTiles, Maps/CarolineGreenhouseTiles_rainy, Maps/submarine_tilesheet",
 			"FromFile":"assets/{{TargetWithoutPath}}.png"
+		},
+		{
+			"Action":"EditImage",
+			"Target":"Maps/townInterior_2",
+			"FromFile":"assets/{{TargetWithoutPath}}.png",
+			"PatchMode":"Overlay"
 		},
 		//town interior chairs
 		{
@@ -74,6 +80,13 @@
 			"FromFile":"assets/{{TargetWithoutPath}}.png",
 			"PatchMode":"Overlay",
 			"When":{"RecolourFarmHouseFurniture":"true"}
+		},
+		{
+			"Action":"EditImage",
+			"Target":"Maps/farmhouse_tiles",
+			"FromFile":"assets/farmhouse_tiles_withoutFurniture.png",
+			"PatchMode":"Overlay",
+			"When":{"RecolourFarmHouseFurniture":"false"}
 		},
 		//walls and floors
 		{

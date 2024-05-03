@@ -12,6 +12,7 @@
   "AutoTrashJunk": false,
   "JunkHighestPrice": 0,
   "AllowTrashFish": false,
+  "JunkIgnoreList": [],
   "AutoPauseFishing": "WarnAndPause",
   "TimeToPause": 24,
   "WarnCount": 1,

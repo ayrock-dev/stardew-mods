@@ -6,14 +6,14 @@
   "ShowHiddenVillagers": false,
   "ShowQuests": true,
   "ShowTravelingMerchant": true,
-  "ShowMinimap": false,
+  "ShowMinimap": true,
   "LockMinimapPosition": false,
   "ShowFarmBuildings": true,
   "MinimapToggleKey": "OemPipe",
-  "MinimapX": 12,
-  "MinimapY": 12,
-  "MinimapWidth": 75,
-  "MinimapHeight": 45,
+  "MinimapX": 64,
+  "MinimapY": 64,
+  "MinimapWidth": 50,
+  "MinimapHeight": 40,
   "MinimapExclusions": [],
   "ShowChildren": false,
   "ShowHorse": true,
@@ -63,7 +63,6 @@
     "Scarlett": 5,
     "Apples": 17,
     "GuntherSilvian": 4,
-    "ScarlettFake": 5,
-    "Aspen": 3
+    "ScarlettFake": 5
   }
 }

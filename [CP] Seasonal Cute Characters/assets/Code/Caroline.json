@@ -1,0 +1,148 @@
+{
+	"Changes": [
+		{
+			"LogName": "Caroline - Winter",
+			"Action": "EditImage",
+			"Target": "Portraits/Caroline_Winter, Characters/Caroline_Winter",
+			"FromFile": "assets/{{TargetPathOnly}}/Caroline/{{TargetWithoutPath}}{{IndoorVariant}}.png",
+			"When":
+			{
+				"HasFile:{{FromFile}}": true,
+			},
+		},
+		{
+			"LogName": "Caroline - Winter Indoor/Outdoor 2",
+			"Action": "EditImage",
+			"Target": "Portraits/Caroline_Winter, Characters/Caroline_Winter",
+			"FromFile": "assets/{{TargetPathOnly}}/Caroline/{{TargetWithoutPath}}{{IndoorVariant}}.png",
+			"When":
+			{
+				"HasFile:{{FromFile}}": true,
+                "Season": "Winter",
+                "WinterIndoorOutdoorOutfits": "IndoorOutdoor",
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "Caroline - Seasonal",
+			"Action": "EditImage",
+			"Target": "Portraits/Caroline, Characters/Caroline",
+			"FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{season}}{{IndoorVariant}}.png",
+			"When":
+			{
+				"HasFile:{{FromFile}}": true,
+			},
+		},
+		{
+			"LogName": "Caroline - Winter Indoor/Outdoor",
+			"Action": "EditImage",
+			"Target": "Portraits/Caroline, Characters/Caroline",
+			"FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{season}}{{IndoorVariant}}.png",
+			"When":
+			{
+				"HasFile:{{FromFile}}": true,
+                "Season": "Winter",
+                "WinterIndoorOutdoorOutfits": "IndoorOutdoor",
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "Caroline - Festival",
+			"Action": "EditImage",
+			"Target": "Portraits/Caroline, Characters/Caroline, Portraits/Caroline_Winter, Characters/Caroline_Winter",
+            "FromFile": "assets/{{TargetPathOnly}}/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
+			"When":
+			{
+				"HasFile:{{FromFile}}": true,
+				"FestivalOutfits": "True",
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "Caroline - Beach",
+			"Action": "EditImage",
+			"Target": "Portraits/Caroline_Beach, Characters/Caroline_Beach",
+			"FromFile": "assets/{{TargetPathOnly}}/Beach/{{TargetWithoutPath}}.png",
+			"When":
+			{
+				"HasFile:{{FromFile}}": true,
+			},
+		},
+		{
+			"LogName": "Caroline - Aerobics",
+			"Action": "EditImage",
+			"Target": "Portraits/Caroline, Characters/Caroline",
+			"FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_Aerobics.png",
+			"When":
+			{
+				"HasFile:{{FromFile}}": true,
+				"AerobicsDay": "Regular, Harvey",
+			},
+			"Update": "OnLocationChange, OnTimeChange",
+		},
+		{
+			"LogName": "Caroline - Aerobics Winter",
+			"Action": "EditImage",
+			"Target": "Portraits/Caroline_Winter, Characters/Caroline_Winter",
+			"FromFile": "assets/{{TargetPathOnly}}/Caroline/{{TargetWithoutPath}}_Aerobics.png",
+			"When":
+			{
+				"HasFile:{{FromFile}}": true,
+				"AerobicsDay": "Regular, Harvey",
+			},
+			"Update": "OnLocationChange, OnTimeChange",
+		},				
+// NOSE OVERLAY
+
+		{
+			"LogName": "Caroline - Winter Nose",
+			"Action": "EditImage",
+			"Target": "Characters/Caroline_Winter",
+			"FromFile": "assets/Characters/Caroline/Caroline_nose.png",
+            "PatchMode": "Overlay",
+			"When":
+			{
+				"HasFile:{{FromFile}}": true,
+				"NoNose": "false",
+			},
+		},
+		{
+			"LogName": "Caroline - Seasonal Nose",
+			"Action": "EditImage",
+			"Target": "Characters/Caroline",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_nose.png",
+            "PatchMode": "Overlay",
+			"When":
+			{
+				"HasFile:{{FromFile}}": true,
+				"NoNose": "false",
+			},
+		},
+		{
+			"LogName": "Caroline - Beach Nose",
+			"Action": "EditImage",
+			"Target": "Characters/Caroline_Beach",
+            "FromFile": "assets/{{TargetPathOnly}}/Beach/{{TargetWithoutPath}}_nose.png",
+            "PatchMode": "Overlay",
+			"When":
+			{
+				"HasFile:{{FromFile}}": true,
+				"NoNose": "false",
+			},
+		},
+		
+// MISCELLANEOUS		
+		{
+			"LogName": "Caroline - Emoji",
+			"Action": "EditImage",
+			"Target": "LooseSprites/emojis",
+            "FromFile": "assets/{{NoNose}}/Random/emojis.png",
+			"FromArea": {"X": 9, "Y": 108, "Width": 9, "Height": 9},
+			"ToArea": {"X": 9, "Y": 108, "Width": 9, "Height": 9},
+			"When": 
+			{
+				"HasFile:{{FromFile}}": true,
+			},
+		},
+	]
+}
