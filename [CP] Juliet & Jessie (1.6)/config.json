@@ -1,7 +1,7 @@
 {
   "LoadJojaMart": "true",
-  "TownMap": "default",
-  "atdsdv": "standard",
+  "TownMap": "SVE",
+  "atdsdv": "none",
   "alternateWallsNFloors": "disabled",
   "GenderNeutral": "false"
 }

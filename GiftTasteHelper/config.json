@@ -6,6 +6,6 @@
   "HideTooltipWhenNoGiftsKnown": false,
   "MaxGiftsToDisplay": 0,
   "ShowUniversalGifts": false,
-  "ColorizeUniversalGiftNames": false,
+  "ColorizeUniversalGiftNames": true,
   "ShowGiftsForUnmetNPCs": true
 }

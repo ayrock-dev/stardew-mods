@@ -1,6 +1,6 @@
 {
   "DrawFishShadows": true,
-  "MaximumFish": 500,
+  "MaximumFish": 300,
   "FishDensity": 0.2,
   "TrashOutside": false,
   "TrashFarm": false,
