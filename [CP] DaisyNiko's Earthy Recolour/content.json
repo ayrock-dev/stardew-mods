@@ -168,7 +168,7 @@
                 "Width":48,
                 "Height":64
             },
-            "ToArea":{
+            "ToArea":{ //top
                 "X":96,
                 "Y":112,
                 "Width":48,
@@ -179,17 +179,16 @@
         {
             "Action":"EditImage",
             "Target":"Maps/desert_festival_tilesheet",
-            "FromFile":"assets/Maps/DesertTiles_tree.png",
-            "ToArea":{
-                "X":112,
-                "Y":176,
-                "Width":16,
-                "Height":16
-
-            },
+            "FromFile":"assets/Maps/DesertTiles_tree.png",            
             "FromArea":{
                 "X":16,
                 "Y":64,
+                "Width":16,
+                "Height":16
+            },
+            "ToArea":{
+                "X":112,
+                "Y":176,
                 "Width":16,
                 "Height":16
             },

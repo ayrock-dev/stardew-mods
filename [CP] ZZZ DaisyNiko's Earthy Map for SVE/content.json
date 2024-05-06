@@ -1,0 +1,125 @@
+{
+	"Format": "2.0.0",
+	"Changes": [
+//SVE Worldmap
+		{
+            "Action": "EditImage",
+            "Target": "LooseSprites/map, LooseSprites/map_summer, LooseSprites/map_fall, LooseSprites/map_winter",
+            "FromFile": "assets/{{Season}}_SVE_WorldMap.png",
+            "PatchMode": "Overlay",
+			"When": {
+				"HasMod": "FlashShifter.SVECode",
+			},
+		},
+//Crimson Badlands
+		{
+            "Action": "EditImage",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/CrimsonBadlands",
+            "FromFile": "assets/CrimsonBadlands.png",
+            "PatchMode": "Overlay",
+			"When": {
+				"HasMod": "FlashShifter.SVECode",
+			},
+		},
+//Meadowlands Farm
+		{
+            "Action": "EditImage",
+            "Target": "LooseSprites/Farm_ranching_map, LooseSprites/Farm_ranching_map_summer, LooseSprites/Farm_ranching_map_fall, LooseSprites/Farm_ranching_map_winter",
+            "FromFile": "assets/{{Season}}_Meadowlands_WorldMap.png",
+            "PatchMode": "Overlay",
+			"When": {
+				"HasMod": "FlashShifter.SVECode",
+			},
+        },
+// Grandpas Farm
+		{
+            "Action": "EditImage",
+            "Target": "LooseSprites/map, LooseSprites/map_summer, LooseSprites/map_fall, LooseSprites/map_winter",
+            "FromFile": "assets/{{Season}}_Grandpas_WorldMap.png",
+            "PatchMode": "Overlay",
+			"ToArea": { "X": 0, "Y": 43, "Width": 142, "Height": 61 },
+			"When": {
+				"HasMod": "flashshifter.GrandpasFarm",
+			},
+		},
+//Grampleton Fields 
+		{
+			"Action": "EditImage",
+			"Target": "Mods/FlashShifter.StardewValleyExpandedCP/{{Season}}_Grampletonfields",
+			"FromFile": "assets/{{Season}}_GrampletonFields.png",
+			"Patchmode": "Overlay",
+			"When": {
+				"HasMod": "flashshifter.GrampletonFields",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+			},
+		},
+//Immersive Farm 2 Remastered
+		{
+            "Action": "EditImage",
+            "Target": "LooseSprites/map, LooseSprites/map_summer, LooseSprites/map_fall, LooseSprites/map_winter",
+            "FromFile": "assets/{{Season}}_IF2R_Worldmap.png",
+            "PatchMode": "Overlay",
+			"ToArea": { "X": 0, "Y": 43, "Width": 142, "Height": 61 },
+			"When": {
+				"HasMod": "flashshifter.immersivefarm2remastered",
+				"FarmType": "Standard",
+				"HasMod |contains=flashshifter.GrandpasFarm": false
+			},
+		},
+//Highlands
+		{
+            "Action": "EditImage",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/{{Season}}_Highlands",
+            "FromFile": "assets/{{Season}}_Highlands_WorldMap.png",
+            "PatchMode": "Overlay",
+			"When": {
+				"HasMod": "FlashShifter.SVECode",
+			},
+		},
+//Grumpleton Suburbs
+		{
+            "Action": "EditImage",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/{{Season}}_GrampletonSuburbs",
+            "FromFile": "assets/{{Season}}_GrampletonSuburbs_WorldMap.png",
+            "PatchMode": "Overlay",
+			"When": {
+				"HasMod": "FlashShifter.SVECode",
+			},
+		},
+//Joja
+		{
+            "Action": "EditImage",
+            "Target": "LooseSprites/map, LooseSprites/map_summer, LooseSprites/map_fall, LooseSprites/map_winter",
+            "FromFile": "assets/{{Season}}_Joja_WorldMap.png",
+			"ToArea": { "X": 84, "Y": 14, "Width": 189, "Height": 117 },
+            "PatchMode": "Overlay",
+			"When": {
+				"HasMod": "FlashShifter.SVECode",
+				"HasSeenEvent": "5553210"
+			},
+		},
+//Fablereef
+		{
+            "Action": "EditImage",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/FableReef",
+            "FromFile": "assets/FableReef.png",
+            "PatchMode": "Overlay",
+			"When": {
+				"HasMod": "FlashShifter.SVECode",
+			},
+		},
+//Maplayer
+		{
+            "Action": "EditImage",
+            "Target": "LooseSprites/map, LooseSprites/map_summer, LooseSprites/map_fall, LooseSprites/map_winter",
+            "FromFile": "assets/maplayer.png",
+			"FromArea": { "X": 208, "Y": 363, "Width": 40, "Height": 30 },
+			"ToArea": { "X": 208, "Y": 363, "Width": 40, "Height": 30 },
+            "PatchMode": "Overlay",
+			"When": {
+				"HasMod": "FlashShifter.SVECode",
+				"HasMod": "DaisyNiko.EarthyInterface",
+			},
+		},
+    ]
+}

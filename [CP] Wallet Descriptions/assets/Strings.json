@@ -1,0 +1,34 @@
+{
+    "Changes": [
+//Skillpages
+		{
+			"Action": "EditData",
+			"Target": "Strings/StringsFromCSFiles",
+			"Entries": {
+				"SkillsPage.cs.11588": "{{i18n:RustyKey}}.",
+				"SkillsPage.cs.11589": "{{i18n:ClubCard}}",
+				"SkillsPage.cs.11590": "{{i18n:SpecialAmmulet}}",
+				"SkillsPage.cs.11591": "{{i18n:SkullKey}}",
+				"SkillsPage.cs.magnifyingglass": "{{i18n:MagnifyingGlass}}",
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Strings/1_6_Strings",
+			"Entries": {
+				"ForestMagic_Description": "{{i18n:ForestMagic}}",
+				"BearPaw_Description": "{{i18n:BearPaw}}",
+				"SpringOnionMastery_Description": "{{i18n:SpringOnionMastery}}",
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Strings/Objects",
+			"Entries": {
+				"DwarvishTranslationGuide_Description": "{{i18n:DwarvenTranslationGuide}}",
+				"DarkTalisman": "{{i18n:DarkTalisman}}",
+				"MagicInk": "{{i18n:MagicInk}}",
+			}
+		},
+    ]
+}

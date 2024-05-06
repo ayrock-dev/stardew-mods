@@ -1,0 +1,13 @@
+{
+	"Name": "Wallet Description",
+	"Author": "N3cro_92",
+	"Version": "2.0.6",
+	"Description": "Addet Descriptions to the Wallet Items",
+	"UniqueID": "N3cro_92.WalletDescriptions",
+	"MinimumApiVersion": "3.0.0",
+  	"UpdateKeys": [ "Nexus:19987" ],
+	"ContentPackFor": {
+		"UniqueID": "Pathoschild.ContentPatcher",
+		"MinimumVersion": "1.19.0" 
+	}
+}

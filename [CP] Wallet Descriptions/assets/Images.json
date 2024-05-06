@@ -1,0 +1,149 @@
+{
+    "Changes": [
+//Images
+//Dwarvish Translation Guide
+        {
+            "Logname": "Dwarvish Translation Guide",
+            "Action": "EditImage",
+            "Target": "Maps/springobjects",
+            "FromFile": "assets/Icons/Wallet.png",
+            "FromArea": { "X": 0, "Y": 0, "Width": 16, "Height": 16 },
+            "ToArea": { "X": 224, "Y": 208, "Width": 16, "Height": 16 },
+            "When": {
+                "Change Icons": true,
+            }
+        },
+//Rusty Key
+        {
+            "Logname": "Rusty Key",
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "assets/Icons/Wallet.png",
+            "FromArea": { "X": 16, "Y": 0, "Width": 16, "Height": 16 },
+            "ToArea": { "X": 144, "Y": 320, "Width": 16, "Height": 16 },
+            "When": {
+                "Change Icons": true,
+            }
+         },
+//Club Card
+        {
+            "Logname": "Club Card",
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "assets/Icons/Wallet.png",
+            "FromArea": { "X":32, "Y": 0, "Width": 16, "Height": 16 },
+            "ToArea": { "X": 160, "Y": 320, "Width": 16, "Height": 16 },
+            "When": {
+                "Change Icons": true,
+            }
+        },
+//Special Charm
+        {
+            "Logname": "Special Charm",
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "assets/Icons/Wallet.png",
+            "FromArea": { "X":48, "Y": 0, "Width": 16, "Height": 16 },
+            "ToArea": { "X": 176, "Y": 320, "Width": 16, "Height": 16 },
+            "When": {
+                "Change Icons": true,
+            }
+        },
+//Skull Key
+        {
+            "Logname": "Skull Key",
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "assets/Icons/Wallet.png",
+            "FromArea": { "X": 64, "Y": 0, "Width": 16, "Height": 16 },
+            "ToArea": { "X": 192, "Y": 320, "Width": 16, "Height": 16 },
+            "When": {
+                "Change Icons": true,
+            }
+        },
+//Magnifying Glass
+        {
+            "Logname": "Magnifying Glass",
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "assets/Icons/Wallet.png",
+            "FromArea": { "X": 80, "Y": 0, "Width": 16, "Height": 16 },
+            "ToArea": { "X": 208, "Y": 320, "Width": 16, "Height": 16 },
+            "When": {
+                "Change Icons": true,
+            }
+        },
+//Dark Talisman
+        {
+            "Logname": "Dark Talisman",
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "assets/Icons/Wallet.png",
+            "FromArea": { "X": 96, "Y": 0, "Width": 16, "Height": 16 },
+            "ToArea": { "X": 224, "Y": 320, "Width": 16, "Height": 16 },
+            "When": {
+                "Change Icons": true,
+            }
+        },
+//Magic Ink
+        {
+            "Logname": "Magic Ink",
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "assets/Icons/Wallet.png",
+            "FromArea": { "X": 112, "Y": 0, "Width": 16, "Height": 16 },
+            "ToArea": { "X": 240, "Y": 320, "Width": 16, "Height": 16 },
+            "When": {
+                "Change Icons": true,
+            }
+        },
+//Bears´s Knowledge
+        {
+            "Logname": "Bears´s Knowledge",
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "assets/Icons/Wallet.png",
+            "FromArea": { "X": 128, "Y": 0, "Width": 16, "Height": 16 },
+            "ToArea": { "X": 192, "Y": 336, "Width": 16, "Height": 16 },
+            "When": {
+                "Change Icons": true,
+            }
+        },
+//Spring Onion Mastery
+        {
+            "Logname": "Spring Onion Mastery",
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "assets/Icons/Wallet.png",
+            "FromArea": { "X": 144, "Y": 0, "Width": 16, "Height": 16 },
+            "ToArea": { "X": 208, "Y": 336, "Width": 16, "Height": 16 },
+            "When": {
+                "Change Icons": true,
+            }
+        },
+//Key To The Town
+        {
+            "Logname": "Key To The Town",
+            "Action": "EditImage",
+            "Target": "Maps/springobjects",
+            "FromFile": "assets/Icons/Wallet.png",
+            "FromArea": { "X": 160, "Y": 0, "Width": 16, "Height": 16 },
+            "ToArea": { "X": 0, "Y": 608, "Width": 16, "Height": 16 },
+            "When": {
+                "Change Icons": true,
+            }
+        },
+//Forest Magic
+        {
+            "Logname": "Forest Magic",
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors_1_6",
+            "FromFile": "assets/Icons/Wallet.png",
+            "FromArea": { "X": 176, "Y": 0, "Width": 16, "Height": 16 },
+            "ToArea": { "X": 16, "Y": 340, "Width": 16, "Height": 16 },
+            "When": {
+                "Change Icons": true,
+            }
+        },
+    ]
+}

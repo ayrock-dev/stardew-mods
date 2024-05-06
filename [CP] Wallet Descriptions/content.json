@@ -1,0 +1,16 @@
+{
+    "Format": "2.0.0",
+    "ConfigSchema": {
+        "Change Icons": {
+            "AllowValues": "true, false",
+            "Description": "Enables new Icons for the Wallet",
+            "Default": "true"
+            },
+        },
+    "Changes": [
+        {
+            "Action": "Include",
+            "FromFile": "assets/Images.json, assets/Strings.json"
+        },
+    ]
+}
