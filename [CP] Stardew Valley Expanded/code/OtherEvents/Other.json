@@ -348,7 +348,7 @@
             "Action": "EditData",
             "Target": "data/events/forest",
             "When": {
-                "IsCommunityCenterComplete": true
+                "HasSeenEvent:anyPlayer |contains=191393": true
             },
             "Entries": {
                 "1091881/": "none/-500 -500/farmer -100 -100 2/viewport 19 109 clamp true/skippable/pause 2500/playSound junimoMeep1/pause 1000/playSound junimoMeep1/pause 800/playSound junimoMeep1/pause 1000/playSound junimoMeep1/pause 700/playSound junimoMeep1/globalFade/viewport -1000 -1000/playSound junimoMeep1/end position 19 107",

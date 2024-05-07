@@ -10,7 +10,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_CrimsonSands",
                     "Category": "Music",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/CrimsonSands.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/CrimsonSands.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": true
@@ -20,7 +20,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_OminousCavern",
                     "Category": "Music",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/OminousCavern.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/OminousCavern.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": true
@@ -30,7 +30,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_EnchantedWaltz",
                     "Category": "Music",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/EnchantedWaltz.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/EnchantedWaltz.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": true
@@ -40,7 +40,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_SDV_FireplaceSound",
                     "Category": "Sound",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/SDV_Fireplace.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/SDV_Fireplace.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": true
@@ -50,7 +50,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_SDV_FireplaceMusic",
                     "Category": "Music",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/SDV_Fireplace.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/SDV_Fireplace.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": true
@@ -61,7 +61,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_CamillasTower",
                     "Category": "Music",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/CamillasTower.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/CamillasTower.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": true
@@ -71,7 +71,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_Lament",
                     "Category": "Music",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/Lament.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/Lament.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": true
@@ -82,7 +82,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_HaruhiViolinSolo",
                     "Category": "Music",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/HaruhiViolinSolo.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/HaruhiViolinSolo.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": true
@@ -92,7 +92,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_NewMagicLearned",
                     "Category": "Music",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/NewMagicLearned.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/NewMagicLearned.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": true
@@ -102,7 +102,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_Nexus",
                     "Category": "Music",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/Nexus.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/Nexus.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": true
@@ -112,7 +112,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_CastleVillageOutpostAmbience",
                     "Category": "Ambient",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/CastleVillageOutpostAmbience.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/CastleVillageOutpostAmbience.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": true
@@ -122,17 +122,17 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_CastleVillageOutpostMusic",
                     "Category": "Music",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/CastleVillageOutpostAmbience.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/CastleVillageOutpostAmbience.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": true
                 },
-                // Wizard 10-Heart Scene - and enchanted grove
+                // Wizard 10-Heart Scene - and sprite spring
                 "FlashShifter.StardewValleyExpandedCP_GrenvilleFalls": {
                     "ID": "FlashShifter.StardewValleyExpandedCP_GrenvilleFalls",
                     "Category": "Music",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/GrenvilleFalls.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/GrenvilleFalls.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": true
@@ -142,7 +142,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_Atlantis",
                     "Category": "Music",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/Atlantis.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/Atlantis.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": true
@@ -152,7 +152,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_DistantTrain",
                     "Category": "Sound",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/DistantTrain.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/DistantTrain.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": false
@@ -162,7 +162,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_GrampletonTrainStationArrival",
                     "Category": "Sound",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/GrampletonTrainStationArrival.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/GrampletonTrainStationArrival.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": false
@@ -172,7 +172,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_GrampletonTrainStationAmbience",
                     "Category": "Music",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/GrampletonTrainStationAmbience.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/GrampletonTrainStationAmbience.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": true
@@ -182,7 +182,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_Taxi",
                     "Category": "Sound",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/Taxi.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/Taxi.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": false
@@ -192,7 +192,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_Aerobics_Looped",
                     "Category": "Music",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/SDV_Aerobics_Looped.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/SDV_Aerobics_Looped.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": true
@@ -202,7 +202,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_BusDrivingOnHighway",
                     "Category": "Sound",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/BusDrivingOnHighway.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/BusDrivingOnHighway.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": true
@@ -212,7 +212,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_ZCCC_Applause",
                     "Category": "Sound",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/ZCCC_Applause.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/ZCCC_Applause.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": false
@@ -222,7 +222,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_ZCCC_Cheering",
                     "Category": "Music",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/ZCCC_Cheering.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/ZCCC_Cheering.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": false
@@ -232,7 +232,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_ZCCC_Crowd_Ambience",
                     "Category": "Music",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/ZCCC_Crowd_Ambience.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/ZCCC_Crowd_Ambience.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": true
@@ -242,7 +242,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_ZuzuCity_Ambience",
                     "Category": "Music",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/ZuzuCity_Ambience.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/ZuzuCity_Ambience.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": true
@@ -252,7 +252,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_SDVMagicalShoes",
                     "Category": "Music",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/SDVMagicalShoes.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/SDVMagicalShoes.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": true
@@ -262,7 +262,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_FirstSlashTheme",
                     "Category": "Music",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/FirstSlashTheme.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/FirstSlashTheme.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": true
@@ -272,7 +272,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_StardewValleyExpandedTrailer",
                     "Category": "Music",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/StardewValleyExpandedTrailer.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/StardewValleyExpandedTrailer.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": true
@@ -282,7 +282,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_TruckStartUp",
                     "Category": "Sound",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/TruckStartUp.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/TruckStartUp.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": true
@@ -292,7 +292,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_TruckOnHighway",
                     "Category": "Music",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/TruckOnHighway.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/TruckOnHighway.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": true
@@ -302,7 +302,7 @@
                     "ID": "FlashShifter.StardewValleyExpandedCP_GrampletonCoastline",
                     "Category": "Music",
                     "FilePaths": [
-                        "{{AbsoluteFilePath: assets/Music/GrampletonCoastline.wav}}"
+                        "{{AbsoluteFilePath: assets/Music/GrampletonCoastline.ogg}}"
                     ],
                     "StreamedVorbis": false,
                     "Looped": true

@@ -35,6 +35,10 @@
                       "Tile": "9, 21",
                       "SectionId": "forest"
                     },
+					"secret-woods": {
+                      "Tile": "80, 29",
+                      "SectionId": "forest",
+                    },
 					"adventurers-guild": {
                       "Tile": "32, 22",
                       "SectionId": "mountain",

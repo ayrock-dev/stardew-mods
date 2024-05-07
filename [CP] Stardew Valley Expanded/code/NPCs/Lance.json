@@ -21,9 +21,9 @@
           "Calendar": "HiddenUntilMet",
           "SocialTab": "HiddenUntilMet",
           "CanSocialize": true,
-          "CanVisitIslandCondition": "PLAYER_NPC_RELATIONSHIP ANY Lance MARRIED",
+          "CanVisitIsland": "PLAYER_NPC_RELATIONSHIP ANY Lance MARRIED",
           "ExcludeFromIntroductionsQuest": true,
-          "ExcludeFromPerfectionScore": true,
+          "PerfectionScore": true,
           "EndSlideShow": "MainGroup",
           "SpouseRoom": {
             "MapAsset": "Custom_LancesRoom",

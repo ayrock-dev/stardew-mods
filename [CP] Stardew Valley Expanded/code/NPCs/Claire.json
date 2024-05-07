@@ -21,9 +21,9 @@
           "Calendar": "AlwaysShown",
           "SocialTab": "UnknownUntilMet",
           "CanSocialize": true,
-          "CanVisitIslandCondition": "PLAYER_NPC_RELATIONSHIP ANY Claire MARRIED, ANY \"WEATHER TOWN Rain, DAY_OF_WEEK Tue Fri Sat\" \"WEATHER TOWN Rain, DAY_OF_WEEK Wed, PLAYER_HAS_SEEN_EVENT ANY 3691371\"",
+          "CanVisitIsland": "PLAYER_NPC_RELATIONSHIP ANY Claire MARRIED, ANY \"WEATHER TOWN Rain, DAY_OF_WEEK Tue Fri Sat\" \"WEATHER TOWN Rain, DAY_OF_WEEK Wed, PLAYER_HAS_SEEN_EVENT ANY 3691371\"",
           "ExcludeFromIntroductionsQuest": false,
-          "ExcludeFromPerfectionScore": false,
+          "PerfectionScore": false,
           "EndSlideShow": "MainGroup",
           "SpouseRoom": {
             "MapAsset": "Custom_ClairesRoom",
