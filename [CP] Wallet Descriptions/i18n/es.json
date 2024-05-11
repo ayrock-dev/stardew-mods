@@ -1,0 +1,18 @@
+{
+//GMCM
+    "Config.Change Icons.name": "Cambiar iconos",
+    "Config.Change Icons.description": "Habilita nuevos íconos para la billetera.",
+//Wallet
+    "DwarvenTranslationGuide": "Te permite comunicarte con el enano en las minas y leer la lápida en el cementerio.",
+    "RustyKey": "Llave oxidada\r\n\r\nNecesaria para entrar en las alcantarillas.",
+    "ClubCard": "Tarjeta del Club\r\n\r\nPermite el acceso al Casino en el Desierto Calico.",
+    "SpecialAmmulet": "Amuleto especial\r\n\r\nSientes un aura de felicidad a tu alrededor\r\n(Tu suerte aumenta permanentemente)!",
+    "SkullKey": "Llave calavera\r\n\r\nAbre el acceso a Skull Cavern y te permite\r\njugar en el Junimo Kart en el salon Fruta Estelar.",
+    "MagnifyingGlass": "Lupa\r\n\r\nPermite encontrar 'Notas secretas'!",
+    "KeyToTheTown": "Llave de la ciudad\r\n\r\nPermite el acceso a todos los edificios de la ciudad en cualquier momento del día.",
+    "DarkTalisman": "Talismán oscuro\r\n\r\nElimina el bloqueo detrás de las vías del tren\r\ny otorga acceso al Pantano de la Bruja.",
+    "MagicInk": "Tinta mágica\r\n\r\nDesbloquea varios edificios agrícolas nuevos.,\r\nque se puede comprar en un libro\r\nen un escritorio en la Torre del Mago.",
+    "BearPaw": "Aumenta 3 veces el precio de venta de Moras y Salmón.",
+    "SpringOnionMastery": "Aumenta cinco veces el precio de venta de las cebollas verdes.",
+    "ForestMagic": "Eres uno con la magia del bosque..., ahora puedes comunicarte con Junimos.",
+}

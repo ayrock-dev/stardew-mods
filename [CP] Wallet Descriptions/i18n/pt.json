@@ -1,14 +1,18 @@
 {
-  "DwarvenTranslationGuide": "Guia da Linguagem Anã\r\n\r\nÉ usado para desbloquear a habilidade de falar com o mercador Anão nas Minas.",
-  "RustyKey": "Chave Enferrujada\r\n\r\nÉ usada para entrar nos Esgotos.",
-  "ClubCard": "Cartão do Clube\r\n\r\nPermite o acesso ao Casino do Deserto de Calico.",
-  "SpecialAmmulet": "Amuleto Especial\r\n\r\nAumenta a sorte diária.",
-  "SkullKey": "Chave de Caveira\r\n\r\nÉ usada para desbloquear a porta na Caverna da Caveira e jogar o JunimoKart no Saloon Fruta Estrelar.",
-  "MagnifyingGlass": "Lupa\r\n\r\nDesbloqueia a habilidade para encontrar Recados Secretos.",
-  "KeyToTheTown": "Chave da Vila\r\n\r\nConcede acesso a todos os edifícios da vila, em qualquer hora do dia.",
-  "DarkTalisman": "Talismã das Trevas\r\n\r\nRemove o bloqueio da passagem atrás dos trilhos do trem e concede acesso ao Pântano da Bruxa.",
-  "MagicInk": "Tinta Mágica\r\n\r\nDestrava as construções mágicas que podem ser invocadas através de um livro de invocações que fica sobre um ambão na torre do mago.",
-  "BearPaw": "Conhecimento do Urso\r\n\r\nAumenta em 3x o preço de venda de amoras e amoras silvestres.",
-  "SpringOnionMastery": "Domínio das Cebolinhas\r\n\r\nAumenta em 5x o preço de venda de cebolinhas.",
-  "ForestMagic": "Magia da Floresta\r\n\r\nDesbloqueia permanentemente a habilidade de ler a linguagem dos Junimos."
+//GMCM
+    "Config.Change Icons.name": "Alterar ícones",
+    "Config.Change Icons.description": "Ativa novos ícones para a carteira",
+//Wallet
+    "DwarvenTranslationGuide": "É usado para desbloquear a habilidade de falar com o mercador Anão nas Minas.",
+    "RustyKey": "Chave Enferrujada\r\n\r\nÉ usada para entrar nos Esgotos.",
+    "ClubCard": "Cartão do Clube\r\n\r\nPermite o acesso ao Casino do Deserto de Calico.",
+    "SpecialAmmulet": "Amuleto Especial\r\n\r\nAumenta a sorte diária\r\n(sua sorte aumentará permanentemente)!.",
+    "SkullKey": "Chave de Caveira\r\n\r\nÉ usada para desbloquear a porta na Caverna da Caveira\r\ne jogar o JunimoKart no Saloon Fruta Estrelar.",
+    "MagnifyingGlass": "Lupa\r\n\r\nDesbloqueia a habilidade para encontrar Recados Secretos.",
+    "KeyToTheTown": "Chave da Vila\r\n\r\nConcede acesso a todos os edifícios da vila,\r\nem qualquer hora do dia.",
+    "DarkTalisman": "Talismã das Trevas\r\n\r\nRemove o bloqueio da passagem atrás dos trilhos do\r\ntrem e concede acessoao Pântano da Bruxa.",
+    "MagicInk": "Tinta Mágica\r\n\r\nDestrava as construções mágicas que podem\r\nser invocadas através de um livro de invocações\r\nque fica sobre um ambão na torre do mago.",
+    "BearPaw": "Aumenta em 3x o preço de venda de amoras e amoras silvestres.",
+    "SpringOnionMastery": "Aumenta em 5x o preço de venda de cebolinhas.",
+    "ForestMagic": "Desbloqueia permanentemente a habilidade de ler a linguagem dos Junimos."
 }

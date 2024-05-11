@@ -1,0 +1,18 @@
+{
+//GMCM
+    "Config.Change Icons.name": "Changer les icônes",
+    "Config.Change Icons.description": "Active de nouvelles icônes pour le portefeuille",
+//Wallet
+    "DwarvenTranslationGuide": "Vous permet de communiquer avec le nain dans les mines et lire les tombes dans le cimetière.",
+    "RustyKey": "Clé rouillée\r\n\r\nNécessaire pour entrer dans les égoûts.",
+    "ClubCard": "Carte de club\r\n\r\nDonne accès au Casion dans le Désert Calico.",
+    "SpecialAmmulet": "Amulette spéciale\r\n\r\nVous sentez une aura de joie autour de vous\r\n(votre chance est augmentée de manière permanente) !",
+    "SkullKey": "Clé Crâne\r\n\r\nDonne accès à la Caverne Crâne et vous permet\r\nde jouer à Junimo Kart dans le Saloon.",
+    "MagnifyingGlass": "Loupe\r\n\r\nVous permet de trouver des notes secrètes !",
+    "KeyToTheTown": "Clé de la ville\r\n\r\nDonne accès à tous les bâtiments de la ville à n’importe\r\nquel moment de la journée",
+    "DarkTalisman": "Talisman sombre\r\n\r\nRetire l’obstacle derrière les rails de train\r\net donne accès au Marécage de la Sorcière.",
+    "MagicInk": "Encre magique\r\n\r\nPlusieurs nouveaux bâtiments de ferme débloqués,\r\nils peuvent être achetés à travers un livre\r\nsur un bureau dans la Tour du Sorcier.",
+    "BearPaw": "Multiplie par 3 le prix de vente des mûres et des baies de saumon.",
+    "SpringOnionMastery": "Multiplie par 5 le prix de vente des oignons nouveaux",
+    "ForestMagic": "Vous ne faîtes qu’un avec la magie de la forêt…\r\nVous pouvez maintenant communiquer avec les Junimos."
+}

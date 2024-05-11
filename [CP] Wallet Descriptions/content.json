@@ -3,7 +3,7 @@
     "ConfigSchema": {
         "Change Icons": {
             "AllowValues": "true, false",
-            "Description": "Enables new Icons for the Wallet",
+            "Description": "Enables new icons for the wallet",
             "Default": "true"
             },
         },

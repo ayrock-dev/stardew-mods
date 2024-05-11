@@ -1,0 +1,18 @@
+{
+//GMCM
+    "Config.Change Icons.name": "Simgeleri değiştir",
+    "Config.Change Icons.description": "M-cüzdan için yeni simgeleri etkinleştirir.",
+//Wallet
+	"DwarvenTranslationGuide": "Madenlerdeki Cüce ve Volkan Zindanındaki cüce ile konuşma yeteneğinin kilidini açar.",
+    "RustyKey": "Paslı Anahtar\r\n\r\nKanalizasyona girmek için gerekli",
+    "ClubCard": "Kulüp Kartı\r\n\r\nKumarhaneye girmek için kullanılır.",
+    "SpecialAmmulet": "Özel Tılsım\r\n\r\nGünlük şansı kalıcı olarak artırır\r\n(şansınız kalıcı olarak artacaktır)!.",
+    "SkullKey": "Kurukafa Anahtarı\r\n\r\nKafatası Mağarası'nın kapısını açar ve Yıldızkaydı\r\nSalonu'ndaki Junimo Kart makinesinin kilidini açar.",
+    "MagnifyingGlass": "Büyüteç\r\n\r\n'Gizli Notları' bulmanızı sağlar!",
+    "KeyToTheTown": "Kasaba Anahtarı\r\n\r\nŞehirdeki tüm binalara günün herhangi bir\r\nsaatinde erişime izin verir (bazı kısıtlamalarla).",
+	"DarkTalisman": "Kara Tılsım\r\n\r\nDemiryolunun kuzeydoğu ucundaki\r\ngeçidi açmak için kullanılır.",
+    "MagicInk": "Büyülü Mürekkep\r\n\r\nBüyücü Kulesi'ndeki bir standın\r\nüzerindeki kitaptan satın alınabilecek birkaç\r\nyeni Çiftlik Binasının kilidini açar.",
+    "BearPaw": "Böğürtlen ve Ahududu satış fiyatını 3 kat artırır.",
+    "SpringOnionBugs": "Yeşil Soğan satış fiyatını 5 kat artırır.",
+    "ForestMagic": "Orman büyüsüyle birsiniz... artık Junimos'la iletişim kurabilirsiniz.",
+}
