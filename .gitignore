@@ -1,6 +1,6 @@
 .DS_Store
 *.save
 
-FarmTypeManager/data/*
-NPCMapLocations/config/*
-UIInfoSuite2/data/*
+FarmTypeManager/data/
+NPCMapLocations/config/
+UIInfoSuite2/data/
