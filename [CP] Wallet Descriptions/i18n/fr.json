@@ -2,6 +2,9 @@
 //GMCM
     "Config.Change Icons.name": "Changer les icônes",
     "Config.Change Icons.description": "Active de nouvelles icônes pour le portefeuille",
+//CJBCM Config
+    "Config.CJBCM.name": "CJBCheatsMenu",
+    "Config.CJBCM.description": "Désactive les descriptions des éléments du portefeuille dans CJBCM.",
 //Wallet
     "DwarvenTranslationGuide": "Vous permet de communiquer avec le nain dans les mines et lire les tombes dans le cimetière.",
     "RustyKey": "Clé rouillée\r\n\r\nNécessaire pour entrer dans les égoûts.",

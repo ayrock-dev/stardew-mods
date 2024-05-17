@@ -197,6 +197,12 @@
 				"HasFile:{{FromFile}}": true,
 			},
 		},	
+		{
+            "LogName": "Alex Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Alex",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },		
 		
 	]
 }

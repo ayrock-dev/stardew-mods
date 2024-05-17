@@ -2,6 +2,9 @@
 //GMCM
     "Config.Change Icons.name": "Simgeleri değiştir",
     "Config.Change Icons.description": "M-cüzdan için yeni simgeleri etkinleştirir.",
+//CJBCM Config
+    "Config.CJBCM.name": "CJBCheatsMenu",
+    "Config.CJBCM.description": "CJBCM'deki cüzdan öğesi açıklamalarını devre dışı bırakır.",
 //Wallet
 	"DwarvenTranslationGuide": "Madenlerdeki Cüce ve Volkan Zindanındaki cüce ile konuşma yeteneğinin kilidini açar.",
     "RustyKey": "Paslı Anahtar\r\n\r\nKanalizasyona girmek için gerekli",

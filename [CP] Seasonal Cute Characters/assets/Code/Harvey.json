@@ -241,6 +241,13 @@
 			{
 				"HasFile:{{FromFile}}": true,
 			},
-		},			
+		},
+		{
+            "LogName": "Harvey Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Harvey",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },		
+		
 	]
 }

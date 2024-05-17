@@ -84,5 +84,11 @@
 				},
 			},
 		},
+		{
+            "LogName": "Abigail Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Parrotboy",
+            "FromFile": "assets/Characters/Leo/Leo_{{Season}}.png",
+        },			
 	]
 }

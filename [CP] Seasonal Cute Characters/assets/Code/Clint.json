@@ -194,5 +194,12 @@
 				"HasFile:{{FromFile}}": true,
 			},
 		},
+		{
+            "LogName": "Clint Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Clint",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },		
+		
 	]
 }

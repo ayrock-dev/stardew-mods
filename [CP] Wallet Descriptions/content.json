@@ -6,6 +6,11 @@
             "Description": "Enables new icons for the wallet",
             "Default": "true"
             },
+        "CJBCM":  {
+            "AllowValues": "true, false",
+            "Description": "Disables the Descriptions for CJBCM",
+            "Default": "false"
+            },
         },
     "Changes": [
         {

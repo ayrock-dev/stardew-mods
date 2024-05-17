@@ -98,5 +98,12 @@
 				"HasFile:{{FromFile}}": true,
 			},
 		},
+		{
+            "LogName": "Sandy Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Sandy",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Season}}.png",
+        },		
+		
 	]
 }

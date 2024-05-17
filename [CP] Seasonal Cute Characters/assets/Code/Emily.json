@@ -230,6 +230,13 @@
 			{
 				"HasFile:{{FromFile}}": true,
 			},
-		},			
+		},
+		{
+            "LogName": "Emily Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Emily",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },		
+		
 	]
 }

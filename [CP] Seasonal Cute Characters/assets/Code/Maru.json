@@ -242,6 +242,13 @@
 			{
 				"HasFile:{{FromFile}}": true,
 			},
-		},			
+		},
+		{
+            "LogName": "Maru Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Maru",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },		
+		
 	]
 }

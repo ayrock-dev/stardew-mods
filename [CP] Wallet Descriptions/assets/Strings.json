@@ -1,6 +1,7 @@
 {
+
     "Changes": [
-//Skillpages
+//Skillpages Vanilla
 		{
 			"Action": "EditData",
 			"Target": "Strings/StringsFromCSFiles",
@@ -10,7 +11,10 @@
 				"SkillsPage.cs.11590": "{{i18n:SpecialAmmulet}}",
 				"SkillsPage.cs.11591": "{{i18n:SkullKey}}",
 				"SkillsPage.cs.magnifyingglass": "{{i18n:MagnifyingGlass}}",
-			}
+			},
+			"When": {
+				"CJBCM": "false"
+			}			
 		},
 		{
 			"Action": "EditData",
@@ -19,7 +23,10 @@
 				"ForestMagic_Description": "{{i18n:ForestMagic}}",
 				"BearPaw_Description": "{{i18n:BearPaw}}",
 				"SpringOnionMastery_Description": "{{i18n:SpringOnionMastery}}",
-			}
+			},
+			"When": {
+				"CJBCM": "false"
+			}			
 		},
 		{
 			"Action": "EditData",
@@ -28,7 +35,10 @@
 				"DwarvishTranslationGuide_Description": "{{i18n:DwarvenTranslationGuide}}",
 				"DarkTalisman": "{{i18n:DarkTalisman}}",
 				"MagicInk": "{{i18n:MagicInk}}",
-			}
+			},
+			"When": {
+				"CJBCM": "false"
+			}			
 		},
     ]
 }

@@ -196,6 +196,13 @@
 			{
 				"HasFile:{{FromFile}}": true,
 			},
-		},			
+		},
+		{
+            "LogName": "Elliott Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Elliott",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },		
+		
 	]
 }

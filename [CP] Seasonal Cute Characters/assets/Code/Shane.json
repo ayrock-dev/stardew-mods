@@ -241,6 +241,13 @@
 			{
 				"HasFile:{{FromFile}}": true,
 			},
-		},			
+		},
+		{
+            "LogName": "Shane Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Shane",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },		
+		
 	]
 }

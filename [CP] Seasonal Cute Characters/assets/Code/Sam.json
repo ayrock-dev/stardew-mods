@@ -207,6 +207,13 @@
 			{
 				"HasFile:{{FromFile}}": true,
 			},
-		},			
+		},
+		{
+            "LogName": "Sam Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Sam",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },		
+		
 	]
 }

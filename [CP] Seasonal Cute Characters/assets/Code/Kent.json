@@ -112,5 +112,14 @@
 				},				
 			},
 		},
+		
+		// MISCELLANEOUS
+		{
+            "LogName": "Abigail Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Abigail",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },		
+		
 	]
 }

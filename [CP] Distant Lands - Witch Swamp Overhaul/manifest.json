@@ -1,11 +1,11 @@
 {
     "Name": "Distant Lands - Witch Swamp Overhaul",
     "Author": "Aimon111",
-    "Version": "2.0.6",
+    "Version": "2.0.8",
     "Description": "A more lively Witch Swamp map overhaul - new NPC, quests, items, fish, forage and more!",
     "UniqueID": "Aimon111.WitchSwampOverhaulCP",
 	"UpdateKeys": [ "Nexus:18109" ],
-    "MinimumApiVersion": "2.11.0",
+    "MinimumApiVersion": "4.0.0",
     "ContentPackFor": {
      "UniqueID": "Pathoschild.ContentPatcher",
    },

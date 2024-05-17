@@ -941,6 +941,7 @@
 			{
 				"HasFile:{{FromFile}}": true,
 				"SlightlyCuterWizard": "True",
+				"HasMod |contains= FlashShifter.StardewValleyExpandedCP": false,				
 			}
 		},
 		

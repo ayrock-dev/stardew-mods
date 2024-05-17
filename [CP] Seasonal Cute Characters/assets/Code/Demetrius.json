@@ -169,5 +169,12 @@
 				"HasFile:{{FromFile}}": true,
 			},
 		},
+		{
+            "LogName": "Demetrius Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Demetrius",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },		
+		
 	]
 }

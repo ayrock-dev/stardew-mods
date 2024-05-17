@@ -2,6 +2,9 @@
 //GMCM
     "Config.Change Icons.name": "Change icons",
     "Config.Change Icons.description": "Enables new icons for the wallet",
+//CJBCM Config
+    "Config.CJBCM.name": "CJBCheatsMenu",
+    "Config.CJBCM.description": "Disables wallet item descriptions in CJBCM.",
 //Wallet
 	"DwarvenTranslationGuide": "Allows you to communicate with the dwarf in the mines and read the tombstone in the cemetery.",
     "RustyKey": "Rusty Key\r\n\r\nNeeded to enter the sewers.",

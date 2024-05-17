@@ -169,5 +169,12 @@
 				"HasFile:{{FromFile}}": true,
 			},
 		},
+		{
+            "LogName": "Robin Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Robin",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },		
+		
 	]
 }

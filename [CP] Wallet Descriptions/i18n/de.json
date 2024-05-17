@@ -1,7 +1,10 @@
 {
-//GMCM
+//GMCM Config
     "Config.Change Icons.name": "Icons ändern",
-    "Config.Change Icons.description": "Aktiviert neue Icons für die Brieftasche",
+    "Config.Change Icons.description": "Aktiviert neue Icons für die Brieftasche.",
+//CJBCM Config
+    "Config.CJBCM.name": "CJBCheatsMenu",
+    "Config.CJBCM.description": "Deaktiviert die Beschreibungen der Items aus der Brieftasche in CJBCM.",
 //Wallet
     "DwarvenTranslationGuide": "Ermöglicht die Kommunikation mit dem Zwerg in den Minen und den Grabstein auf dem Friedhof zu lesen.",
     "RustyKey": "Rostiger Schlüssel\r\n\r\nWird benötigt, um die Kanalisation zu betreten.",

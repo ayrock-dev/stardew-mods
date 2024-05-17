@@ -157,5 +157,12 @@
 				"HasFile:{{FromFile}}": true,
 			},
 		},
+		{
+            "LogName": "Jodi Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Jodi",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },		
+		
 	]
 }

@@ -126,5 +126,12 @@
 				"HasFile:{{FromFile}}": true,
 			},
 		},
+		{
+            "LogName": "Evelyn Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Evelyn",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },		
+		
 	]
 }

@@ -207,6 +207,12 @@
 			{
 				"HasFile:{{FromFile}}": true,
 			},
-		},			
+		},
+		{
+            "LogName": "Leah Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Leah",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },			
 	]
 }

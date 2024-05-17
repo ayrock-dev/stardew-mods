@@ -204,6 +204,13 @@
 			{
 				"HasFile:{{FromFile}}": true,
 			},
-		},			
+		},
+		{
+            "LogName": "Sebastian Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Sebastian",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },		
+		
 	]
 }

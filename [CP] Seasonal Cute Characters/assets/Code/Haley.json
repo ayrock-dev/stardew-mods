@@ -207,6 +207,13 @@
 			{
 				"HasFile:{{FromFile}}": true,
 			},
-		},			
+		},
+		{
+            "LogName": "Haley Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Haley",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },		
+		
 	]
 }

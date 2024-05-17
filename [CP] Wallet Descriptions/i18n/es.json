@@ -2,6 +2,9 @@
 //GMCM
     "Config.Change Icons.name": "Cambiar iconos",
     "Config.Change Icons.description": "Habilita nuevos íconos para la billetera.",
+//CJBCM Config
+    "Config.CJBCM.name": "CJBCheatsMenu",
+    "Config.CJBCM.description": "Deshabilita las descripciones de elementos de la billetera en CJBCM.",
 //Wallet
     "DwarvenTranslationGuide": "Te permite comunicarte con el enano en las minas y leer la lápida en el cementerio.",
     "RustyKey": "Llave oxidada\r\n\r\nNecesaria para entrar en las alcantarillas.",

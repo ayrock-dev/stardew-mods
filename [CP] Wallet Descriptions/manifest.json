@@ -1,7 +1,7 @@
 {
 	"Name": "Wallet Description",
 	"Author": "N3cro_92",
-	"Version": "2.0.9",
+	"Version": "2.1.0",
 	"Description": "Addet Descriptions to the Wallet Items",
 	"UniqueID": "N3cro_92.WalletDescriptions",
 	"MinimumApiVersion": "3.0.0",

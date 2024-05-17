@@ -112,5 +112,12 @@
 				"HasFile:{{FromFile}}": true,
 			},
 		},
+		{
+            "LogName": "George Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/George",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },		
+		
 	]
 }

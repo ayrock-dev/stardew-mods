@@ -166,5 +166,12 @@
 			"FromArea": { "X": 387, "Y": 1311, "Width": 11, "Height": 19 },
 			"ToArea": { "X": 387, "Y": 1311, "Width": 11, "Height": 19 },
 		},
+		{
+            "LogName": "Pam Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Pam",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },		
+		
 	]
 }

@@ -7,7 +7,10 @@
 			"Action": "Load",
 			"Priority": "High",
 			"Target": "Portraits/Wizard_Spring, Portraits/Wizard_Summer, Portraits/Wizard_Fall, Portraits/Wizard_Winter, Characters/Wizard_Spring, Characters/Wizard_Summer, Characters/Wizard_Fall, Characters/Wizard_Winter",
-			"FromFile": "assets/{{TargetPathOnly}}/Wizard/{{TargetWithoutPath}}.png"
+			"FromFile": "assets/{{TargetPathOnly}}/Wizard/{{TargetWithoutPath}}.png",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false, //Do not load these if SVE is installed.
+			},
 		},
 		
 		// NOSE OVERLAY
@@ -20,6 +23,7 @@
 			"When":
 			{
 				"NoNose": "false",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false, //Do not load these if SVE is installed.
 			},
 		},
 		
@@ -64,6 +68,9 @@
 					"Precedence": -120,
 				},
 			},
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false, //Do not load these if SVE is installed.
+			},
 		},
 		
 // MISCELLANEOUS		
@@ -91,5 +98,11 @@
 				"HasFile:{{FromFile}}": true,
 			},
 		},
+		{
+            "LogName": "Wizard Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Wizard",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Season}}.png",
+        },			
 	]
 }

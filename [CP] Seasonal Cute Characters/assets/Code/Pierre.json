@@ -137,5 +137,12 @@
 				"HasFile:{{FromFile}}": true,
 			},
 		},
+		{
+            "LogName": "Pierre Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Pierre",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },		
+		
 	]
 }

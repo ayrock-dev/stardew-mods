@@ -181,5 +181,11 @@
 				"HasFile:{{FromFile}}": true,
 			},
 		},
+		{
+            "LogName": "Lewis Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Lewis",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },			
 	]
 }

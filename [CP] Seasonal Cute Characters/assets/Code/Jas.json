@@ -138,5 +138,12 @@
 				"HasFile:{{FromFile}}": true,
 			},
 		},
+		{
+            "LogName": "Jas Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Jas",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },		
+			
 	]
 }

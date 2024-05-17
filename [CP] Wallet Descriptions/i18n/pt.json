@@ -2,6 +2,9 @@
 //GMCM
     "Config.Change Icons.name": "Alterar ícones",
     "Config.Change Icons.description": "Ativa novos ícones para a carteira",
+//CJBCM Config
+    "Config.CJBCM.name": "CJBCheatsMenu",
+    "Config.CJBCM.description": "Desativa descrições de itens da carteira no CJBCM.",
 //Wallet
     "DwarvenTranslationGuide": "É usado para desbloquear a habilidade de falar com o mercador Anão nas Minas.",
     "RustyKey": "Chave Enferrujada\r\n\r\nÉ usada para entrar nos Esgotos.",

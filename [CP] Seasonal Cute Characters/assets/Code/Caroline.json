@@ -159,5 +159,13 @@
 				"HasFile:{{FromFile}}": true,
 			},
 		},
+		{
+            "LogName": "Caroline Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Caroline",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },		
+
+		
 	]
 }

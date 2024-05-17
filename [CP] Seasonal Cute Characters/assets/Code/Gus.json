@@ -125,5 +125,13 @@
 				"HasFile:{{FromFile}}": true,
 			},
 		},
+		{
+            "LogName": "Gus Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Gus",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },		
+		
+		
 	]
 }

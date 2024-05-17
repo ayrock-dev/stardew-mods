@@ -168,5 +168,12 @@
 				"HasFile:{{FromFile}}": true,
 			},
 		},
+		{
+            "LogName": "Marnie Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Marnie",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },		
+		
 	]
 }

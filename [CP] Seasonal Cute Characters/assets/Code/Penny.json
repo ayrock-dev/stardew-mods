@@ -227,6 +227,14 @@
 			{
 				"HasFile:{{FromFile}}": true,
 			},
-		},			
+		},
+		{
+            "LogName": "Penny Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Penny",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },		
+
+		
 	]
 }

@@ -137,5 +137,12 @@
 				"HasFile:{{FromFile}}": true,
 			},
 		},
+		{
+            "LogName": "Vincent Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Vincent",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },		
+		
 	]
 }

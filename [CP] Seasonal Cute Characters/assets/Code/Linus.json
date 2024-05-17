@@ -95,5 +95,11 @@
 				"HasFile:{{FromFile}}": true,
 			},
 		},
+		{
+            "LogName": "Linus Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Linus",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },			
 	]
 }

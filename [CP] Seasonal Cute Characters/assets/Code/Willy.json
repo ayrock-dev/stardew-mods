@@ -116,5 +116,11 @@
             "FromFile": "assets/{{NoNose}}/Random/WillysBoat_{{Season}}.png",
             "ToArea": { "X": 173, "Y": 163, "Width": 16, "Height": 18 },
 		},
+		{
+            "LogName": "Willy Calendar Sprite Edits",
+            "Action": "EditImage",
+            "Target": "Characters/Willy",
+            "FromFile": "assets/{{Target}}/{{TargetWithoutPath}}_{{Aerobics}}.png",
+        },			
 	]
 }
