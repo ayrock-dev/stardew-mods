@@ -7,7 +7,7 @@
   "UseForageFlowers": false,
   "ValueMultiplier": 1.0,
   "Particles": true,
-  "UseQuality": false,
+  "UseQuality": true,
   "BearBoost": 1.0,
   "UseGiantCrops": true,
   "UseFruitTrees": true,
@@ -16,7 +16,7 @@
   "FlowersPerBoost": 2,
   "UseAnyFruitTrees": false,
   "BeePaths": true,
-  "PathParticleCount": 5,
+  "PathParticleCount": 3,
   "AnythingHoney": false,
   "UseBushes": true,
   "ModifyCustomBeehouses": true
