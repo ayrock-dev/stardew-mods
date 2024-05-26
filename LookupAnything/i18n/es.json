@@ -98,31 +98,19 @@
     "data.item.box.description": "Romper para obtener diversos bienes.",
 
     // location names
-    "location.backwoods": "selvas de interior",
-    "location.beach": "playa",
     "location.beach.east-pier": "playa (en el muelle al este)",
     "location.bugLand": "guarida de los insectos mutantes",
-    "location.busStop": "parada de autobús",
-    "location.desert": "desierto",
     "location.desert.topPond": "desierto (estanque del norte)",
-    "location.farm": "granja",
     "location.farmCave": "cueva de granja",
     "location.farmHouse": "casa de granja",
-    "location.forest": "bosque",
     "location.forest.island-tip": "río de bosque (en la punta sureña de la gran isla)",
     "location.forest.lake": "estanque de bosque",
     "location.forest.river": "río de bosque",
-    "location.mountain": "montaña",
-    "location.railroad": "ferrocarril",
-    "location.sewer": "alcantarilla",
     "location.submarine": "submarino del Mercado de Noche",
-    "location.town": "pueblo",
     "location.town.northmost-bridge": "pueblo (en el puente más al norte)",
-    "location.tunnel": "túnel del autobús",
     "location.undergroundMine": "minas",
     "location.undergroundMine.level": "nivel {{level}} de las minas",
     "location.witchSwamp": "pantano de la bruja",
-    "location.woods": "bosque secreto",
 
     "location.caldera": "Caldera de la isla Jengibre",
     "location.islandEast": "Este de la isla Jengibre",
@@ -135,6 +123,15 @@
     "location.islandWest.ocean": "Oeste de la isla Jengibre (Oceano)",
 
     "location.unknown-fish-area": "{{locationName}} (zona de pesca {{id}})",
+
+    // context tags (e.g. for machine recipes)
+    // TODO
+    "context-tag.negate": "not {{tag}}",
+    "context-tag.bone": "any bone",
+    "context-tag.egg": "any egg",
+    "context-tag.large-egg": "any large egg",
+    "context-tag.preserved-item": "preserved {{name}}",
+
 
     /*********
     ** Animal lookups
@@ -315,9 +312,13 @@
     "item.needed-for.gourmet-chef": "Logro de ''gourmet chef'' (cocina {{recipes}})",
     "item.needed-for.craft-master": "Logro de ''craft master'' (crea {{recipes}})",
     "item.needed-for.quests": "Mision actual ({{quests}})",
+    "item.unknown-recipes": "{{count}} unknown recipes", // TODO
     "item.sells-to.shipping-box": "Caja de envío",
     "item.recipes-for-ingredient.entry": "{{name}} (necesita {{count}})",
     "item.recipes-for-machine.multiple-items": "{{name}} x {{count}}",
+    "item.recipes-for-machine.same-as-input": "[same as input]", // e.g. crystalarium produces same item that was put in // TODO
+    "item.recipes-for-machine.conditions": "[conditions: {{conditions}}]", // TODO
+    "item.recipes-for-machine.too-complex": "Some machine rules are too dynamic to display.", // TODO
     "item.number-owned.summary": "{{count}} ud(s)",
     "item.number-crafted.summary": "creaste {{count}} de estos",
 
@@ -667,6 +668,18 @@
 
     "config.highlight-unrevealed-gift-tastes.name": "Destacar los gustos de los regalos no revelados",
     "config.highlight-unrevealed-gift-tastes.desc": "Si se desea resaltar los gustos de los regalos que no han sido revelados en el perfil del NPC. Cuando se activa, los gustos de los regalos no revelados estarán en negrita.",
+
+    // collapse fields
+    // TODO
+    "config.title.collapse-fields": "Collapse large fields",
+
+    "config.collapse-fields.enabled.name": "Enabled",
+    "config.collapse-fields.enabled.desc": "Whether to collapse large fields, so the lookup menu will replace the list with a clickable 'show X values' link to expand it.",
+
+    "config.collapse-fields.building-recipes.name": "Building lookup: recipes",
+    "config.collapse-fields.item-recipes.name": "Item lookup: recipes",
+    "config.collapse-fields.npc-gift-tastes.name": "NPC lookup: gift tastes",
+    "config.collapse-fields.any.desc": "If the field contains this many values, the lookup menu will replace the list with a clickable 'show X values' link to expand it.",
 
     // advanced options
     "config.title.advanced-options": "Opciones avanzadas",

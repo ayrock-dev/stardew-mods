@@ -98,31 +98,19 @@
     "data.item.box.description": "เมื่อทำลายมันจะได้รับของจิปาถะ",
 
     // location names
-    "location.backwoods": "ป่าด้านหลังฟาร์ม",
-    "location.beach": "ชายหาด",
     "location.beach.east-pier": "ชายหาด (ฝั่งขวา)",
     "location.bugLand": "ลังแมลงกลายพันธุ์",
-    "location.busStop": "ป้ายรถประจำทาง",
-    "location.desert": "ทะเลทราย",
     "location.desert.topPond": "desert (north pond)", // TODO
-    "location.farm": "ฟาร์ม",
     "location.farmCave": "ถ้ำในฟาร์ม",
     "location.farmHouse": "บ้านของเรา",
-    "location.forest": "ป่า",
     "location.forest.island-tip": "แม่น้ำในป่า (ปลายทางใต้สุดของเกาะใหญ่กลางแม่น้ำ)",
     "location.forest.lake": "ทะลสาบในป่า",
     "location.forest.river": "แม่น้ำในป่า",
-    "location.mountain": "ภูเขา",
-    "location.railroad": "ทางรถไฟ",
-    "location.sewer": "ท่อระบายน้ำ",
     "location.submarine": "เรือดำน้ำในงานตลาดกลางคืน",
-    "location.town": "เมือง",
     "location.town.northmost-bridge": "เมือง (สะพานที่อยู่ทิศเหนือสุดของเมือง)",
-    "location.tunnel": "อุโมงค์รถประจำทาง",
     "location.undergroundMine": "เหมือง",
     "location.undergroundMine.level": "เหมือง ชั้นที่ {{level}}",
     "location.witchSwamp": "บึงน้ำของแม่มด",
-    "location.woods": "ป่าลึกลับ",
 
     "location.caldera": "ปล่องภูเขาไฟของเกาะขิง",
     "location.islandEast": "เกาะขิงฝั่งตะวันออก",
@@ -135,6 +123,14 @@
     "location.islandWest.ocean": "เกาะขิงฝั่งตะวันตก (ทะเล)",
 
     "location.unknown-fish-area": "{{locationName}} (จุดตกปลา {{id}})",
+
+    // context tags (e.g. for machine recipes)
+    // TODO
+    "context-tag.negate": "not {{tag}}",
+    "context-tag.bone": "any bone",
+    "context-tag.egg": "any egg",
+    "context-tag.large-egg": "any large egg",
+    "context-tag.preserved-item": "preserved {{name}}",
 
 
     /*********
@@ -316,9 +312,13 @@
     "item.needed-for.gourmet-chef": "ความสำเร็จพ่อครัวหัวป่าก์ (ปรุงอาหาร {{recipes}} เมนู)",
     "item.needed-for.craft-master": "ความสำเร็จนักประดิษฐ์ (สร้าง {{recipes}} อย่าง)",
     "item.needed-for.quests": "เควสปัจจุบัน ({{quests}})",
+    "item.unknown-recipes": "{{count}} unknown recipes", // TODO
     "item.sells-to.shipping-box": "กล่องส่งสินค้า",
     "item.recipes-for-ingredient.entry": "{{name}} (ต้องใช้ {{count}})",
     "item.recipes-for-machine.multiple-items": "{{name}} x{{count}}",
+    "item.recipes-for-machine.same-as-input": "[same as input]", // e.g. crystalarium produces same item that was put in // TODO
+    "item.recipes-for-machine.conditions": "[conditions: {{conditions}}]", // TODO
+    "item.recipes-for-machine.too-complex": "Some machine rules are too dynamic to display.", // TODO
     "item.number-owned.summary": "คุณมีแล้ว {{count}} ชิ้น",
     "item.number-crafted.summary": "คุณสร้างแล้ว {{count}} ชิ้น",
 
@@ -670,6 +670,18 @@
 
     "config.highlight-unrevealed-gift-tastes.name": "เหตุการณ์ที่สำคัญรสนิยมของขวัญที่ยังไม่ได้เปิดเผย",
     "config.highlight-unrevealed-gift-tastes.desc": "จะเน้นรสนิยมของขวัญของไอเท็มที่ยังไม่ได้เปิดเผยในโปรไฟล์ NPC หรือไม่ เมื่อเปิดใช้งาน รสนิยมของขวัญที่ยังไม่ได้เปิดเผยจะเป็นตัวหนา",
+
+    // collapse fields
+    // TODO
+    "config.title.collapse-fields": "Collapse large fields",
+
+    "config.collapse-fields.enabled.name": "Enabled",
+    "config.collapse-fields.enabled.desc": "Whether to collapse large fields, so the lookup menu will replace the list with a clickable 'show X values' link to expand it.",
+
+    "config.collapse-fields.building-recipes.name": "Building lookup: recipes",
+    "config.collapse-fields.item-recipes.name": "Item lookup: recipes",
+    "config.collapse-fields.npc-gift-tastes.name": "NPC lookup: gift tastes",
+    "config.collapse-fields.any.desc": "If the field contains this many values, the lookup menu will replace the list with a clickable 'show X values' link to expand it.",
 
     // advanced options
     "config.title.advanced-options": "ตัวเลือกขั้นสูง",

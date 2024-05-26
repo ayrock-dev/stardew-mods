@@ -27,7 +27,7 @@
     "generic.price": "{{price}}g",
     "generic.price-for-quality": "{{price}}g ({{quality}})",
     "generic.price-for-stack": "{{price}}g ogni {{count}}",
-    "generic.show-x-results": "show {{count}} results", // TODO
+    "generic.show-x-results": "mostra {{count}} risultati",
 
     // types
     "type.building": "Edificio",
@@ -97,31 +97,19 @@
     "data.item.box.description": "Rompila per ottenere diversi materiali.",
 
     // location names
-    "location.backwoods": "campagna",
-    "location.beach": "spiaggia",
     "location.beach.east-pier": "spiaggia (molo orientale)",
     "location.bugLand": "tana dell'insetto mutante",
-    "location.busStop": "fermata dell'autobus",
-    "location.desert": "deserto",
     "location.desert.topPond": "deserto (stagno a nord)",
-    "location.farm": "fattoria",
     "location.farmCave": "grotta nella fattoria",
     "location.farmHouse": "casale",
-    "location.forest": "foresta",
     "location.forest.island-tip": "fiume nella foresta (punta Sud dell'isola maggiore)",
     "location.forest.lake": "laghetto nella foresta",
     "location.forest.river": "fiume nella foresta",
-    "location.mountain": "montagna",
-    "location.railroad": "ferrovia",
-    "location.sewer": "fogne",
     "location.submarine": "sottomarino",
-    "location.town": "paese",
     "location.town.northmost-bridge": "paese (ponte Nord)",
-    "location.tunnel": "tunnel dell'autobus",
     "location.undergroundMine": "miniera",
     "location.undergroundMine.level": "miniera livello {{level}}",
     "location.witchSwamp": "palude della strega",
-    "location.woods": "boschi segreti",
 
     "location.caldera": "Caldera dell'Isola Zenzero",
     "location.islandEast": "Zona est dell'Isola Zenzero",
@@ -134,6 +122,13 @@
     "location.islandWest.ocean": "Zona ovest dell'Isola Zenzero (oceano)",
 
     "location.unknown-fish-area": "{{locationName}} (area di pesca {{id}})",
+
+    // context tags (e.g. for machine recipes)
+    "context-tag.negate": "non {{tag}}",
+    "context-tag.bone": "qualsiasi osso",
+    "context-tag.egg": "qualsiasi uovo",
+    "context-tag.large-egg": "qualsiasi uovo grande",
+    "context-tag.preserved-item": "preserved {{name}}", // TODO
 
 
     /*********
@@ -315,9 +310,13 @@
     "item.needed-for.gourmet-chef": "l'achievement 'chef da gourmet' (cucina {{recipes}})",
     "item.needed-for.craft-master": "l'achievement 'maestro della fabbricazione' (crea {{recipes}})",
     "item.needed-for.quests": "missioni attuali ({{quests}})",
+    "item.unknown-recipes": "{{count}} ricette sconosciute",
     "item.sells-to.shipping-box": "Cassetta delle spedizioni",
     "item.recipes-for-ingredient.entry": "{{name}} ({{count}} necessari)",
     "item.recipes-for-machine.multiple-items": "{{name}} x{{count}}",
+    "item.recipes-for-machine.same-as-input": "[stesso oggetto]", // e.g. crystalarium produces same item that was put in
+    "item.recipes-for-machine.conditions": "[condizioni: {{conditions}}]",
+    "item.recipes-for-machine.too-complex": "Alcune regole della macchina sono troppo dinamiche per essere visualizzate.",
     "item.number-owned.summary": "Quantità posseduta: {{count}}",
     "item.number-crafted.summary": "Quantità fabbricata: {{count}}",
 
@@ -666,6 +665,17 @@
 
     "config.highlight-unrevealed-gift-tastes.name": "Evidenzia i gusti dei regali non rivelati",
     "config.highlight-unrevealed-gift-tastes.desc": "Scegli se evidenziare i gusti dei regali degli oggetti che non sono stati rivelati nel profilo del PNG. Se abilitato, i gusti dei regali non rivelati saranno in grassetto.",
+
+    // collapse fields
+    "config.title.collapse-fields": "Riduzione dei campi grandi",
+
+    "config.collapse-fields.enabled.name": "Abilitato",
+    "config.collapse-fields.enabled.desc": "Scegli se ridurre i campi grandi, in modo che il menu di ricerca sostituisca l'elenco con un link cliccabile 'mostra i valori X' per espanderlo.",
+
+    "config.collapse-fields.building-recipes.name": "Ricerca edificio: ricette",
+    "config.collapse-fields.item-recipes.name": "Ricerca oggetti: ricette",
+    "config.collapse-fields.npc-gift-tastes.name": "Ricerca PNG: gusti dei regali",
+    "config.collapse-fields.any.desc": "Se il campo contiene così tanti valori, il menu di ricerca sostituirà l'elenco con un link 'mostra X valori' cliccabile per espanderlo.",
 
     // advanced options
     "config.title.advanced-options": "Opzioni avanzate",

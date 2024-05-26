@@ -98,31 +98,19 @@
     "data.item.box.description": "Törd szét, hogy különböző tárgyakhoz juss.",
 
     // location names
-    "location.backwoods": "hátsó erdő",
-    "location.beach": "tengerpart",
     "location.beach.east-pier": "tengerpart (keleti móló)",
     "location.bugLand": "mutáns rovar odú",
-    "location.busStop": "buszmegálló",
-    "location.desert": "sivatag",
     "location.desert.topPond": "desert (north pond)", // TODO
-    "location.farm": "farm",
     "location.farmCave": "farmbarlang",
     "location.farmHouse": "parasztház",
-    "location.forest": "erdő",
     "location.forest.island-tip": "erdei folyó (nagy sziget déli csücske)",
     "location.forest.lake": "erdei tó",
     "location.forest.river": "erdei folyó",
-    "location.mountain": "hegy",
-    "location.railroad": "vasút",
-    "location.sewer": "szennyvízcsatorna",
     "location.submarine": "Éjszakai Piac tengeralattjáró",
-    "location.town": "város",
     "location.town.northmost-bridge": "város (legészakibb híd)",
-    "location.tunnel": "buszalagút",
     "location.undergroundMine": "bányák",
     "location.undergroundMine.level": "bánya {{level}}. szintje",
     "location.witchSwamp": "boszorkány mocsár",
-    "location.woods": "titkos erdő",
 
     "location.caldera": "Ginger Island caldera", // TODO
     "location.islandEast": "Ginger Island east", // TODO
@@ -135,6 +123,14 @@
     "location.islandWest.ocean": "Ginger Island west (ocean)", // TODO
 
     "location.unknown-fish-area": "{{locationName}} (Horgászhely: {{id}})",
+
+    // context tags (e.g. for machine recipes)
+    // TODO
+    "context-tag.negate": "not {{tag}}",
+    "context-tag.bone": "any bone",
+    "context-tag.egg": "any egg",
+    "context-tag.large-egg": "any large egg",
+    "context-tag.preserved-item": "preserved {{name}}",
 
 
     /*********
@@ -316,9 +312,13 @@
     "item.needed-for.gourmet-chef": "ínyenc szakács teljesítmény (készíts még: {{recipes}})",
     "item.needed-for.craft-master": "kézműves mester teljesítmény (készíts még: {{recipes}})",
     "item.needed-for.quests": "current quests ({{quests}})", // TODO
+    "item.unknown-recipes": "{{count}} unknown recipes", // TODO
     "item.sells-to.shipping-box": "szállítmányos láda",
     "item.recipes-for-ingredient.entry": "{{name}} (szükséges: {{count}})",
     "item.recipes-for-machine.multiple-items": "{{name}} x{{count}}",
+    "item.recipes-for-machine.same-as-input": "[same as input]", // e.g. crystalarium produces same item that was put in // TODO
+    "item.recipes-for-machine.conditions": "[conditions: {{conditions}}]", // TODO
+    "item.recipes-for-machine.too-complex": "Some machine rules are too dynamic to display.", // TODO
     "item.number-owned.summary": "ennyit birtokolsz ebből: {{count}}",
     "item.number-crafted.summary": "ennyit készítettél ebből: {{count}}",
 
@@ -678,6 +678,18 @@
 
     "config.highlight-unrevealed-gift-tastes.name": "Highlight unrevealed gift tastes",
     "config.highlight-unrevealed-gift-tastes.desc": "Whether to highlight item gift tastes which haven't been revealed in the NPC profile. When enabled, unrevealed gift tastes will be bold.",
+
+    // collapse fields
+    // TODO
+    "config.title.collapse-fields": "Collapse large fields",
+
+    "config.collapse-fields.enabled.name": "Enabled",
+    "config.collapse-fields.enabled.desc": "Whether to collapse large fields, so the lookup menu will replace the list with a clickable 'show X values' link to expand it.",
+
+    "config.collapse-fields.building-recipes.name": "Building lookup: recipes",
+    "config.collapse-fields.item-recipes.name": "Item lookup: recipes",
+    "config.collapse-fields.npc-gift-tastes.name": "NPC lookup: gift tastes",
+    "config.collapse-fields.any.desc": "If the field contains this many values, the lookup menu will replace the list with a clickable 'show X values' link to expand it.",
 
     // advanced options
     // TODO

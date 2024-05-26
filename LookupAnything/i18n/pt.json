@@ -27,7 +27,7 @@
     "generic.price": "{{price}} ouros",
     "generic.price-for-quality": "{{price}} ouros ({{quality}})",
     "generic.price-for-stack": "{{price}} ouros por uma pilha de {{count}}",
-    "generic.show-x-results": "show {{count}} results", // TODO
+    "generic.show-x-results": "mostrar {{count}} resultados",
 
     // types
     "type.building": "Construção",
@@ -98,31 +98,19 @@
     "data.item.box.description": "Quebre para receber itens diversos.",
 
     // location names
-    "location.backwoods": "Bosque",
-    "location.beach": "Praia",
     "location.beach.east-pier": "Praia (cais mais ao leste)",
     "location.bugLand": "Covil dos Insetos Mutantes",
-    "location.busStop": "Parada de ônibus",
-    "location.desert": "Deserto",
     "location.desert.topPond": "Deserto (lagoa do norte)",
-    "location.farm": "Fazenda",
     "location.farmCave": "Caverna",
     "location.farmHouse": "Casa da Fazenda",
-    "location.forest": "Floresta Cinzaseiva",
     "location.forest.island-tip": "Rio da Floresta Cinzaseiva (ponta sul da ilha grande)",
     "location.forest.lake": "Lagoa da Floresta Cinzaseiva",
     "location.forest.river": "Rio da Floresta Cinzaseiva",
-    "location.mountain": "Montanha",
-    "location.railroad": "Ferrovia",
-    "location.sewer": "Esgotos",
     "location.submarine": "Submarino de Pesca do Mercado Noturno",
-    "location.town": "Cidade",
     "location.town.northmost-bridge": "Cidade (ponte mais ao norte)",
-    "location.tunnel": "Túnel do ônibus",
     "location.undergroundMine": "Minas",
     "location.undergroundMine.level": "Mina nível {{level}}",
     "location.witchSwamp": "Pântano da bruxa",
-    "location.woods": "Bosque Secreto",
 
     "location.caldera": "Caverna do Vulcão",
     "location.islandEast": "Ilha Gengibre Leste",
@@ -135,6 +123,14 @@
     "location.islandWest.ocean": "Ilha Gengibre Oceano Oeste",
 
     "location.unknown-fish-area": "{{locationName}} (área de pesca {{id}})",
+
+    // context tags (e.g. for machine recipes)
+    // TODO
+    "context-tag.negate": "not {{tag}}",
+    "context-tag.bone": "any bone",
+    "context-tag.egg": "any egg",
+    "context-tag.large-egg": "any large egg",
+    "context-tag.preserved-item": "preserved {{name}}",
 
 
     /*********
@@ -316,9 +312,13 @@
     "item.needed-for.gourmet-chef": "conquista de Chefe Gourmet (cozinhe {{recipes}})",
     "item.needed-for.craft-master": "conquista de Mestre do Artesanato (crie {{recipes}})",
     "item.needed-for.quests": "Missões atuais ({{quests}})",
+    "item.unknown-recipes": "{{count}} unknown recipes", // TODO
     "item.sells-to.shipping-box": "Caixa de envio",
     "item.recipes-for-ingredient.entry": "{{name}} (precisa de {{count}})",
     "item.recipes-for-machine.multiple-items": "{{name}} x {{count}}",
+    "item.recipes-for-machine.same-as-input": "[same as input]", // e.g. crystalarium produces same item that was put in // TODO
+    "item.recipes-for-machine.conditions": "[conditions: {{conditions}}]", // TODO
+    "item.recipes-for-machine.too-complex": "Some machine rules are too dynamic to display.", // TODO
     "item.number-owned.summary": "Possui {{count}} desses",
     "item.number-crafted.summary": "Criou {{count}} desses",
 
@@ -667,6 +667,17 @@
 
     "config.highlight-unrevealed-gift-tastes.name": "Destacar preferências de presentes não revelados",
     "config.highlight-unrevealed-gift-tastes.desc": "Se deve destacar preferências de presentes que não foram revelados no perfil do NPC. Quando ativado, as preferências de presentes não reveladas estarão em negrito.",
+
+    // collapse fields
+    "config.title.collapse-fields": "Recolher campos longos",
+
+    "config.collapse-fields.enabled.name": "Habilitado",
+    "config.collapse-fields.enabled.desc": "Se for para minimizar campos longos, o menu de pesquisa substituirá a lista com o a palavra 'mostrar X valores' que pode ser clicada para expandir.",
+
+    "config.collapse-fields.building-recipes.name": "Building lookup: recipes", // TODO
+    "config.collapse-fields.item-recipes.name": "Pesquisa de Items: receitas",
+    "config.collapse-fields.npc-gift-tastes.name": "Pesquisa de NPC: preferências de presentes",
+    "config.collapse-fields.any.desc": "Se o campo tiver essa quantidade de valores, o menu de pesquisa substituirá a lista com o a palavra 'mostrar X valores' que pode ser clicada para expandir.",
 
     // advanced options
     "config.title.advanced-options": "Opções avançadas",

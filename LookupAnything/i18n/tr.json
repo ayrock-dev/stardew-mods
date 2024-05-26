@@ -98,31 +98,19 @@
     "data.item.box.description": "Çeşitli eşyalar elde etmek için parçala.",
 
     // location names
-    "location.backwoods": "Kömürözü Ormanı",
-    "location.beach": "Sahil",
     "location.beach.east-pier": "Sahil (doğu iskelesi)",
     "location.bugLand": "Mutant böcek yuvası",
-    "location.busStop": "Otobüs Durağı",
-    "location.desert": "Çöl",
     "location.desert.topPond": "desert (north pond)", // TODO
-    "location.farm": "Çiftlik",
     "location.farmCave": "Çiftlik Mağarası",
     "location.farmHouse": "Çiftlik Evi",
-    "location.forest": "Orman",
     "location.forest.island-tip": "Orman Nehri (büyük adanın güney ucu)",
     "location.forest.lake": "Orman Göleti",
     "location.forest.river": "Orman Nehri",
-    "location.mountain": "Dağ",
-    "location.railroad": "Demiryolu",
-    "location.sewer": "Kanalizasyon",
     "location.submarine": "Akşam Pazarı Denizaltısı",
-    "location.town": "Kasaba",
     "location.town.northmost-bridge": "Kasaba (en kuzeydeki köprü)",
-    "location.tunnel": "Otobüs Tüneli",
     "location.undergroundMine": "Maden",
     "location.undergroundMine.level": "Maden seviyesi {{level}}",
     "location.witchSwamp": "Cadı'nın Bataklığı",
-    "location.woods": "Gizli Orman",
 
     "location.caldera": "Zencefil Adası krateri",
     "location.islandEast": "Zencefil Adası doğu",
@@ -135,6 +123,14 @@
     "location.islandWest.ocean": "Zencefil Adası batı (okyanus)",
 
     "location.unknown-fish-area": "{{locationName}} (balıkçılık alanı {{id}})",
+
+    // context tags (e.g. for machine recipes)
+    // TODO
+    "context-tag.negate": "not {{tag}}",
+    "context-tag.bone": "any bone",
+    "context-tag.egg": "any egg",
+    "context-tag.large-egg": "any large egg",
+    "context-tag.preserved-item": "preserved {{name}}",
 
 
     /*********
@@ -316,9 +312,13 @@
     "item.needed-for.gourmet-chef": "gurme şef başarısı (pişir {{recipes}})",
     "item.needed-for.craft-master": "zanaat ustası başarısı (yap {{recipes}})",
     "item.needed-for.quests": "şuanki görevler ({{quests}})",
+    "item.unknown-recipes": "{{count}} unknown recipes", // TODO
     "item.sells-to.shipping-box": "gönderi kutusu",
     "item.recipes-for-ingredient.entry": "{{name}} (lazım {{count}})",
     "item.recipes-for-machine.multiple-items": "{{name}} x{{count}}",
+    "item.recipes-for-machine.same-as-input": "[same as input]", // e.g. crystalarium produces same item that was put in // TODO
+    "item.recipes-for-machine.conditions": "[conditions: {{conditions}}]", // TODO
+    "item.recipes-for-machine.too-complex": "Some machine rules are too dynamic to display.", // TODO
     "item.number-owned.summary": "bundan {{count}} tane sahipsin",
     "item.number-crafted.summary": "bundan {{count}} tane yaptın",
 
@@ -667,6 +667,18 @@
 
     "config.highlight-unrevealed-gift-tastes.name": "Açıklanmayan hediye zevklerini vurgulayın",
     "config.highlight-unrevealed-gift-tastes.desc": "NPC profilinde açıklanmayan eşya hediye zevklerinin vurgulanıp vurgulanmayacağı. Etkinleştirildiğinde, açıklanmayan hediye zevkleri gösterilecek.",
+
+    // collapse fields
+    // TODO
+    "config.title.collapse-fields": "Collapse large fields",
+
+    "config.collapse-fields.enabled.name": "Enabled",
+    "config.collapse-fields.enabled.desc": "Whether to collapse large fields, so the lookup menu will replace the list with a clickable 'show X values' link to expand it.",
+
+    "config.collapse-fields.building-recipes.name": "Building lookup: recipes",
+    "config.collapse-fields.item-recipes.name": "Item lookup: recipes",
+    "config.collapse-fields.npc-gift-tastes.name": "NPC lookup: gift tastes",
+    "config.collapse-fields.any.desc": "If the field contains this many values, the lookup menu will replace the list with a clickable 'show X values' link to expand it.",
 
     // advanced options
     "config.title.advanced-options": "Gelişmiş Seçenekler",

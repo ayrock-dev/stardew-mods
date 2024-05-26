@@ -27,7 +27,7 @@
     "generic.price": "{{price}}金",
     "generic.price-for-quality": "{{price}}金（{{quality}}）",
     "generic.price-for-stack": "{{count}}个，总共价值{{price}}金",
-    "generic.show-x-results": "show {{count}} results", // TODO
+    "generic.show-x-results": "显示 {{count}} 个结果",
 
     // types
     "type.building": "建筑",
@@ -98,31 +98,19 @@
     "data.item.box.description": "打碎之后可以获得各种物品。",
 
     // location names
-    "location.backwoods": "边远森林",
-    "location.beach": "海滩",
     "location.beach.east-pier": "海滩（码头东侧）",
     "location.bugLand": "突变虫穴",
-    "location.busStop": "巴士站",
-    "location.desert": "沙漠",
     "location.desert.topPond": "沙漠池塘",
-    "location.farm": "农场",
     "location.farmCave": "农场洞穴",
     "location.farmHouse": "农舍",
-    "location.forest": "煤矿森林",
     "location.forest.island-tip": "煤矿森林（河流小岛南端）",
     "location.forest.lake": "煤矿森林（湖泊）",
     "location.forest.river": "煤矿森林（河流）",
-    "location.mountain": "深山",
-    "location.railroad": "铁路",
-    "location.sewer": "下水道",
     "location.submarine": "夜市潜艇",
-    "location.town": "鹈鹕镇",
     "location.town.northmost-bridge": "鹈鹕镇（北部桥区）",
-    "location.tunnel": "巴士隧道",
     "location.undergroundMine": "矿井",
     "location.undergroundMine.level": "矿井层数：{{level}}",
     "location.witchSwamp": "女巫的沼泽",
-    "location.woods": "秘密森林",
 
     "location.caldera": "姜岛火山口",
     "location.islandEast": "姜岛东部",
@@ -135,6 +123,13 @@
     "location.islandWest.ocean": "姜岛西部（海洋）",
 
     "location.unknown-fish-area": "{{locationName}}（钓鱼区 {{id}}）",
+
+    // context tags (e.g. for machine recipes)
+    "context-tag.negate": "除了{{tag}}",
+    "context-tag.bone": "骨头（任意）",
+    "context-tag.egg": "鸡蛋（任意）",
+    "context-tag.large-egg": "大鸡蛋（任意）",
+    "context-tag.preserved-item": "preserved {{name}}", // TODO
 
 
     /*********
@@ -316,9 +311,13 @@
     "item.needed-for.gourmet-chef": "美食大厨成就（烹饪{{recipes}}）",
     "item.needed-for.craft-master": "制造大师成就（制造{{recipes}}）",
     "item.needed-for.quests": "当前任务（{{quests}}）",
+    "item.unknown-recipes": "{{count}}个未知配方",
     "item.sells-to.shipping-box": "出货箱",
     "item.recipes-for-ingredient.entry": "{{name}}（需要{{count}}）",
     "item.recipes-for-machine.multiple-items": "{{name}} x{{count}}",
+    "item.recipes-for-machine.same-as-input": "[与输入相同]", // e.g. crystalarium produces same item that was put in
+    "item.recipes-for-machine.conditions": "[条件: {{conditions}}]",
+    "item.recipes-for-machine.too-complex": "一些生产规则因太复杂而无法显示",
     "item.number-owned.summary": "你目前拥有的总数为{{count}}",
     "item.number-crafted.summary": "你已制造{{count}}个此物",
 
@@ -668,6 +667,17 @@
 
     "config.highlight-unrevealed-gift-tastes.name": "加粗显示未揭露的礼物",
     "config.highlight-unrevealed-gift-tastes.desc": "是否加粗显示未揭露的礼物品位",
+
+    // collapse fields
+    "config.title.collapse-fields": "折叠大型字段",
+
+    "config.collapse-fields.enabled.name": "启用",
+    "config.collapse-fields.enabled.desc": "是否折叠大型字段。当启用时，查找菜单会用'显示X个结果'的链接来替代大型字段，点击该字段会显示全部信息。",
+
+    "config.collapse-fields.building-recipes.name": "建筑查看: 生产规则",
+    "config.collapse-fields.item-recipes.name": "物品查看: 配方",
+    "config.collapse-fields.npc-gift-tastes.name": "NPC查看: 礼物品味",
+    "config.collapse-fields.any.desc": "如果某个字段包含的信息数量超过你所设置的值，查找菜单会用'显示X个结果'的链接来替代该字段。",
 
     // advanced options
     "config.title.advanced-options": "高级",

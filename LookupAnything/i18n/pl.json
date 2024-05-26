@@ -98,31 +98,19 @@
     "data.item.box.description": "Zniszcz, aby uzyskać rozmaite przedmioty.",
 
     // location names
-    "location.backwoods": "ostępy",
-    "location.beach": "plaża",
     "location.beach.east-pier": "plaża (wschodnie molo)",
     "location.bugLand": "legowisko zmutowanych robaków",
-    "location.busStop": "przystanek autobusowy",
-    "location.desert": "pustynia",
     "location.desert.topPond": "desert (north pond)", // TODO
-    "location.farm": "farma",
     "location.farmCave": "jaskinia na farmie",
     "location.farmHouse": "dom na farmie",
-    "location.forest": "las",
     "location.forest.island-tip": "leśna rzeka (południowy kraniec dużej wyspy)",
     "location.forest.lake": "leśny staw",
     "location.forest.river": "leśna rzeka",
-    "location.mountain": "góra",
-    "location.railroad": "stacja kolejowa",
-    "location.sewer": "ścieki",
     "location.submarine": "łódź podwodna Nocnego Rynku",
-    "location.town": "miasto",
     "location.town.northmost-bridge": "miasto (kładka na północy)",
-    "location.tunnel": "tunel drogowy",
     "location.undergroundMine": "kopalnia",
     "location.undergroundMine.level": "{{level}} poziom kopalni",
     "location.witchSwamp": "bagno wiedźmy",
-    "location.woods": "tajemniczy las",
 
     "location.caldera": "Imbirowa Wyspa kaldera",
     "location.islandEast": "Imbirowa Wyspa wschód",
@@ -135,6 +123,14 @@
     "location.islandWest.ocean": "Imbirowa Wyspa zachód (ocean)",
 
     "location.unknown-fish-area": "{{locationName}} (obszar połowowy {{id}})",
+
+    // context tags (e.g. for machine recipes)
+    // TODO
+    "context-tag.negate": "not {{tag}}",
+    "context-tag.bone": "any bone",
+    "context-tag.egg": "any egg",
+    "context-tag.large-egg": "any large egg",
+    "context-tag.preserved-item": "preserved {{name}}",
 
 
     /*********
@@ -316,9 +312,13 @@
     "item.needed-for.gourmet-chef": "osiągnięcie smakosz (przyrządź {{recipes}})",
     "item.needed-for.craft-master": "osiągnięcie mistrz rzemieślników (wytwórz {{recipes}})",
     "item.needed-for.quests": "aktualne zadania ({{quests}})",
+    "item.unknown-recipes": "{{count}} unknown recipes", // TODO
     "item.sells-to.shipping-box": "skrzynka sprzedaży",
     "item.recipes-for-ingredient.entry": "{{name}} (potrzeba {{count}})",
     "item.recipes-for-machine.multiple-items": "{{name}} x{{count}}",
+    "item.recipes-for-machine.same-as-input": "[same as input]", // e.g. crystalarium produces same item that was put in // TODO
+    "item.recipes-for-machine.conditions": "[conditions: {{conditions}}]", // TODO
+    "item.recipes-for-machine.too-complex": "Some machine rules are too dynamic to display.", // TODO
     "item.number-owned.summary": "masz takich {{count}}",
     "item.number-crafted.summary": "zrobiono takich {{count}}",
 
@@ -670,6 +670,18 @@
 
     "config.highlight-unrevealed-gift-tastes.name": "Wyróżnij nieodkryte upodobania",
     "config.highlight-unrevealed-gift-tastes.desc": "Czy wyróżniać przedmioty w upodobaniach prezentowych, które nie zostały odkryte w profilu NPC. Gdy ta opcja jest włączona, nieodkryte upodobania prezentowe będą pogrubione.",
+
+    // collapse fields
+    // TODO
+    "config.title.collapse-fields": "Collapse large fields",
+
+    "config.collapse-fields.enabled.name": "Enabled",
+    "config.collapse-fields.enabled.desc": "Whether to collapse large fields, so the lookup menu will replace the list with a clickable 'show X values' link to expand it.",
+
+    "config.collapse-fields.building-recipes.name": "Building lookup: recipes",
+    "config.collapse-fields.item-recipes.name": "Item lookup: recipes",
+    "config.collapse-fields.npc-gift-tastes.name": "NPC lookup: gift tastes",
+    "config.collapse-fields.any.desc": "If the field contains this many values, the lookup menu will replace the list with a clickable 'show X values' link to expand it.",
 
     // advanced options
     "config.title.advanced-options": "Opcje zaawansowane",

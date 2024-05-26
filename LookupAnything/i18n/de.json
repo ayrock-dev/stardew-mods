@@ -98,31 +98,19 @@
     "data.item.box.description": "Zerschlage sie um verschiedenes Gut zu erhalten.",
 
     // location names
-    "location.backwoods": "Unentdeckter Wald",
-    "location.beach": "Strand",
     "location.beach.east-pier": "Strand (östliches Pier)",
     "location.bugLand": "Mutantenkäferhöhle",
-    "location.busStop": "Bushaltestelle",
-    "location.desert": "Wüste",
     "location.desert.topPond": "Wüste (nördlicher Teich)",
-    "location.farm": "Bauernhof",
     "location.farmCave": "Bauernhof-Höhle",
     "location.farmHouse": "Bauernhaus",
-    "location.forest": "Wald",
     "location.forest.island-tip": "Waldfluss (Südspitze der großen Insel)",
     "location.forest.lake": "Waldteich",
     "location.forest.river": "Waldfluss",
-    "location.mountain": "Berge",
-    "location.railroad": "Eisenbahn",
-    "location.sewer": "Kanalisation",
     "location.submarine": "Nachtmarkt Tiefsee-U-Boot",
-    "location.town": "Stadt",
     "location.town.northmost-bridge": "Stadt (Nord-östliche Brücke)",
-    "location.tunnel": "Bus Tunnel",
     "location.undergroundMine": "Mine",
     "location.undergroundMine.level": "Minenebene {{level}}",
     "location.witchSwamp": "Hexensumpf",
-    "location.woods": "Geheime Wälder",
 
     "location.caldera": "Feuerberg",
     "location.islandEast": "Insel Ost",
@@ -135,6 +123,14 @@
     "location.islandWest.ocean": "Insel West (Meer)",
 
     "location.unknown-fish-area": "{{locationName}} (Angelgebiet {{id}})",
+
+    // context tags (e.g. for machine recipes)
+    // TODO
+    "context-tag.negate": "not {{tag}}",
+    "context-tag.bone": "any bone",
+    "context-tag.egg": "any egg",
+    "context-tag.large-egg": "any large egg",
+    "context-tag.preserved-item": "preserved {{name}}",
 
 
     /*********
@@ -316,9 +312,13 @@
     "item.needed-for.gourmet-chef": "\"Gourmetkoch\" Errungenschaft (koche {{recipes}})",
     "item.needed-for.craft-master": "\"Handwerksmeister\" Errungenschaft (stelle {{recipes}} her)",
     "item.needed-for.quests": "aktuelle Aufgaben ({{quests}})",
+    "item.unknown-recipes": "{{count}} unknown recipes", // TODO
     "item.sells-to.shipping-box": "Versandkiste",
     "item.recipes-for-ingredient.entry": "{{name}} (braucht {{count}})",
     "item.recipes-for-machine.multiple-items": "{{name}} x{{count}}",
+    "item.recipes-for-machine.same-as-input": "[same as input]", // e.g. crystalarium produces same item that was put in // TODO
+    "item.recipes-for-machine.conditions": "[conditions: {{conditions}}]", // TODO
+    "item.recipes-for-machine.too-complex": "Some machine rules are too dynamic to display.", // TODO
     "item.number-owned.summary": "Du besitzt {{count}} davon",
     "item.number-crafted.summary": "Du hast bereits {{count}} davon hergestellt",
 
@@ -666,6 +666,18 @@
 
     "config.highlight-unrevealed-gift-tastes.name": "Hebe unentdeckte Geschenkvorlieben hervor",
     "config.highlight-unrevealed-gift-tastes.desc": "Hervorhebung von Gegenstandsgeschenken, die im NSC-Profil noch nicht offenbart wurden. Wenn diese Option aktiviert ist, werden nicht enthüllte Geschenkvorlieben fett dargestellt.",
+
+    // collapse fields
+    // TODO
+    "config.title.collapse-fields": "Collapse large fields",
+
+    "config.collapse-fields.enabled.name": "Enabled",
+    "config.collapse-fields.enabled.desc": "Whether to collapse large fields, so the lookup menu will replace the list with a clickable 'show X values' link to expand it.",
+
+    "config.collapse-fields.building-recipes.name": "Building lookup: recipes",
+    "config.collapse-fields.item-recipes.name": "Item lookup: recipes",
+    "config.collapse-fields.npc-gift-tastes.name": "NPC lookup: gift tastes",
+    "config.collapse-fields.any.desc": "If the field contains this many values, the lookup menu will replace the list with a clickable 'show X values' link to expand it.",
 
     // advanced options
     "config.title.advanced-options": "Erweiterte Optionen",

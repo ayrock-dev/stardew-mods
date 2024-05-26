@@ -26,8 +26,8 @@
     "generic.x-days-ago": "{{count}}日前",
     "generic.price": "{{price}}G",
     "generic.price-for-quality": "{{price}}G ({{quality}})",
-    "generic.price-for-stack": "{{price}}g (スタック:{{count}})",
-    "generic.show-x-results": "show {{count}} results", // TODO
+    "generic.price-for-stack": "({{price}}G (スタック:{{count}})",
+    "generic.show-x-results": "{{count}}個 (詳細確認)",
 
     // types
     "type.building": "建物",
@@ -91,38 +91,26 @@
     "data.type.container": "入れ物",
 
     // override item text
-    "data.item.egg-incubator.description": "卵を孵化させる",
+    "data.item.egg-incubator.description": "卵をふ化させる",
     "data.item.barrel.name": "タル",
     "data.item.barrel.description": "壊すと色々なアイテムが手に入る",
     "data.item.box.name": "箱",
     "data.item.box.description": "壊すと色々なアイテムが手に入る",
 
     // location names
-    "location.backwoods": "裏の森",
-    "location.beach": "ビーチ",
     "location.beach.east-pier": "ビーチ (東の桟橋)",
     "location.bugLand": "ミュータントバグのすみか",
-    "location.busStop": "バス停",
-    "location.desert": "カリコ砂漠",
-    "location.desert.topPond": "desert (north pond)", // TODO
-    "location.farm": "農場",
+    "location.desert.topPond": "砂漠の池",
     "location.farmCave": "農場の洞窟",
     "location.farmHouse": "自宅",
-    "location.forest": "シンダーサップの森",
     "location.forest.island-tip": "森の川 (南の小島の南端)",
     "location.forest.lake": "森の池",
     "location.forest.river": "森の川",
-    "location.mountain": "山の湖",
-    "location.railroad": "線路",
-    "location.sewer": "下水道",
     "location.submarine": "夜の市 潜水艦",
-    "location.town": "ペリカンタウン",
     "location.town.northmost-bridge": "ペリカンタウン (北端の橋)",
-    "location.tunnel": "トンネル",
     "location.undergroundMine": "鉱山",
     "location.undergroundMine.level": "鉱山{{level}}階",
     "location.witchSwamp": "魔女の沼",
-    "location.woods": "秘密の森",
 
     "location.caldera": "火山のカルデラ",
     "location.islandEast": "ジンジャー島-東部",
@@ -135,6 +123,13 @@
     "location.islandWest.ocean": "ジンジャー島-西部(海)",
 
     "location.unknown-fish-area": "{{locationName}}(エリア{{id}})",
+
+    // context tags (e.g. for machine recipes)
+    "context-tag.negate": "なし：{{tag}}",
+    "context-tag.bone": "骨系",
+    "context-tag.egg": "タマゴ系",
+    "context-tag.large-egg": "大きなタマゴ系",
+    "context-tag.preserved-item": "preserved {{name}}", // TODO
 
 
     /*********
@@ -169,9 +164,9 @@
     "building.horse-location": "馬の場所",
     "building.owner": "所有者",
     "building.slimes": "スライム",
-    "building.stored-hay": "ためた干し草",
+    "building.stored-hay": "ほし草の貯蔵数",
     "building.upgrades": "アップグレード",
-    "building.water-trough": "給水樋",
+    "building.water-trough": "水おけ",
 
     // values
     "building.animals.summary": "{{count}}匹 (最大{{max}}匹)",
@@ -183,8 +178,8 @@
     "building.owner.none": "オーナーなし",
     "building.output-processing": "処理中",
     "building.output-ready": "準備完了",
-    "building.slimes.summary": "最大{{max}}匹中{{count}}のスライムがいる",
-    "building.stored-hay.summary": "{{hayCount}} of {{maxHayInLocation}} hay in this location (max capacity in this building: {{maxHayInBuilding}})", // TODO
+    "building.slimes.summary": "最大{{max}}匹中{{count}}匹のスライムがいる",
+    "building.stored-hay.summary": "最大{{maxHayInLocation}}本中{{hayCount}}本の、ほし草を貯蔵中。(1つのサイロにつき{{maxHayInBuilding}}本を貯蔵可能)",
     "building.upgrades.barn.0": "4匹まで動物が入り、牛が飼える",
     "building.upgrades.barn.1": "8匹まで動物が入り、動物の妊娠とヤギの飼育ができる",
     "building.upgrades.barn.2": "12匹まで動物が入り、 自動給餌と、豚や羊の飼育ができる",
@@ -194,7 +189,7 @@
     "building.upgrades.coop.0": "4羽まで飼育でき、鶏が飼える",
     "building.upgrades.coop.1": "8羽まで飼育でき、ふ卵器が付き、恐竜とアヒルの飼育ができる",
     "building.upgrades.coop.2": "12羽まで飼育でき、自動給餌とウサギの飼育ができる",
-    "building.water-trough.summary": "最大{{max}}中{{filled}}の給水樋が充たされている",
+    "building.water-trough.summary": "最大{{max}}中{{filled}}の水おけが充たされている",
 
 
     /*********
@@ -254,7 +249,7 @@
     "fruit-tree.next-fruit.out-of-season": "季節外",
     "fruit-tree.next-fruit.struck-by-lightning": "雷に打たれた! {{count}}日で復旧",
     "fruit-tree.next-fruit.too-young": "果実を実らせるには若すぎる",
-    "fruit-tree.quality.now": "現在{{quality}}",
+    "fruit-tree.quality.now": "現在は{{quality}}",
     "fruit-tree.quality.on-date": "{{date}}に{{quality}}",
     "fruit-tree.quality.on-date-next-year": "来年{{date}}に{{quality}}",
     "fruit-tree.season.summary": "{{season}} (温室の中ではいつでも)",
@@ -284,7 +279,7 @@
     ** Item > generic lookups
     *********/
     // labels
-    "item.custom-item": "Custom item", // TODO
+    "item.custom-item": "カスタムアイテム",
     "item.contents": "内容",
     "item.loves-this": "これが大好きな人",
     "item.likes-this": "これが好きな人",
@@ -303,7 +298,7 @@
     "item.produces-dye": "染色",
 
     // values
-    "item.custom-item.summary": "added by {{modName}}", // TODO
+    "item.custom-item.summary": "MOD：{{modName}}による追加",
     "item.contents.placed": "設置した {{name}}",
     "item.contents.ready": "{{name}}が回収可能",
     "item.contents.partial": "{{time}}で{{name}}",
@@ -315,10 +310,14 @@
     "item.needed-for.full-collection": "実績:コンプリートコレクション (博物館に一つ寄付)",
     "item.needed-for.gourmet-chef": "実績:グルメマスター ({{recipes}}を調理する)",
     "item.needed-for.craft-master": "実績:クラフトマスター ({{recipes}}を作成する)",
-    "item.needed-for.quests": "進行中の依頼({{quests}})",
+    "item.needed-for.quests": "進行中の依頼：({{quests}})",
+    "item.unknown-recipes": "未知のレシピ：{{count}}個",
     "item.sells-to.shipping-box": "出荷箱",
     "item.recipes-for-ingredient.entry": "{{name}} ({{count}}個必要)",
     "item.recipes-for-machine.multiple-items": "{{name}}が{{count}}個",
+    "item.recipes-for-machine.same-as-input": "[入れたものと同じ]", // e.g. crystalarium produces same item that was put in
+    "item.recipes-for-machine.conditions": "[条件：{{conditions}}]",
+    "item.recipes-for-machine.too-complex": "設備ルールの中には、情報量が多すぎると表示できないものもある。",
     "item.number-owned.summary": "{{count}}個持っている",
     "item.number-crafted.summary": "{{count}}個作成した",
 
@@ -361,7 +360,7 @@
     ** Item > fish lookups
     *********/
     // labels
-    "item.fish-pond-drops": "いけす産物",
+    "item.fish-pond-drops": "魚のいる池の生産品",
     "item.fish-spawn-rules": "釣り",
 
     // values
@@ -381,24 +380,22 @@
     ** Item > melee weapon lookups
     *********/
     // labels
-    // TODO
-    "item.melee-weapon.accuracy": "Accuracy",
-    "item.melee-weapon.critical-chance": "Critical chance",
-    "item.melee-weapon.critical-damage": "Critical damage",
-    "item.melee-weapon.damage": "Damage",
-    "item.melee-weapon.defense": "Defense",
-    "item.melee-weapon.knockback": "Knockback",
-    "item.melee-weapon.reach": "Reach",
-    "item.melee-weapon.speed": "Attack speed",
+    "item.melee-weapon.accuracy": "命中率",
+    "item.melee-weapon.critical-chance": "クリティカルチャンス",
+    "item.melee-weapon.critical-damage": "クリティカルダメージ",
+    "item.melee-weapon.damage": "ダメージ",
+    "item.melee-weapon.defense": "防御",
+    "item.melee-weapon.knockback": "ノックバック",
+    "item.melee-weapon.reach": "リーチ",
+    "item.melee-weapon.speed": "速度",
 
     // values
-    // TODO
-    "item.melee-weapon.critical-damage.label": "{{multiplier}} times normal damage (before player bonuses)",
-    "item.melee-weapon.defense.label": "{{amount}} while equipped",
-    "item.melee-weapon.knockback.label": "{{amount}} ({{multiplier}} times normal distance)",
-    "item.melee-weapon.reach.label": "{{amount}} pixels",
-    "item.melee-weapon.speed.shown-vs-actual": "shown: {{shownSpeed}}{{lineBreak}}actual: {{actualSpeed}}",
-    "item.melee-weapon.speed.summary": "{{speed}} ({{milliseconds}} milliseconds per swing frame, before player speed bonuses)",
+    "item.melee-weapon.critical-damage.label": "通常の{{multiplier}}倍ダメージ (バフ効果適用前)",
+    "item.melee-weapon.defense.label": "装備中{{amount}}",
+    "item.melee-weapon.knockback.label": "{{amount}} (通常の{{multiplier}}倍)",
+    "item.melee-weapon.reach.label": "{{amount}}ピクセル分",
+    "item.melee-weapon.speed.shown-vs-actual": "表記速度：{{shownSpeed}}{{lineBreak}}実際の速度：{{actualSpeed}}",
+    "item.melee-weapon.speed.summary": "{{speed}} (1振りにつき{{milliseconds}}ミリ秒。これはバフ効果適用前の数値)",
 
 
     /*********
@@ -407,10 +404,10 @@
     // labels
     "item.movie-snack-preference": "好み",
     "item.movie-ticket.movie-this-week": "今週の映画",
-    "item.movie-ticket.loves-movie": "大好きな映画",
-    "item.movie-ticket.likes-movie": "好きな映画",
-    "item.movie-ticket.dislikes-movie": "嫌いな映画",
-    "item.movie-ticket.rejects-movie": "Won't watch movie", // TODO
+    "item.movie-ticket.loves-movie": "大好き",
+    "item.movie-ticket.likes-movie": "好き",
+    "item.movie-ticket.dislikes-movie": "嫌い",
+    "item.movie-ticket.rejects-movie": "映画を観ない",
 
     // values
     "item.movie-snack-preference.love": "{{name}}が大好き",
@@ -463,13 +460,13 @@
     "npc.hates-gifts": "大嫌いな贈り物",
 
     // values
-    "npc.can-romance.married": "あなたと結婚しました♡", // < turns into a heart
+    "npc.can-romance.married": "あなたと結婚しました<", // < turns into a heart
     "npc.can-romance.housemate": "あなたと同居人になりました！",
     "npc.friendship.not-met": "まだ会っていません",
     "npc.friendship.need-bouquet": "進むには花束が必要",
     "npc.friendship.need-points": "{{count}}ポイント必要",
     "npc.undiscovered-gift-taste": "{{count}}個の贈った事のないアイテム",
-    "npc.unowned-gift-taste": "{{count}} unowned items", // TODO
+    "npc.unowned-gift-taste": "{{count}}個のアイテムは未所有",
 
 
     /*********
@@ -483,7 +480,7 @@
     "npc.child.age.description-grown": "{{label}}",
     "npc.child.age.newborn": "新生児",
     "npc.child.age.baby": "幼児",
-    "npc.child.age.crawler": "這い始めた",
+    "npc.child.age.crawler": "ハイハイを始めた",
     "npc.child.age.toddler": "歩き始めた",
 
 
@@ -514,11 +511,11 @@
     "player.gender": "性別",
     "player.housemate": "同居人",
     "player.spouse": "配偶者",
-    "player.watched-movie-this-week": "今週見た映画",
+    "player.watched-movie-this-week": "今週の映画視聴",
     "player.combat-skill": "戦闘",
     "player.farming-skill": "農業",
     "player.fishing-skill": "釣り",
-    "player.foraging-skill": "採集",
+    "player.foraging-skill": "採取",
     "player.mining-skill": "採掘",
     "player.luck": "運勢",
     "player.save-format": "セーブフォーマット",
@@ -620,17 +617,17 @@
     "tree.name.oak": "カシの木",
     "tree.name.palm": "ヤシの木",
     "tree.name.pine": "マツの木",
-    "tree.name.mossy": "Mossy Tree", // TODO
-    "tree.name.mystic": "Mystic Tree", // TODO
+    "tree.name.mossy": "コケむした木",
+    "tree.name.mystic": "神秘の木",
     "tree.name.unknown": "未知の木",
     "tree.stage.done": "成長完了",
     "tree.stage.partial": "{{stageName}} ({{step}} / {{max}})",
-    "tree.next-growth.winter": "肥料を与えないと温室の外では冬に育たない",
+    "tree.next-growth.winter": "肥料を与えないと温室の外では冬に育たない。",
     "tree.next-growth.adjacent-trees": "他の木に近いため育たない",
     "tree.next-growth.chance": "{{chance}}%の確率で明日{{stage}}に成長する",
-    "tree.seed.not-ready": "Not ready", // TODO
-    "tree.seed.probability-daily": "{{chance}}% chance of {{itemName}} each day.", // TODO
-    "tree.seed.probability-on-chop": "{{chance}}% chance of dropping {{itemName}} when chopped down.", // TODO
+    "tree.seed.not-ready": "つけていない",
+    "tree.seed.probability-daily": "毎日{{chance}}%の確率で{{itemName}}を生成する。",
+    "tree.seed.probability-on-chop": "切り倒すと{{chance}}%の確率で{{itemName}}を生成する。",
 
     // growth stages
     "tree.stages.seed": "種",
@@ -645,62 +642,69 @@
     ** Generic Mod Config Menu UI
     *********/
     // main options
-    // TODO
-    "config.title.main-options": "Main options",
-    "config.progression-mode.name": "Progression mode",
-    "config.progression-mode.desc": "Whether to hide some content (e.g. gift tastes and puzzle solutions) until you've discovered it in-game.",
-    "config.force-full-screen.name": "Force full screen",
-    "config.force-full-screen.desc": "Whether the menu should always be full-screen, instead of centered in the window. This is mainly useful when viewing data mining fields.",
+    "config.title.main-options": "メインオプション",
+    "config.progression-mode.name": "プログレッションモード",
+    "config.progression-mode.desc": "特定の要素（例：贈り物の好みやパズルの解答）をゲーム内で発見するまで隠す。",
+    "config.force-full-screen.name": "フルスクリーン表示",
+    "config.force-full-screen.desc": "メニューを画面中央ではなく、フルスクリーンで表示。これは主に、データマイニングのフィールドを表示するときに便利です。",
 
     // gift tastes
-    // TODO
-    "config.title.gift-tastes": "Gift tastes",
-    "config.show-gift-tastes.loved.name": "Show loved gifts",
-    "config.show-gift-tastes.loved.desc": "Whether to show loved gifts in NPC and item lookups.",
-    "config.show-gift-tastes.liked.name": "Show liked gifts",
-    "config.show-gift-tastes.liked.desc": "Whether to show liked gifts in NPC and item lookups.",
-    "config.show-gift-tastes.neutral.name": "Show neutral gifts",
-    "config.show-gift-tastes.neutral.desc": "Whether to show neutral gifts in NPC and item lookups.",
-    "config.show-gift-tastes.disliked.name": "Show disliked gifts",
-    "config.show-gift-tastes.disliked.desc": "Whether to show disliked gifts in NPC and item lookups.",
-    "config.show-gift-tastes.hated.name": "Show hated gifts",
-    "config.show-gift-tastes.hated.desc": "Whether to show hated gifts in NPC and item lookups.",
+    "config.title.gift-tastes": "贈り物の好み",
+    "config.show-gift-tastes.loved.name": "大好きなものを表示",
+    "config.show-gift-tastes.loved.desc": "NPCやアイテムでの確認で、大好きな贈り物表示する。",
+    "config.show-gift-tastes.liked.name": "好きなものを表示",
+    "config.show-gift-tastes.liked.desc": "NPCやアイテムでの確認で、好きな贈り物表示する。",
+    "config.show-gift-tastes.neutral.name": "普通なものを表示",
+    "config.show-gift-tastes.neutral.desc": "NPCやアイテムでの確認で、普通の贈り物表示する。",
+    "config.show-gift-tastes.disliked.name": "嫌いなものを表示",
+    "config.show-gift-tastes.disliked.desc": "NPCやアイテムでの確認で、嫌いな贈り物表示する。",
+    "config.show-gift-tastes.hated.name": "大嫌いなものを表示",
+    "config.show-gift-tastes.hated.desc": "NPCやアイテムでの確認で、大嫌いな贈り物表示する。",
 
-    "config.show-unowned-gifts.name": "Show unowned gift tastes",
-    "config.show-unowned-gifts.desc": "Whether to show gift tastes for items that the player doesn't own somewhere in the world.",
+    "config.show-unowned-gifts.name": "未所有のアイテムも表示",
+    "config.show-unowned-gifts.desc": "未所有のアイテムも贈り物の好みで表示する。",
 
-    "config.highlight-unrevealed-gift-tastes.name": "Highlight unrevealed gift tastes",
-    "config.highlight-unrevealed-gift-tastes.desc": "Whether to highlight item gift tastes which haven't been revealed in the NPC profile. When enabled, unrevealed gift tastes will be bold.",
+    "config.highlight-unrevealed-gift-tastes.name": "渡していない好みを強調",
+    "config.highlight-unrevealed-gift-tastes.desc": "NPCのプロフィールで、渡していない好みを強調する。有効にすると渡していない好みは太字になる。",
+
+    // collapse fields
+    "config.title.collapse-fields": "大きなフィールドを折りたたむ",
+
+    "config.collapse-fields.enabled.name": "有効",
+    "config.collapse-fields.enabled.desc": "大きなフィールドを折りたたみ、確認画面がクリック可能な「Xの値」リンクでリストを展開するように置き換える。",
+
+    "config.collapse-fields.building-recipes.name": "建物検索：レシピ",
+    "config.collapse-fields.item-recipes.name": "アイテム検索：レシピ",
+    "config.collapse-fields.npc-gift-tastes.name": "NPC検索：贈り物の好み",
+    "config.collapse-fields.any.desc": "フィールドにこれだけの値が含まれている場合、確認画面がクリック可能な「Xの値」リンクでリストを展開するように置き換える。",
 
     // advanced options
-    // TODO
-    "config.title.advanced-options": "Advanced options",
-    "config.tile-lookups.name": "Tile lookups",
-    "config.tile-lookups.desc": "Whether to include map tiles as lookup targets.",
-    "config.data-mining-fields.name": "Show data mining fields",
-    "config.data-mining-fields.desc": "Whether to show raw data useful for data miners (as separate fields at the bottom of lookup results). This is an advanced feature not intended for most players.",
-    "config.target-redirection.name": "Target redirection",
-    "config.target-redirection.desc": "In some cases the game spawns a temporary entity to represent another one. For example, Abigail in the mines is actually a temporary NPC with the name 'AbigailMine', so looking her up there won't show Abigail's real info. With this option enabled, Lookup Anything will look up the original Abigail instead.",
-    "config.scroll-amount.name": "Scroll amount",
-    "config.scroll-amount.desc": "The number of pixels to shift content on each up/down scroll.",
+    "config.title.advanced-options": "詳細オプション",
+    "config.tile-lookups.name": "マップタイルも表示",
+    "config.tile-lookups.desc": "マップタイルを検索対象に含める。",
+    "config.data-mining-fields.name": "データマイニングのフィールドを表示",
+    "config.data-mining-fields.desc": "データマイニングに役立つライブデータを表示するかどうか（確認結果の下部に別フィールドとして表示される）。これは上級者向けの機能であり、一般的なプレーヤーを対象としたものではありません。",
+    "config.target-redirection.name": "ターゲットのリダイレクト",
+    "config.target-redirection.desc": "場合によっては、ゲームは別のエンティティを表すために一時的なエンティティを生成する。例えば、鉱山にいるアビゲイルは実際には「AbigailMine」という名前の仮のNPCなので、そこで彼女を調べてもアビゲイルの情報は表示されません。このオプションを有効にすると、Lookup Anythingが代わりにオリジナルのアビゲイルを調べます。",
+    "config.scroll-amount.name": "スクロール量",
+    "config.scroll-amount.desc": "上下にスクロールするたびにコンテンツを移動させるピクセル数。",
 
     // controls section
-    // TODO
-    "config.title.controls": "Controls",
-    "config.hide-on-key-up.name": "Hide on key up",
-    "config.hide-on-key-up.desc": "Whether to hide the lookup UI when you release the lookup key.",
-    "config.toggle-lookup.name": "Toggle lookup",
-    "config.toggle-lookup.desc": "The keys which toggle the lookup UI for something under the cursor.",
-    "config.toggle-search.name": "Toggle search",
-    "config.toggle-search.desc": "The keys which toggle the search UI.",
-    "config.scroll-up.name": "Scroll up",
-    "config.scroll-up.desc": "The keys which scroll up long content by a few lines.",
-    "config.scroll-down.name": "Scroll down",
-    "config.scroll-down.desc": "The keys which scroll down long content by a few lines.",
-    "config.page-up.name": "Page up",
-    "config.page-up.desc": "The keys which scroll up long content by a full page.",
-    "config.page-down.name": "Page down",
-    "config.page-down.desc": "The keys which scroll down long content by a full page.",
-    "config.toggle-debug.name": "Toggle debug",
-    "config.toggle-debug.desc": "The keys which toggle the display of debug information."
+    "config.title.controls": "操作",
+    "config.hide-on-key-up.name": "キーアップで非表示",
+    "config.hide-on-key-up.desc": "確認キーを押した状態から離した時に、確認UIを非表示にする。",
+    "config.toggle-lookup.name": "確認キー",
+    "config.toggle-lookup.desc": "マウスカーソルを合わせた状態で、確認画面を表示するキー設定。",
+    "config.toggle-search.name": "検索キー",
+    "config.toggle-search.desc": "検索画面を表示するためのキー設定。",
+    "config.scroll-up.name": "上スクロール",
+    "config.scroll-up.desc": "表示内容が多い場合、数行ずつ上にスクロールするキー設定。",
+    "config.scroll-down.name": "下スクロール",
+    "config.scroll-down.desc": "表示内容が多い場合、数行ずつ下にスクロールするキー設定。",
+    "config.page-up.name": "ページアップ",
+    "config.page-up.desc": "表示内容が多い場合、1ページ分を上にスクロールするキー設定。",
+    "config.page-down.name": "ページダウン",
+    "config.page-down.desc": "表示内容が多い場合、1ページ分を下にスクロールするキー設定。",
+    "config.toggle-debug.name": "デバッグ表示",
+    "config.toggle-debug.desc": "デバッグ情報を表示するためのキー設定。"
 }
