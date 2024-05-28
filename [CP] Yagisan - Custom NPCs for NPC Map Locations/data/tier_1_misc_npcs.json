@@ -178,5 +178,19 @@
                 },
             }
         },
+        // Nora The Herpetologist - https://www.nexusmods.com/stardewvalley/mods/18176
+        {
+            "LogName": "[Yagi] Nora - Sprite Offsets",
+            "Action": "EditData",
+            "Target": "Mods/Bouhm.NPCMapLocations/NPCs",
+            "When": {
+                "HasMod: |contains=Bagi.Nora.CP": true
+            },
+            "Entries": {
+                "Nora": {
+                    "MarkerCropOffset": 5
+                },
+            }
+        },
     ]
 }

@@ -77,6 +77,22 @@
 				"HasMod": "Bouhm.NPCMapLocations"
 			}
 		},
+		// A New Dream
+		{
+			"Action": "Include",
+			"FromFile": "data/a_new_dream.json",
+			"When": {
+				"HasMod": "Bouhm.NPCMapLocations"
+			}
+		},
+		// Passerby Cemetery
+		{
+			"Action": "Include",
+			"FromFile": "data/passerby.json",
+			"When": {
+				"HasMod": "Bouhm.NPCMapLocations"
+			}
+		},
 		// Tier 2 Community Supported.
 		////////////////////////////////////////////////////////////////////////////////
 		// Stardew Valley Expanded (Unsupported)
