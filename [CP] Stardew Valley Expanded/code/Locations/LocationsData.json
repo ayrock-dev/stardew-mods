@@ -376,7 +376,7 @@
                 },
                 // The locations are LOADING in . See line 1653 for EDIT in (vanilla locations),
                 "Custom_SVESummit": {
-                    "DisplayName": "Summit",
+                    "DisplayName": "{{i18n:LocationData.Summit}}",
                     "DefaultArrivalTile": {
                         "X": 32,
                         "Y": 32,
@@ -859,7 +859,7 @@
                     ],
                 },
                 "Custom_FableReef": {
-                    "DisplayName": "{{i18n:Fable_Reef}}",
+                    "DisplayName": "{{i18n:LocationData.Fable_Reef}}",
                     "DefaultArrivalTile": {
                         "X": 31,
                         "Y": 42,

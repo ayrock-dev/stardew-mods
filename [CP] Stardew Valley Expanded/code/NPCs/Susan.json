@@ -25,7 +25,7 @@
           "CanSocialize": "PLAYER_HAS_SEEN_EVENT Any 1000077",
           "CanVisitIsland": true,
           "ExcludeFromIntroductionsQuest": true,
-          "PerfectionScore": false,
+          "PerfectionScore": true,
           "EndSlideShow": "MainGroup",
           "FriendsAndFamily": {},
           "UnlockConditions": null,

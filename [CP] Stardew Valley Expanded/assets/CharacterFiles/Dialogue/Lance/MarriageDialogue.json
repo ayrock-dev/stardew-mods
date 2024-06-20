@@ -1139,7 +1139,7 @@
         "HasSeenEvent": "65360198"
       },
       "Entries": {
-        "funLeave_Lance": "{{i18n:LanceKrobus.1}}",
+        "spring_10": "{{i18n:LanceKrobus.1}}",
       }
     },
         {
@@ -1151,7 +1151,7 @@
         "HasSeenEvent": "65360198"
       },
       "Entries": {
-        "funLeave_Lance": "{{i18n:LanceKrobus.2}}",
+        "spring_24": "{{i18n:LanceKrobus.2}}",
       }
     },
         {
@@ -1163,7 +1163,7 @@
         "HasSeenEvent": "65360198"
       },
       "Entries": {
-        "funLeave_Lance": "{{i18N:LanceKrobus.3}}",
+        "summer_10": "{{i18n:LanceKrobus.3}}",
       }
     },
         {
@@ -1175,7 +1175,7 @@
         "HasSeenEvent": "65360198"
       },
       "Entries": {
-        "funLeave_Lance": "{{i18N:LanceKrobus.4}}",
+        "summer_24": "{{i18n:LanceKrobus.4}}",
       }
     },
         {
@@ -1187,7 +1187,7 @@
         "HasSeenEvent": "65360198"
       },
       "Entries": {
-        "funLeave_Lance": "{{i18N:LanceKrobus.5}}",
+        "fall_10": "{{i18n:LanceKrobus.5}}",
       }
     },
         {
@@ -1199,7 +1199,7 @@
         "HasSeenEvent": "65360198"
       },
       "Entries": {
-        "funLeave_Lance": "{{i18n:LanceKrobus.6}}",
+        "fall_24": "{{i18n:LanceKrobus.6}}",
       }
     },
         {
@@ -1211,7 +1211,7 @@
         "HasSeenEvent": "65360198"
       },
       "Entries": {
-        "funLeave_Lance": "{{i18n:LanceKrobus.7}}",
+        "winter_10": "{{i18n:LanceKrobus.7}}",
       }
     },
   ]

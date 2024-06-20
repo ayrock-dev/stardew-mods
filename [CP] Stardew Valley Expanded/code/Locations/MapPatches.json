@@ -13,14 +13,14 @@
                },
                "Update": "OnLocationChange",
                "When": {
-                    "HasSeenEvent": "191393, 502261"
+                    "HasSeenEvent: anyPlayer|contains=191393, 502261": true
                }
           },
           { //Andy House Clean - Fireplace sound effect map property patch
                "Action": "EditMap",
                "Target": "Maps/Custom_AndyHouse",
                "When": {
-                    "HasSeenEvent": "191393, 502261"
+                    "HasSeenEvent: anyPlayer|contains=191393, 502261": true
                },
                "MapProperties": {
                     "BrookSounds": "18 13 1",
@@ -40,7 +40,7 @@
                },
                "Update": "OnLocationChange",
                "When": {
-                    "HasSeenEvent": "191393, 502261"
+                    "HasSeenEvent: anyPlayer|contains=191393, 502261": true
                }
           },
           {
@@ -54,7 +54,7 @@
                     "Height": 5
                },
                "When": {
-                    "HasSeenEvent": "5404269"
+                    "HasSeenEvent: anyPlayer|contains=5404269": true
                },
                "Update": "OnLocationChange"
           },
@@ -69,7 +69,7 @@
                     "Height": 16
                },
                "When": {
-                    "HasSeenEvent: anyPlayer| contains=5515272": true,
+                    "HasSeenEvent: anyPlayer|contains=5515272": true,
                },
                "Update": "OnLocationChange"
           },
@@ -84,7 +84,7 @@
                     "Height": 39
                },
                "When": {
-                    "HasSeenEvent: anyPlayer |contains=418172, 3073012, 3073013, Parrot.RomRas_MagicInkStandardPart2, Parrot.RomRas_MagicInkMarriedPart2": true 
+                    "HasSeenEvent: anyPlayer|contains=418172, 3073012, 3073013, Parrot.RomRas_MagicInkStandardPart2, Parrot.RomRas_MagicInkMarriedPart2": true 
                },
                "Update": "OnLocationChange"
           },
@@ -99,7 +99,7 @@
                     "Height": 39
                },
                "When": {
-                    "HasSeenEvent: anyPlayer |contains=3073012": true,
+                    "HasSeenEvent: anyPlayer|contains=3073012": true,
                     "HasMod": "Nom0ri.RomRas, Parrot.RomRas"
                },
                "Update": "OnLocationChange"
@@ -115,7 +115,7 @@
                     "Height": 39
                },
                "When": {
-                    "HasSeenEvent: anyPlayer |contains=3073013": true,
+                    "HasSeenEvent: anyPlayer|contains=3073013": true,
                     "HasMod": "Nom0ri.RomRas, Parrot.RomRas"
                },
                "Update": "OnLocationChange"
@@ -131,7 +131,7 @@
                     "Height": 2
                },
                "When": {
-                    "HasSeenEvent: anyPlayer| contains=2120303": true,
+                    "HasSeenEvent: anyPlayer|contains=2120303": true,
                },
                "Update": "OnLocationChange"
           },
@@ -146,8 +146,8 @@
                     "Height": 1
                },
                "When": {
-                    "HasSeenEvent": "77759254",
-                    "HasSeenEvent |contains=7775926": false
+                    "HasSeenEvent: anyPlayer|contains=77759254": true,
+                    "HasSeenEvent: anyPlayer|contains=7775926": false
                },
                "Update": "OnLocationChange"
           },
@@ -162,7 +162,7 @@
                     "Height": 1
                },
                "When": {
-                    "HasSeenEvent": "7775926"
+                    "HasSeenEvent: anyPlayer|contains=7775926": true
                },
                "Update": "OnLocationChange"
           },
@@ -177,8 +177,8 @@
                     "Height": 24
                },
                "When": {
-                    "HasSeenEvent: anyPlayer |contains=7775925": true,
-                    "HasSeenEvent |contains=7776001": false
+                    "HasSeenEvent: anyPlayer|contains=7775925": true,
+                    "HasSeenEvent: anyPlayer|contains=7776001": false
                },
                "Update": "OnLocationChange"
           },
@@ -194,7 +194,7 @@
                },
                "When": {
                     "Relationship:Apples": "Friendly",
-                    "HasSeenEvent |contains=7775925, 7776001": false
+                    "HasSeenEvent: anyPlayer|contains=7775925, 7776001": false
                },
                "Update": "OnLocationChange"
           },
@@ -209,7 +209,7 @@
                     "Height": 24
                },
                "When": {
-                    "HasSeenEvent": "7776001"
+                    "HasSeenEvent: anyPlayer|contains=7776001": true
                },
                "Update": "OnLocationChange"
           },
@@ -224,7 +224,7 @@
                     "Height": 15
                },
                "When": {
-                    "HasSeenEvent": "7776006"
+                    "HasSeenEvent: anyPlayer|contains=7776006": true
                },
                "Update": "OnLocationChange"
           },
@@ -239,7 +239,7 @@
                     "Height": 2
                },
                "When": {
-                    "HasSeenEvent": "2554903"
+                    "HasSeenEvent: anyPlayer|contains=2554903": true
                },
                "Update": "OnLocationChange"
           },
@@ -396,7 +396,7 @@
                "Target": "Maps/Town",
                "FromFile": "Assets/Maps/Locations/Town.tmx",
                "When": {
-                    "HasSeenEvent |contains=5553210": false
+                    "HasSeenEvent: hostPlayer|contains=5553210": false
                }
           },
           {
@@ -581,7 +581,7 @@
                "Action": "EditMap",
                "Target": "Maps/Forest",
                "When": {
-                    "HasSeenEvent": "5553210"
+                    "HasSeenEvent: hostPlayer|contains=5553210": true
                },
                "MapProperties": {
                     "Light": "9 19 4 90 14 4 87 6 4 56 68 4 115 23 4 101 23 4 87 23 4 73 23 4 67 9 4",
@@ -1058,7 +1058,7 @@
                "Target": "Maps/Town-TheaterCC",
                "FromFile": "Assets/Maps/MapPatches/Town-TheaterCC_Pavement.tbin",
                "When": {
-                    "HasSeenEvent": "5553210"
+                    "HasSeenEvent: hostPlayer|contains=5553210": true
                }
           },
           /*{
@@ -1129,7 +1129,7 @@
                "Target": "Maps/Town-TrashGone",
                "FromFile": "Assets/Maps/MapPatches/Town-TrashGone.tbin",
                "When": {
-                    "HasSeenEvent |contains=5553210": false
+                    "HasSeenEvent: hostPlayer|contains=5553210": false
                }
           },
           {
@@ -1145,7 +1145,7 @@
                "Target": "Maps/Town-DogHouse",
                "FromFile": "Assets/Maps/MapPatches/Town-DogHouse.tbin",
                "When": {
-                    "HasSeenEvent |contains=5553210": false
+                    "HasSeenEvent: hostPlayer|contains=5553210": false
                }
           },
           {
@@ -1182,7 +1182,7 @@
                "Target": "Maps/Backwoods_Staircase",
                "FromFile": "Assets/Maps/MapPatches/Backwoods_Staircase.tbin",
                "When": {
-                    "HasSeenEvent |contains= 5553210": false
+                    "HasSeenEvent: hostPlayer|contains=5553210": false
                },
           },
           {
@@ -1770,7 +1770,7 @@
                "FromFile": "Assets/Maps/MapPatches/GrampletonFields_NoWarp.tbin",
                "When": {
                     "HasMod": "flashshifter.GrampletonFields",
-                    "HasSeenEvent |contains=1000035": false
+                    "HasSeenEvent: anyPlayer|contains=1000035": false
                },
                "ToArea": {
                     "X": 154,
@@ -1785,7 +1785,7 @@
                "Target": "Maps/Custom_AdventurerSummit",
                "FromFile": "Assets/Maps/MapPatches/AdventurerSummit_Railroad_Shortcut.tmx",
                "When": {
-                    "HasSeenEvent |contains=1000077": true
+                    "HasSeenEvent: anyPlayer|contains=1000077": true
                },
                "ToArea": {
                     "X": 11,
@@ -2214,7 +2214,7 @@
                "Update": "OnLocationChange",
                "PatchMode": "Replace",
                "When": {
-                    "HasSeenEvent |contains=5553210": true
+                    "HasSeenEvent: anyPlayer|contains=5553210": true
                }
           },
           {
@@ -2230,7 +2230,7 @@
                "Update": "OnLocationChange",
                "PatchMode": "Replace",
                "When": {
-                    "HasSeenEvent |contains=5553210": true
+                    "HasSeenEvent: anyPlayer|contains=5553210": true
                }
           },
           {
@@ -2246,7 +2246,7 @@
                "Update": "OnLocationChange",
                "PatchMode": "Replace",
                "When": {
-                    "HasSeenEvent |contains=5553210": true
+                    "HasSeenEvent: anyPlayer|contains=5553210": true
                }
           },
           {
@@ -2262,7 +2262,7 @@
                "Update": "OnLocationChange",
                "PatchMode": "Replace",
                "When": {
-                    "HasSeenEvent |contains=5553210": true
+                    "HasSeenEvent: anyPlayer|contains=5553210": true
                }
           },
           /*{
@@ -2320,8 +2320,8 @@
                "Target": "LooseSprites/Map",
                "FromFile": "Assets/Maps/WorldMaps/Patches/{{Season}}_MorrisHouse.png",
                "When": {
-                    "HasSeenEvent |contains=6663408": true,
-                    "HasSeenEvent |contains=5553210": false
+                    "HasSeenEvent: anyPlayer|contains=6663408": true,
+                    "HasSeenEvent: anyPlayer|contains=5553210": false
                },
                "ToArea": {
                     "X": 227,
@@ -2352,7 +2352,7 @@
                "When": {
                     "HasMod": "flashshifter.immersivefarm2remastered",
                     "FarmType": "Standard",
-                    "HasSeenEvent |contains=5553210": false,
+                    "HasSeenEvent: anyPlayer|contains=5553210": false,
                     "HasMod |contains=flashshifter.GrandpasFarm": false
                }
           },
@@ -2369,7 +2369,7 @@
                "When": {
                     "HasMod": "flashshifter.immersivefarm2remastered",
                     "FarmType": "Standard",
-                    "HasSeenEvent": "5553210",
+                    "HasSeenEvent: anyPlayer|contains=5553210": true,
                     "HasMod |contains=flashshifter.GrandpasFarm": false
                }
           },

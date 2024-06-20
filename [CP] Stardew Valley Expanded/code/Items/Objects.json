@@ -132,6 +132,23 @@
                     "ContextTags": [
                         "color_green",
                         "potion_item",
+                    ],
+					"Buffs": [
+                        {
+                            "Duration": 300,
+                            "CustomAttributes": {
+                                "FarmingLevel": 0,
+                                "FishingLevel": 0,
+                                "MiningLevel": 0,
+                                "LuckLevel": 0,
+                                "ForagingLevel": 0,
+                                "MaxStamina": 0,
+                                "MagneticRadius": 0,
+                                "Speed": 0,
+                                "Defense": 10,
+                                "Attack": 0
+                            },
+                        },
                     ]
                 },
                 "FlashShifter.StardewValleyExpandedCP_Aurora_Vineyard_Property_Deed": {
@@ -1369,7 +1386,7 @@
                     "Name": "Razor Trout",
                     "DisplayName": "{{i18n:object.razor-trout.name}}",
                     "Description": "{{i18n:object.razor-trout.description}}",
-                    "Type": "MonsterLoot",
+                    "Type": "Fish",
                     "Category": -28,
                     "Price": 400,
                     "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Razor Trout",

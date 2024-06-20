@@ -1514,7 +1514,7 @@
  <objectgroup id="12" name="Front"/>
  <layer id="13" name="Paths" width="70" height="62">
   <data encoding="base64" compression="zlib">
-   eJztmluuwyAMRFkA/1GT3+5/jfdWKpI1soGWR0yZIyHShBRwzPAMgRBCCCGEEEIIaeN4h/gfroq0d1AqV29OcX1ArBHf8WNMcdyRs8VReP4iFp5/y2w/qa1HsscFv3+V1u//7FUQR2g2KdkB25J2XaPbnrF8JacjUpNjRdpRejOD1BZy/VAMtp+U3p1Jj/xP5d4n9cM00bi/Kjk/qEFqyZ02GZH3q249tUCW8VTujaZV962ytvS/8l1tPOxZi7FsrW2pNj+pXylcIo2meYnZfb9mh1/Rzk+pqbdnfx9Nrm/d1WcSqC072yM3L5a2QR3coW3h2HZnX8F6P4z7O7JDW2iBPkK8rZPh2tUBIYhYG0vhOhj+Rwhr9hfWGo31vCaNZuMZmim/H35fT+tyOR8ckZ+MMd8YdP+dvS9gzc9n5aX5NNroDk2TNkhraivqDCGEECKxxmmpP9b2eqwzQFfQx1fW2NPzPL53H4/zFhkjuT0QL/TeW/QyP/iWEefhcH8sl847o8tozZe8asyoOYS1f7AKo7/XCm1lJrSHDp4zW407zgI+wzo2u6Ocq9iGEEJ68AdodRO9
+   eJztmluuwyAMRFkA/1Gb3+5/jfdWKpI1soGUR0yZI0WkCSnGMcMrIRBCCCGEEEIIIW0cnyP+H2dF3jso2dWbpzg/INWIn/Qxxhx35HxxFO6/iYX73zI7Tmrrkfxxwu9fpfX9v3oZ4gjNJyU/YFvSzmt02zNWrOR0RGpyrMg7Sm9mkNpCrh+KwY6T0rMz6VH+U7l2pX6YJxrXVyUXBzVILbnTJyPKftetpxZIG5/KtdG06r5la0v/K5/VxsOetRhta21LteVJ/UrHKfJompeY3fdrfvgV7bxKTb09x/tocn3rrjGTQG3Z2R+5ebH0DergDm0Lx7Y7xwrW+2Fc35Ed2kILjBHibZ0M164OOIJItbEUroPhf4SwZn9hrdFY92vyaD6eoZny/eH79bQul4vBEeXJFMuNQY/f2fsC1vx8VllaTKOP7tA06YO0pjYjXvBcy+NF7zzYQAgh5BrWOC31x9pej/UN0An/URp7ep7H9+5bcd4iUyS3B+KF3nuLXuYH3zLiezjcH8vl885oG635kleNGTV2t/YPVmH0+1qhrcyE/tDB78xWY9aan+QV1vHZHXau4htCCOnBH5iJFEc=
   </data>
  </layer>
  <objectgroup id="14" name="Paths"/>

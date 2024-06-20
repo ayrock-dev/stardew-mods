@@ -24,7 +24,7 @@
           "CanSocialize": true,
           "CanVisitIsland": true,
           "ExcludeFromIntroductionsQuest": false,
-          "PerfectionScore": false,
+          "PerfectionScore": true,
           "EndSlideShow": "MainGroup",
           "SpouseRoom": {
             "MapAsset": "Custom_VictorsRoom",

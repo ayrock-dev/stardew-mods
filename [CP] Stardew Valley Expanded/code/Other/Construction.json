@@ -235,20 +235,15 @@
                 "Deluxe Barn": {
                     "BuildMaterials": [
                         {
+                            "Id": "(O)388",
+                            "ItemId": "(O)388",
+                            "Amount": 950
+                        },
+                        {
                             "Id": "(O)390",
                             "ItemId": "(O)390",
-                            "Amount": 200
-                        },
-                        {
-                            "Id": "(O)330",
-                            "ItemId": "(O)330",
-                            "Amount": 15
-                        },
-                        {
-                            "Id": "(O)334",
-                            "ItemId": "(O)334",
-                            "Amount": 5
-                        },
+                            "Amount": 450
+                        }
                     ],
                     "BuildCost": 35000
                 },

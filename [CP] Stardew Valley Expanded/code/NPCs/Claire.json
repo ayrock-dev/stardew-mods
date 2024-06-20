@@ -23,7 +23,7 @@
           "CanSocialize": true,
           "CanVisitIsland": "PLAYER_NPC_RELATIONSHIP ANY Claire MARRIED, ANY \"WEATHER TOWN Rain, DAY_OF_WEEK Tue Fri Sat\" \"WEATHER TOWN Rain, DAY_OF_WEEK Wed, PLAYER_HAS_SEEN_EVENT ANY 3691371\"",
           "ExcludeFromIntroductionsQuest": false,
-          "PerfectionScore": false,
+          "PerfectionScore": true,
           "EndSlideShow": "MainGroup",
           "SpouseRoom": {
             "MapAsset": "Custom_ClairesRoom",
@@ -613,11 +613,11 @@
         "DayEvent |contains=flower dance, dance of the moonlight jellies, egg festival, feast of the winter star, festival of ice, luau, stardew valley fair, spirit's eve": false
       },
       "Entries": {
-        "marriage_Mon": "640 Town 92 44 2/850 MovieTheater 7 5 2 Claire_Blink \"Strings\\schedules\\Claire:MovieTheater.000\"/2100 BusStop 22 8 0/2310 bed",
+        "marriage_Mon": "640 Town 92 44 2/850 MovieTheater 7 5 2 Claire_Blink \"Strings\\schedules\\Claire:MovieTheater.000\"/2100 bed",
         "marriage_Tue": "1030 SeedShop 26 17 1 \"Strings\\schedules\\Claire:AerobicsClass.000\"/1300 SeedShop 23 18 2 Claire_Dance \"Strings\\schedules\\Claire:AerobicsClass.001\"/1600 bed",
-        "marriage_Wed": "640 Town 92 44 2/850 MovieTheater 7 5 2 Claire_Blink \"Strings\\schedules\\Claire:MovieTheater.001\"/2100 BusStop 22 8 0/2310 bed",
-        "marriage_Thu": "640 Town 92 44 2/850 MovieTheater 7 5 2 Claire_Blink \"Strings\\schedules\\Claire:MovieTheater.002\"/2100 BusStop 22 8 0/2310 bed",
-        "marriage_Sun": "640 Town 92 44 2/850 MovieTheater 7 5 2 Claire_Blink \"Strings\\schedules\\Claire:MovieTheater.003\"/2100 BusStop 22 8 0/2310 bed",
+        "marriage_Wed": "640 Town 92 44 2/850 MovieTheater 7 5 2 Claire_Blink \"Strings\\schedules\\Claire:MovieTheater.001\"/2100 bed",
+        "marriage_Thu": "640 Town 92 44 2/850 MovieTheater 7 5 2 Claire_Blink \"Strings\\schedules\\Claire:MovieTheater.002\"/2100 bed",
+        "marriage_Sun": "640 Town 92 44 2/850 MovieTheater 7 5 2 Claire_Blink \"Strings\\schedules\\Claire:MovieTheater.003\"/2100 bed",
       }
     },
     {
@@ -647,7 +647,7 @@
         "HasSeenEvent |contains=4269703": false
       },
       "MapProperties": {
-        "NPCWarp": "13 15 BusStop -1 23 14 15 BusStop -1 23"
+        "NPCWarp": "13 15 BusStop 43 23 14 15 BusStop 43 23"
       }
     },
     {
@@ -657,14 +657,14 @@
       "When": {
         "HasSeenEvent": "191393",
         "HasFlag": "ccMovieTheater",
-        "Spouse": "Claire",
+        "Spouse |contains=Claire": true,
         "Day |contains=22": false,
         "DayOfWeek |contains=Tuesday, Wednesday, Friday, Saturday": false,
         "Weather |contains=Rain": false,
         "HasSeenEvent |contains=4269703": true
       },
       "MapProperties": {
-        "NPCWarp": "13 15 BusStop -1 23 14 15 BusStop -1 23"
+        "NPCWarp": "13 15 BusStop 43 23 14 15 BusStop 43 23"
       }
     }, /*
     {

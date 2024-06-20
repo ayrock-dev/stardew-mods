@@ -9,6 +9,7 @@
 
     // generic values
     "generic.unknown": "sconosciuto",
+    "generic.list-separator": ", ", // text between listed values (like ", " in "A, B, C")
 
     // generic field values
     "generic.percent": "{{percent}}%",
@@ -121,14 +122,33 @@
     "location.islandWest.freshwater": "Zona ovest dell'Isola Zenzero (stagno)",
     "location.islandWest.ocean": "Zona ovest dell'Isola Zenzero (oceano)",
 
+    "location.fish-area": "{{locationName}} ({{areaName}})",
     "location.unknown-fish-area": "{{locationName}} (area di pesca {{id}})",
 
-    // context tags (e.g. for machine recipes)
-    "context-tag.negate": "non {{tag}}",
+
+    /*********
+    ** Conditions & context tags
+    *********/
+    "condition-or-context-tag.negate": "non {{value}}",
+
+    "condition.item-type.input": "oggetto inserito",
+    "condition.item-type.target": "oggetto finale",
+
+    "condition.raw-context-tag": "tag contesto \"{{tag}}\"",
+    "condition.raw-condition": "query \"{{tag}}\"",
+
+    "condition.item-context-tag": "{{item}} ha il tag contesto {{tags}}",
+    "condition.item-context-tags": "{{item}} ha i tag contesto {{tags}}",
+    "condition.item-context-tag.value": "'{{tag}}'", // the format of each context tag in the list (each context tag isn't translated)
+
+    "condition.item-edibility.edible": "{{item}} è commestibile",
+    "condition.item-edibility.min": "{{item}} è commestibile per {{min}} o più",
+    "condition.item-edibility.range": "{{item}} è commestibile per {{min}} fino ad un massimo di {{max}}",
+
     "context-tag.bone": "qualsiasi osso",
     "context-tag.egg": "qualsiasi uovo",
     "context-tag.large-egg": "qualsiasi uovo grande",
-    "context-tag.preserved-item": "preserved {{name}}", // TODO
+    "context-tag.preserved-item": "{{name}} conservato",
 
 
     /*********
@@ -536,7 +556,7 @@
 
     // values
     "puzzle.solution.solved": "Puzzle risolto!",
-    "puzzle.solution.hidden": "Le soluzioni dei Puzzle sono nascoste nella modalità Progresso.",
+    "puzzle.solution.hidden": "Le soluzioni dei Puzzle sono nascoste in base alle tue impostazioni.",
 
 
     /*********
@@ -642,10 +662,20 @@
     *********/
     // main options
     "config.title.main-options": "Opzioni principali",
-    "config.progression-mode.name": "Modalità progressione",
-    "config.progression-mode.desc": "Scegli se nascondere alcuni contenuti (ad esempio, i gusti dei regali e le soluzioni degli enigmi) finché non li si scopre nel gioco.",
     "config.force-full-screen.name": "Forza schermo intero",
     "config.force-full-screen.desc": "Scegli se il menu deve essere sempre a tutto schermo, invece che centrato nella finestra. Questa opzione è utile soprattutto quando si visualizzano i campi di data mining.",
+
+    // progression mode
+    "config.title.progression": "Modalità progressione",
+
+    "config.progression.show-unknown-gift-tastes.name": "Mostra gusti dei regali sconosciuti",
+    "config.progression.show-unknown-gift-tastes.desc": "Scegli se mostrare i gusti dei regali che non si sono ancora appresi nel gioco (ad esempio dal testo del dialogo o sperimentando).",
+
+    "config.progression.show-unknown-recipes.name": "Mostra ricette sconosciute",
+    "config.progression.show-unknown-recipes.desc": "Scegli se mostrare le ricette che non si sono ancora imparate nel gioco.",
+
+    "config.progression.show-puzzle-solutions.name": "Mostra soluzioni dei puzzle",
+    "config.progression.show-puzzle-solutions.desc": "Scegli se mostrare le soluzioni dei puzzle.",
 
     // gift tastes
     "config.title.gift-tastes": "Gusti dei regali",

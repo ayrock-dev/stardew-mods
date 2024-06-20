@@ -42,7 +42,7 @@
             "Entries": {
                 "FlashShifter.StardewValleyExpandedCP_AdventureShopGil_Evening": {
                     "Condition": "TIME 2200 2600",
-                    "Portrait": "Mods\\FlashShifter.StardewValleyExpandedCP\\GilShop",
+                    "Portrait": "Portraits/Gil",
                     "RandomizeDialogueOnOpen": false,
                     "ClosedMessage": null,
                     "ID": "Gil Evening",
@@ -57,7 +57,7 @@
                 },
                 "FlashShifter.StardewValleyExpandedCP_AdventureShopGil_Morning": {
                     "Condition": "TIME 600 1200",
-                    "Portrait": "Mods\\FlashShifter.StardewValleyExpandedCP\\GilShop",
+                    "Portrait": "Portraits/Gil",
                     "RandomizeDialogueOnOpen": false,
                     "ClosedMessage": null,
                     "ID": "Gil Morning",
@@ -72,7 +72,7 @@
                 },
                 "FlashShifter.StardewValleyExpandedCP_AdventureShopMarlon_Winter": {
                     "Condition": "SEASON Winter, TIME 1200 2200",
-                    "Portrait": "Mods\\FlashShifter.StardewValleyExpandedCP\\MarlonShop",
+                    "Portrait": "MarlonFay",
                     "RandomizeDialogueOnOpen": false,
                     "ClosedMessage": null,
                     "ID": "Marlon Winter",
@@ -118,7 +118,7 @@
             "Entries": {
                 "FlashShifter.StardewValleyExpandedCP_AdventureGuildRecoveryGil_Evening": {
                     "Condition": "TIME 2200 2600",
-                    "Portrait": "Mods\\FlashShifter.StardewValleyExpandedCP\\GilShop",
+                    "Portrait": "Portraits/Gil",
                     "RandomizeDialogueOnOpen": false,
                     "ClosedMessage": null,
                     "ID": "Gil Evening",
@@ -133,7 +133,7 @@
                 },
                 "FlashShifter.StardewValleyExpandedCP_AdventureGuildRecoveryGil_Morning": {
                     "Condition": "TIME 600 1200",
-                    "Portrait": "Mods\\FlashShifter.StardewValleyExpandedCP\\GilShop",
+                    "Portrait": "Portraits/Gil",
                     "RandomizeDialogueOnOpen": false,
                     "ClosedMessage": null,
                     "ID": "Gil Morning",
@@ -148,7 +148,7 @@
                 },
                 "FlashShifter.StardewValleyExpandedCP_AdventureGuildRecoveryMarlon_Winter": {
                     "Condition": "SEASON Winter, TIME 1200 2200",
-                    "Portrait": "Mods\\FlashShifter.StardewValleyExpandedCP\\MarlonShop",
+                    "Portrait": "MarlonFay",
                     "RandomizeDialogueOnOpen": false,
                     "ClosedMessage": null,
                     "ID": "Marlon Winter",

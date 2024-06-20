@@ -21,7 +21,7 @@
           "CanSocialize": false,
           "CanVisitIsland": "FALSE",
           "ExcludeFromIntroductionsQuest": true,
-          "PerfectionScore": true,
+          "PerfectionScore": false,
           "EndSlideShow": "TrailingGroup",
           "FriendsAndFamily": {},
           "UnlockConditions": "",
@@ -58,6 +58,11 @@
       "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Alesia",
       "FromFile": "Assets/CharacterFiles/Portraits/Alesia/Alesia.png"
+    },
+	{
+      "Action": "Load", "Priority": "Low",
+      "Target": "Characters/Schedules/Alesia",
+      "FromFile": "Assets/CharacterFiles/Schedules/Alesia/Alesia.json"
     },
 	{
       "Action": "Load", "Priority": "Low",

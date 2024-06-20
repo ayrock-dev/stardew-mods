@@ -399,7 +399,7 @@
     },
     {
       //Scarlett's beach portraits
-      "Action": "EditImage",
+      "Action": "Load",
       "Target": "Portraits/Scarlett_Beach",
       "FromFile": "assets/CharacterFiles/Portraits/Scarlett/Scarlett_Beach.png"
     },

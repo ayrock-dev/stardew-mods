@@ -45,7 +45,7 @@
           "CanSocialize": false,
           "CanVisitIsland": "FALSE",
           "ExcludeFromIntroductionsQuest": true,
-          "PerfectionScore": true,
+          "PerfectionScore": false,
           "EndSlideShow": "Hidden",
           "FriendsAndFamily": {},
           "UnlockConditions": null,

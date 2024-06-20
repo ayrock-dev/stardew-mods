@@ -23,7 +23,7 @@
           "CanSocialize": true,
           "CanVisitIsland": "FALSE",
           "ExcludeFromIntroductionsQuest": false,
-          "PerfectionScore": true,
+          "PerfectionScore": false,
           "EndSlideShow": "TrailingGroup",
           "FriendsAndFamily": {},
           "WinterStarParticipant": false,
