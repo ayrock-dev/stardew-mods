@@ -760,14 +760,15 @@
                                         "Operation": "Append",
                                         "Target": [
                                                 "MapProperties",
-                                                "Warp"
+                                                "NPCWarp"
                                         ],
                                         "Value": "100 51 Custom_LK_TheaterBreakroom 21 20",
                                         "Delimiter": " "
                                 },
                         ],
                         "When": {
-                                "HasMod |contains= Lumisteria.MtVapius": true
+                                "HasMod |contains= Lumisteria.MtVapius": true,
+					"HasFlag |contains=ccMovieTheater": true
                         }
                 },
                 { //Adds spouse strings for the movie theater

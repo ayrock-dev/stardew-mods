@@ -187,12 +187,36 @@
 		
 		//MAPS
          {
-            "Action": "EditMap",
+            "Action": "Load",
             "Target": "Maps/WitchSwamp",
             "FromFile": "assets/WitchSwamp.tmx",
-			"PatchMode": "Replace",
+			//"PatchMode": "Replace",
 			
         },
+		{
+			"Action": "EditMap",
+			"Target": "Maps/WitchSwamp",
+			"MapProperties": {
+			"DefaultWarpLocation": "20 41", 
+			"Warp": "20 47 Railroad 54 36", 
+			},			
+		},
+		 {
+            "Action": "EditMap",
+            "Target": "Maps/WitchWarpCave",
+            "MapTiles": [
+                {
+                    "Position": { "X":4, "Y": 5 },
+                    "Layer": "Back",
+                    "SetProperties": 
+					{
+                        "TouchAction": "MagicWarp WitchSwamp 20 41"
+                    }
+                },
+				]
+	 },
+		
+		
 		{
 			"Action": "EditMap",
 			"Target": "Maps/WitchSwamp",
@@ -203,6 +227,55 @@
 			},			
 		},
 		
+	//railroad npcwarp
+  {			 "LogName": "swampnpcwarp",
+			"Action": "EditMap",
+			"Target": "Maps/Railroad",
+			"MapProperties": {
+			"NPCWarp": "55 36 WitchSwamp 20 41", 
+			},
+		},
+		{			 "LogName": "swampnpcwarp",
+			"Action": "EditMap",
+			"Target": "Maps/WitchSwamp",
+			"MapProperties": {
+			"NPCWarp": "20 42 Railroad 54 36", 
+			},
+		},
+		 {
+		  "LogName": "swampnpcwarpaddwarps",
+            "Action": "EditMap",
+            "Target": "Maps/Railroad",
+          
+            "AddWarps": [
+                "52 34 WitchSwamp 20 41"
+            ]
+        },
+		 {
+            "Action": "EditMap",
+            "Target": "Maps/Railroad",
+            "MapTiles": [
+                {
+                    "Position": { "X":52, "Y": 34 },
+                    "Layer": "Buildings",
+                    "SetProperties": 
+					{
+                        "Passable": "t",
+		"NPCPassable": "t",
+                    }
+                },
+		{
+                    "Position": { "X":52, "Y": 35 },
+                    "Layer": "Buildings",
+                    "SetProperties": 
+					{
+                        "Passable": "t",
+		"NPCPassable": "t",
+                    }
+                },
+		
+            ]
+        },
 	
 		
 

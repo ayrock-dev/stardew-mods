@@ -67,59 +67,8 @@
 			"PatchMode": "Overlay",
         },
 	 
-	 //railroad warp for goblin
-	 
-	 {
-        "Action": "EditMap",
-        "Target": "Maps/Railroad",
-        "AddWarps": [
-                "54 32 WitchSwamp 20 41"
-            ]
-        },
-		 //witchwarpcave warp for goblin
-	 
-	 {
-        "Action": "EditMap",
-        "Target": "Maps/WitchWarpCave",
-        "AddWarps": [
-                "4 2 WitchSwamp 20 41"
-            ]
-        },
+
 		
-									
-		{ //railroad patch tile
-    	"Action": "EditMap",
-    	"Target": "Maps/Railroad", 
-    	"FromFile": "assets/mappatches/Railroad_patch.tmx",
-		"PatchMode": "Replace",
-    	"ToArea": {
-        		"X": 54,
-        		"Y": 32,
-        		"Width": 1,
-        		"Height": 1
-    			},
-		},	
-{ //witchwarpcave  patch tile
-    	"Action": "EditMap",
-    	"Target": "Maps/WitchWarpCave", 
-    	"FromFile": "assets/mappatches/WitchWarpCave_patch.tmx",
-		"PatchMode": "Replace",
-    	"ToArea": {
-        		"X": 4,
-        		"Y": 2,
-        		"Width": 1,
-        		"Height": 2
-    			},
 		
-		},					
-		{
-            "Action": "EditMap",
-            "Target": "Maps/WitchWarpCave",
-            "MapProperties": {
-                "NPCWarp": "4 9 WitchSwamp 20 41 4 8 WitchSwamp 20 41"
-            },
-           
-        },
-	 
    ]
 }

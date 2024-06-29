@@ -170,12 +170,14 @@
     {
       "LogName": "swimsuit sprites",
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Characters/Juliet_Beach",
       "FromFile": "assets/Characters/Juliet/Juliet_swimsuit.png"
     },
     {
       "LogName": "swimsuit sprites",
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Portraits/Juliet_Beach",
       "FromFile": "assets/Portraits/Juliet/Juliet_swimsuit.png"
     },
@@ -219,25 +221,27 @@
     },
     {
       "LogName": "JojaMart Sprites",
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Juliet_Joja",
       "FromFile": "assets/Portraits/Juliet/Juliet_Joja.png"
     },
     {
       "LogName": "JojaMart Sprites",
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Juliet_Joja",
       "FromFile": "assets/Characters/Juliet/Juliet_Joja.png"
     },
     { //Kataryna
       "LogName": "Juliet FortuneTeller",
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Characters/Juliet_FortuneTeller",
       "FromFile": "assets/Characters/Juliet/Juliet_FortuneTeller.png"
     },
     { //Kataryna
       "LogName": "Juliet FortuneTeller",
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Portraits/Juliet_FortuneTeller",
       "FromFile": "assets/Portraits/Juliet/Juliet_FortuneTeller.png"
     },
@@ -762,7 +766,7 @@
       "Target": "Data/Events/Beach",
       "Entries": {
         "6398421/e 6398420/f Juliet 2000/t 1700 2300/w sunny/i 348": "ocean/36 36/Juliet 42 36 2 farmer 26 35 1/ambientLight 50 120 120/addConversationTopic Juliet_Prop 5/skippable/pause 500/move farmer 15 0 2 true/pause 1000/faceDirection Juliet 3/speak Juliet \"{{i18n:6398421.01}}\"/pause 500/emote farmer 32/addObject 41 33 348/showFrame 9/pause 1000/move Juliet 0 -1 3/removeSprite 41 33/removeItem 348/faceDirection farmer 1/pause 500/speak Juliet \"{{i18n:6398421.02}}\"/pause 500/faceDirection Juliet 0/playSound gulp/pause 500/faceDirection Juliet 2/pause 1000/emote Juliet 40/pause 500/emote farmer 8/pause 500/faceDirection Juliet 3/speak Juliet \"{{i18n:6398421.03}}\"/faceDirection farmer 2/showFrame farmer 90/pause 1000/farmerEat 348/pause 4000/pause 500/pause 500/faceDirection Juliet 3/faceDirection farmer 1/playMusic sappypiano/pause 500/speak Juliet \"{{i18n:6398421.04}}\"/pause 500/emote farmer 8/pause 1500/speak Juliet \"{{i18n:6398421.05}}\"/pause 500/faceDirection Juliet 1/faceDirection farmer 1/pause 500/speak Juliet \"{{i18n:6398421.06}}\"/pause 500/faceDirection Juliet 3/pause 500/speak Juliet \"{{i18n:6398421.07}} [(O)458]\"/pause 500/emote Juliet 28/pause 500/emote farmer 40/pause 1500/speak Juliet \"{{i18n:6398421.q1}}#$b#$q 639897 null#{{i18n:6398421.q2}}#$r 639899 100 Juliet_Date_Yes#{{i18n:6398421.a1}}#$r 639898 -250 Juliet_Date_No#{{i18n:6398421.a2}}#$r 639898 -500 Juliet_Date_HellNo#{{i18n:6398421.a3}}#$r 639896 0 Juliet_NoMarried#{{i18n:6398421.a4}}\"/fork 639899 Juliet_Dating/fork 639896 Juliet_Married/pause 500/faceDirection Juliet 1/move Juliet 2 0 1/speak Juliet \"{{i18n:6398421.08}}\"/pause 500/faceDirection Juliet 3/pause 500/emote farmer 28/speak Juliet \"{{i18n:6398421.09}}\"/emote farmer 60/pause 500/emote Juliet 32/pause 1000/end",
-        "Juliet_Dating": "pause 500/speak Juliet \"{{i18n:6398421.Juliet_Dating.01}}\"/pause 500/faceDirection Juliet 2 true/faceDirection farmer 2 true/positionOffset Juliet -20 0/emote farmer 32/emote Juliet 20/pause 2000/end dialogue \"{{i18n:6398421.Juliet_Dating.02}}\"",
+        "Juliet_Dating": "pause 500/speak Juliet \"{{i18n:6398421.Juliet_Dating.01}}\"/pause 500/faceDirection Juliet 2 true/faceDirection farmer 2 true/positionOffset Juliet -20 0/emote farmer 32/emote Juliet 20/pause 2000/end dialogue Juliet \"{{i18n:6398421.Juliet_Dating.02}}\"",
         "Juliet_Married": "pause 500/faceDirection Juliet 1/move Juliet 2 0 1/speak Juliet \"{{i18n:6398421.Juliet_Married.01}}\"/pause 500/faceDirection Juliet 3/pause 500/emote farmer 28/speak Juliet \"{{i18n:6398421.Juliet_Married.02}}\"/emote farmer 60/pause 500/emote Juliet 32/pause 1000/end"
       }
     },
