@@ -2,6 +2,10 @@
     /*********
     ** Generic translations
     *********/
+    // language info
+    "generic.list-separator": "、", // text between listed values (like ", " in "A, B, C")
+    "generic.line-wrap-on": "、",   // characters after which we can line-wrap text if needed, even if there's no space
+
     // date names
     "generic.now": "现在",
     "generic.tomorrow": "明天",
@@ -9,7 +13,6 @@
 
     // generic values
     "generic.unknown": "未知",
-    "generic.list-separator": "、", // text between listed values (like ", " in "A, B, C")
 
     // generic field values
     "generic.percent": "{{percent}}%",
@@ -46,6 +49,9 @@
     "quality.silver": "银星",
     "quality.gold": "金星",
     "quality.iridium": "铱星",
+
+    // item names shown in recipes
+    "item.wild-seeds": "Wild Seeds (Any)", // TODO
 
     // NPC friendship
     "friendship-status.friendly": "友好的",
@@ -130,13 +136,17 @@
     /*********
     ** Conditions & context tags
     *********/
-    "condition-or-context-tag.negate": "!{{value}}",
+    "condition-or-context-tag.negate": "非{{value}}",
+
+    "condition.day-of-month": "on specific days ({{days}})", // TODO
+    "condition.day-of-month.even": "even days", // TODO
+    "condition.day-of-month.odd": "odd days", // TODO
 
     "condition.item-type.input": "输入物品",
     "condition.item-type.target": "产物",
 
-    "condition.raw-context-tag": "context tag \"{{tag}}\"", // TODO
-    "condition.raw-condition": "query \"{{tag}}\"", // TODO
+    "condition.raw-context-tag": "标签 \"{{tag}}\"",
+    "condition.raw-condition": "要求 \"{{tag}}\"",
 
     "condition.item-context-tag": "{{item}}有{{tags}}标签",
     "condition.item-context-tags": "{{item}}有{{tags}}标签",

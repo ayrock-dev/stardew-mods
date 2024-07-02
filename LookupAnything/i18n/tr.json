@@ -2,6 +2,10 @@
     /*********
     ** Generic translations
     *********/
+    // language info
+    "generic.list-separator": ", ", // text between listed values (like ", " in "A, B, C")
+    "generic.line-wrap-on": "",     // characters after which we can line-wrap text if needed, even if there's no space
+
     // date names
     "generic.now": "şimdi",
     "generic.tomorrow": "yarın",
@@ -9,7 +13,6 @@
 
     // generic values
     "generic.unknown": "bilinmiyor",
-    "generic.list-separator": ", ", // text between listed values (like ", " in "A, B, C")
 
     // generic field values
     "generic.percent": "{{percent}}%",
@@ -46,6 +49,9 @@
     "quality.silver": "gümüş",
     "quality.gold": "altın",
     "quality.iridium": "iridyum",
+
+    // item names shown in recipes
+    "item.wild-seeds": "Wild Seeds (Any)", // TODO
 
     // NPC friendship
     "friendship-status.friendly": "Arkadaş",
@@ -131,6 +137,10 @@
     ** Conditions & context tags
     *********/
     "condition-or-context-tag.negate": "{{value}} değil",
+
+    "condition.day-of-month": "on specific days ({{days}})", // TODO
+    "condition.day-of-month.even": "even days", // TODO
+    "condition.day-of-month.odd": "odd days", // TODO
 
     "condition.item-type.input": "girilen nesne",
     "condition.item-type.target": "hedef nesne",
