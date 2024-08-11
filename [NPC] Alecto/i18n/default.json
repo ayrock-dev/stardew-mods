@@ -141,13 +141,14 @@
   "Titania.dialogue.Sat": "Ca-caw! Ca-caw!",
   "Titania.dialogue.Sun": "Caw! Caw! Caw!",
 
-	// strings from map
+	// strings from maps
   "maps.AlectoHouse1": "The spider looks at you and waves one of her many little legs.",
 	"maps.AlectoHouse2": "There's an empty wine bottle and a book of sonnets on this bedside table.",
 	"maps.AlectoHouse3": "'Fae Flirt' mascara'... 'Erinyes No. 3' eau de parfum... 'Belladonna - DO NOT EAT'...",
   "maps.AlectoHouse4": "Everything in this spellbook seems to be written by hand.",
   "maps.AlectoHouse5": "Mmmm! Smells like elderberries!",
   "maps.AlectoHouse6": "The candles around this ritual circle burn cold and never seem to melt... weird.",
+  "maps.AlectoRoom1": "There's a cross-stitched pillow that says 'if you can't say anything nice, come sit by me' on it.",
 
   //location name
   "location.AlectoRoom": "Alecto's Bedroom",
