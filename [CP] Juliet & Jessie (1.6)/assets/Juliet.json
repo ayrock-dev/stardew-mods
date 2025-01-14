@@ -68,16 +68,6 @@
           "HiddenProfileEmoteFrameDuration": 200.0,
           "Home": [
             {
-              "Id": "OwnHouse",
-              "Condition": "PLAYER_HAS_MAIL Host RosaJulesLivingTogether",
-              "Location": "EastScarp_RosJulesHouse",
-              "Tile": {
-                "X": 15,
-                "Y": 5
-              },
-              "Direction": "Right"
-            },
-            {
               "Id": "Default",
               "Location": "Custom_LK_LodgingHouse",
               "Tile": {
@@ -221,13 +211,15 @@
     },
     {
       "LogName": "JojaMart Sprites",
-      "Action": "Load", "Priority": "Low",
+      "Action": "Load",
+      "Priority": "Low",
       "Target": "Portraits/Juliet_Joja",
       "FromFile": "assets/Portraits/Juliet/Juliet_Joja.png"
     },
     {
       "LogName": "JojaMart Sprites",
-      "Action": "Load", "Priority": "Low",
+      "Action": "Load",
+      "Priority": "Low",
       "Target": "Characters/Juliet_Joja",
       "FromFile": "assets/Characters/Juliet/Juliet_Joja.png"
     },

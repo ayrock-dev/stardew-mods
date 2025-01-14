@@ -1,5 +1,5 @@
 {
-   "Format": "2.0.0",
+   "Format": "2.4.0",
    
     
    "ConfigSchema": {
@@ -201,20 +201,7 @@
 			"Warp": "20 47 Railroad 54 36", 
 			},			
 		},
-		 {
-            "Action": "EditMap",
-            "Target": "Maps/WitchWarpCave",
-            "MapTiles": [
-                {
-                    "Position": { "X":4, "Y": 5 },
-                    "Layer": "Back",
-                    "SetProperties": 
-					{
-                        "TouchAction": "MagicWarp WitchSwamp 20 41"
-                    }
-                },
-				]
-	 },
+		
 		
 		
 		{

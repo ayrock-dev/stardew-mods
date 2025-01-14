@@ -2,11 +2,17 @@
 	"Name": "WorldMap for Stardew Valley Expanded",
 	"Author": "N3cro_92",
 	"Description": "DaisyNiko's Earthy Worldmap for SVE",
-	"Version": "1.0.9",
+	"Version": "1.1.2",
 	"UniqueID": "N3cro_92.WorldMapSVE",
 	"MinimumApiVersion": "3.0.0",
-	"UpdateKeys": [ "Nexus:21788" ],
+	"UpdateKeys": [ "Nexus:21788@SVE" ],
 	"ContentPackFor": {
 		"UniqueID": "Pathoschild.ContentPatcher",
     },
+	"Dependencies": [
+		{
+		   "UniqueID": "flashshifter.FrontierFarm",
+		   "IsRequired": false
+		},
+	]
 }

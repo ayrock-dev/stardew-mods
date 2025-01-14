@@ -1,5 +1,5 @@
 {
-	"Format":"2.0.0",
+	"Format":"2.3.0",
 	"ConfigSchema":{
 		"ChangeInteriorLighting":{
 			"AllowValues":"true,false",
@@ -93,6 +93,13 @@
 			"Action":"EditImage",
 			"Target":"Maps/walls_and_floors",
 			"FromFile":"assets/walls_and_floors.png",
+			"When":{"RecolourWallsAndFloors":"true"}
+		},
+		//1.6 wallpapers
+		{
+			"Action":"EditImage",
+			"Target":"Maps/wallpapers_2",
+			"FromFile":"assets/wallpapers_2.png",
 			"When":{"RecolourWallsAndFloors":"true"}
 		},
 		//coop and barn

@@ -1,5 +1,40 @@
 {
    "Changes": [
+   
+  //summit background fix for winter event
+  
+   {  
+            "Action": "EditMap",
+            "Target": "Maps/Summit",
+            "FromFile": "assets/mappatches/SummitEventFix.tmx",
+			
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay",
+			"When": { 
+					"Hearts:{{ModId}}_GoblinZic": "10",
+					"Season": "Winter",
+					"HasSeenEvent |contains=181091263": false, 
+					"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false, },			
+					
+					},
+  
+		
+		  {  
+            "Action": "EditMap",
+            "Target": "Maps/Summit",
+            "FromFile": "assets/mappatches/SummitEventFixSVE.tmx",
+			
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay",
+			"When": { 
+					"Hearts:{{ModId}}_GoblinZic": "10",
+					"Season": "Winter",
+					"HasSeenEvent |contains=181091263": false, 
+					"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true, },			
+        },
+		
+		
+		
   
      { //ancientfruit
             "Action": "EditMap",

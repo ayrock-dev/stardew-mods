@@ -48,6 +48,7 @@
                                 "HasMod": "FlashShifter.StardewValleyExpandedCP"
                         }
                 },
+                // CUT FROM HERE DOWNWARDS DONE *********************************************
                 //Is Juliet's Boss Lewis or Morris? 
                 {
                         "Name": "bossGuy",
@@ -225,6 +226,7 @@
                         "Name": "Juliet_SetUp",
                         "Value": "{{Juliet_SetUp}} Vincent 40 10 0 Jas 41 10 0 Willy 43 11 3 Penny 38 10 1 Lewis 33 11 1 Caroline 24 11 1 Jodi 25 11 3 Wizard 22 11 1 Alex 27 12 1 Haley 28 12 3 Kent 22 15 1 Gus 23 18 1 Pam 23 20 1 Harvey 26 21 0 Shane 29 19 3 Clint 27 17 2 Pierre 26 9 2 Emily 30 15 2 Gunther 30 18 0 Leah 34 17 1 Elliott 35 16 2 Robin 36 17 3 Sam 38 15 1 Abigail 39 14 2 Sebastian 40 15 3 Demetrius 43 15 3 Maru 46 13 0 Evelyn 39 19 2 George 40 19 2 Linus 42 20 3 Jessie 38 20 1 Juliet 32 11 3 farmer 32 23 0"
                 },
+                // CUT BELOW HERE *********************************************************
                 //Adds selected custom NPCs: Jasper, Tristan and Luckiel (if installed)
                 {
                         "Name": "Juliet_SetUp",

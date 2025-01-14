@@ -1,5 +1,5 @@
 {
-	"Format": "2.0.0",
+	"Format": "2.3.0",
 	"Changes": [
 //SVE Worldmap
 		{
@@ -10,6 +10,7 @@
 			"When": {
 				"HasMod": "FlashShifter.SVECode",
 			},
+			"Update": "OnLocationChange",
 		},
 //Crimson Badlands
 		{
@@ -30,14 +31,30 @@
 			"When": {
 				"HasMod": "FlashShifter.SVECode",
 			},
+			"Update": "OnLocationChange",
         },
-// Grandpas Farm
+//Grandpas Farm + Icon
 		{
             "Action": "EditImage",
             "Target": "LooseSprites/map, LooseSprites/map_summer, LooseSprites/map_fall, LooseSprites/map_winter",
             "FromFile": "assets/{{Season}}_Grandpas_WorldMap.png",
             "PatchMode": "Overlay",
 			"ToArea": { "X": 0, "Y": 43, "Width": 142, "Height": 61 },
+			"When": {
+				"HasMod": "flashshifter.GrandpasFarm",
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Loosesprites/Cursors",
+			"FromFile": "assets/GrandpasFarm_Icon.png",
+			"ToArea": {
+			  	"X": 2,
+			  	"Y": 324,
+			  	"Width": 18,
+			  	"Height": 20,
+			},
 			"When": {
 				"HasMod": "flashshifter.GrandpasFarm",
 			},
@@ -52,8 +69,9 @@
 				"HasMod": "flashshifter.GrampletonFields",
 				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
 			},
+			"Update": "OnLocationChange",
 		},
-//Immersive Farm 2 Remastered
+//Immersive Farm 2 Remastered + Icon
 		{
             "Action": "EditImage",
             "Target": "LooseSprites/map, LooseSprites/map_summer, LooseSprites/map_fall, LooseSprites/map_winter",
@@ -65,6 +83,21 @@
 				"FarmType": "Standard",
 				"HasMod |contains=flashshifter.GrandpasFarm": false
 			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Loosesprites/Cursors",
+			"FromFile": "assets/IF2R_Icon.png",
+			"When": {
+			  "HasMod |contains=flashshifter.GrandpasFarm": false
+			},
+			"ToArea": {
+			  "X": 2,
+			  "Y": 324,
+			  "Width": 18,
+			  "Height": 20
+			},
 		},
 //Highlands
 		{
@@ -75,6 +108,7 @@
 			"When": {
 				"HasMod": "FlashShifter.SVECode",
 			},
+			"Update": "OnLocationChange",
 		},
 //Grumpleton Suburbs
 		{
@@ -85,6 +119,7 @@
 			"When": {
 				"HasMod": "FlashShifter.SVECode",
 			},
+			"Update": "OnLocationChange",
 		},
 //Joja
 		{
@@ -97,6 +132,7 @@
 				"HasMod": "FlashShifter.SVECode",
 				"HasSeenEvent": "5553210"
 			},
+			"Update": "OnLocationChange",
 		},
 //Fablereef
 		{
@@ -106,6 +142,29 @@
             "PatchMode": "Overlay",
 			"When": {
 				"HasMod": "FlashShifter.SVECode",
+			},
+		},
+//Frontier Farm + Icon
+		{
+			"Action": "EditImage",
+			"Target": "LooseSprites/map, LooseSprites/map_summer, LooseSprites/map_fall, LooseSprites/map_winter",
+			"Priority": "Late",
+			"FromFile": "assets/{{Season}}_FrontierFarm_Worldmap.png",
+			"PatchMode": "Overlay",
+			"ToArea": { "X": 0, "Y": 44, "Width": 137, "Height": 60 },
+			"When": {
+				"HasMod": "flashshifter.FrontierFarm",
+				"FarmType": "FrontierFarm",
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Mods/FlashShifter.FrontierFarm/Icon",
+			"FromFile": "assets/FrontierFarm_Icon.png",
+			"PatchMode": "Overlay",
+			"When": {
+				"HasMod": "flashshifter.FrontierFarm",
 			},
 		},
 //Maplayer

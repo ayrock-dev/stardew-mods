@@ -1,7 +1,7 @@
 {
     "Name": "Earthy Interface",
     "Author": "DaisyNiko",
-    "Version": "1.1",
+    "Version": "1.2",
     "UniqueID": "DaisyNiko.EarthyInterface",
     "MinimumApiVersion": "2.11.2",
     "UpdateKeys": [ "Nexus:13658" ],

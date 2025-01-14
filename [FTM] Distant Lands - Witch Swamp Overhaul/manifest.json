@@ -1,10 +1,11 @@
 {
   "Name": "Distant Lands - Witch Swamp Overhaul FTM",
   "Author": "Aimon111",
-  "Version": "2.1.0",
+  "Version": "2.2.2",
   "Description": "Distant Lands - Witch Swamp Overhaul FTM",
   "UniqueID": "Aimon111.WitchSwampOverhaulFTM",
   "MinimumAPIVersion": "4.0.0",
+    "UpdateKeys": [ "Nexus:???" ],
   "ContentPackFor": { 
   "UniqueID": "Esca.FarmTypeManager",
   },

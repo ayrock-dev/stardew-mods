@@ -13,7 +13,6 @@ Allowed Values:
 	- "Off"
 	- "Vanilla"
 	- "Earthy"
-	- "Eemie"
 	- "Starblue"
 	- "VibrantPastoral"
 	- "WittilyNamed"
@@ -33,17 +32,6 @@ Allowed Values:
 	- "StarrySky"
 	- "StarrySkyDark"
 	- "Vintage"
-
----------------------------------------------------
-
-"EemieFallVariant"
-
-> This is only relevant if you have Eemie's recolour. Choose whether you are using the green or orange version of fall.
-
-Allowed Values:
-
-	- "Green"
-	- "Orange"
 
 ---------------------------------------------------
 
